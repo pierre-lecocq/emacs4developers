@@ -5,7 +5,9 @@
 #+STARTUP: showall
 #+OPTIONS: toc:2
 
-* Brief history
+* Emacs for developers
+
+** Brief history
 
 - Developped by Richard Stallman in MIT AI lab
 - First release in 1976
@@ -16,7 +18,7 @@
 
 - So old, but every days new users appear. This is the best proof that Emacs is a *masterpiece*.
 
-* How to get emacs?
+** How to get emacs?
 
 On every linux distribution, packages are available.
 So run your favorite package manager to install it:
@@ -32,7 +34,7 @@ And if you have an exotic operating system, here are the specific distrubitions:
 - Mac OS X: http://emacsformacosx.com/
 - Windows: http://ftp.igh.cnrs.fr/pub/gnu/emacs/windows/
 
-* More than an editor
+** More than an editor
 
 - More than an editor, it is a lisp interpretor
 - Can run any type of program written in lisp:
@@ -53,7 +55,7 @@ And if you have an exotic operating system, here are the specific distrubitions:
 
 Naturally, you can all of that at the same time with only one Emacs instance. Don't need to say it ...
 
-* The perfect development tool
+** The perfect development tool
 
 - As Emacs is a lisp interpretor, it is extensible. Really really extensible.
 - The (unofficial) goal of Emacs is to be hacked
@@ -76,9 +78,9 @@ Naturally, you can all of that at the same time with only one Emacs instance. Do
   - Specific behaviour
   - ...
 
-* The basics
+** The basics
 
-**  Config files
+***  Config files
 
 In order to customize Emacs, you will have to edit its configuration files.
 It does not exist when you install the software (or is an empty file) and does nothing until you decide to tweak Emacs.
@@ -93,7 +95,7 @@ The first solution is great if you have a small, tidied and exportable configura
 
 The second solution is great if you need several configuration files (keep you configuration parts separated) or you need to install external extensions (you will install them in *~/.emacs.d* to keep them centralized and exportable).
 
-** Executing commands
+*** Executing commands
 
 The main idea of Emacs is that everything is a command. For example: opening a file with a keybinding calls a command that is executed by the Emacs' core.
 And all the commands are written in lisp.
@@ -113,7 +115,7 @@ Emacs should display the current version number of the software.
 
 Congratulation, you called your first Emacs command.
 
-** Key bindings
+*** Key bindings
 
 Here are the most useful keys in Emacs. You will use it several hundred (or thousand) times a day.
 
@@ -123,12 +125,12 @@ How it works:
 - The sequence /C-something somethingelse/ means that you press /Control + something/, then you release Control to hit /somethingelse/.
 - The sequence /C-something C-somethingelse/ means that you have to press Control while hitting /something/ and /somethingelse/.
 
-*** Manipulate files
+**** Manipulate files
 
 - *C-x C-f*: open a file
 - *C-x C-s*: save a file
 
-*** Manipulate the line
+**** Manipulate the line
 
 - *C-a*: go to the begining of the current line
 - *C-e*: go to the end of the current line
@@ -136,7 +138,7 @@ How it works:
 - *C-y*: paste what you had cut with the command above
 - *C-l*: center the buffer at the cursor position
 
-*** Windows
+**** Windows
 
 This might be confusing but a /window/ is a part of a /frame/.
 
@@ -149,7 +151,7 @@ An /Emacs frame/ can be divided into /windows/ in itself.
 - *C-x o*: switch to the next window
 - *C-x 0*: close a window
 
-*** Buffers
+**** Buffers
 
 A /buffer/ is displayed in a /frame/.
 
@@ -157,11 +159,11 @@ A /buffer/ is displayed in a /frame/.
 - *C-x C-b*: list opened buffer (and jump to the selected one)
 - *C-x k*: kill a buffer
 
-*** The most useless one
+**** The most useless one
 
 - *C-x C-c*: quit emacs (use at your own risks!)
 
-** Help!
+*** Help!
 
 Emacs has a powerful built-in help system for key bindings and internal functionalities.
 
@@ -176,7 +178,7 @@ Emacs also includes the full manual (also available online: http://www.gnu.org/s
 
 Finally, there are so many other help functions: http://www.emacswiki.org/emacs/EmacsNewbieHelpReference
 
-* Building your own editor
+** Building your own editor
 
 From this point, we will edit the configuration file.
 For the moment, we will put everything in a single *~/.emacs.d/init.el* file. Create it if it does not exist.
@@ -189,7 +191,7 @@ mkdir ~/.emacs.d
 touch ~/.emacs.d/init.el
 #+END_SRC
 
-** First basic configuration
+*** First basic configuration
 
 When you will have to change or add configuration, simply edit your *~/.emacs.d/init.el* file.
 For exemple, here is a tweak that does nothing visually but is useful for other packages and the Emacs engine itself.
@@ -202,7 +204,7 @@ It allows you to  define your name and email. Emacs can use it to add author inf
 
 After each configuration modification, you will have to restart Emacs.
 
-** General basic configuration
+*** General basic configuration
 
 Now, let's move to a more visual configuration basic set.
 As before, simply add this to your configuration file:
@@ -225,7 +227,7 @@ As before, simply add this to your configuration file:
 (add-hook 'before-save-hook (lambda() (delete-trailing-whitespace)))
 #+END_SRC
 
-** Backup files
+*** Backup files
 
 You may have notice that the files you edit are duplicated and renamed with a /~/ at the end.
 They are the backup files that Emacs creates for you with an auto-save feature.
@@ -248,7 +250,7 @@ An alternative method is to save these backups in a centralized folder:
 (setq backup-directory-alist '(("." . "~/.saves")))
 #+END_SRC
 
-** Setting up the locales
+*** Setting up the locales
 
 You may want to set up a specific locale for your files.
 Here is the trick:
@@ -263,7 +265,7 @@ Here is the trick:
 (prefer-coding-system 'utf-8)
 #+END_SRC
 
-** More configuration
+*** More configuration
 
 The best way to get your configuration better, is to read the doc ...
 But you can also (this is the un-official method) read the others Emacs users' config files.
@@ -276,28 +278,28 @@ Here is mine: (https://github.com/pierre-lecocq/emacs.d)
 - The [[https://github.com/pierre-lecocq/emacs.d/blob/master/config/modes.org][modes]] specific configuration
 - The [[https://github.com/pierre-lecocq/emacs.d/blob/master/config/keybindings.org][keybindings]]
 
-** Modes
+*** Modes
 
 /Modes/ are Emacs' /extensions/ that can be installed to extend the capabilities of Emacs. They will allow you to build a powerful tailored editor.
 There are 2 kind of modes: minor and major.
 
-*** Major modes
+**** Major modes
 
 Major modes are modes that transform Emacs to a specialized software for editing a certain type of files (i.e c-mode) or managing special tasks (i.e reading emails, managing git repository, ...)
 
 Only one major mode can be used at a time.
 
-*** Minor modes
+**** Minor modes
 
 Minor modes are additionnal modes that are added transparently to the major mode. They add more features to the main one (i.e parentheses matching, syntax or spelling checkers, ...)
 
 Several minor modes can be used at a time.
 
-** Package managers
+*** Package managers
 
 Emacs has brilliant package managers such as /package.el/, /el-get/ that allows you to add and update modes really easily.
 
-*** Package.el
+**** Package.el
 
 /package.el/ is the built in package manager shipped by default with Emacs 24 or later.
 
@@ -318,7 +320,7 @@ Additionnaly, you can manage the packages list by adding other sources to your c
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 #+END_SRC
 
-*** El-Get
+**** El-Get
 
 /[[https://github.com/dimitri/el-get][el-get]]/ is the most popular and easy to use package manager.
 It is written by the great [[https://github.com/dimitri][Dimitri Fontaine]] and is based on recipe files.
@@ -339,7 +341,7 @@ To use it, simply add this to your configuration file. It will simply download a
 
 From this point, we will use /el-get/ to install packages.
 
-*** Install your first package with el-get
+**** Install your first package with el-get
 
 Here is how to install a package. All the packages that you will install in the future will be done with the same method.
 
@@ -368,14 +370,14 @@ In the future, if you want to add a package, simply add its name to this list.
 
 Available packages are listed [[https://github.com/dimitri/el-get/tree/master/recipes][here]].
 
-** Some useful packages
+*** Some useful packages
 
 As a developer, you will need some packages that will help you to work, increase your productivity and enhance your confort while coding.
 Please note that even if I am a ruby/shell/lisp/web/php(ouch!) developer, some packages are compatible and useful for every kind of development. Therefore, the base packages are listed here but some specific packages that might be useful for your work are eventually not listed here. It is up to you to adapt the list according to your needs!
 
 Tip: After adding packages, restart Emacs in order to let /el-get/ download and install it properly.
 
-*** Auto complete
+**** Auto complete
 
 Auto completion is a must-have feature in the development world.
 This package simply displays a popup at the cursor position with the available completions.
@@ -384,7 +386,7 @@ To install it, add =auto-complete= to your packages list.
 
 [[http://www.emacswiki.org/emacs/AutoComplete][Read more]]
 
-*** Autopair
+**** Autopair
 
 When you open a quote/parenthese/bracket/curly bracket, this mode automatically adds the closed one and bring your cusror between the two.
 Very useful to avoid syntax errors, for example.
@@ -393,7 +395,7 @@ To install it, add =autopair= to your packages list.
 
 [[https://github.com/capitaomorte/autopair][Read more]]
 
-*** Buffer move
+**** Buffer move
 
 This mode allows you to re-organize and move the buffers from a window to another.
 Useful if you want to switch buffer places in order to have your debugging buffer on the right side, for example.
@@ -402,7 +404,7 @@ To install it, add =buffer-move= to your packages list.
 
 [[http://www.emacswiki.org/cgi-bin/wiki/buffer-move.el][Read more]]
 
-*** Flycheck
+**** Flycheck
 
 This mode check the syntax of a buffer. It could be used for checking code syntax or typos when writing any kind of text.
 
@@ -410,7 +412,7 @@ To install it, add =flycheck= to your packages list.
 
 [[https://github.com/flycheck/flycheck][Read more]]
 
-*** Highlight symbol
+**** Highlight symbol
 
 This mode highlights all symbols that matches a pattern in your buffer
 
@@ -418,7 +420,7 @@ To install it, add =highlight-symbol= to your packages list.
 
 [[http://www.emacswiki.org/emacs/HighlightSymbol][Read more]]
 
-*** Ido
+**** Ido
 
 Ido is a must have mode to navigate, find stuffs, and do things interactively.
 It is for comfort, but is indispensable to go fast.
@@ -431,7 +433,7 @@ To install it, add =ido-hacks= and =ido-vertical-mode= to your packages list.
 
 [[http://www.emacswiki.org/emacs/InteractivelyDoThings][Read more]]
 
-*** JS2
+**** JS2
 
 This mode is an enhanced mode for editing Javascript files. I do not use it a lot since I think Javascript is an error in itself, but it is useful for some javascript-like files.
 
@@ -439,7 +441,7 @@ To install it, add =js2-mode= to your packages list.
 
 [[http://www.emacswiki.org/emacs/Js2Mode][Read more]]
 
-*** Magit
+**** Magit
 
 Magit is a very powerful and elegant mode for intercating with your git repository.
 In order to understand how powerful it is, simply watch this amazing [[http://vimeo.com/2871241][video]]
@@ -448,7 +450,7 @@ To install it, add =magit= to your packages list.
 
 [[https://github.com/magit/magit][Read more]]
 
-*** Multiple cursors
+**** Multiple cursors
 
 This mode is great and super powerful. Instead of explaining what it is, check this amazing [[http://emacsrocks.com/e13.html][video]] by Magnars.
 
@@ -456,7 +458,7 @@ To install it, add =multiple-cursors= to your packages list.
 
 [[https://github.com/magnars/multiple-cursors.el][Read more]]
 
-*** PHP mode
+**** PHP mode
 
 A basic but stable mode for editing PHP files, whatever you think about PHP ...
 
@@ -464,7 +466,7 @@ To install it, add =php-mode= to your packages list.
 
 [[http://php-mode.sourceforge.net/][Read more]]
 
-*** Rainbow mode
+**** Rainbow mode
 
 A useless but indispensable mode to add colors to your CSS files when using properties like "color", "background-color".
 It is cool since it understands every way to write a color (hex, name, ...) and gives you a preview of the color itself.
@@ -473,7 +475,7 @@ To install it, add =rainbow-mode= to your packages list.
 
 [[http://julien.danjou.info/projects/emacs-packages][Read more]]
 
-*** RHTML mode
+**** RHTML mode
 
 This mode is useful for editing .rhtml files. You can also use it to edit any kinf of ruby templates (i.e .erb).
 
@@ -481,7 +483,7 @@ To install it, add =rhtml-mode= to your packages list.
 
 [[https://github.com/eschulte/rhtml][Read more]]
 
-*** Ruby mode
+**** Ruby mode
 
 Do I really need to explain ?
 
@@ -489,7 +491,7 @@ To install it, add =ruby-mode= to your packages list.
 
 [[http://www.emacswiki.org/emacs/RubyMode][Read more]]
 
-*** Switch window
+**** Switch window
 
 This mode is cool when you work with a lot of windows opened.
 If you want to switch to another one, you have to press *C-x o* until you reach the wanted window.
@@ -499,7 +501,7 @@ To install it, add =switch-window= to your packages list.
 
 [[https://github.com/dimitri/switch-window][Read more]]
 
-*** Visual regexp
+**** Visual regexp
 
 This mode highlights the text that matches the regexp that you are writing in the mini buffer.
 
@@ -507,7 +509,7 @@ To install it, add =visual-regexp= to your packages list.
 
 [[https://github.com/benma/visual-regexp.el][Read more]]
 
-*** Yaml mode
+**** Yaml mode
 
 Alows you to edit .yml files
 
@@ -515,7 +517,7 @@ To install it, add =yaml-mode= to your packages list.
 
 [[http://www.emacswiki.org/emacs/YamlMode][Read more]]
 
-*** Yasnippet
+**** Yasnippet
 
 A mode that allows you to write code faster if you are lazy.
 It is very easy to create your own snippets and use it whatever the file you are editing (code, non-code, emails, ...)
@@ -526,7 +528,7 @@ To install it, add =yasnippet= to your packages list.
 
 [[http://www.emacswiki.org/emacs/Yasnippet][Read more]]
 
-* Working locally vs remotely
+** Working locally vs remotely
 
 Emacs, once installed on your machine will allow you to edit your file locally, obviously.
 
@@ -541,7 +543,7 @@ And what is great is that if you are editing a remote file and you launch a shel
 
 [[http://www.emacswiki.org/emacs/TrampMode][Read more about Tramp]]
 
-* Organize your work, write papers and manage your agenda
+** Organize your work, write papers and manage your agenda
 
 In Emacs, you can do everything. This is a fact.
 
@@ -573,7 +575,7 @@ You really should check their [[http://orgmode.org/features.html][list of featur
 
 If you want to see a good example of Org-mode capabilities, check [[http://home.fnal.gov/~neilsen/notebook/orgExamples/org-examples.html][that great page]]
 
-* Some great Emacs tips and tricks
+** Some great Emacs tips and tricks
 
 - Emacs is all about Macros. This is one of its most powerful feature. Record a sequence and re-play it on other lines! Here is [[http://www.thegeekstuff.com/2010/07/emacs-macro-tutorial-how-to-record-and-play/][how]].
 - Using [[http://www.masteringemacs.org/articles/2010/11/01/running-shells-in-emacs-overview/][shell]] inside Emacs is cool
@@ -588,7 +590,7 @@ If you want to see a good example of Org-mode capabilities, check [[http://home.
 
 /To be continued/
 
-* Some useful readings, tutorials and demos
+** Some useful readings, tutorials and demos
 
 - [[http://emacsrocks.com/][Emacs rocks videos]]
 - [[http://devblog.avdi.org/category/emacs-reboot/][Avdi Grimm Emacs reboot series]]
@@ -600,7 +602,7 @@ If you want to see a good example of Org-mode capabilities, check [[http://home.
 
 And of course, the [[http://www.emacswiki.org/][Emacs wiki]]
 
-* Thanks
+** Thanks
 
 I want to thank some of the great people who make Emacs a very intersting piece of software or make its community very active (the sort order is absolutly not important here):
 
