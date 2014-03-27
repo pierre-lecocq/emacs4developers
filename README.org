@@ -7,6 +7,11 @@
 
 * Emacs for developers
 
+This document will (hopefully) help you to use Emacs like a sir !
+
+#+CAPTION: Using Emacs like a sir
+[[http://qsdfgh.com/sir.png]]
+
 ** Brief history
 
 - Developped by Richard Stallman in MIT AI lab
