@@ -3,6 +3,7 @@
 #+DESCRIPTION: Learn using Emacs as a developer
 #+KEYWORDS: emacs, developer
 #+STARTUP: showall
+#+OPTIONS: toc:2
 
 * Brief history
 
