@@ -593,6 +593,7 @@ If you want to see a good example of Org-mode capabilities, check [[http://home.
 - [[http://devblog.avdi.org/category/emacs-reboot/][Avdi Grimm Emacs reboot series]]
 - [[http://www.masteringemacs.org/][Mastering Emacs]]
 - [[http://sachachua.com/blog/category/geek/emacs/][Sacha's blog]] and her wonderful Emacs contributors interviews serie
+- [[http://emacsredux.com][Emacs redux]] by Bozhidar Batsov
 - [[http://planet.emacsen.org/][Planet Emacsen]]
 - [[http://reddit.com/r/emacs][Emacs sub-reddit]]
 
@@ -611,6 +612,7 @@ I want to thank some of the great people who make Emacs a very intersting piece 
 - Avdi Grimm
 - Magnars
 - Steve Yegge
+- Bozhidar Batsov
 - Xah Lee
 - And many more ...
 
