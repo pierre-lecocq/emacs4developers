@@ -499,7 +499,7 @@ To install it, add =rhtml-mode= to your packages list.
 
 Do I really need to explain ?
 
-Ruby mode is already installed in Emacs and is very stable but if you want a newer version (i.e because you need a specific feature), add =ruby-mode= to your packages list.
+Ruby mode is already installed in Emacs and is very stable.
 
 [[http://www.emacswiki.org/emacs/RubyMode][Read more]]
 
