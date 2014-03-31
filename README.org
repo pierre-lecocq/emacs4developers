@@ -21,7 +21,7 @@ This document will (hopefully) help you to use Emacs like a sir !
 - Written in C and Emacs Lisp
 - Part of the GNU project (therefore, we /should/ say "GNU/Emacs", not "Emacs")
 
-- So old, but every days new users appear. This is the best proof that Emacs is a *masterpiece*.
+- So old, but every days new users appear.
 
 ** How to get emacs?
 
@@ -41,8 +41,8 @@ And if you have an exotic operating system, here are the specific distrubitions:
 
 ** More than an editor
 
-- More than an editor, it is a lisp interpretor
-- Can run any type of program written in lisp:
+- More than an editor, it is a LISP interpretor
+- Can run any type of program written in LISP:
   - Email clients (like [[http://www.gnus.org/][Gnus]] or [[http://www.emacswiki.org/emacs/mu4e][mu4e]])
   - Shell (like bash or eshell)
   - File and directory management (with [[http://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html][Dired mode]])
@@ -58,11 +58,11 @@ And if you have an exotic operating system, here are the specific distrubitions:
   - And so on ...
   - (and of course a document editor that can automatically generate this presentation)
 
-Naturally, you can all of that at the same time with only one Emacs instance. Don't need to say it ...
+Naturally, you can do all of that at the same time with only one Emacs instance. Don't need to say it ...
 
 ** The perfect development tool
 
-- As Emacs is a lisp interpretor, it is extensible. Really really extensible.
+- As Emacs is a LISP interpretor, it is extensible. Really really extensible.
 - The (unofficial) goal of Emacs is to be hacked
 - Therefore your goal is to hack Emacs to make it work perfectly as you want
 
@@ -103,7 +103,7 @@ The second solution is great if you need several configuration files (keep you c
 *** Executing commands
 
 The main idea of Emacs is that everything is a command. For example: opening a file with a keybinding calls a command that is executed by the Emacs' core.
-And all the commands are written in lisp.
+And all the commands are written in LISP.
 
 To call a command, you simply have to press *Escape* and then *x*.
 The official name is "/Meta x/" and is written /M-x/
@@ -378,7 +378,7 @@ Available packages are listed [[https://github.com/dimitri/el-get/tree/master/re
 *** Some useful packages
 
 As a developer, you will need some packages that will help you to work, increase your productivity and enhance your confort while coding.
-Please note that even if I am a ruby/shell/lisp/web/php(ouch!) developer, some packages are compatible and useful for every kind of development. Therefore, the base packages are listed here but some specific packages that might be useful for your work are eventually not listed here. It is up to you to adapt the list according to your needs!
+Please note that even if I am a ruby/shell/LISP/web/php(ouch!) developer, some packages are compatible and useful for every kind of development. Therefore, the base packages are listed here but some specific packages that might be useful for your work are eventually not listed here. It is up to you to adapt the list according to your needs!
 
 Tip: After adding packages, restart Emacs in order to let /el-get/ download and install it properly.
 
@@ -535,7 +535,7 @@ To install it, add =yasnippet= to your packages list.
 
 **** Paredit
 
-Paredit is a really cool mode to "keep parentheses balanced" and navigating in the S-expressions. Useful and indispensable if you write Lisp code, for example.
+Paredit is a really cool mode to "keep parentheses balanced" and navigating in the S-expressions. Useful and indispensable if you write LISP code, for example.
 
 To install it, add =paredit= to your packages list.
 
@@ -626,7 +626,7 @@ Here are some of its features beside the basic ones:
 - Customizable layout
 - Encrypted file to manage your credentials
 - ... and many more
-- ... and of course, it is extensible thanks to Lisp
+- ... and of course, it is extensible thanks to LISP
 
 You really should try it with your personnal account. It is easy to configure and integrate with [[http://www.emacswiki.org/emacs/GnusGmail][Gmail]], for example.
 
