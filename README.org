@@ -19,7 +19,7 @@ This document will (hopefully) help you to use Emacs like a sir !
 - Inspired by TECO editor
 - Based on macros (emacs stands for Editor MACroS)
 - Written in C and Emacs Lisp
-- Part of the GNU project (therefore, we /should/ say "GNU/Emacs", not "Emacs")
+- Part of the GNU project (therefore, we /should/ say "GNU Emacs", not "Emacs")
 
 - Despite it's age, new users are still adopting Emacs as their development platform to this day!
 
@@ -495,7 +495,7 @@ To install it, add =rhtml-mode= to your packages list.
 
 Do I really need to explain ?
 
-To install it, add =ruby-mode= to your packages list.
+Ruby mode is already installed in Emacs and is very stable but if you want a newer version (i.e because you need a specific feature), add =ruby-mode= to your packages list.
 
 [[http://www.emacswiki.org/emacs/RubyMode][Read more]]
 
