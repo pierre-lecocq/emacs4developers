@@ -438,11 +438,11 @@ To install it, add =ido-hacks= and =ido-vertical-mode= to your packages list.
 
 [[http://www.emacswiki.org/emacs/InteractivelyDoThings][Read more]]
 
-**** JS2
+**** JS3
 
-This mode is an enhanced mode for editing Javascript files. I do not use it a lot since I think Javascript is an error in itself, but it is useful for some javascript-like files.
+This mode is an enhanced mode for editing Javascript files. I do not use it a lot, but it is useful for some javascript-like or NPM files.
 
-To install it, add =js2-mode= to your packages list.
+To install it, add =js3-mode= to your packages list.
 
 [[http://www.emacswiki.org/emacs/Js2Mode][Read more]]
 
@@ -533,6 +533,29 @@ To install it, add =yasnippet= to your packages list.
 
 [[http://www.emacswiki.org/emacs/Yasnippet][Read more]]
 
+**** Paredit
+
+Paredit is a really cool mode to "keep parentheses balanced" and navigating in the S-expressions. Useful and indispensable if you write Lisp code, for example.
+
+To install it, add =paredit= to your packages list.
+
+[[http://www.emacswiki.org/emacs/ParEdit][Read more]]
+
+** Coming for other editors (i.e Vim)
+
+Some people use other editors and want to give Emacs a try.
+Some people are really used to use a specific editor.
+Some people do not want to lose their habits and their learning curve.
+
+I am thinking about Vim, but it is also true for other editors (textmate, sublime, ...)
+
+Emacs has a mode that allows you to use it exactly like Vim.
+
+I personnaly never used this mode, but many people use it. Therefore, it allows you to switch gently and softly from Vim to Emacs.
+
+[[http://www.emacswiki.org/emacs/Evil][Read more about Evil-mode]]
+
+
 ** Working locally vs remotely
 
 Emacs, once installed on your machine will allow you to edit your file locally, obviously.
@@ -545,6 +568,8 @@ If you press *C-x C-f*, you can open a file. But if you ask =myname@myserver.com
 /Tramp/ supports lots of protocols like ssh, ftp, and so on.
 
 And what is great is that if you are editing a remote file and you launch a shell in Emacs, it will automatically set the shell into your remote environment and open it as if you were in the remote directory the file is in.
+
+A last tip about TRAMP. If you simply add =sudo:= in front of your file path, you edit your file with higher privileges. It is a very useful feature if you need to edit your configuration files on a server, for example. Of course, it works remotely and locally.
 
 [[http://www.emacswiki.org/emacs/TrampMode][Read more about Tramp]]
 
