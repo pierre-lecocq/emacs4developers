@@ -548,7 +548,7 @@ To install it, add =paredit= to your packages list.
 
 [[http://www.emacswiki.org/emacs/ParEdit][Read more]]
 
-** Coming for other editors (i.e Vim)
+** Coming from other editors (i.e Vim)
 
 Some people use other editors and want to give Emacs a try.
 Some people are really used to use a specific editor.
