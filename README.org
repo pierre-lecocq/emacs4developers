@@ -164,10 +164,14 @@ A /buffer/ is displayed in a /frame/.
 - *C-x C-b*: list opened buffer (and jump to the selected one)
 - *C-x k*: kill a buffer
 
+**** Cancel a command
+
+- *C-g* or *ESC ESC ESC*: cancel the current command running in the minibuffer
+
+
 **** The most useless one
 
 - *C-x C-c*: quit emacs (use at your own risks!)
-
 *** Help!
 
 Emacs has a powerful built-in help system for key bindings and internal functionalities.
