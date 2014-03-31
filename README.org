@@ -21,7 +21,7 @@ This document will (hopefully) help you to use Emacs like a sir !
 - Written in C and Emacs Lisp
 - Part of the GNU project (therefore, we /should/ say "GNU/Emacs", not "Emacs")
 
-- So old, but every days new users appear.
+- Despite it's age, new users are still adopting Emacs as their development platform to this day!
 
 ** How to get emacs?
 
@@ -32,9 +32,9 @@ So run your favorite package manager to install it:
 - /yum install emacs/
 - ...
 
-But in order to get the latest version, it is _highly recommanded_ to compile it by yourself: http://ftp.igh.cnrs.fr/pub/gnu/emacs/
+In order to get the latest version, it's _highly recommended_ that you compile Emacs yourself: http://ftp.igh.cnrs.fr/pub/gnu/emacs/
 
-And if you have an exotic operating system, here are the specific distrubitions:
+And if you have an exotic operating system, here are the specific distributions:
 
 - Mac OS X: http://emacsformacosx.com/
 - Windows: http://ftp.igh.cnrs.fr/pub/gnu/emacs/windows/
@@ -207,7 +207,10 @@ It allows you to  define your name and email. Emacs can use it to add author inf
 (setq user-mail-address "your@email.com")
 #+END_SRC
 
-After each configuration modification, you will have to restart Emacs.
+After each configuration modification, two solutions:
+
+- the soft & clever way: execute *M-x eval-buffer*
+- the hard way: restart Emacs.
 
 *** General basic configuration
 
