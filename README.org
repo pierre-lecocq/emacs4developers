@@ -19,9 +19,9 @@ This document will (hopefully) help you to use Emacs like a sir !
 - Inspired by TECO editor
 - Based on macros (emacs stands for Editor MACroS)
 - Written in C and Emacs Lisp
-- Part of the GNU project (therefore, we /should/ say "GNU/Emacs", not "Emacs")
+- Part of the GNU project (therefore, we /should/ say "GNU Emacs", not "Emacs")
 
-- So old, but every days new users appear.
+- Despite it's age, new users are still adopting Emacs as their development platform to this day!
 
 ** How to get emacs?
 
@@ -32,9 +32,9 @@ So run your favorite package manager to install it:
 - /yum install emacs/
 - ...
 
-But in order to get the latest version, it is _highly recommanded_ to compile it by yourself: http://ftp.igh.cnrs.fr/pub/gnu/emacs/
+In order to get the latest version, it's _highly recommended_ that you compile Emacs yourself: http://ftp.igh.cnrs.fr/pub/gnu/emacs/
 
-And if you have an exotic operating system, here are the specific distrubitions:
+And if you have an exotic operating system, here are the specific distributions:
 
 - Mac OS X: http://emacsformacosx.com/
 - Windows: http://ftp.igh.cnrs.fr/pub/gnu/emacs/windows/
@@ -179,13 +179,19 @@ A /buffer/ is displayed in a /frame/.
 - *C-x C-b*: list opened buffer (and jump to the selected one)
 - *C-x k*: kill a buffer
 
+<<<<<<< HEAD
 #+CAPTION: Buffer navigation
 [[./images/buffers.gif]]
+=======
+**** Cancel a command
+
+- *C-g* or *ESC ESC ESC*: cancel the current command running in the minibuffer
+
+>>>>>>> cae9f7ee5a18d21ecb4fe27ca9e7dede584bf9b3
 
 **** The most useless one
 
 - *C-x C-c*: quit emacs (use at your own risks!)
-
 *** Help!
 
 Emacs has a powerful built-in help system for key bindings and internal functionalities.
@@ -225,7 +231,10 @@ It allows you to  define your name and email. Emacs can use it to add author inf
 (setq user-mail-address "your@email.com")
 #+END_SRC
 
-After each configuration modification, you will have to restart Emacs.
+After each configuration modification, two solutions:
+
+- the soft & clever way: execute *M-x eval-buffer*
+- the hard way: restart Emacs.
 
 *** General basic configuration
 
@@ -510,7 +519,7 @@ To install it, add =rhtml-mode= to your packages list.
 
 Do I really need to explain ?
 
-To install it, add =ruby-mode= to your packages list.
+Ruby mode is already installed in Emacs and is very stable.
 
 [[http://www.emacswiki.org/emacs/RubyMode][Read more]]
 
@@ -559,7 +568,7 @@ To install it, add =paredit= to your packages list.
 
 [[http://www.emacswiki.org/emacs/ParEdit][Read more]]
 
-** Coming for other editors (i.e Vim)
+** Coming from other editors (i.e Vim)
 
 Some people use other editors and want to give Emacs a try.
 Some people are really used to use a specific editor.
