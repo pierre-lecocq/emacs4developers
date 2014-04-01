@@ -86,7 +86,7 @@ Naturally, you can do all of that at the same time with only one Emacs instance.
 ** The basics
 
 #+CAPTION: The Emacs splash screen
-[[./images/slash.gif]]
+[[./images/splash.gif]]
 
 ***  Config files
 
