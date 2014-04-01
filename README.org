@@ -565,6 +565,31 @@ To install it, add =paredit= to your packages list.
 
 [[http://www.emacswiki.org/emacs/ParEdit][Read more]]
 
+** Setting a color theme
+
+Now, we are talking about something very touchy and that can be a long quest ...
+
+A color theme generally includes colors for:
+
+- background
+- syntax color (for code)
+- specific modes colors (gnus, dired, git, ...)
+
+There are several ways to install a color theme, but first, we will use the Emacs' internal color-theme library.
+
+Let's try to switch between different themes:
+
+- Type *M-x load-theme RET tango-dark*
+- Then type *M-x load-theme RET wombat*
+- Finally type *M-x load-theme RET whiteboard*
+
+There is no secret or perfect color theme. There are so many of theme and each user has its preferences in term of colors.
+
+#+CAPTION: color themes
+[[./images/colors.gif]]
+
+In order to choose yours, try the default ones, see this [[http://gnuemacscolorthemetest.googlecode.com/svn/html/index-el.html][showcase]], make your own or google a lot !
+
 ** Coming from other editors (i.e Vim)
 
 Some people use other editors and want to give Emacs a try.
