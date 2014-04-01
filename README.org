@@ -14,18 +14,18 @@ This document will (hopefully) help you to use Emacs like a sir !
 
 ** Brief history
 
-- Developped by Richard Stallman in MIT AI lab
+- Developed by Richard Stallman in MIT AI lab
 - First release in 1976
 - Inspired by TECO editor
-- Based on macros (emacs stands for Editor MACroS)
+- Based on macros (Emacs stands for Editor MACroS)
 - Written in C and Emacs Lisp
 - Part of the GNU project (therefore, we /should/ say "GNU Emacs", not "Emacs")
 
-- Despite it's age, new users are still adopting Emacs as their development platform to this day!
+- Despite its age, new users are still adopting Emacs as their development platform to this day!
 
-** How to get emacs?
+** How to get Emacs?
 
-On every linux distribution, packages are available.
+On every Linux distribution, packages are available.
 So run your favorite package manager to install it:
 
 - /apt-get install emacs/
@@ -657,7 +657,7 @@ If you want to see a good example of Org-mode capabilities, check [[http://home.
 ** Emails in Emacs
 
 There are packages that let you use Emacs as a full featured MUA.
-Reading emacs, sending emails, filtering, archiving ... etc.
+Reading emails, sending emails, filtering, archiving ... etc.
 
 Emacs can be a very powerful and fast e-mail client and as it is controlled by the keyboard, it could be more efficient than a graphical e-mail client (clicking is a loss of time).
 I use it for years now and I can not imagine using another program to read my emails.
@@ -691,7 +691,7 @@ Some alternatives to Gnus (that I do not use, but that are popular):
 - Using [[http://www.masteringemacs.org/articles/2010/11/01/running-shells-in-emacs-overview/][shell]] inside Emacs is cool
 - You really should use the /[[http://www.emacswiki.org/emacs/BookMarks][bookmarks]]/ functionnality to save your projects locations (locally or remotely)
 - When opening a file, add /sudo:/ in front of its path in order to edit it as a privileged user
-- You can edit files in hexadecimal directly in emacs thanks to the /hexl-mode/
+- You can edit files in hexadecimal directly in Emacs thanks to the /hexl-mode/
 - Emacs allows you to open an archive (gz, bz2, zip, ...), edit its files on-the-fly without extracting yourself the archive. To do so, simple open the file directly in Emacs (*C-x C-f* /path/to/archive.tar.bz2)
 - [[http://www.gnu.org/software/emacs/manual/html_node/emacs/Rectangles.html][Rectangle regions]] edition is really easy
 - [[http://www.cs.bu.edu/teaching/tool/emacs/programming/#compile][Compilation]] and [[http://www.cs.bu.edu/teaching/tool/emacs/programming/#gdb][debugging]] is really well supported in Emacs
