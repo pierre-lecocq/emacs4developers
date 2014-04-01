@@ -10,7 +10,7 @@
 This document will (hopefully) help you to use Emacs like a sir !
 
 #+CAPTION: Using Emacs like a sir
-[[http://qsdfgh.com/sir.png]]
+[[./images/sir.png]]
 
 ** Brief history
 
@@ -85,6 +85,9 @@ Naturally, you can do all of that at the same time with only one Emacs instance.
 
 ** The basics
 
+#+CAPTION: The Emacs splash screen
+[[./images/slash.gif]]
+
 ***  Config files
 
 In order to customize Emacs, you will have to edit its configuration files.
@@ -118,6 +121,9 @@ Let's try something:
 
 Emacs should display the current version number of the software.
 
+#+CAPTION: Execute the version command
+[[./images/version.gif]]
+
 Congratulation, you called your first Emacs command.
 
 *** Key bindings
@@ -135,6 +141,9 @@ How it works:
 - *C-x C-f*: open a file
 - *C-x C-s*: save a file
 
+#+CAPTION: Open a file, modify it and save it
+[[./images/open-and-save.gif]]
+
 **** Manipulate the line
 
 - *C-a*: go to the begining of the current line
@@ -142,6 +151,9 @@ How it works:
 - *C-k*: cut the rest of the line at the cursor position
 - *C-y*: paste what you had cut with the command above
 - *C-l*: center the buffer at the cursor position
+
+#+CAPTION: Line manipulation
+[[./images/line.gif]]
 
 **** Windows
 
@@ -156,6 +168,9 @@ An /Emacs frame/ can be divided into /windows/ in itself.
 - *C-x o*: switch to the next window
 - *C-x 0*: close a window
 
+#+CAPTION: Windows manipulation
+[[./images/windows.gif]]
+
 **** Buffers
 
 A /buffer/ is displayed in a /frame/.
@@ -163,6 +178,9 @@ A /buffer/ is displayed in a /frame/.
 - *C-x b*: switch to an already opened buffer
 - *C-x C-b*: list opened buffer (and jump to the selected one)
 - *C-x k*: kill a buffer
+
+#+CAPTION: Buffer navigation
+[[./images/buffers.gif]]
 
 **** The most useless one
 
