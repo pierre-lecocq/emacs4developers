@@ -179,15 +179,12 @@ A /buffer/ is displayed in a /frame/.
 - *C-x C-b*: list opened buffer (and jump to the selected one)
 - *C-x k*: kill a buffer
 
-<<<<<<< HEAD
 #+CAPTION: Buffer navigation
 [[./images/buffers.gif]]
-=======
+
 **** Cancel a command
 
 - *C-g* or *ESC ESC ESC*: cancel the current command running in the minibuffer
-
->>>>>>> cae9f7ee5a18d21ecb4fe27ca9e7dede584bf9b3
 
 **** The most useless one
 
