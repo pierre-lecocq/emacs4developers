@@ -52,6 +52,8 @@ And if you have an exotic operating system, here are the specific distributions:
   - Encrypt/decrypt files (like GPG files)
   - On-the-fly archives editing (thanks to [[http://www.emacswiki.org/emacs/ArchiveMode][archive-mode]])
   - PDF / Image / (...) viewer
+  - A powerful front end to R / S+ / SPSS / Stata (with [[http://ess.r-project.org/][EmacsSpeaksStatisics)]]
+  - An editor for multi-modal REPL's like IPython (with [[http://tkf.github.io/emacs-ipython-notebook/][EmacsIPythonNotebook]])
   - Music player (with emms, vlc, mplayer, ...)
   - Music programming (with [[http://vimeo.com/22798433][Overtone]])
   - Video editing
