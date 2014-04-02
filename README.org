@@ -652,6 +652,32 @@ I personnaly never used this mode, but many people use it. Therefore, it allows 
 
 [[http://www.emacswiki.org/emacs/Evil][Read more about Evil-mode]]
 
+** Emacs as a file manager
+
+Emacs has a built-in mode named /dired/ that allows you to manage your file system directly in Emacs and really easily.
+It is very powerful and has features that graphical file managers do not have.
+
+First of all, to launch it, type:
+
+- *M-x dired RET* and then select a path to open (default is the directory of the file you are editing)
+- or *C-x d* if you prefer keybindings
+
+Here are a few quick shortcuts once you are in /dired mode/
+
+- *R* (capital R): rename a file
+- *D* (capital D): delete a file
+- *+*: create a new directory
+- *Z*: compress the file
+- *RET* (enter): Open the file
+- *g*: refresh
+- *q*: close the dired window
+
+Of course, files can be marked to operate on a selection of them. Use *m* to mark, *u* to unmark (*U* to unmark all), *% m* to mark according to a pattern.
+
+Note that there are so many tricks, extensions and features in /dired mode/ that I let you see around what you need.
+
+[[http://www.emacswiki.org/emacs/DiredMode][Read more about Dired]]
+[[https://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html][Read the manual]]
 
 ** Working locally vs remotely
 
