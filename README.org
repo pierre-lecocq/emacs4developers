@@ -659,7 +659,7 @@ A last tip about TRAMP. If you simply add =sudo:= in front of your file path, yo
 In Emacs, you can do everything. This is a fact.
 
 One the most amazing and complete mode is the amazing [[http://orgmode.org][Org mode]], written by amazing people.
-But when I say amazing, it is absolutly amazing. It allow you to "live in Emacs".
+But when I say amazing, it is absolutly amazing. It allows you to "live in Emacs".
 
 Here a a few of its am... features:
 
@@ -698,7 +698,7 @@ There are several package to do so, but the most used is [[http://www.gnus.org/]
 
 Here are some of its features beside the basic ones:
 
-- Gnus is in fact a newsreader used to interact with email servers. So you can use to fetch messages from newsgroups, RSS, ...
+- Gnus is in fact a newsreader used to interact with email servers. So you can use to fetch messages from newsgroups, RSS, SMTP, POP, ...
 - Easy and powerful mail splitting
 - Integration with BBDB, a contact manager
 - Message scoring
