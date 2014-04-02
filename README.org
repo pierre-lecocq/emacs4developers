@@ -677,6 +677,7 @@ Of course, files can be marked to operate on a selection of them. Use *m* to mar
 Note that there are so many tricks, extensions and features in /dired mode/ that I let you see around what you need.
 
 [[http://www.emacswiki.org/emacs/DiredMode][Read more about Dired]]
+
 [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html][Read the manual]]
 
 ** Working locally vs remotely
