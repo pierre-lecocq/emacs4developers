@@ -11,7 +11,7 @@ TODO: Divide it in chapters and different documents, enhance some important part
 * Table of Contents
 
 - 1 Emacs for developers
-    - 1.1 Brief history
+    - 1.1 [[#brief-history][Brief history]]
     - 1.2 How to get Emacs?
     - 1.3 More than an editor
     - 1.4 The perfect development tool
