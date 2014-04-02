@@ -5,6 +5,10 @@
 #+STARTUP: showall
 #+OPTIONS: toc:2
 
+Disclamer: This document is still in progress. Stay tuned.
+
+TODO: Divide it in chapters and different documents, enhance some important parts like emailing, add sections abouts TAGS and project oriented packages (projectile, ...), ...
+
 * Emacs for developers
 
 This document will (hopefully) help you to use Emacs like a sir !
@@ -807,3 +811,9 @@ I want to thank some of the great people who make Emacs a very intersting piece 
 You should check those people and their work over www/twitter/youtube/...
 
 And thank you for reading this !
+
+* License
+
+The content of this project itself is licensed under the [[http://creativecommons.org/licenses/by/3.0/us/deed.en_US][Creative Commons Attribution 3.0 license]], and the underlying source code used to format and display that content is licensed under the [[http://opensource.org/licenses/mit-license.php][MIT license]].
+
+Contributors list can be found [[https://github.com/pierre-lecocq/emacs4developers/network/members][here]].
