@@ -415,6 +415,8 @@ To install it, add =auto-complete= to your packages list.
 
 [[http://www.emacswiki.org/emacs/AutoComplete][Read more]]
 
+[[./images/mode-autocomplete.gif]]
+
 **** Autopair
 
 When you open a quote/parenthese/bracket/curly bracket, this mode automatically adds the closed one and bring your cusror between the two.
@@ -424,6 +426,8 @@ To install it, add =autopair= to your packages list.
 
 [[https://github.com/capitaomorte/autopair][Read more]]
 
+[[./images/autopair.gif]]
+
 **** Buffer move
 
 This mode allows you to re-organize and move the buffers from a window to another.
@@ -432,6 +436,8 @@ Useful if you want to switch buffer places in order to have your debugging buffe
 To install it, add =buffer-move= to your packages list.
 
 [[http://www.emacswiki.org/cgi-bin/wiki/buffer-move.el][Read more]]
+
+[[./images/buffermove.gif]]
 
 **** Flycheck
 
@@ -461,6 +467,8 @@ I personnaly use two of them: /vertical/ and /hack/.
 To install it, add =ido-hacks= and =ido-vertical-mode= to your packages list.
 
 [[http://www.emacswiki.org/emacs/InteractivelyDoThings][Read more]]
+
+[[./images/mode-ido.gif]]
 
 **** JS3
 
@@ -528,7 +536,15 @@ With this mode, when you press *C-x o*, big numbers replace your opened windows.
 
 To install it, add =switch-window= to your packages list.
 
+Then do not forget to override the defaut configuration by adding this to your configuration:
+
+#+BEGIN_SRC lisp
+(global-set-key (kbd "C-x o") 'switch-window)
+#+END_SRC
+
 [[https://github.com/dimitri/switch-window][Read more]]
+
+[[./images/mode-switchwindow.gif]]
 
 **** Visual regexp
 
