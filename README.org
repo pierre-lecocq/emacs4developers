@@ -14,7 +14,7 @@ This document will (hopefully) help you to use Emacs like a sir !
 
 ** Brief history
 
-- Developed by Richard Stallman in MIT AI lab
+- Originally developed by Richard Stallman and Guy Steele in MIT AI lab
 - First release in 1976
 - Inspired by TECO editor
 - Based on macros (Emacs stands for Editor MACroS)
@@ -584,6 +584,36 @@ Let's try to switch between different themes:
 - Finally type *M-x load-theme RET whiteboard*
 
 There is no secret or perfect color theme. There are so many of theme and each user has its preferences in term of colors.
+
+*** Font setting
+
+After setting up your theme, there are some other tweaks that are "color theme related".
+Fonts is something very important depending on your system, your screen size, your current task in Emacs, ... etc
+
+If you want to change the font directly from your current Emacs instance, simply type *M-x set-frame-font RET*.
+And if you want to see all supported fonts, type *TAB* twice. It will show you a list.
+
+The global and easy way to do it is to add a line to your configuration:
+
+#+BEGIN_SRC lisp
+(set-default-font "DejaVu Sans Mono-10")
+#+END_SRC
+
+But to be safe, you'd better add this into your X resource settings file (~/.Xresources):
+
+#+BEGIN_SRC lisp
+emacs.font: DejaVu Sans Mono-10
+#+END_SRC
+
+Of course, it is possible to set a different font for any system or mode you want. It is cool since you can use different font (size) if you are on Linux or mac OR if you write a book, write code, read your emails, ... etc.
+As an exercise, I'll let you search how to do this kind of stuff in Emacs Lisp if you need it.
+
+A last point: sometimes you want to change the font size of your current buffer. To do this, simply type:
+
+- *M-x text-scale-increase* or *C-x C-+*
+- *M-x text-scale-decrease* or *C-x C--* (Ctrl x, Ctrl dash)
+
+Really handy if you show your screen through an external display or you want to focus on a specific part of a file.
 
 #+CAPTION: color themes
 [[./images/colors.gif]]
