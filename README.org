@@ -3,11 +3,42 @@
 #+DESCRIPTION: Learn using Emacs as a developer
 #+KEYWORDS: emacs, developer
 #+STARTUP: showall
-#+OPTIONS: toc:2
 
 Disclamer: This document is still in progress. Stay tuned.
 
 TODO: Divide it in chapters and different documents, enhance some important parts like emailing, add sections abouts TAGS and project oriented packages (projectile, ...), ...
+
+* Table of Contents
+1 Emacs for developers
+    1.1 Brief history
+    1.2 How to get Emacs?
+    1.3 More than an editor
+    1.4 The perfect development tool
+    1.5 The basics
+        1.5.1 Config files
+        1.5.2 Executing commands
+        1.5.3 Key bindings
+        1.5.4 Help!
+    1.6 Building your own editor
+        1.6.1 First basic configuration
+        1.6.2 General basic configuration
+        1.6.3 Backup files
+        1.6.4 Setting up the locales
+        1.6.5 More configuration
+        1.6.6 Modes
+        1.6.7 Package managers
+        1.6.8 Some useful packages
+    1.7 Setting a color theme
+        1.7.1 Font settings
+    1.8 Coming from other editors (i.e Vim)
+    1.9 Emacs as a file manager
+    1.10 Working locally vs remotely
+    1.11 Organize your work, write papers and manage your agenda
+    1.12 Emails in Emacs
+    1.13 Some great Emacs tips and tricks
+    1.14 Some useful readings, tutorials and demos
+    1.15 Thanks
+2 License
 
 * Emacs for developers
 
