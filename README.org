@@ -426,7 +426,7 @@ To install it, add =autopair= to your packages list.
 
 [[https://github.com/capitaomorte/autopair][Read more]]
 
-[[./images/autopair.gif]]
+[[./images/mode-autopair.gif]]
 
 **** Buffer move
 
@@ -437,7 +437,7 @@ To install it, add =buffer-move= to your packages list.
 
 [[http://www.emacswiki.org/cgi-bin/wiki/buffer-move.el][Read more]]
 
-[[./images/buffermove.gif]]
+[[./images/mode-buffermove.gif]]
 
 **** Flycheck
 
