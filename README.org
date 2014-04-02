@@ -585,6 +585,11 @@ Let's try to switch between different themes:
 
 There is no secret or perfect color theme. There are so many of theme and each user has its preferences in term of colors.
 
+#+CAPTION: color themes
+[[./images/colors.gif]]
+
+In order to choose yours, try the default ones, see this [[http://gnuemacscolorthemetest.googlecode.com/svn/html/index-el.html][showcase]], make your own or google a lot !
+
 *** Font setting
 
 After setting up your theme, there are some other tweaks that are "color theme related".
@@ -614,11 +619,6 @@ A last point: sometimes you want to change the font size of your current buffer.
 - *M-x text-scale-decrease* or *C-x C--* (Ctrl x, Ctrl dash)
 
 Really handy if you show your screen through an external display or you want to focus on a specific part of a file.
-
-#+CAPTION: color themes
-[[./images/colors.gif]]
-
-In order to choose yours, try the default ones, see this [[http://gnuemacscolorthemetest.googlecode.com/svn/html/index-el.html][showcase]], make your own or google a lot !
 
 ** Coming from other editors (i.e Vim)
 
