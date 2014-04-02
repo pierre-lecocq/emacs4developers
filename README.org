@@ -9,6 +9,7 @@ Disclamer: This document is still in progress. Stay tuned.
 TODO: Divide it in chapters and different documents, enhance some important parts like emailing, add sections abouts TAGS and project oriented packages (projectile, ...), ...
 
 * Table of Contents
+
 - 1 Emacs for developers
     - 1.1 Brief history
     - 1.2 How to get Emacs?
@@ -36,9 +37,9 @@ TODO: Divide it in chapters and different documents, enhance some important part
     - 1.11 Organize your work, write papers and manage your agenda
     - 1.12 Emails in Emacs
     - 1.13 Some great Emacs tips and tricks
-    - 1.14 Some useful readings, tutorials and demos
-    - 1.15 Thanks
-- 2 License
+- 2 Some useful readings, tutorials and demos
+- 3 Thanks
+- 4 License
 
 * Emacs for developers
 
@@ -812,7 +813,7 @@ Some alternatives to Gnus (that I do not use, but that are popular):
 
 /To be continued/
 
-** Some useful readings, tutorials and demos
+* Some useful readings, tutorials and demos
 
 - [[http://emacsrocks.com/][Emacs rocks videos]]
 - [[http://devblog.avdi.org/category/emacs-reboot/][Avdi Grimm Emacs reboot series]]
@@ -824,7 +825,7 @@ Some alternatives to Gnus (that I do not use, but that are popular):
 
 And of course, the [[http://www.emacswiki.org/][Emacs wiki]]
 
-** Thanks
+* Thanks
 
 I want to thank some of the great people who make Emacs a very intersting piece of software or make its community very active (the sort order is absolutly not important here):
 
