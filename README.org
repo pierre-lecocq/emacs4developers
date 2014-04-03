@@ -17,11 +17,11 @@ Work in progress, so stay tuned.
 
 * Table of contents
 
-- 1 [[./chapters/01-introduction.org][Introduction]]
-- 2 [[./chapters/02-the-basics.org][The basics]]
-- 3 [[./chapters/03-building-your-own-editor.org][Building your own editor]]
-- 4 [[./chapters/04-special-features.org][Special features]]
-- 5 [[./chapters/05-readings-and-resources.org][Readings and resources]]
+1. [[./chapters/01-introduction.org][Introduction]]
+2. [[./chapters/02-the-basics.org][The basics]]
+3. [[./chapters/03-building-your-own-editor.org][Building your own editor]]
+4. [[./chapters/04-special-features.org][Special features]]
+5. [[./chapters/05-readings-and-resources.org][Readings and resources]]
 
 * License
 
