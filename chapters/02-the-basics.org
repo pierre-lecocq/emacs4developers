@@ -40,7 +40,7 @@ Let's try something:
 Emacs should display the current version number of the software.
 
 #+CAPTION: Execute the version command
-[[./images/version.gif]]
+[[../images/version.gif]]
 
 Congratulation, you called your first Emacs command.
 
@@ -60,7 +60,7 @@ How it works:
 - *C-x C-s*: save a file
 
 #+CAPTION: Open a file, modify it and save it
-[[./images/open-and-save.gif]]
+[[../images/open-and-save.gif]]
 
 *** Manipulate the line
 
@@ -71,7 +71,7 @@ How it works:
 - *C-l*: center the buffer at the cursor position
 
 #+CAPTION: Line manipulation
-[[./images/line.gif]]
+[[../images/line.gif]]
 
 *** Windows
 
@@ -87,7 +87,7 @@ An /Emacs frame/ can be divided into /windows/ in itself.
 - *C-x 0*: close a window
 
 #+CAPTION: Windows manipulation
-[[./images/windows.gif]]
+[[../images/windows.gif]]
 
 *** Buffers
 
@@ -98,7 +98,7 @@ A /buffer/ is displayed in a /frame/.
 - *C-x k*: kill a buffer
 
 #+CAPTION: Buffer navigation
-[[./images/buffers.gif]]
+[[../images/buffers.gif]]
 
 *** Cancel a command
 

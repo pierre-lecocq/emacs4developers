@@ -215,7 +215,7 @@ To install it, add =auto-complete= to your packages list.
 
 [[http://www.emacswiki.org/emacs/AutoComplete][Read more]]
 
-[[./images/mode-autocomplete.gif]]
+[[../images/mode-autocomplete.gif]]
 
 *** Autopair
 
@@ -226,7 +226,7 @@ To install it, add =autopair= to your packages list.
 
 [[https://github.com/capitaomorte/autopair][Read more]]
 
-[[./images/mode-autopair.gif]]
+[[../images/mode-autopair.gif]]
 
 *** Buffer move
 
@@ -237,7 +237,7 @@ To install it, add =buffer-move= to your packages list.
 
 [[http://www.emacswiki.org/cgi-bin/wiki/buffer-move.el][Read more]]
 
-[[./images/mode-buffermove.gif]]
+[[../images/mode-buffermove.gif]]
 
 *** Flycheck
 
@@ -268,7 +268,7 @@ To install it, add =ido-hacks= and =ido-vertical-mode= to your packages list.
 
 [[http://www.emacswiki.org/emacs/InteractivelyDoThings][Read more]]
 
-[[./images/mode-ido.gif]]
+[[../images/mode-ido.gif]]
 
 *** JS3
 
@@ -344,7 +344,7 @@ Then do not forget to override the defaut configuration by adding this to your c
 
 [[https://github.com/dimitri/switch-window][Read more]]
 
-[[./images/mode-switchwindow.gif]]
+[[../images/mode-switchwindow.gif]]
 
 *** Visual regexp
 
@@ -402,7 +402,7 @@ Let's try to switch between different themes:
 There is no secret or perfect color theme. There are so many of theme and each user has its preferences in term of colors.
 
 #+CAPTION: color themes
-[[./images/colors.gif]]
+[[../images/colors.gif]]
 
 In order to choose yours, try the default ones, see this [[http://gnuemacscolorthemetest.googlecode.com/svn/html/index-el.html][showcase]], make your own or google a lot !
 
