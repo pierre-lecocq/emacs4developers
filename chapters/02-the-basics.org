@@ -1,0 +1,124 @@
+#+TITLE: Emacs for developers - The basics
+#+AUTHOR: Pierre Lecocq
+#+DESCRIPTION: Learn using Emacs as a developer
+#+KEYWORDS: emacs, developer
+#+STARTUP: showall
+
+* Emacs for developers - The basics
+
+**  Config files
+
+In order to customize Emacs, you will have to edit its configuration files.
+It does not exist when you install the software (or is an empty file) and does nothing until you decide to tweak Emacs.
+Some people use Emacs for decades without any extra configuration because they like it out of the box.
+
+There are several ways to manage your Emacs configuration:
+
+- Simply create and edit a *~/.emacs* file
+- Create a *~/.emacs.d/* directory with a *~/.emacs.d/init.el* file
+
+The first solution is great if you have a small, tidied and exportable configuration file.
+
+The second solution is great if you need several configuration files (keep you configuration parts separated) or you need to install external extensions (you will install them in *~/.emacs.d* to keep them centralized and exportable).
+
+** Executing commands
+
+The main idea of Emacs is that everything is a command. For example: opening a file with a keybinding calls a command that is executed by the Emacs' core.
+And all the commands are written in Lisp.
+
+To call a command, you simply have to press *Escape* and then *x*.
+The official name is "/Meta x/" and is written /M-x/
+
+If you type this key sequence, you will see at the bottom of the editor a little prompt.
+This part of Emacs is called the /mini buffer/ and is used for every interactive actions.
+
+Let's try something:
+
+- type *M-x*
+- Then, in the minibuffer, type *version*
+
+Emacs should display the current version number of the software.
+
+#+CAPTION: Execute the version command
+[[./images/version.gif]]
+
+Congratulation, you called your first Emacs command.
+
+** Key bindings
+
+Here are the most useful keys in Emacs. You will use it several hundred (or thousand) times a day.
+
+How it works:
+
+- The sequence /C-something/ means that you have to press and hold the /Control/ key while hitting the /something/ key. Example: /C-a/ means /Control + a/.
+- The sequence /C-something somethingelse/ means that you press /Control + something/, then you release Control to hit /somethingelse/.
+- The sequence /C-something C-somethingelse/ means that you have to press Control while hitting /something/ and /somethingelse/.
+
+*** Manipulate files
+
+- *C-x C-f*: open a file
+- *C-x C-s*: save a file
+
+#+CAPTION: Open a file, modify it and save it
+[[./images/open-and-save.gif]]
+
+*** Manipulate the line
+
+- *C-a*: go to the begining of the current line
+- *C-e*: go to the end of the current line
+- *C-k*: cut the rest of the line at the cursor position
+- *C-y*: paste what you had cut with the command above
+- *C-l*: center the buffer at the cursor position
+
+#+CAPTION: Line manipulation
+[[./images/line.gif]]
+
+*** Windows
+
+This might be confusing but a /window/ is a part of a /frame/.
+
+An /Emacs frame/ is the window that you opened when you launched Emacs.
+
+An /Emacs frame/ can be divided into /windows/ in itself.
+
+- *C-x 2*: open a new window horizontally
+- *C-x 3*: open a new window vertically
+- *C-x o*: switch to the next window
+- *C-x 0*: close a window
+
+#+CAPTION: Windows manipulation
+[[./images/windows.gif]]
+
+*** Buffers
+
+A /buffer/ is displayed in a /frame/.
+
+- *C-x b*: switch to an already opened buffer
+- *C-x C-b*: list opened buffer (and jump to the selected one)
+- *C-x k*: kill a buffer
+
+#+CAPTION: Buffer navigation
+[[./images/buffers.gif]]
+
+*** Cancel a command
+
+- *C-g* or *ESC ESC ESC*: cancel the current command running in the minibuffer
+
+*** The most useless one
+
+- *C-x C-c*: quit emacs (use at your own risks!)
+
+** Help!
+
+Emacs has a powerful built-in help system for key bindings and internal functionalities.
+
+- *C-h f <function-name>*: Find the key binding corresponding to <function-name> (ex: C-h f save-buffer)
+- *C-h k <key-sequence>*: Find the function name corresponding to <key-sequence> (ex: C-h k C-x C-s)
+
+When executing these commands, a new frame opens. To close it, switch to it (/C-x o/) and type /q/. If not, simply close it (/C-x 0/)
+
+Emacs also includes the full manual (also available online: http://www.gnu.org/software/emacs/manual/html_node/emacs/)
+
+- *C-h r*: browse the Emacs manual within Emacs
+
+Finally, there are so many other help functions: http://www.emacswiki.org/emacs/EmacsNewbieHelpReference

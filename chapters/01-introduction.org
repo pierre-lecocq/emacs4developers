@@ -1,0 +1,81 @@
+#+TITLE: Emacs for developers - Introduction
+#+AUTHOR: Pierre Lecocq
+#+DESCRIPTION: Learn using Emacs as a developer
+#+KEYWORDS: emacs, developer
+#+STARTUP: showall
+
+* Emacs for developers - Introduction
+
+** Brief history
+
+- Originally developed by Richard Stallman and Guy Steele in MIT AI lab
+- First release in 1976
+- Inspired by TECO editor
+- Based on macros (Emacs stands for Editor MACroS)
+- Written in C and Emacs Lisp
+- Part of the GNU project (therefore, we /should/ say "GNU Emacs", not "Emacs")
+
+- Despite its age, new users are still adopting Emacs as their development platform to this day!
+
+** How to get Emacs?
+
+On every Linux distribution, packages are available.
+So run your favorite package manager to install it:
+
+- /apt-get install emacs/
+- /yum install emacs/
+- ...
+
+And if you have an exotic operating system, here are the specific distributions:
+
+- Mac OS X: http://emacsformacosx.com/
+- Windows: http://ftp.igh.cnrs.fr/pub/gnu/emacs/windows/
+
+But, in order to get the latest version, it's _highly recommended_ that you compile Emacs yourself: http://ftp.igh.cnrs.fr/pub/gnu/emacs/
+
+
+** More than an editor
+
+- More than an editor, it is a Lisp interpretor
+- Can run any type of program written in Lisp:
+  - Email clients (like [[http://www.gnus.org/][Gnus]] or [[http://www.emacswiki.org/emacs/mu4e][mu4e]])
+  - Shell (like bash or eshell)
+  - File and directory management (with [[http://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html][Dired mode]])
+  - Agenda / Notes / TODO list / Project management (with the amazing [[http://orgmode.org][OrgMode]])
+  - IRC / Twitter / Jabber / ... clients
+  - Games (like Tetris, Pong, Snake, 5x5, Dunnet, ...)
+  - Encrypt/decrypt files (like GPG files)
+  - On-the-fly archives editing (thanks to [[http://www.emacswiki.org/emacs/ArchiveMode][archive-mode]])
+  - PDF / Image / (...) viewer
+  - A powerful front end to R / S+ / SPSS / Stata (with [[http://ess.r-project.org/][EmacsSpeaksStatisics)]]
+  - An editor for multi-modal REPL's like IPython (with [[http://tkf.github.io/emacs-ipython-notebook/][EmacsIPythonNotebook]])
+  - Music player (with emms, vlc, mplayer, ...)
+  - Music programming (with [[http://vimeo.com/22798433][Overtone]])
+  - Video editing
+  - And so on ...
+  - (and of course a document editor that can automatically generate this presentation)
+
+Naturally, you can do all of that at the same time with only one Emacs instance. Don't need to say it ...
+
+** The perfect development tool
+
+- As Emacs is a Lisp interpretor, it is extensible. Really really extensible.
+- The (unofficial) goal of Emacs is to be hacked
+- Therefore your goal is to hack Emacs to make it work perfectly as you want
+
+- Already provides so many development tools (also extensible, of course)
+  - Debuggers
+  - Compilers
+  - Syntax checkers
+  - Documentations
+  - Consoles
+  - ...
+
+- Also provides /modes/ (extensions) for *every* programming language for
+  - Syntax highlighting
+  - Documentation search
+  - Indentation
+  - Source code browsing
+  - Compilation commands
+  - Specific behaviour
+  - ...
