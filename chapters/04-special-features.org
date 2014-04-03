@@ -1,0 +1,143 @@
+#+TITLE: Emacs for developers - Special features
+#+AUTHOR: Pierre Lecocq
+#+DESCRIPTION: Learn using Emacs as a developer
+#+KEYWORDS: emacs, developer
+#+STARTUP: showall
+
+* Emacs for developers - Special features
+
+** Emacs as a file manager
+
+Emacs has a built-in mode named /dired/ that allows you to manage your file system directly in Emacs and really easily.
+It is very powerful and has features that graphical file managers do not have.
+
+First of all, to launch it, type:
+
+- *M-x dired RET* and then select a path to open (default is the directory of the file you are editing)
+- or *C-x d* if you prefer keybindings
+
+Here are a few quick shortcuts once you are in /dired mode/
+
+- *R* (capital R): rename a file
+- *D* (capital D): delete a file
+- *+*: create a new directory
+- *Z*: compress the file
+- *RET* (enter): Open the file
+- *g*: refresh
+- *q*: close the dired window
+
+Of course, files can be marked to operate on a selection of them. Use *m* to mark, *u* to unmark (*U* to unmark all), *% m* to mark according to a pattern.
+
+Note that there are so many tricks, extensions and features in /dired mode/ that I let you see around what you need.
+
+[[http://www.emacswiki.org/emacs/DiredMode][Read more about Dired]]
+
+[[https://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html][Read the manual]]
+
+** Working locally vs remotely
+
+Emacs, once installed on your machine will allow you to edit your file locally, obviously.
+
+Other people (non-Emacs users) will do a dirty trick to edit remote files like they were local files. They will mount the remote directory on their machine (thanks to /sshfs/).
+But the magic in Emacs is that you can transparently edit remote files on your development servers for example.
+To do so, Emacs comes with a genious extension named "Tramp". It is alreay installed and available when you install Emacs.
+
+If you press *C-x C-f*, you can open a file. But if you ask =myname@myserver.com:/path/to/file=, it will automatically connect to the server and let you edit the remote file. Easy as pie.
+/Tramp/ supports lots of protocols like ssh, ftp, and so on.
+
+And what is great is that if you are editing a remote file and you launch a shell in Emacs, it will automatically set the shell into your remote environment and open it as if you were in the remote directory the file is in.
+
+A last tip about TRAMP. If you simply add =sudo:= in front of your file path, you edit your file with higher privileges. It is a very useful feature if you need to edit your configuration files on a server, for example. Of course, it works remotely and locally.
+
+[[http://www.emacswiki.org/emacs/TrampMode][Read more about Tramp]]
+
+** Organize your work, write papers and manage your agenda
+
+In Emacs, you can do everything. This is a fact.
+
+One the most amazing and complete mode is the amazing [[http://orgmode.org][Org mode]], written by amazing people.
+But when I say amazing, it is absolutly amazing. It allows you to "live in Emacs".
+
+Here a a few of its am... features:
+
+- A full agenda / calendar
+- TODO lists and project management
+- Writing (research papers, books, an "Emacs for developers" whitepaper, your shopping list ...)
+- Include code in you papers
+- Tables and spreadsheets (with formulas and calculation)
+- Mobile integration
+- ...
+
+And what is really cool is that every thing you do in Org is exportable in:
+
+- PDF
+- LaTex
+- HTML
+- Text
+- ODT
+- iCalendar
+- TextInfo
+- ... and many more.
+
+You really should check their [[http://orgmode.org/features.html][list of features]]
+
+If you want to see a good example of Org-mode capabilities, check [[http://home.fnal.gov/~neilsen/notebook/orgExamples/org-examples.html][that great page]]
+
+** Emails in Emacs
+
+There are packages that let you use Emacs as a full featured MUA.
+Reading emails, sending emails, filtering, archiving ... etc.
+
+Emacs can be a very powerful and fast e-mail client and as it is controlled by the keyboard, it could be more efficient than a graphical e-mail client (clicking is a loss of time).
+I use it for years now and I can not imagine using another program to read my emails.
+
+There are several package to do so, but the most used is [[http://www.gnus.org/][Gnus]]. It is already installed with Emacs.
+
+Here are some of its features beside the basic ones:
+
+- Gnus is in fact a newsreader used to interact with email servers. So you can use to fetch messages from newsgroups, RSS, SMTP, POP, ...
+- Easy and powerful mail splitting
+- Integration with BBDB, a contact manager
+- Message scoring
+- LDAP
+- PGP signing and encrypting
+- Customizable layout
+- Encrypted file to manage your credentials
+- ... and many more
+- ... and of course, it is extensible thanks to Lisp
+
+You really should try it with your personnal account. It is easy to configure and integrate with [[http://www.emacswiki.org/emacs/GnusGmail][Gmail]], for example.
+
+But be careful! If you try it, you will love it.
+
+Some alternatives to Gnus (that I do not use, but that are popular):
+- [[http://www.emacswiki.org/emacs/WanderLust][Wanderlust]]
+- [[http://www.djcbsoftware.nl/code/mu/mu4e.html][Mu4e]]
+
+** Some great Emacs tips and tricks
+
+- Emacs is all about Macros. This is one of its most powerful feature. Record a sequence and re-play it on other lines! Here is [[http://www.thegeekstuff.com/2010/07/emacs-macro-tutorial-how-to-record-and-play/][how]].
+- Using [[http://www.masteringemacs.org/articles/2010/11/01/running-shells-in-emacs-overview/][shell]] inside Emacs is cool
+- You really should use the /[[http://www.emacswiki.org/emacs/BookMarks][bookmarks]]/ functionnality to save your projects locations (locally or remotely)
+- When opening a file, add /sudo:/ in front of its path in order to edit it as a privileged user
+- You can edit files in hexadecimal directly in Emacs thanks to the /hexl-mode/
+- Emacs allows you to open an archive (gz, bz2, zip, ...), edit its files on-the-fly without extracting yourself the archive. To do so, simple open the file directly in Emacs (*C-x C-f* /path/to/archive.tar.bz2)
+- [[http://www.gnu.org/software/emacs/manual/html_node/emacs/Rectangles.html][Rectangle regions]] edition is really easy
+- [[http://www.cs.bu.edu/teaching/tool/emacs/programming/#compile][Compilation]] and [[http://www.cs.bu.edu/teaching/tool/emacs/programming/#gdb][debugging]] is really well supported in Emacs
+- [[http://www.emacswiki.org/ERC][Erc]] is a great IRC client running in Emacs
+
+/To be continued/
+
+** Coming from other editors (i.e Vim)
+
+Some people use other editors and want to give Emacs a try.
+Some people are really used to use a specific editor.
+Some people do not want to lose their habits and their learning curve.
+
+I am thinking about Vim, but it is also true for other editors (textmate, sublime, ...)
+
+Emacs has a mode that allows you to use it exactly like Vim.
+
+I personnaly never used this mode, but many people use it. Therefore, it allows you to switch gently and softly from Vim to Emacs.
+
+[[http://www.emacswiki.org/emacs/Evil][Read more about Evil-mode]]

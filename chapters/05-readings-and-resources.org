@@ -1,0 +1,17 @@
+#+TITLE: Emacs for developers - Readings and resources
+#+AUTHOR: Pierre Lecocq
+#+DESCRIPTION: Learn using Emacs as a developer
+#+KEYWORDS: emacs, developer
+#+STARTUP: showall
+
+* Emacs for developers - Readings and resources
+
+- [[http://emacsrocks.com/][Emacs rocks videos]]
+- [[http://devblog.avdi.org/category/emacs-reboot/][Avdi Grimm Emacs reboot series]]
+- [[http://www.masteringemacs.org/][Mastering Emacs]]
+- [[http://sachachua.com/blog/category/geek/emacs/][Sacha's blog]] and her wonderful Emacs contributors interviews serie
+- [[http://emacsredux.com][Emacs redux]] by Bozhidar Batsov
+- [[http://planet.emacsen.org/][Planet Emacsen]]
+- [[http://reddit.com/r/emacs][Emacs sub-reddit]]
+
+And of course, the [[http://www.emacswiki.org/][Emacs wiki]]
