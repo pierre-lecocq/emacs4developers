@@ -23,6 +23,10 @@ Work in progress, so stay tuned.
 4. [[./chapters/04-special-features.org][Special features]]
 5. [[./chapters/05-readings-and-resources.org][Readings and resources]]
 
+* Exports
+
+This document is also available in [[./exports/emacs4developers.org][a single ORG file]],  [[./exports/emacs4developers.pdf][PDF]], [[./exports/emacs4developers.odt][ODT]], [[./exports/emacs4developers.txt][TXT]] and [[./exports/emacs4developers.html][HTML]].
+
 * License
 
 The content of this project itself is licensed under the [[http://creativecommons.org/licenses/by/3.0/us/deed.en_US][Creative Commons Attribution 3.0 license]], and the underlying source code used to format and display that content is licensed under the [[http://opensource.org/licenses/mit-license.php][MIT license]].
