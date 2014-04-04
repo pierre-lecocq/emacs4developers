@@ -26,7 +26,7 @@ The second solution is great if you need several configuration files (keep you c
 The main idea of Emacs is that everything is a command. For example: opening a file with a keybinding calls a command that is executed by the Emacs' core.
 And all the commands are written in Lisp.
 
-To call a command, you simply have to press *Escape* and then *x*.
+To call a command, you simply have to press *Escape* and then *x*. It could be *Alt-x* for more comfort.
 The official name is "/Meta x/" and is written /M-x/
 
 If you type this key sequence, you will see at the bottom of the editor a little prompt.
@@ -35,20 +35,20 @@ This part of Emacs is called the /mini buffer/ and is used for every interactive
 Let's try something:
 
 - type *M-x*
-- Then, in the minibuffer, type *version*
+- Then, in the minibuffer, type *version* and *RET* (return)
 
 Emacs should display the current version number of the software.
 
 #+CAPTION: Execute the version command
 [[../images/version.gif]]
 
-Congratulation, you called your first Emacs command.
+Congratulations! You just called your first Emacs command.
 
 ** Key bindings
 
-Here are the most useful keys in Emacs. You will use it several hundred (or thousand) times a day.
+Here are the most useful keys in Emacs. You will use them several hundreds (or thousands) times a day.
 
-How it works:
+How it works?
 
 - The sequence /C-something/ means that you have to press and hold the /Control/ key while hitting the /something/ key. Example: /C-a/ means /Control + a/.
 - The sequence /C-something somethingelse/ means that you press /Control + something/, then you release Control to hit /somethingelse/.

@@ -8,7 +8,7 @@
 
 ** Emacs as a file manager
 
-Emacs has a built-in mode named /dired/ that allows you to manage your file system directly in Emacs and really easily.
+Emacs has a built-in mode named /dired/ that allows you to manage your file system directly in Emacs really easily.
 It is very powerful and has features that graphical file managers do not have.
 
 First of all, to launch it, type:
