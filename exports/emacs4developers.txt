@@ -2,7 +2,7 @@
                          ====================
 
 Author: Pierre Lecocq
-Date: 2014-04-09 13:32:26 CEST
+Date: 2014-04-09 22:26:48 CEST
 
 
 Table of Contents
@@ -91,17 +91,65 @@ This document will (hopefully) help you to use Emacs like a sir !
 2 Table of contents
 ====================
 
-1. [Introduction]
-2. [The basics]
-3. [Building your own editor]
-4. [Special features]
-5. [Readings and resources]
+- 1. [Introduction]
+   - 1.1 [Brief history]
+   - 1.2 [How to get Emacs?]
+   - 1.3 [More than an editor]
+   - 1.4 [The perfect development tool]
+- 2. [The basics]
+   - 2.1 [Config files]
+   - 2.2 [Executing commands]
+   - 2.3 [Key bindings]
+   - 2.4 [Help!]
+- 3. [Building your own editor]
+   - 3.1 [First basic configuration]
+   - 3.2 [General basic configuration]
+   - 3.3 [Backup files]
+   - 3.4 [Setting up the locales]
+   - 3.5 [More configuration]
+   - 3.6 [Modes]
+   - 3.7 [Package managers]
+   - 3.8 [Some useful packages]
+   - 3.9 [Code navigation]
+   - 3.10 [Setting a color theme]
+- 4. [Special features]
+   - 4.1 [Emacs as a file manager]
+   - 4.2 [Working locally vs remotely]
+   - 4.3 [Organize your work, write papers and manage your agenda]
+   - 4.4 [Emails in Emacs]
+   - 4.5 [Some great Emacs tips and tricks]
+   - 4.6 [Coming from other editors (i.e Vim)]
+- 5. [Readings and resources]
 
 
 [Introduction]: #introduction
+[Brief history]: #brief-history
+[How to get Emacs?]: #how-to-get-emacs
+[More than an editor]: #more-than-an-editor
+[The perfect development tool]: #the-perfect-development-tool
 [The basics]: #the-basics
+[Config files]: #config-files
+[Executing commands]: #executing-commands
+[Key bindings]: #key-bindings
+[Help!]: #help
 [Building your own editor]: #building-your-own-editor
+[First basic configuration]: #first-basic-configuration
+[General basic configuration]: #general-basic-configuration
+[Backup files]: #backup-files
+[Setting up the locales]: #setting-up-the-locals
+[More configuration]: #more-configuration
+[Modes]: #modes
+[Package managers]: #package-managers
+[Some useful packages]: #some-useful-packages
+[Code navigation]: #code-navigation
+[Setting a color theme]: #setting-a-color-theme
 [Special features]: #special-features
+[Emacs as a file manager]: #emacs-as-a-file-manager
+[Working locally vs remotely]: #working-locally-vs-remotely
+[Organize your work, write papers and manage your agenda]: #organize-your-work-write-papers-and-manage-your-agenda
+[Emails in Emacs]: #emails-in-emacs
+[Some great Emacs tips and tricks]: #some-great-emacs-tips-and-tricks
+[Coming from other editors (i.e Vim)]: #coming-from-other-editors-ie-vim
 [Readings and resources]: #readings-and-resources
 
 3 Introduction
