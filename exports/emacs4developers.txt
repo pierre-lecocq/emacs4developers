@@ -2,7 +2,7 @@
                          ====================
 
 Author: Pierre Lecocq
-Date: 2014-04-04 08:50:40 CEST
+Date: 2014-04-09 13:32:26 CEST
 
 
 Table of Contents
@@ -57,8 +57,13 @@ Table of Contents
         5.8.16 Yaml mode
         5.8.17 Yasnippet
         5.8.18 Paredit
-    5.9 Setting a color theme
-        5.9.1 Font settings
+    5.9 Code navigation
+        5.9.1 Tags basics
+        5.9.2 List functions or methods
+        5.9.3 Files navigation (a.k.a fuzzy matching) with TAGS and ido
+        5.9.4 RGrep
+    5.10 Setting a color theme
+        5.10.1 Font settings
 6 Special features
     6.1 Emacs as a file manager
     6.2 Working locally vs remotely
@@ -809,8 +814,114 @@ To install it, add =paredit= to your packages list.
 
 [Read more]: http://www.emacswiki.org/emacs/ParEdit
 
-5.9 Setting a color theme
---------------------------
+5.9 Code navigation
+--------------------
+
+Navigate through source code is an indispensable feature in code editors. Some of other editors are focused on this (like Sublime) but the problem is that they do not leave you the choices of the weapons (like every other features).
+
+Emacs, as you noticed (yes, you did) can integrate any external tool or include a large variety of internal tools to make it more efficient. Code navigation is not an exception.
+
+There are a lot of packages in order to navigate through code, with different methodologies and advantages:
+
+- [TAGS] (built in. No installation required)
+- [Projectile] (install it by adding =projectile= to your packages list)
+- [Helm] (install it by adding =heml= to your packages list)
+- [Emacs CEDET] (install it by adding =cedet= to your packages list)
+- ...
+
+(Note: use once at a time! You do not need to install them all)
+
+After using /Projectile/ for a certain period of time, I gave /Helm/ a shot but finally got back to the simplicity and the efficiency of the /TAGS/ system.
+Nevertheless, /Projectile/ and /Helm/ are really powerful and useful. You really should look at them.
+
+For now, I will cover the basics of /TAGS/ since it is a standard (used by other softwares) and it is built-in (so if you use another Emacs without your config, you still know how to surf in the code). And other useful tricks will be shown here.
+
+
+[TAGS]: http://www.emacswiki.org/emacs/EmacsTags
+[Projectile]: https://github.com/bbatsov/projectile
+[Helm]: https://github.com/emacs-helm/helm
+[Emacs CEDET]: http://cedet.sourceforge.net/
+
+5.9.1 Tags basics
+~~~~~~~~~~~~~~~~~~
+
+Basically, the TAGS rely on an index file of the content of your code source.
+In the root folder of a project, you must generate your index.
+Several methods for this, but here is one command that generates the file:
+
+
+
+  cd /path/to/your/project
+  find . -regex ".*\.\(c\|h\|rb\|py\|php\|js\|sh\|bash\)" -print | xargs etags -a
+
+
+You now should see a "TAGS" file. If needed, exclude this file from your git/svn/whatever repository/.
+
+You are now ready to surf!
+
+Now, here are the main commands to use them:
+
+- *M-.* is the equivalent of *M-x find-tag*: find a tag
+- *M-x find-tag-other-window*: find a tag, but in another window
+- *M-x tags-search*: find a tag thanks to a regexp
+- *M-x tags-query-replace*: replace a tag in all the indexed files
+- *M-x tags-apropos*: list all tags that match a regexp
+- *M-x list-tags*: list all tags in a file
+
+5.9.2 List functions or methods
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In order to list and jump easily between the functions or methods of the current file, here is a little trick:
+
+
+
+  (global-set-key (kbd "C-S-f") 'imenu) ;; use iMenu
+
+
+After pressing Ctrl-Shift-f (replace it by whatever you want!), a menu with all the available resources appears in the minibuffer.
+Select the resource you want (let's say /All.methods/ if you are editing some code) and you will be able to search and jump to a method definition directly.
+
+5.9.3 Files navigation (a.k.a fuzzy matching) with TAGS and ido
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In order to find and jump easily to a file in your project thanks to TAGS, you have to add a little function to your confiugration.
+For this you should have installed the =ido-mode= described above.
+
+
+
+  (defun ido-find-file-in-tag-files ()
+    (interactive)
+    (save-excursion
+      (let ((enable-recursive-minibuffers t))
+        (visit-tags-table-buffer))
+      (find-file
+       (expand-file-name
+        (ido-completing-read
+         "Project file: " (tags-table-files) nil t)))))
+
+  (global-set-key (kbd "C-S-x C-S-f") 'ido-find-file-in-tag-files)
+
+
+Now, in your project folder and once you generated your TAGS file, you can press *C-S-x C-S-f* to find files through the whole tree of directories just by typing a pattern.
+
+[../images/fuzzy.gif]
+
+5.9.4 RGrep
+~~~~~~~~~~~~
+
+/rgrep/ is a great tool to use in addition of the TAGS. It is a Unix tool that make /grep/ queries recursively. In Emacs, it will bring you a new buffer with all the results of the command. To use it, simply type:
+
+*M-x rgrep RET yoursearchterm RET*
+
+Once fired, you can swith to the newly created buffer, parse the results and jump to the wanted files very quickly.
+
+What is cool is that it is integrated in the editor, just beside your code and does not require to switch to a shell and then copy-paste the files path you want.
+
+[../images/rgrep.gif]
+
+
+5.10 Setting a color theme
+---------------------------
 
 Now, we are talking about something very touchy and that can be a long quest ...
 
@@ -837,8 +948,8 @@ In order to choose yours, try the default ones, see this [showcase], make your o
 
 [showcase]: http://gnuemacscolorthemetest.googlecode.com/svn/html/index-el.html
 
-5.9.1 Font settings
-~~~~~~~~~~~~~~~~~~~~
+5.10.1 Font settings
+~~~~~~~~~~~~~~~~~~~~~
 
 After setting up your theme, there are some other tweaks that are "color theme related".
 Fonts is something very important depending on your system, your screen size, your current task in Emacs, ... etc

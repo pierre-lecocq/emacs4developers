@@ -599,6 +599,98 @@ To install it, add =paredit= to your packages list.
 
 [[http://www.emacswiki.org/emacs/ParEdit][Read more]]
 
+** Code navigation
+
+Navigate through source code is an indispensable feature in code editors. Some of other editors are focused on this (like Sublime) but the problem is that they do not leave you the choices of the weapons (like every other features).
+
+Emacs, as you noticed (yes, you did) can integrate any external tool or include a large variety of internal tools to make it more efficient. Code navigation is not an exception.
+
+There are a lot of packages in order to navigate through code, with different methodologies and advantages:
+
+- [[http://www.emacswiki.org/emacs/EmacsTags][TAGS]] (built in. No installation required)
+- [[https://github.com/bbatsov/projectile][Projectile]] (install it by adding =projectile= to your packages list)
+- [[https://github.com/emacs-helm/helm][Helm]] (install it by adding =heml= to your packages list)
+- [[http://cedet.sourceforge.net/][Emacs CEDET]] (install it by adding =cedet= to your packages list)
+- ...
+
+(Note: use once at a time! You do not need to install them all)
+
+After using /Projectile/ for a certain period of time, I gave /Helm/ a shot but finally got back to the simplicity and the efficiency of the /TAGS/ system.
+Nevertheless, /Projectile/ and /Helm/ are really powerful and useful. You really should look at them.
+
+For now, I will cover the basics of /TAGS/ since it is a standard (used by other softwares) and it is built-in (so if you use another Emacs without your config, you still know how to surf in the code). And other useful tricks will be shown here.
+
+*** Tags basics
+
+Basically, the TAGS rely on an index file of the content of your code source.
+In the root folder of a project, you must generate your index.
+Several methods for this, but here is one command that generates the file:
+
+#+begin_src sh
+cd /path/to/your/project
+find . -regex ".*\.\(c\|h\|rb\|py\|php\|js\|sh\|bash\)" -print | xargs etags -a
+#+end_src
+
+You now should see a "TAGS" file. If needed, exclude this file from your git/svn/whatever repository/.
+
+You are now ready to surf!
+
+Now, here are the main commands to use them:
+
+- *M-.* is the equivalent of *M-x find-tag*: find a tag
+- *M-x find-tag-other-window*: find a tag, but in another window
+- *M-x tags-search*: find a tag thanks to a regexp
+- *M-x tags-query-replace*: replace a tag in all the indexed files
+- *M-x tags-apropos*: list all tags that match a regexp
+- *M-x list-tags*: list all tags in a file
+
+*** List functions or methods
+
+In order to list and jump easily between the functions or methods of the current file, here is a little trick:
+
+#+begin_src emacs-lisp
+(global-set-key (kbd "C-S-f") 'imenu) ;; use iMenu
+#+end_src
+
+After pressing Ctrl-Shift-f (replace it by whatever you want!), a menu with all the available resources appears in the minibuffer.
+Select the resource you want (let's say /All.methods/ if you are editing some code) and you will be able to search and jump to a method definition directly.
+
+*** Files navigation (a.k.a fuzzy matching) with TAGS and ido
+
+In order to find and jump easily to a file in your project thanks to TAGS, you have to add a little function to your confiugration.
+For this you should have installed the =ido-mode= described above.
+
+#+begin_src emacs-lisp
+(defun ido-find-file-in-tag-files ()
+  (interactive)
+  (save-excursion
+    (let ((enable-recursive-minibuffers t))
+      (visit-tags-table-buffer))
+    (find-file
+     (expand-file-name
+      (ido-completing-read
+       "Project file: " (tags-table-files) nil t)))))
+
+(global-set-key (kbd "C-S-x C-S-f") 'ido-find-file-in-tag-files)
+#+end_src
+
+Now, in your project folder and once you generated your TAGS file, you can press *C-S-x C-S-f* to find files through the whole tree of directories just by typing a pattern.
+
+[[../images/fuzzy.gif]]
+
+*** RGrep
+
+/rgrep/ is a great tool to use in addition of the TAGS. It is a Unix tool that make /grep/ queries recursively. In Emacs, it will bring you a new buffer with all the results of the command. To use it, simply type:
+
+*M-x rgrep RET yoursearchterm RET*
+
+Once fired, you can swith to the newly created buffer, parse the results and jump to the wanted files very quickly.
+
+What is cool is that it is integrated in the editor, just beside your code and does not require to switch to a shell and then copy-paste the files path you want.
+
+[[../images/rgrep.gif]]
+
+
 ** Setting a color theme
 
 Now, we are talking about something very touchy and that can be a long quest ...

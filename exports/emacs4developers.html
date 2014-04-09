@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
 <meta name="title" content="Emacs for developers"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2014-04-04T08:49+0200"/>
+<meta name="generated" content="2014-04-09T13:32+0200"/>
 <meta name="author" content="Pierre Lecocq"/>
 <meta name="description" content="Learn using Emacs as a developer"/>
 <meta name="keywords" content="emacs, developer"/>
@@ -191,9 +191,17 @@ for the JavaScript code in this tag.
 <li><a href="#sec-5-8-18">5.8.18 Paredit</a></li>
 </ul>
 </li>
-<li><a href="#sec-5-9">5.9 Setting a color theme</a>
+<li><a href="#sec-5-9">5.9 Code navigation</a>
 <ul>
-<li><a href="#sec-5-9-1">5.9.1 Font settings</a></li>
+<li><a href="#sec-5-9-1">5.9.1 Tags basics</a></li>
+<li><a href="#sec-5-9-2">5.9.2 List functions or methods</a></li>
+<li><a href="#sec-5-9-3">5.9.3 Files navigation (a.k.a fuzzy matching) with TAGS and ido</a></li>
+<li><a href="#sec-5-9-4">5.9.4 RGrep</a></li>
+</ul>
+</li>
+<li><a href="#sec-5-10">5.10 Setting a color theme</a>
+<ul>
+<li><a href="#sec-5-10-1">5.10.1 Font settings</a></li>
 </ul></li>
 </ul>
 </li>
@@ -1490,8 +1498,181 @@ To install it, add <code>paredit</code> to your packages list.
 </div>
 
 <div id="outline-container-5-9" class="outline-3">
-<h3 id="sec-5-9"><span class="section-number-3">5.9</span> Setting a color theme</h3>
+<h3 id="sec-5-9"><span class="section-number-3">5.9</span> Code navigation</h3>
 <div class="outline-text-3" id="text-5-9">
+
+
+<p>
+Navigate through source code is an indispensable feature in code editors. Some of other editors are focused on this (like Sublime) but the problem is that they do not leave you the choices of the weapons (like every other features).
+</p>
+<p>
+Emacs, as you noticed (yes, you did) can integrate any external tool or include a large variety of internal tools to make it more efficient. Code navigation is not an exception.
+</p>
+<p>
+There are a lot of packages in order to navigate through code, with different methodologies and advantages:
+</p>
+<ul>
+<li><a href="http://www.emacswiki.org/emacs/EmacsTags">TAGS</a> (built in. No installation required)
+</li>
+<li><a href="https://github.com/bbatsov/projectile">Projectile</a> (install it by adding <code>projectile</code> to your packages list)
+</li>
+<li><a href="https://github.com/emacs-helm/helm">Helm</a> (install it by adding <code>heml</code> to your packages list)
+</li>
+<li><a href="http://cedet.sourceforge.net/">Emacs CEDET</a> (install it by adding <code>cedet</code> to your packages list)
+</li>
+<li>&hellip;
+</li>
+</ul>
+
+
+<p>
+(Note: use once at a time! You do not need to install them all)
+</p>
+<p>
+After using <i>Projectile</i> for a certain period of time, I gave <i>Helm</i> a shot but finally got back to the simplicity and the efficiency of the <i>TAGS</i> system.
+Nevertheless, <i>Projectile</i> and <i>Helm</i> are really powerful and useful. You really should look at them.
+</p>
+<p>
+For now, I will cover the basics of <i>TAGS</i> since it is a standard (used by other softwares) and it is built-in (so if you use another Emacs without your config, you still know how to surf in the code). And other useful tricks will be shown here.
+</p>
+
+</div>
+
+<div id="outline-container-5-9-1" class="outline-4">
+<h4 id="sec-5-9-1"><span class="section-number-4">5.9.1</span> Tags basics</h4>
+<div class="outline-text-4" id="text-5-9-1">
+
+
+<p>
+Basically, the TAGS rely on an index file of the content of your code source.
+In the root folder of a project, you must generate your index.
+Several methods for this, but here is one command that generates the file:
+</p>
+
+
+
+<pre class="example">cd /path/to/your/project
+find . -regex ".*\.\(c\|h\|rb\|py\|php\|js\|sh\|bash\)" -print | xargs etags -a
+</pre>
+
+
+<p>
+You now should see a "TAGS" file. If needed, exclude this file from your git/svn/whatever repository/.
+</p>
+<p>
+You are now ready to surf!
+</p>
+<p>
+Now, here are the main commands to use them:
+</p>
+<ul>
+<li><b>M-.</b> is the equivalent of <b>M-x find-tag</b>: find a tag
+</li>
+<li><b>M-x find-tag-other-window</b>: find a tag, but in another window
+</li>
+<li><b>M-x tags-search</b>: find a tag thanks to a regexp
+</li>
+<li><b>M-x tags-query-replace</b>: replace a tag in all the indexed files
+</li>
+<li><b>M-x tags-apropos</b>: list all tags that match a regexp
+</li>
+<li><b>M-x list-tags</b>: list all tags in a file
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-5-9-2" class="outline-4">
+<h4 id="sec-5-9-2"><span class="section-number-4">5.9.2</span> List functions or methods</h4>
+<div class="outline-text-4" id="text-5-9-2">
+
+
+<p>
+In order to list and jump easily between the functions or methods of the current file, here is a little trick:
+</p>
+
+
+
+<pre class="example">(global-set-key (kbd "C-S-f") 'imenu) ;; use iMenu
+</pre>
+
+
+<p>
+After pressing Ctrl-Shift-f (replace it by whatever you want!), a menu with all the available resources appears in the minibuffer.
+Select the resource you want (let's say <i>All.methods</i> if you are editing some code) and you will be able to search and jump to a method definition directly.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-5-9-3" class="outline-4">
+<h4 id="sec-5-9-3"><span class="section-number-4">5.9.3</span> Files navigation (a.k.a fuzzy matching) with TAGS and ido</h4>
+<div class="outline-text-4" id="text-5-9-3">
+
+
+<p>
+In order to find and jump easily to a file in your project thanks to TAGS, you have to add a little function to your confiugration.
+For this you should have installed the <code>ido-mode</code> described above.
+</p>
+
+
+
+<pre class="example">(defun ido-find-file-in-tag-files ()
+  (interactive)
+  (save-excursion
+    (let ((enable-recursive-minibuffers t))
+      (visit-tags-table-buffer))
+    (find-file
+     (expand-file-name
+      (ido-completing-read
+       "Project file: " (tags-table-files) nil t)))))
+
+(global-set-key (kbd "C-S-x C-S-f") 'ido-find-file-in-tag-files)
+</pre>
+
+
+<p>
+Now, in your project folder and once you generated your TAGS file, you can press <b>C-S-x C-S-f</b> to find files through the whole tree of directories just by typing a pattern.
+</p>
+<p>
+<img src="../images/fuzzy.gif"  alt="../images/fuzzy.gif" />
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-5-9-4" class="outline-4">
+<h4 id="sec-5-9-4"><span class="section-number-4">5.9.4</span> RGrep</h4>
+<div class="outline-text-4" id="text-5-9-4">
+
+
+<p>
+<i>rgrep</i> is a great tool to use in addition of the TAGS. It is a Unix tool that make <i>grep</i> queries recursively. In Emacs, it will bring you a new buffer with all the results of the command. To use it, simply type:
+</p>
+<p>
+<b>M-x rgrep RET yoursearchterm RET</b>
+</p>
+<p>
+Once fired, you can swith to the newly created buffer, parse the results and jump to the wanted files very quickly.
+</p>
+<p>
+What is cool is that it is integrated in the editor, just beside your code and does not require to switch to a shell and then copy-paste the files path you want.
+</p>
+<p>
+<img src="../images/rgrep.gif"  alt="../images/rgrep.gif" />
+</p>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-5-10" class="outline-3">
+<h3 id="sec-5-10"><span class="section-number-3">5.10</span> Setting a color theme</h3>
+<div class="outline-text-3" id="text-5-10">
 
 
 <p>
@@ -1541,9 +1722,9 @@ In order to choose yours, try the default ones, see this <a href="http://gnuemac
 
 </div>
 
-<div id="outline-container-5-9-1" class="outline-4">
-<h4 id="sec-5-9-1"><span class="section-number-4">5.9.1</span> Font settings</h4>
-<div class="outline-text-4" id="text-5-9-1">
+<div id="outline-container-5-10-1" class="outline-4">
+<h4 id="sec-5-10-1"><span class="section-number-4">5.10.1</span> Font settings</h4>
+<div class="outline-text-4" id="text-5-10-1">
 
 
 <p>
@@ -1952,7 +2133,7 @@ And thank you for reading this !
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2014-04-04T08:49+0200</p>
+<p class="date">Date: 2014-04-09T13:32+0200</p>
 <p class="author">Author: Pierre Lecocq</p>
 <p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3f with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
