@@ -44,7 +44,7 @@ Work in progress, so stay tuned.
    - 4.3 [[./chapters/04-special-features.org#organize-your-work-write-papers-and-manage-your-agenda][Organize your work, write papers and manage your agenda]]
    - 4.4 [[./chapters/04-special-features.org#emails-in-emacs][Emails in Emacs]]
    - 4.5 [[./chapters/04-special-features.org#some-great-emacs-tips-and-tricks][Some great Emacs tips and tricks]]
-   - 4.6 [[./chapters/04-special-features.org#coming-from-other-editors-ie-vim][Coming from other editors (i.e Vim)]]
+   - 4.6 [[./chapters/04-special-features.org#coming-from-other-editors-ie-vim][Coming from other editors (i.e Vim or SublimeText)]]
 - 5. [[./chapters/05-readings-and-resources.org][Readings and resources]]
 
 * Exports

@@ -128,16 +128,18 @@ Some alternatives to Gnus (that I do not use, but that are popular):
 
 /To be continued/
 
-** Coming from other editors (i.e Vim)
+** Coming from other editors (i.e Vim or SublimeText)
 
 Some people use other editors and want to give Emacs a try.
 Some people are really used to use a specific editor.
 Some people do not want to lose their habits and their learning curve.
 
 I am thinking about Vim, but it is also true for other editors (textmate, sublime, ...)
-
 Emacs has a mode that allows you to use it exactly like Vim.
-
 I personnaly never used this mode, but many people use it. Therefore, it allows you to switch gently and softly from Vim to Emacs.
 
 [[http://www.emacswiki.org/emacs/Evil][Read more about Evil-mode]]
+
+There is also a package to recreate SublimeText and its GUI features that some people like (minimap, smooth scrolling, ...)
+
+[[https://github.com/zk-phi/sublimity][Read more about Sublimity]]
