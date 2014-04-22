@@ -201,7 +201,8 @@ Simply add this code at the bottom of your configuration file:
 This code will install packages from the list named /el-get-packages/ we defined just above.
 In the future, if you want to add a package, simply add its name to this list.
 
-Available packages are listed [[https://github.com/dimitri/el-get/tree/master/recipes][here]].
+Available packages are listed when you type *M-x el-get-list-packages RET* or can be found [[https://github.com/dimitri/el-get/tree/master/recipes][here]].
+The first solution is better since the package is described and its state (available or installed) is displayed.
 
 ** Some useful packages
 
