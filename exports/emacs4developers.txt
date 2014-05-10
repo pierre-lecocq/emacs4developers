@@ -2,7 +2,7 @@
                          ====================
 
 Author: Pierre Lecocq
-Date: 2014-04-09 22:26:48 CEST
+Date: 2014-05-10 12:16:14 CEST
 
 
 Table of Contents
@@ -64,16 +64,24 @@ Table of Contents
         5.9.4 RGrep
     5.10 Setting a color theme
         5.10.1 Font settings
-6 Special features
-    6.1 Emacs as a file manager
-    6.2 Working locally vs remotely
-    6.3 Organize your work, write papers and manage your agenda
-    6.4 Emails in Emacs
-    6.5 Some great Emacs tips and tricks
-    6.6 Coming from other editors (i.e Vim)
-7 Readings and resources
-8 License
-9 Thanks
+6 Emacs for developers - Emacs developing environments
+    6.1 Emacs for Ruby developers
+    6.2 Emacs for Python developers
+    6.3 Emacs for C/C++/Objective-C
+    6.4 Emacs for Go developers
+    6.5 Emacs for PHP developers
+    6.6 Emacs for Java developers
+    6.7 Emacs for R and statistics
+7 Special features
+    7.1 Emacs as a file manager
+    7.2 Working locally vs remotely
+    7.3 Organize your work, write papers and manage your agenda
+    7.4 Emails in Emacs
+    7.5 Some great Emacs tips and tricks
+    7.6 Coming from other editors (i.e Vim)
+8 Readings and resources
+9 License
+10 Thanks
 
 
 1 Emacs for developers
@@ -112,14 +120,22 @@ This document will (hopefully) help you to use Emacs like a sir !
    - 3.8 [Some useful packages]
    - 3.9 [Code navigation]
    - 3.10 [Setting a color theme]
-- 4. [Special features]
-   - 4.1 [Emacs as a file manager]
-   - 4.2 [Working locally vs remotely]
-   - 4.3 [Organize your work, write papers and manage your agenda]
-   - 4.4 [Emails in Emacs]
-   - 4.5 [Some great Emacs tips and tricks]
-   - 4.6 [Coming from other editors (i.e Vim)]
-- 5. [Readings and resources]
+- 4. [Emacs developing environments]
+   - 4.1 [Emacs for Ruby developers]
+   - 4.2 [Emacs for Python developers]
+   - 4.3 [Emacs for C/C++/Objective-C developers]
+   - 4.4 [Emacs for Go developers]
+   - 4.5 [Emacs for PHP developers]
+   - 4.6 [Emacs for Java developers]
+   - 4.7 [Emacs for R and statistics]
+- 5. [Special features]
+   - 5.1 [Emacs as a file manager]
+   - 5.2 [Working locally vs remotely]
+   - 5.3 [Organize your work, write papers and manage your agenda]
+   - 5.4 [Emails in Emacs]
+   - 5.5 [Some great Emacs tips and tricks]
+   - 5.6 [Coming from other editors (i.e Vim or SublimeText)]
+- 6. [Readings and resources]
 
 
 [Introduction]: #introduction
@@ -143,13 +159,21 @@ This document will (hopefully) help you to use Emacs like a sir !
 [Some useful packages]: #some-useful-packages
 [Code navigation]: #code-navigation
 [Setting a color theme]: #setting-a-color-theme
+[Emacs developing environments]: #emacs-developing-environments
+[Emacs for Ruby developers]: #emacs-for-ruby-developers
+[Emacs for Python developers]: #emacs-for-python-developers
+[Emacs for C/C++/Objective-C developers]: #emacs-for-ccobjective-c
+[Emacs for Go developers]: #emacs-for-go-developers
+[Emacs for PHP developers]: #emacs-for-php-developers
+[Emacs for Java developers]: #emacs-for-java-developers
+[Emacs for R and statistics]: #emacs-for-r-and-statistics
 [Special features]: #special-features
 [Emacs as a file manager]: #emacs-as-a-file-manager
 [Working locally vs remotely]: #working-locally-vs-remotely
 [Organize your work, write papers and manage your agenda]: #organize-your-work-write-papers-and-manage-your-agenda
 [Emails in Emacs]: #emails-in-emacs
 [Some great Emacs tips and tricks]: #some-great-emacs-tips-and-tricks
-[Coming from other editors (i.e Vim)]: #coming-from-other-editors-ie-vim
+[Coming from other editors (i.e Vim or SublimeText)]: #coming-from-other-editors-ie-vim
 [Readings and resources]: #readings-and-resources
 
 3 Introduction
@@ -1035,10 +1059,115 @@ Really handy if you show your screen through an external display or you want to 
 [Emacs wiki page]: http://www.emacswiki.org/emacs/SetFonts
 [manual]: http://www.gnu.org/software/emacs/manual/html_node/emacs/Fonts.html
 
-6 Special features
+6 Emacs for developers - Emacs developing environments
+=======================================================
+
+Emacs, thanks to major or minor modes can be transformed into a powerful specific environment.
+
+According to the kind of files you are editing (or a command you type), it can mutate and give you specific features that fits the need of a programming language (or a task like debugging, launching unit tests, ...)
+
+6.1 Emacs for Ruby developers
+------------------------------
+
+There are many ruby developer who decribe their set up around the web. Here are the most popular:
+
+- [The Emacs reboot serie, by Avdi Grimm] (Avdi is a famous ruby programmer and a great Emacs hacker)
+- [Setting up Emacs as Ruby development environment on OSX] (even if it is for OSX, the packages remain the same on all OSes)
+- [Configuring Emacs as a productive development environment for Rails development]
+- [The EmacsWiki on Ruby and RoR]
+
+
+[The Emacs reboot serie, by Avdi Grimm]: http://devblog.avdi.org/category/emacs-reboot/
+[Setting up Emacs as Ruby development environment on OSX]: http://crypt.codemancers.com/posts/2013-09-26-setting-up-emacs-as-development-environment-on-osx/
+[Configuring Emacs as a productive development environment for Rails development]: http://lorefnon.me/2014/02/02/configuring-emacs-for-rails.html
+[The EmacsWiki on Ruby and RoR]: http://www.emacswiki.org/emacs/RubyOnRails
+
+6.2 Emacs for Python developers
+--------------------------------
+
+Here are some resources about setting Emacs for developing in python:
+
+- [Emacs for python - on caisah.info]
+- [Python programming in Emacs - on the EmacsWiki]
+
+
+[Emacs for python - on caisah.info]: http://caisah.info/emacs-for-python/
+[Python programming in Emacs - on the EmacsWiki]: http://www.emacswiki.org/emacs/PythonProgrammingInEmacs
+
+6.3 Emacs for C/C++/Objective-C
+--------------------------------
+
+C languages are very well handled by Emacs and it allows you to edit, debug and run programs with Emacs very easily, with all the control you want.
+
+- [A various tips and packages for C language(s)] on StackOverflow
+- [Setting up perfect environment for C/C++ Programming] (according to its auhor. Good resource, though)
+- [Debugging with Emacs]
+- [CEDET - Collection of Emacs Development Environment Tools] An amazing collection of tools for developping in many programming languages, especially for C/C++
+- [How to configure CEDET]
+
+
+[A various tips and packages for C language(s)]: http://stackoverflow.com/questions/5800317/emacs-as-a-c-programming-ide-configuration
+[Setting up perfect environment for C/C++ Programming]: http://truongtx.me/2013/03/10/emacs-setting-up-perfect-environment-for-cc-programming/
+[Debugging with Emacs]: http://www.emacswiki.org/emacs/DebuggingWithEmacs
+[CEDET - Collection of Emacs Development Environment Tools]: http://cedet.sourceforge.net/
+[How to configure CEDET]: http://alexott.net/en/writings/emacs-devenv/EmacsCedet.html
+
+6.4 Emacs for Go developers
+----------------------------
+
+If you develop in Go, you really should refer to the great [Emacs for Go] article, written by Yousef Ourabi.
+
+
+[Emacs for Go]: http://yousefourabi.com/blog/2014/05/emacs-for-go/
+
+6.5 Emacs for PHP developers
+-----------------------------
+
+PHP, along with all the web technologies (HTML/JS/CSS) are very well supported in Emacs. The PHP mode does almost all the job by itself.
+
+- [The EmacsWiki page about php-mode and other assicated packages]
+- [A list of useful packages for PHP - on StackOverflow]
+- [An example setup for working on Drupal] (but can be used for PHP in general)
+- [GEBEN - remote debugging environment for Emacs]
+- [Web Mode - focused on web templates (HTML/JS/CSS)]
+
+
+[The EmacsWiki page about php-mode and other assicated packages]: http://www.emacswiki.org/emacs/PhpMode
+[A list of useful packages for PHP - on StackOverflow]: http://stackoverflow.com/questions/912671/what-is-a-good-setup-for-editing-php-in-emacs
+[An example setup for working on Drupal]: https://drupal.org/node/59868
+[GEBEN - remote debugging environment for Emacs]: https://code.google.com/p/geben-on-emacs/
+[Web Mode - focused on web templates (HTML/JS/CSS)]: http://web-mode.org/
+
+6.6 Emacs for Java developers
+------------------------------
+
+Java development is held by Eclipse. But it is not the only editor/environment that allows you to develop in Java !
+
+- [JDEE - the Java Development Environment for Emacs]
+- [The EmacsWiki article on JDEE]
+- [A video demo of a full Java environment on Emacs]
+
+
+[JDEE - the Java Development Environment for Emacs]: http://jdee.sourceforge.net/
+[The EmacsWiki article on JDEE]: http://www.emacswiki.org/emacs/JavaDevelopmentEnvironment
+[A video demo of a full Java environment on Emacs]: http:
+
+6.7 Emacs for R and statistics
+-------------------------------
+
+Emacs is very useful for scientists and people dealing with data. Statistics, analysis, plotting, ... everything can be done within Emacs.
+
+- [Emacs Speaks Statistics] is a great project that adds a full statistics environment to your Emacs
+- [A tutorial on using ESS]
+
+
+[Emacs Speaks Statistics]: http://ess.r-project.org/
+[A tutorial on using ESS]: http://stats.blogoverflow.com/2011/08/using-emacs-to-work-with-r/
+
+7 Special features
 ===================
 
-6.1 Emacs as a file manager
+7.1 Emacs as a file manager
 ----------------------------
 
 Emacs has a built-in mode named /dired/ that allows you to manage your file system directly in Emacs really easily.
@@ -1071,7 +1200,7 @@ Note that there are so many tricks, extensions and features in /dired mode/ that
 [Read more about Dired]: http://www.emacswiki.org/emacs/DiredMode
 [Read the manual]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html
 
-6.2 Working locally vs remotely
+7.2 Working locally vs remotely
 --------------------------------
 
 Emacs, once installed on your machine will allow you to edit your file locally, obviously.
@@ -1092,7 +1221,7 @@ A last tip about TRAMP. If you simply add =sudo:= in front of your file path, yo
 
 [Read more about Tramp]: http://www.emacswiki.org/emacs/TrampMode
 
-6.3 Organize your work, write papers and manage your agenda
+7.3 Organize your work, write papers and manage your agenda
 ------------------------------------------------------------
 
 In Emacs, you can do everything. This is a fact.
@@ -1130,7 +1259,7 @@ If you want to see a good example of Org-mode capabilities, check [that great pa
 [list of features]: http://orgmode.org/features.html
 [that great page]: http://home.fnal.gov/~neilsen/notebook/orgExamples/org-examples.html
 
-6.4 Emails in Emacs
+7.4 Emails in Emacs
 --------------------
 
 There are packages that let you use Emacs as a full featured MUA.
@@ -1168,7 +1297,7 @@ Some alternatives to Gnus (that I do not use, but that are popular):
 [Wanderlust]: http://www.emacswiki.org/emacs/WanderLust
 [Mu4e]: http://www.djcbsoftware.nl/code/mu/mu4e.html
 
-6.5 Some great Emacs tips and tricks
+7.5 Some great Emacs tips and tricks
 -------------------------------------
 
 - Emacs is all about Macros. This is one of its most powerful feature. Record a sequence and re-play it on other lines! Here is [how].
@@ -1192,7 +1321,7 @@ Some alternatives to Gnus (that I do not use, but that are popular):
 [debugging]: http://www.cs.bu.edu/teaching/tool/emacs/programming/#gdb
 [Erc]: http://www.emacswiki.org/ERC
 
-6.6 Coming from other editors (i.e Vim)
+7.6 Coming from other editors (i.e Vim)
 ----------------------------------------
 
 Some people use other editors and want to give Emacs a try.
@@ -1210,7 +1339,7 @@ I personnaly never used this mode, but many people use it. Therefore, it allows 
 
 [Read more about Evil-mode]: http://www.emacswiki.org/emacs/Evil
 
-7 Readings and resources
+8 Readings and resources
 =========================
 
 - [Emacs rocks videos]
@@ -1233,7 +1362,7 @@ And of course, the [Emacs wiki]
 [Emacs sub-reddit]: http://reddit.com/r/emacs
 [Emacs wiki]: http://www.emacswiki.org/
 
-8 License
+9 License
 ==========
 
 The content of this project itself is licensed under the [Creative Commons Attribution 3.0 license], and the underlying source code used to format and display that content is licensed under the [MIT license].
@@ -1245,8 +1374,8 @@ Contributors list can be found [here].
 [MIT license]: http://opensource.org/licenses/mit-license.php
 [here]: https://github.com/pierre-lecocq/emacs4developers/network/members
 
-9 Thanks
-=========
+10 Thanks
+==========
 
 I want to thank some of the great people who make Emacs a very intersting piece of software or make its community very active (the sort order is absolutly not important here):
 

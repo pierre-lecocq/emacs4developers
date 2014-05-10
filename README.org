@@ -41,7 +41,7 @@ Work in progress, so stay tuned.
 - 4. [[./chapters/04-emacs-developing-environments.org][Emacs developing environments]]
    - 4.1 [[./chapters/04-emacs-developing-environments.org#emacs-for-ruby-developers][Emacs for Ruby developers]]
    - 4.2 [[./chapters/04-emacs-developing-environments.org#emacs-for-python-developers][Emacs for Python developers]]
-   - 4.3 [[./chapters/04-emacs-developing-environments.org#emacs-for-c-c-objective-c-developers][Emacs for C/C++/Objective-C developers]]
+   - 4.3 [[./chapters/04-emacs-developing-environments.org#emacs-for-ccobjective-c][Emacs for C/C++/Objective-C developers]]
    - 4.4 [[./chapters/04-emacs-developing-environments.org#emacs-for-go-developers][Emacs for Go developers]]
    - 4.5 [[./chapters/04-emacs-developing-environments.org#emacs-for-php-developers][Emacs for PHP developers]]
    - 4.6 [[./chapters/04-emacs-developing-environments.org#emacs-for-java-developers][Emacs for Java developers]]

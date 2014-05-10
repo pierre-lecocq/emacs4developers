@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
 <meta name="title" content="Emacs for developers"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2014-04-09T22:26+0200"/>
+<meta name="generated" content="2014-05-10T12:16+0200"/>
 <meta name="author" content="Pierre Lecocq"/>
 <meta name="description" content="Learn using Emacs as a developer"/>
 <meta name="keywords" content="emacs, developer"/>
@@ -205,19 +205,30 @@ for the JavaScript code in this tag.
 </ul></li>
 </ul>
 </li>
-<li><a href="#sec-6">6 Special features</a>
+<li><a href="#sec-6">6 Emacs for developers - Emacs developing environments</a>
 <ul>
-<li><a href="#sec-6-1">6.1 Emacs as a file manager</a></li>
-<li><a href="#sec-6-2">6.2 Working locally vs remotely</a></li>
-<li><a href="#sec-6-3">6.3 Organize your work, write papers and manage your agenda</a></li>
-<li><a href="#sec-6-4">6.4 Emails in Emacs</a></li>
-<li><a href="#sec-6-5">6.5 Some great Emacs tips and tricks</a></li>
-<li><a href="#sec-6-6">6.6 Coming from other editors (i.e Vim)</a></li>
+<li><a href="#sec-6-1">6.1 Emacs for Ruby developers</a></li>
+<li><a href="#sec-6-2">6.2 Emacs for Python developers</a></li>
+<li><a href="#sec-6-3">6.3 Emacs for C/C++/Objective-C</a></li>
+<li><a href="#sec-6-4">6.4 Emacs for Go developers</a></li>
+<li><a href="#sec-6-5">6.5 Emacs for PHP developers</a></li>
+<li><a href="#sec-6-6">6.6 Emacs for Java developers</a></li>
+<li><a href="#sec-6-7">6.7 Emacs for R and statistics</a></li>
 </ul>
 </li>
-<li><a href="#sec-7">7 Readings and resources</a></li>
-<li><a href="#sec-8">8 License</a></li>
-<li><a href="#sec-9">9 Thanks</a></li>
+<li><a href="#sec-7">7 Special features</a>
+<ul>
+<li><a href="#sec-7-1">7.1 Emacs as a file manager</a></li>
+<li><a href="#sec-7-2">7.2 Working locally vs remotely</a></li>
+<li><a href="#sec-7-3">7.3 Organize your work, write papers and manage your agenda</a></li>
+<li><a href="#sec-7-4">7.4 Emails in Emacs</a></li>
+<li><a href="#sec-7-5">7.5 Some great Emacs tips and tricks</a></li>
+<li><a href="#sec-7-6">7.6 Coming from other editors (i.e Vim)</a></li>
+</ul>
+</li>
+<li><a href="#sec-8">8 Readings and resources</a></li>
+<li><a href="#sec-9">9 License</a></li>
+<li><a href="#sec-10">10 Thanks</a></li>
 </ul>
 </div>
 </div>
@@ -305,24 +316,43 @@ Work in progress, so stay tuned.
 </ul>
 
 </li>
-<li>4. <a href="#special-features">Special features</a>
+<li>4. <a href="#emacs-developing-environments">Emacs developing environments</a>
 <ul>
-<li>4.1 <a href="#emacs-as-a-file-manager">Emacs as a file manager</a>
+<li>4.1 <a href="#emacs-for-ruby-developers">Emacs for Ruby developers</a>
 </li>
-<li>4.2 <a href="#working-locally-vs-remotely">Working locally vs remotely</a>
+<li>4.2 <a href="#emacs-for-python-developers">Emacs for Python developers</a>
 </li>
-<li>4.3 <a href="#organize-your-work-write-papers-and-manage-your-agenda">Organize your work, write papers and manage your agenda</a>
+<li>4.3 <a href="#emacs-for-ccobjective-c">Emacs for C/C++/Objective-C developers</a>
 </li>
-<li>4.4 <a href="#emails-in-emacs">Emails in Emacs</a>
+<li>4.4 <a href="#emacs-for-go-developers">Emacs for Go developers</a>
 </li>
-<li>4.5 <a href="#some-great-emacs-tips-and-tricks">Some great Emacs tips and tricks</a>
+<li>4.5 <a href="#emacs-for-php-developers">Emacs for PHP developers</a>
 </li>
-<li>4.6 <a href="#coming-from-other-editors-ie-vim">Coming from other editors (i.e Vim)</a>
+<li>4.6 <a href="#emacs-for-java-developers">Emacs for Java developers</a>
+</li>
+<li>4.7 <a href="#emacs-for-r-and-statistics">Emacs for R and statistics</a>
 </li>
 </ul>
 
 </li>
-<li>5. <a href="#readings-and-resources">Readings and resources</a>
+<li>5. <a href="#special-features">Special features</a>
+<ul>
+<li>5.1 <a href="#emacs-as-a-file-manager">Emacs as a file manager</a>
+</li>
+<li>5.2 <a href="#working-locally-vs-remotely">Working locally vs remotely</a>
+</li>
+<li>5.3 <a href="#organize-your-work-write-papers-and-manage-your-agenda">Organize your work, write papers and manage your agenda</a>
+</li>
+<li>5.4 <a href="#emails-in-emacs">Emails in Emacs</a>
+</li>
+<li>5.5 <a href="#some-great-emacs-tips-and-tricks">Some great Emacs tips and tricks</a>
+</li>
+<li>5.6 <a href="#coming-from-other-editors-ie-vim">Coming from other editors (i.e Vim or SublimeText)</a>
+</li>
+</ul>
+
+</li>
+<li>6. <a href="#readings-and-resources">Readings and resources</a>
 </li>
 </ul>
 
@@ -1843,16 +1873,181 @@ Really handy if you show your screen through an external display or you want to 
 </div>
 
 <div id="outline-container-6" class="outline-2">
-<h2 id="sec-6"><span class="section-number-2">6</span> Special features</h2>
+<h2 id="sec-6"><span class="section-number-2">6</span> Emacs for developers - Emacs developing environments</h2>
 <div class="outline-text-2" id="text-6">
+
+
+<p>
+Emacs, thanks to major or minor modes can be transformed into a powerful specific environment.
+</p>
+<p>
+According to the kind of files you are editing (or a command you type), it can mutate and give you specific features that fits the need of a programming language (or a task like debugging, launching unit tests, &hellip;)
+</p>
+
+</div>
+
+<div id="outline-container-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> Emacs for Ruby developers</h3>
+<div class="outline-text-3" id="text-6-1">
+
+
+<p>
+There are many ruby developer who decribe their set up around the web. Here are the most popular:
+</p>
+<ul>
+<li><a href="http://devblog.avdi.org/category/emacs-reboot/">The Emacs reboot serie, by Avdi Grimm</a> (Avdi is a famous ruby programmer and a great Emacs hacker)
+</li>
+<li><a href="http://crypt.codemancers.com/posts/2013-09-26-setting-up-emacs-as-development-environment-on-osx/">Setting up Emacs as Ruby development environment on OSX</a> (even if it is for OSX, the packages remain the same on all OSes)
+</li>
+<li><a href="http://lorefnon.me/2014/02/02/configuring-emacs-for-rails.html">Configuring Emacs as a productive development environment for Rails development</a>
+</li>
+<li><a href="http://www.emacswiki.org/emacs/RubyOnRails">The EmacsWiki on Ruby and RoR</a>
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-6-2" class="outline-3">
+<h3 id="sec-6-2"><span class="section-number-3">6.2</span> Emacs for Python developers</h3>
+<div class="outline-text-3" id="text-6-2">
+
+
+<p>
+Here are some resources about setting Emacs for developing in python:
+</p>
+<ul>
+<li><a href="http://caisah.info/emacs-for-python/">Emacs for python - on caisah.info</a>
+</li>
+<li><a href="http://www.emacswiki.org/emacs/PythonProgrammingInEmacs">Python programming in Emacs - on the EmacsWiki</a>
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-6-3" class="outline-3">
+<h3 id="sec-6-3"><span class="section-number-3">6.3</span> Emacs for C/C++/Objective-C</h3>
+<div class="outline-text-3" id="text-6-3">
+
+
+<p>
+C languages are very well handled by Emacs and it allows you to edit, debug and run programs with Emacs very easily, with all the control you want.
+</p>
+<ul>
+<li><a href="http://stackoverflow.com/questions/5800317/emacs-as-a-c-programming-ide-configuration">A various tips and packages for C language(s)</a> on StackOverflow
+</li>
+<li><a href="http://truongtx.me/2013/03/10/emacs-setting-up-perfect-environment-for-cc-programming/">Setting up perfect environment for C/C++ Programming</a> (according to its auhor. Good resource, though)
+</li>
+<li><a href="http://www.emacswiki.org/emacs/DebuggingWithEmacs">Debugging with Emacs</a>
+</li>
+<li><a href="http://cedet.sourceforge.net/">CEDET - Collection of Emacs Development Environment Tools</a> An amazing collection of tools for developping in many programming languages, especially for C/C++
+</li>
+<li><a href="http://alexott.net/en/writings/emacs-devenv/EmacsCedet.html">How to configure CEDET</a>
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-6-4" class="outline-3">
+<h3 id="sec-6-4"><span class="section-number-3">6.4</span> Emacs for Go developers</h3>
+<div class="outline-text-3" id="text-6-4">
+
+
+<p>
+If you develop in Go, you really should refer to the great <a href="http://yousefourabi.com/blog/2014/05/emacs-for-go/">Emacs for Go</a> article, written by Yousef Ourabi.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-6-5" class="outline-3">
+<h3 id="sec-6-5"><span class="section-number-3">6.5</span> Emacs for PHP developers</h3>
+<div class="outline-text-3" id="text-6-5">
+
+
+<p>
+PHP, along with all the web technologies (HTML/JS/CSS) are very well supported in Emacs. The PHP mode does almost all the job by itself.
+</p>
+<ul>
+<li><a href="http://www.emacswiki.org/emacs/PhpMode">The EmacsWiki page about php-mode and other assicated packages</a>
+</li>
+<li><a href="http://stackoverflow.com/questions/912671/what-is-a-good-setup-for-editing-php-in-emacs">A list of useful packages for PHP - on StackOverflow</a>
+</li>
+<li><a href="https://drupal.org/node/59868">An example setup for working on Drupal</a> (but can be used for PHP in general)
+</li>
+<li><a href="https://code.google.com/p/geben-on-emacs/">GEBEN - remote debugging environment for Emacs</a>
+</li>
+<li><a href="http://web-mode.org/">Web Mode - focused on web templates (HTML/JS/CSS)</a>
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-6-6" class="outline-3">
+<h3 id="sec-6-6"><span class="section-number-3">6.6</span> Emacs for Java developers</h3>
+<div class="outline-text-3" id="text-6-6">
+
+
+<p>
+Java development is held by Eclipse. But it is not the only editor/environment that allows you to develop in Java !
+</p>
+<ul>
+<li><a href="http://jdee.sourceforge.net/">JDEE - the Java Development Environment for Emacs</a>
+</li>
+<li><a href="http://www.emacswiki.org/emacs/JavaDevelopmentEnvironment">The EmacsWiki article on JDEE</a>
+</li>
+<li><a href="#http">A video demo of a full Java environment on Emacs</a>
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-6-7" class="outline-3">
+<h3 id="sec-6-7"><span class="section-number-3">6.7</span> Emacs for R and statistics</h3>
+<div class="outline-text-3" id="text-6-7">
+
+
+<p>
+Emacs is very useful for scientists and people dealing with data. Statistics, analysis, plotting, &hellip; everything can be done within Emacs.
+</p>
+<ul>
+<li><a href="http://ess.r-project.org/">Emacs Speaks Statistics</a> is a great project that adds a full statistics environment to your Emacs
+</li>
+<li><a href="http://stats.blogoverflow.com/2011/08/using-emacs-to-work-with-r/">A tutorial on using ESS</a>
+</li>
+</ul>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Special features</h2>
+<div class="outline-text-2" id="text-7">
 
 
 
 </div>
 
-<div id="outline-container-6-1" class="outline-3">
-<h3 id="sec-6-1"><span class="section-number-3">6.1</span> Emacs as a file manager</h3>
-<div class="outline-text-3" id="text-6-1">
+<div id="outline-container-7-1" class="outline-3">
+<h3 id="sec-7-1"><span class="section-number-3">7.1</span> Emacs as a file manager</h3>
+<div class="outline-text-3" id="text-7-1">
 
 
 <p>
@@ -1907,9 +2102,9 @@ Note that there are so many tricks, extensions and features in <i>dired mode</i>
 
 </div>
 
-<div id="outline-container-6-2" class="outline-3">
-<h3 id="sec-6-2"><span class="section-number-3">6.2</span> Working locally vs remotely</h3>
-<div class="outline-text-3" id="text-6-2">
+<div id="outline-container-7-2" class="outline-3">
+<h3 id="sec-7-2"><span class="section-number-3">7.2</span> Working locally vs remotely</h3>
+<div class="outline-text-3" id="text-7-2">
 
 
 <p>
@@ -1937,9 +2132,9 @@ A last tip about TRAMP. If you simply add <code>sudo:</code> in front of your fi
 
 </div>
 
-<div id="outline-container-6-3" class="outline-3">
-<h3 id="sec-6-3"><span class="section-number-3">6.3</span> Organize your work, write papers and manage your agenda</h3>
-<div class="outline-text-3" id="text-6-3">
+<div id="outline-container-7-3" class="outline-3">
+<h3 id="sec-7-3"><span class="section-number-3">7.3</span> Organize your work, write papers and manage your agenda</h3>
+<div class="outline-text-3" id="text-7-3">
 
 
 <p>
@@ -2003,9 +2198,9 @@ If you want to see a good example of Org-mode capabilities, check <a href="http:
 
 </div>
 
-<div id="outline-container-6-4" class="outline-3">
-<h3 id="sec-6-4"><span class="section-number-3">6.4</span> Emails in Emacs</h3>
-<div class="outline-text-3" id="text-6-4">
+<div id="outline-container-7-4" class="outline-3">
+<h3 id="sec-7-4"><span class="section-number-3">7.4</span> Emails in Emacs</h3>
+<div class="outline-text-3" id="text-7-4">
 
 
 <p>
@@ -2066,9 +2261,9 @@ Some alternatives to Gnus (that I do not use, but that are popular):
 
 </div>
 
-<div id="outline-container-6-5" class="outline-3">
-<h3 id="sec-6-5"><span class="section-number-3">6.5</span> Some great Emacs tips and tricks</h3>
-<div class="outline-text-3" id="text-6-5">
+<div id="outline-container-7-5" class="outline-3">
+<h3 id="sec-7-5"><span class="section-number-3">7.5</span> Some great Emacs tips and tricks</h3>
+<div class="outline-text-3" id="text-7-5">
 
 
 <ul>
@@ -2100,9 +2295,9 @@ Some alternatives to Gnus (that I do not use, but that are popular):
 
 </div>
 
-<div id="outline-container-6-6" class="outline-3">
-<h3 id="sec-6-6"><span class="section-number-3">6.6</span> Coming from other editors (i.e Vim)</h3>
-<div class="outline-text-3" id="text-6-6">
+<div id="outline-container-7-6" class="outline-3">
+<h3 id="sec-7-6"><span class="section-number-3">7.6</span> Coming from other editors (i.e Vim)</h3>
+<div class="outline-text-3" id="text-7-6">
 
 
 <p>
@@ -2127,9 +2322,9 @@ I personnaly never used this mode, but many people use it. Therefore, it allows 
 
 </div>
 
-<div id="outline-container-7" class="outline-2">
-<h2 id="sec-7"><span class="section-number-2">7</span> Readings and resources</h2>
-<div class="outline-text-2" id="text-7">
+<div id="outline-container-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> Readings and resources</h2>
+<div class="outline-text-2" id="text-8">
 
 
 <ul>
@@ -2157,9 +2352,9 @@ And of course, the <a href="http://www.emacswiki.org/">Emacs wiki</a>
 
 </div>
 
-<div id="outline-container-8" class="outline-2">
-<h2 id="sec-8"><span class="section-number-2">8</span> License</h2>
-<div class="outline-text-2" id="text-8">
+<div id="outline-container-9" class="outline-2">
+<h2 id="sec-9"><span class="section-number-2">9</span> License</h2>
+<div class="outline-text-2" id="text-9">
 
 
 <p>
@@ -2172,9 +2367,9 @@ Contributors list can be found <a href="https://github.com/pierre-lecocq/emacs4d
 
 </div>
 
-<div id="outline-container-9" class="outline-2">
-<h2 id="sec-9"><span class="section-number-2">9</span> Thanks</h2>
-<div class="outline-text-2" id="text-9">
+<div id="outline-container-10" class="outline-2">
+<h2 id="sec-10"><span class="section-number-2">10</span> Thanks</h2>
+<div class="outline-text-2" id="text-10">
 
 
 <p>
@@ -2193,7 +2388,7 @@ And thank you for reading this !
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2014-04-09T22:26+0200</p>
+<p class="date">Date: 2014-05-10T12:16+0200</p>
 <p class="author">Author: Pierre Lecocq</p>
 <p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3f with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
