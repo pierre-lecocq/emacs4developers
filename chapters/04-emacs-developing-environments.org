@@ -62,6 +62,6 @@ Java development is held by Eclipse. But it is not the only editor/environment t
 
 Emacs is very useful for scientists and people dealing with data. Statistics, analysis, plotting, ... everything can be done within Emacs.
 
-- [[https://github.com/vikasrawal/orgpaper/blob/master/orgpapers.org][An amazing paper on worling with Emacs, OrgMode and R]]
+- [[https://github.com/vikasrawal/orgpaper/blob/master/orgpapers.org][An amazing paper on working with Emacs, OrgMode and R]]
 - [[http://ess.r-project.org/][Emacs Speaks Statistics]] is a great project that adds a full statistics environment to your Emacs
 - [[http://stats.blogoverflow.com/2011/08/using-emacs-to-work-with-r/][A tutorial on using ESS]]
