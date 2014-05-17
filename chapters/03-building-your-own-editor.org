@@ -62,7 +62,7 @@ As before, simply add this to your configuration file:
 ** Backup files
 
 You may have notice that the files you edit are duplicated and renamed with a /~/ at the end.
-They are the backup files that Emacs creates for you with an auto-save feature.
+They are the backup files that Emacs creates for you with the auto-save feature.
 Sometimes it is great because you can recover a file in case of error, sometimes it is annoying because you can have some many of these files.
 
 It is up to you to keep it or disable it.
