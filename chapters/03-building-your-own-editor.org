@@ -206,7 +206,7 @@ The first solution is better since the package is described and its state (avail
 
 ** Some useful packages
 
-As a developer, you will need some packages that will help you to work, increase your productivity and enhance your confort while coding.
+As a developer, you will need some packages that will help you to work, increase your productivity and enhance your comfort while coding.
 Please note that even if I am a Ruby/shell/Lisp/web/PHP developer, some packages are compatible and useful for every kind of development. Therefore, the base packages are listed here but some specific packages that might be useful for your work are eventually not listed here. It is up to you to adapt the list according to your needs!
 
 Tip: After adding packages, restart Emacs in order to let /el-get/ download and install it properly.
