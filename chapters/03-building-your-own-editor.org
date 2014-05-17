@@ -155,7 +155,7 @@ Additionnaly, you can manage the packages list by adding other sources to your c
 
 *** El-Get
 
-/[[https://github.com/dimitri/el-get][el-get]]/ is one of the most popular and easy to use package manager. The "/apt-get/" of Emacs.
+/[[https://github.com/dimitri/el-get][el-get]]/ is one of the most popular and easy to use package managers. It's the "/apt-get/" of Emacs.
 It is written by the great [[https://github.com/dimitri][Dimitri Fontaine]] and is based on recipe files that simply describe where is located the package and how to get/compile/install it for you.
 
 To use it, simply add this to your configuration file. It will download and set up /el-get/ for you:
