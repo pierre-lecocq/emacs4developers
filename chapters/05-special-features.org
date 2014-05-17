@@ -106,7 +106,7 @@ Here are some of its features beside the basic ones:
 - ... and many more
 - ... and of course, it is extensible thanks to Lisp
 
-You really should try it with your personnal account. It is easy to configure and integrate with [[http://www.emacswiki.org/emacs/GnusGmail][Gmail]], for example.
+You really should try it with your personal account. It is easy to configure and integrate with [[http://www.emacswiki.org/emacs/GnusGmail][Gmail]], for example.
 
 But be careful! If you try it, you will love it.
 
