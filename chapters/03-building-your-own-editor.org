@@ -450,7 +450,7 @@ Select the resource you want (let's say /All.methods/ if you are editing some co
 
 *** Files navigation (a.k.a fuzzy matching) with TAGS and ido
 
-In order to find and jump easily to a file in your project thanks to TAGS, you have to add a little function to your confiugration.
+In order to find and jump easily to a file in your project thanks to TAGS, you have to add a little function to your configuration.
 For this you should have installed the =ido-mode= described above.
 
 #+begin_src emacs-lisp
