@@ -300,7 +300,7 @@ To install it, add =magit= to your packages list.
 
 *** Multiple cursors
 
-This mode is great and super powerful. Instead of explaining what it is, check this amazing [[http://emacsrocks.com/e13.html][video]] by Magnars.
+This mode is great and super powerful. Instead of explaining what it is, I'll point you to this amazing [[http://emacsrocks.com/e13.html][video]] by Magnars.
 
 To install it, add =multiple-cursors= to your packages list.
 
