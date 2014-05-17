@@ -230,7 +230,7 @@ To install it, add =company-mode= to your packages list.
 
 *** Autopair
 
-When you open a quote/parenthese/bracket/curly bracket, this mode automatically adds the closed one and bring your cusror between the two.
+When you open a quote/parenthese/bracket/curly bracket, this mode automatically adds the closed one and bring your cursor between the two.
 Very useful to avoid syntax errors, for example.
 
 To install it, add =autopair= to your packages list.
