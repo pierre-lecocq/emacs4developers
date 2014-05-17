@@ -411,7 +411,7 @@ There are a lot of packages in order to navigate through code, with different me
 After using /Projectile/ for a certain period of time, I gave /Helm/ a shot but finally got back to the simplicity and the efficiency of the /TAGS/ system.
 Nevertheless, /Projectile/ and /Helm/ are really powerful and useful. You really should look at them.
 
-For now, I will cover the basics of /TAGS/ since it is a standard (used by other softwares) and it is built-in (so if you use another Emacs without your config, you still know how to surf in the code). And other useful tricks will be shown here.
+For now, I will cover the basics of /TAGS/ since it is a standard (used by other software) and it is built-in (so if you use another Emacs without your config, you still know how to surf in the code). And other useful tricks will be shown here.
 
 *** Tags basics
 
