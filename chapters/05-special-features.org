@@ -79,7 +79,7 @@ And what is really cool is that every thing you do in Org is exportable in:
 - TextInfo
 - ... and many more.
 
-You really should check their [[http://orgmode.org/features.html][list of features]]
+You really should check their [[http://orgmode.org/features.html][list of features]].
 
 If you want to see a good example of Org-mode capabilities, check [[http://home.fnal.gov/~neilsen/notebook/orgExamples/org-examples.html][that great page]]
 
