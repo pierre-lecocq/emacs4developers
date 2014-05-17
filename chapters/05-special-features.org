@@ -40,7 +40,7 @@ Emacs, once installed on your machine will allow you to edit your file locally, 
 
 Other people (non-Emacs users) will do a dirty trick to edit remote files like they were local files. They will mount the remote directory on their machine (thanks to /sshfs/).
 But the magic in Emacs is that you can transparently edit remote files on your development servers for example.
-To do so, Emacs comes with a genious extension named "Tramp". It is alreay installed and available when you install Emacs.
+To do so, Emacs comes with an ingenious extension named "Tramp". It is already installed and available when you install Emacs.
 
 If you press *C-x C-f*, you can open a file. But if you ask =myname@myserver.com:/path/to/file=, it will automatically connect to the server and let you edit the remote file. Easy as pie.
 /Tramp/ supports lots of protocols like ssh, ftp, and so on.
