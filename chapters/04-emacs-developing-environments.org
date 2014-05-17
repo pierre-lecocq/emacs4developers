@@ -6,7 +6,7 @@
 
 * Emacs for developers - Emacs developing environments
 
-Emacs, thanks to major or minor modes can be transformed into a powerful specific environment.
+Emacs, thanks to major or minor modes, can be transformed into a powerful specific environment.
 
 According to the kind of files you are editing (or a command you type), it can mutate and give you specific features that fits the need of a programming language (or a task like debugging, launching unit tests, ...)
 
