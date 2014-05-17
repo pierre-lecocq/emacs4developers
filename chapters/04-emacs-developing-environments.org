@@ -31,7 +31,7 @@ Here are some resources about setting Emacs for developing in python:
 C languages are very well handled by Emacs and it allows you to edit, debug and run programs with Emacs very easily, with all the control you want.
 
 - [[http://stackoverflow.com/questions/5800317/emacs-as-a-c-programming-ide-configuration][A various tips and packages for C language(s)]] on StackOverflow
-- [[http://truongtx.me/2013/03/10/emacs-setting-up-perfect-environment-for-cc-programming/][Setting up perfect environment for C/C++ Programming]] (according to its auhor. Good resource, though)
+- [[http://truongtx.me/2013/03/10/emacs-setting-up-perfect-environment-for-cc-programming/][Setting up perfect environment for C/C++ Programming]] (according to its author. Good resource, though)
 - [[http://www.emacswiki.org/emacs/DebuggingWithEmacs][Debugging with Emacs]]
 - [[http://cedet.sourceforge.net/][CEDET - Collection of Emacs Development Environment Tools]] An amazing collection of tools for developping in many programming languages, especially for C/C++
 - [[http://alexott.net/en/writings/emacs-devenv/EmacsCedet.html][How to configure CEDET]]
