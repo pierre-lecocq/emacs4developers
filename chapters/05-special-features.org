@@ -89,7 +89,7 @@ There are packages that let you use Emacs as a full featured MUA.
 Reading emails, sending emails, filtering, archiving ... etc.
 
 Emacs can be a very powerful and fast e-mail client and as it is controlled by the keyboard, it could be more efficient than a graphical e-mail client (clicking is a loss of time).
-I use it for years now and I can not imagine using another program to read my emails.
+I've used it for years now and I can not imagine using another program to read my emails.
 
 There are several package to do so, but the most used is [[http://www.gnus.org/][Gnus]]. It is already installed with Emacs.
 
