@@ -136,7 +136,7 @@ Some people do not want to lose their habits and their learning curve.
 
 I am thinking about Vim, but it is also true for other editors (textmate, sublime, ...)
 Emacs has a mode that allows you to use it exactly like Vim.
-I personnaly never used this mode, but many people use it. Therefore, it allows you to switch gently and softly from Vim to Emacs.
+I have personally never used this mode, but many people use it. Therefore, it allows you to switch gently and softly from Vim to Emacs.
 
 [[http://www.emacswiki.org/emacs/Evil][Read more about Evil-mode]]
 
