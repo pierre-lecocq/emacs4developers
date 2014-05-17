@@ -378,7 +378,7 @@ To install it, add =yaml-mode= to your packages list.
 A mode that allows you to write code faster if you are lazy.
 It is very easy to create your own snippets and use it whatever the file you are editing (code, non-code, emails, ...)
 
-I personnaly do not use it, but people coming from Textmate/Sublime would love it.
+I personally do not use it, but people coming from Textmate/Sublime would love it.
 
 To install it, add =yasnippet= to your packages list.
 
