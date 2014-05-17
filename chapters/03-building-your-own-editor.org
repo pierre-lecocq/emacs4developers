@@ -406,7 +406,7 @@ There are a lot of packages in order to navigate through code, with different me
 - [[http://cedet.sourceforge.net/][Emacs CEDET]] (install it by adding =cedet= to your packages list)
 - ...
 
-(Note: use once at a time! You do not need to install them all)
+(Note: use once at a time! You do not need to install them all.)
 
 After using /Projectile/ for a certain period of time, I gave /Helm/ a shot but finally got back to the simplicity and the efficiency of the /TAGS/ system.
 Nevertheless, /Projectile/ and /Helm/ are really powerful and useful. You really should look at them.
