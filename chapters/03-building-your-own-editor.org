@@ -365,9 +365,9 @@ To install it, add =visual-regexp= to your packages list.
 
 [[https://github.com/benma/visual-regexp.el][Read more]]
 
-*** Yaml mode
+*** YAML mode
 
-Alows you to edit .yml files
+Allows you to edit YAML files
 
 To install it, add =yaml-mode= to your packages list.
 
