@@ -347,7 +347,7 @@ With this mode, when you press *C-x o*, big numbers replace your opened windows.
 
 To install it, add =switch-window= to your packages list.
 
-Then do not forget to override the defaut configuration by adding this to your configuration:
+Then do not forget to override the default configuration by adding this to your configuration:
 
 #+BEGIN_SRC lisp
 (global-set-key (kbd "C-x o") 'switch-window)
