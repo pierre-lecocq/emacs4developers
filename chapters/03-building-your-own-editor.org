@@ -54,7 +54,7 @@ As before, simply add this to your configuration file:
 ;; Show trailing white spaces
 (setq-default show-trailing-whitespace t)
 
-;; Remove useless whitespaces before saving a file
+;; Remove useless whitespace before saving a file
 (add-hook 'before-save-hook 'whitespace-cleanup)
 (add-hook 'before-save-hook (lambda() (delete-trailing-whitespace)))
 #+END_SRC
