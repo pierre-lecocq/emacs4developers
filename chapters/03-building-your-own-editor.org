@@ -45,7 +45,7 @@ As before, simply add this to your configuration file:
 ;; Ask "y" or "n" instead of "yes" or "no". Yes, laziness is great.
 (fset 'yes-or-no-p 'y-or-n-p)
 
-;; Highlight corresponding parenthese when cursor is on one
+;; Highlight corresponding parentheses when cursor is on one
 (show-paren-mode t)
 
 ;; Highlight tabulations
