@@ -12,7 +12,7 @@ According to the kind of files you are editing (or a command you type), it can m
 
 ** Emacs for Ruby developers
 
-There are many ruby developer who decribe their set up around the web. Here are the most popular:
+There are many ruby developers who describe their setup around the web. Here are the most popular:
 
 - [[http://devblog.avdi.org/category/emacs-reboot/][The Emacs reboot serie, by Avdi Grimm]] (Avdi is a famous ruby programmer and a great Emacs hacker)
 - [[http://crypt.codemancers.com/posts/2013-09-26-setting-up-emacs-as-development-environment-on-osx/][Setting up Emacs as Ruby development environment on OSX]] (even if it is for OSX, the packages remain the same on all OSes)
