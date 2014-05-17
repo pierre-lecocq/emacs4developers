@@ -273,7 +273,7 @@ It is for comfort, but is indispensable to go fast.
 
 Many extensions of this mode are available, therefore read and chose what you want.
 
-I personnaly use two of them: /vertical/ and /hack/.
+I personally use two of them: /vertical/ and /hack/.
 
 To install it, add =ido-hacks= and =ido-vertical-mode= to your packages list.
 
