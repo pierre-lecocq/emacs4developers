@@ -124,7 +124,7 @@ Only one major mode can be used at a time.
 
 *** Minor modes
 
-Minor modes are additionnal modes that are added transparently to the major mode. They add more features to the main one (i.e parentheses matching, syntax or spelling checkers, ...)
+Minor modes are additional modes that are added transparently to the major mode. They add more features to the main one (i.e parentheses matching, syntax or spelling checkers, ...)
 
 Several minor modes can be used at a time.
 
