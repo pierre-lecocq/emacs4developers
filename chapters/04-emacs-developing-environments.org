@@ -44,7 +44,7 @@ If you develop in Go, you really should refer to the great [[http://yousefourabi
 
 PHP, along with all the web technologies (HTML/JS/CSS) are very well supported in Emacs. The PHP mode does almost all the job by itself.
 
-- [[http://www.emacswiki.org/emacs/PhpMode][The EmacsWiki page about php-mode and other assicated packages]]
+- [[http://www.emacswiki.org/emacs/PhpMode][The EmacsWiki page about php-mode and other associated packages]]
 - [[http://stackoverflow.com/questions/912671/what-is-a-good-setup-for-editing-php-in-emacs][A list of useful packages for PHP - on StackOverflow]]
 - [[https://drupal.org/node/59868][An example setup for working on Drupal]] (but can be used for PHP in general)
 - [[https://code.google.com/p/geben-on-emacs/][GEBEN - remote debugging environment for Emacs]]
