@@ -52,7 +52,7 @@ PHP, along with all the web technologies (HTML/JS/CSS) are very well supported i
 
 ** Emacs for Java developers
 
-Java development is held by Eclipse. But it is not the only editor/environment that allows you to develop in Java !
+Java development is held by Eclipse. But it is not the only editor/environment that allows you to develop in Java!
 
 - [[http://jdee.sourceforge.net/][JDEE - the Java Development Environment for Emacs]]
 - [[http://www.emacswiki.org/emacs/JavaDevelopmentEnvironment][The EmacsWiki article on JDEE]]
