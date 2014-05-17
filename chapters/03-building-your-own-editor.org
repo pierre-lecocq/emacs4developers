@@ -24,7 +24,7 @@ touch ~/.emacs.d/init.el
 When you will have to change or add configuration, simply edit your *~/.emacs.d/init.el* file and add what you need.
 
 For exemple, here is a tweak that does nothing visually but is useful for other packages and the Emacs engine itself.
-It allows you to define your name and email. Emacs can use it to add author informations to a file when asked.
+It allows you to define your name and email. Emacs can use it to add author information to a file when asked.
 
 #+BEGIN_SRC lisp
 (setq user-full-name "Your full name")
