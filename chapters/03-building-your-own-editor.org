@@ -178,7 +178,7 @@ From this point, we will use /el-get/ to install packages.
 
 Here is how to install a few packages. All the packages that you will install in the future will be done with the same method.
 
-Let's say that we want to install 2 packages for the begining:
+Let's say that we want to install 2 packages for the beginning:
 
 - /color-theme/ in order to allow us to  change colors themes
 - /autopair/ in order to close automatically parentheses, brackets and braces when you open it
