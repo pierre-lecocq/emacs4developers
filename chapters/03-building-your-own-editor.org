@@ -325,7 +325,7 @@ To install it, add =rainbow-mode= to your packages list.
 
 *** RHTML mode
 
-This mode is useful for editing .rhtml files. You can also use it to edit any kinf of ruby templates (i.e .erb).
+This mode is useful for editing .rhtml files. You can also use it to edit any kind of ruby templates (i.e .erb).
 
 To install it, add =rhtml-mode= to your packages list.
 
