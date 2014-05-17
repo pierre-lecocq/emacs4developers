@@ -506,7 +506,7 @@ There is no secret or perfect color theme. There are so many of theme and each u
 #+CAPTION: color themes
 [[../images/colors.gif]]
 
-In order to choose yours, try the default ones, see this [[http://gnuemacscolorthemetest.googlecode.com/svn/html/index-el.html][showcase]], make your own or google a lot !
+In order to choose yours, try the default ones, see this [[http://gnuemacscolorthemetest.googlecode.com/svn/html/index-el.html][showcase]], make your own or Google a lot!
 
 *** Font settings
 
