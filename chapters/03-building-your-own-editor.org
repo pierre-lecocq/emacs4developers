@@ -479,7 +479,7 @@ Now, in your project folder and once you generated your TAGS file, you can press
 
 Once fired, you can switch to the newly created buffer, parse the results and jump to the wanted files very quickly.
 
-What is cool is that it is integrated in the editor, just beside your code and does not require to switch to a shell and then copy-paste the files path you want.
+What is cool is that it is integrated in the editor, just beside your code --  it does not require you to switch to a shell and then copy-paste the file you want.
 
 [[../images/rgrep.gif]]
 
