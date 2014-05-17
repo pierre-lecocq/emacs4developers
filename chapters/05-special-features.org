@@ -118,7 +118,7 @@ Some alternatives to Gnus (that I do not use, but that are popular):
 
 - Emacs is all about Macros. This is one of its most powerful feature. Record a sequence and re-play it on other lines! Here is [[http://www.thegeekstuff.com/2010/07/emacs-macro-tutorial-how-to-record-and-play/][how]].
 - Using [[http://www.masteringemacs.org/articles/2010/11/01/running-shells-in-emacs-overview/][shell]] inside Emacs is cool
-- You really should use the /[[http://www.emacswiki.org/emacs/BookMarks][bookmarks]]/ functionnality to save your projects locations (locally or remotely)
+- You really should use the /[[http://www.emacswiki.org/emacs/BookMarks][bookmarks]]/ functionality to save your projects locations (locally or remotely)
 - When opening a file, add /sudo:/ in front of its path in order to edit it as a privileged user
 - You can edit files in hexadecimal directly in Emacs thanks to the /hexl-mode/
 - Emacs allows you to open an archive (gz, bz2, zip, ...), edit its files on-the-fly without extracting yourself the archive. To do so, simple open the file directly in Emacs (*C-x C-f* /path/to/archive.tar.bz2)
