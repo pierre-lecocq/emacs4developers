@@ -64,7 +64,7 @@ How it works?
 
 *** Manipulate the line
 
-- *C-a*: go to the begining of the current line
+- *C-a*: go to the beginning of the current line
 - *C-e*: go to the end of the current line
 - *C-k*: cut the rest of the line at the cursor position
 - *C-y*: paste what you had cut with the command above
