@@ -31,7 +31,7 @@ Work in progress, so stay tuned.
    - 3.1 [[./chapters/03-building-your-own-editor.org#first-basic-configuration][First basic configuration]]
    - 3.2 [[./chapters/03-building-your-own-editor.org#general-basic-configuration][General basic configuration]]
    - 3.3 [[./chapters/03-building-your-own-editor.org#backup-files][Backup files]]
-   - 3.4 [[./chapters/03-building-your-own-editor.org#setting-up-the-locals][Setting up the locales]]
+   - 3.4 [[./chapters/03-building-your-own-editor.org#setting-up-the-locales][Setting up the locales]]
    - 3.5 [[./chapters/03-building-your-own-editor.org#more-configuration][More configuration]]
    - 3.6 [[./chapters/03-building-your-own-editor.org#modes][Modes]]
    - 3.7 [[./chapters/03-building-your-own-editor.org#package-managers][Package managers]]
