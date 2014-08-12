@@ -55,6 +55,10 @@ Work in progress, so stay tuned.
    - 5.6 [[./chapters/05-special-features.org#coming-from-other-editors-ie-vim][Coming from other editors (i.e Vim or SublimeText)]]
 - 6. [[./chapters/06-readings-and-resources.org][Readings and resources]]
 
+* The Gnus case
+
+If you need a detailed and explained Gnus configuration example, please refer to [[http://qsdfgh.com/articles/gnus-configuration-example.html][this dedicated article]]
+
 * Exports
 
 This document is also available in [[./exports/emacs4developers.org][a single ORG file]], [[./exports/emacs4developers.odt][ODT]], [[./exports/emacs4developers.txt][TXT]] and [[./exports/emacs4developers.html][HTML]].
