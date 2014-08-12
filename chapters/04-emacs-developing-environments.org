@@ -6,15 +6,15 @@
 
 * Emacs for developers - Emacs developing environments
 
-Emacs, thanks to major or minor modes can be transformed into a powerful specific environment.
+Emacs, thanks to major or minor modes, can be transformed into a powerful specific environment.
 
 According to the kind of files you are editing (or a command you type), it can mutate and give you specific features that fits the need of a programming language (or a task like debugging, launching unit tests, ...)
 
 ** Emacs for Ruby developers
 
-There are many ruby developer who decribe their set up around the web. Here are the most popular:
+There are many ruby developers who describe their setup around the web. Here are the most popular:
 
-- [[http://devblog.avdi.org/category/emacs-reboot/][The Emacs reboot serie, by Avdi Grimm]] (Avdi is a famous ruby programmer and a great Emacs hacker)
+- [[http://devblog.avdi.org/category/emacs-reboot/][The Emacs reboot series, by Avdi Grimm]] (Avdi is a famous ruby programmer and a great Emacs hacker)
 - [[http://crypt.codemancers.com/posts/2013-09-26-setting-up-emacs-as-development-environment-on-osx/][Setting up Emacs as Ruby development environment on OSX]] (even if it is for OSX, the packages remain the same on all OSes)
 - [[http://lorefnon.me/2014/02/02/configuring-emacs-for-rails.html][Configuring Emacs as a productive development environment for Rails development]]
 - [[http://www.emacswiki.org/emacs/RubyOnRails][The EmacsWiki on Ruby and RoR]]
@@ -31,9 +31,9 @@ Here are some resources about setting Emacs for developing in python:
 C languages are very well handled by Emacs and it allows you to edit, debug and run programs with Emacs very easily, with all the control you want.
 
 - [[http://stackoverflow.com/questions/5800317/emacs-as-a-c-programming-ide-configuration][A various tips and packages for C language(s)]] on StackOverflow
-- [[http://truongtx.me/2013/03/10/emacs-setting-up-perfect-environment-for-cc-programming/][Setting up perfect environment for C/C++ Programming]] (according to its auhor. Good resource, though)
+- [[http://truongtx.me/2013/03/10/emacs-setting-up-perfect-environment-for-cc-programming/][Setting up perfect environment for C/C++ Programming]] (according to its author. Good resource, though)
 - [[http://www.emacswiki.org/emacs/DebuggingWithEmacs][Debugging with Emacs]]
-- [[http://cedet.sourceforge.net/][CEDET - Collection of Emacs Development Environment Tools]] An amazing collection of tools for developping in many programming languages, especially for C/C++
+- [[http://cedet.sourceforge.net/][CEDET - Collection of Emacs Development Environment Tools]] An amazing collection of tools for developing in many programming languages, especially for C/C++
 - [[http://alexott.net/en/writings/emacs-devenv/EmacsCedet.html][How to configure CEDET]]
 
 ** Emacs for Go developers
@@ -44,7 +44,7 @@ If you develop in Go, you really should refer to the great [[http://yousefourabi
 
 PHP, along with all the web technologies (HTML/JS/CSS) are very well supported in Emacs. The PHP mode does almost all the job by itself.
 
-- [[http://www.emacswiki.org/emacs/PhpMode][The EmacsWiki page about php-mode and other assicated packages]]
+- [[http://www.emacswiki.org/emacs/PhpMode][The EmacsWiki page about php-mode and other associated packages]]
 - [[http://stackoverflow.com/questions/912671/what-is-a-good-setup-for-editing-php-in-emacs][A list of useful packages for PHP - on StackOverflow]]
 - [[https://drupal.org/node/59868][An example setup for working on Drupal]] (but can be used for PHP in general)
 - [[https://code.google.com/p/geben-on-emacs/][GEBEN - remote debugging environment for Emacs]]
@@ -52,7 +52,7 @@ PHP, along with all the web technologies (HTML/JS/CSS) are very well supported i
 
 ** Emacs for Java developers
 
-Java development is held by Eclipse. But it is not the only editor/environment that allows you to develop in Java !
+Java development is held by Eclipse. But it is not the only editor/environment that allows you to develop in Java!
 
 - [[http://jdee.sourceforge.net/][JDEE - the Java Development Environment for Emacs]]
 - [[http://www.emacswiki.org/emacs/JavaDevelopmentEnvironment][The EmacsWiki article on JDEE]]
@@ -62,6 +62,6 @@ Java development is held by Eclipse. But it is not the only editor/environment t
 
 Emacs is very useful for scientists and people dealing with data. Statistics, analysis, plotting, ... everything can be done within Emacs.
 
-- [[https://github.com/vikasrawal/orgpaper/blob/master/orgpapers.org][An amazing paper on worling with Emacs, OrgMode and R]]
+- [[https://github.com/vikasrawal/orgpaper/blob/master/orgpapers.org][An amazing paper on working with Emacs, OrgMode and R]]
 - [[http://ess.r-project.org/][Emacs Speaks Statistics]] is a great project that adds a full statistics environment to your Emacs
 - [[http://stats.blogoverflow.com/2011/08/using-emacs-to-work-with-r/][A tutorial on using ESS]]

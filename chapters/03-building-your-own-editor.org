@@ -23,8 +23,8 @@ touch ~/.emacs.d/init.el
 
 When you will have to change or add configuration, simply edit your *~/.emacs.d/init.el* file and add what you need.
 
-For exemple, here is a tweak that does nothing visually but is useful for other packages and the Emacs engine itself.
-It allows you to define your name and email. Emacs can use it to add author informations to a file when asked.
+For example, here is a tweak that does nothing visually but is useful for other packages and the Emacs engine itself.
+It allows you to define your name and email. Emacs can use it to add author information to a file when asked.
 
 #+BEGIN_SRC lisp
 (setq user-full-name "Your full name")
@@ -45,7 +45,7 @@ As before, simply add this to your configuration file:
 ;; Ask "y" or "n" instead of "yes" or "no". Yes, laziness is great.
 (fset 'yes-or-no-p 'y-or-n-p)
 
-;; Highlight corresponding parenthese when cursor is on one
+;; Highlight corresponding parentheses when cursor is on one
 (show-paren-mode t)
 
 ;; Highlight tabulations
@@ -54,7 +54,7 @@ As before, simply add this to your configuration file:
 ;; Show trailing white spaces
 (setq-default show-trailing-whitespace t)
 
-;; Remove useless whitespaces before saving a file
+;; Remove useless whitespace before saving a file
 (add-hook 'before-save-hook 'whitespace-cleanup)
 (add-hook 'before-save-hook (lambda() (delete-trailing-whitespace)))
 #+END_SRC
@@ -62,11 +62,11 @@ As before, simply add this to your configuration file:
 ** Backup files
 
 You may have notice that the files you edit are duplicated and renamed with a /~/ at the end.
-They are the backup files that Emacs creates for you with an auto-save feature.
+They are the backup files that Emacs creates for you with the auto-save feature.
 Sometimes it is great because you can recover a file in case of error, sometimes it is annoying because you can have some many of these files.
 
 It is up to you to keep it or disable it.
-Here is the configuration for that:
+Here is the configuration to disable it:
 
 #+BEGIN_SRC lisp
 ;; Remove all backup files
@@ -105,10 +105,10 @@ There are so many people who share their configuration, comment their code, and 
 
 Here is mine: (https://github.com/pierre-lecocq/emacs.d)
 
-- The [[https://github.com/pierre-lecocq/emacs.d/blob/master/config/packages.org][packages]] I use
-- The [[https://github.com/pierre-lecocq/emacs.d/blob/master/config/common.org][common]] configuration
-- The [[https://github.com/pierre-lecocq/emacs.d/blob/master/config/modes.org][modes]] specific configuration
-- The [[https://github.com/pierre-lecocq/emacs.d/blob/master/config/keybindings.org][keybindings]]
+- The [[https://github.com/pierre-lecocq/emacs.d/blob/master/config/org/01-packages.org][packages]] I use
+- The [[https://github.com/pierre-lecocq/emacs.d/blob/master/config/org/02-common.org][common]] configuration
+- The [[https://github.com/pierre-lecocq/emacs.d/blob/master/config/org/03-modes.org][modes]] specific configuration
+- The [[https://github.com/pierre-lecocq/emacs.d/blob/master/config/org/04-keybindings.org][keybindings]]
 
 ** Modes
 
@@ -124,7 +124,7 @@ Only one major mode can be used at a time.
 
 *** Minor modes
 
-Minor modes are additionnal modes that are added transparently to the major mode. They add more features to the main one (i.e parentheses matching, syntax or spelling checkers, ...)
+Minor modes are additional modes that are added transparently to the major mode. They add more features to the main one (i.e parentheses matching, syntax or spelling checkers, ...)
 
 Several minor modes can be used at a time.
 
@@ -144,7 +144,7 @@ M-x package-list-packages
 
 You will have a list of packages. Simply press ENTER on the name of one of it to install it.
 
-Additionnaly, you can manage the packages list by adding other sources to your configuration file:
+Additionally, you can manage the packages list by adding other sources to your configuration file:
 
 #+BEGIN_SRC lisp
 ;; Add package sources
@@ -155,7 +155,7 @@ Additionnaly, you can manage the packages list by adding other sources to your c
 
 *** El-Get
 
-/[[https://github.com/dimitri/el-get][el-get]]/ is one of the most popular and easy to use package manager. The "/apt-get/" of Emacs.
+/[[https://github.com/dimitri/el-get][el-get]]/ is one of the most popular and easy to use package managers. It's the "/apt-get/" of Emacs.
 It is written by the great [[https://github.com/dimitri][Dimitri Fontaine]] and is based on recipe files that simply describe where is located the package and how to get/compile/install it for you.
 
 To use it, simply add this to your configuration file. It will download and set up /el-get/ for you:
@@ -178,7 +178,7 @@ From this point, we will use /el-get/ to install packages.
 
 Here is how to install a few packages. All the packages that you will install in the future will be done with the same method.
 
-Let's say that we want to install 2 packages for the begining:
+Let's say that we want to install 2 packages for the beginning:
 
 - /color-theme/ in order to allow us to  change colors themes
 - /autopair/ in order to close automatically parentheses, brackets and braces when you open it
@@ -206,7 +206,7 @@ The first solution is better since the package is described and its state (avail
 
 ** Some useful packages
 
-As a developer, you will need some packages that will help you to work, increase your productivity and enhance your confort while coding.
+As a developer, you will need some packages that will help you to work, increase your productivity and enhance your comfort while coding.
 Please note that even if I am a Ruby/shell/Lisp/web/PHP developer, some packages are compatible and useful for every kind of development. Therefore, the base packages are listed here but some specific packages that might be useful for your work are eventually not listed here. It is up to you to adapt the list according to your needs!
 
 Tip: After adding packages, restart Emacs in order to let /el-get/ download and install it properly.
@@ -230,7 +230,7 @@ To install it, add =company-mode= to your packages list.
 
 *** Autopair
 
-When you open a quote/parenthese/bracket/curly bracket, this mode automatically adds the closed one and bring your cusror between the two.
+When you open a quote/parenthese/bracket/curly bracket, this mode automatically adds the closed one and bring your cursor between the two.
 Very useful to avoid syntax errors, for example.
 
 To install it, add =autopair= to your packages list.
@@ -273,7 +273,7 @@ It is for comfort, but is indispensable to go fast.
 
 Many extensions of this mode are available, therefore read and chose what you want.
 
-I personnaly use two of them: /vertical/ and /hack/.
+I personally use two of them: /vertical/ and /hack/.
 
 To install it, add =ido-hacks= and =ido-vertical-mode= to your packages list.
 
@@ -291,8 +291,8 @@ To install it, add =js3-mode= to your packages list.
 
 *** Magit
 
-Magit is a very powerful and elegant mode for intercating with your git repository.
-In order to understand how powerful it is, simply watch this amazing [[http://vimeo.com/2871241][video]]
+Magit is a very powerful and elegant mode for interacting with your git repository.
+In order to understand how powerful it is, simply watch this amazing [[http://vimeo.com/2871241][video]].
 
 To install it, add =magit= to your packages list.
 
@@ -300,7 +300,7 @@ To install it, add =magit= to your packages list.
 
 *** Multiple cursors
 
-This mode is great and super powerful. Instead of explaining what it is, check this amazing [[http://emacsrocks.com/e13.html][video]] by Magnars.
+This mode is great and super powerful. Instead of explaining what it is, I'll point you to this amazing [[http://emacsrocks.com/e13.html][video]] by Magnars.
 
 To install it, add =multiple-cursors= to your packages list.
 
@@ -325,7 +325,7 @@ To install it, add =rainbow-mode= to your packages list.
 
 *** RHTML mode
 
-This mode is useful for editing .rhtml files. You can also use it to edit any kinf of ruby templates (i.e .erb).
+This mode is useful for editing .rhtml files. You can also use it to edit any kind of ruby templates (i.e .erb).
 
 To install it, add =rhtml-mode= to your packages list.
 
@@ -347,7 +347,7 @@ With this mode, when you press *C-x o*, big numbers replace your opened windows.
 
 To install it, add =switch-window= to your packages list.
 
-Then do not forget to override the defaut configuration by adding this to your configuration:
+Then do not forget to override the default configuration by adding this to your configuration:
 
 #+BEGIN_SRC lisp
 (global-set-key (kbd "C-x o") 'switch-window)
@@ -365,9 +365,9 @@ To install it, add =visual-regexp= to your packages list.
 
 [[https://github.com/benma/visual-regexp.el][Read more]]
 
-*** Yaml mode
+*** YAML mode
 
-Alows you to edit .yml files
+Allows you to edit YAML files
 
 To install it, add =yaml-mode= to your packages list.
 
@@ -378,7 +378,7 @@ To install it, add =yaml-mode= to your packages list.
 A mode that allows you to write code faster if you are lazy.
 It is very easy to create your own snippets and use it whatever the file you are editing (code, non-code, emails, ...)
 
-I personnaly do not use it, but people coming from Textmate/Sublime would love it.
+I personally do not use it, but people coming from Textmate/Sublime would love it.
 
 To install it, add =yasnippet= to your packages list.
 
@@ -406,12 +406,12 @@ There are a lot of packages in order to navigate through code, with different me
 - [[http://cedet.sourceforge.net/][Emacs CEDET]] (install it by adding =cedet= to your packages list)
 - ...
 
-(Note: use once at a time! You do not need to install them all)
+(Note: use once at a time! You do not need to install them all.)
 
 After using /Projectile/ for a certain period of time, I gave /Helm/ a shot but finally got back to the simplicity and the efficiency of the /TAGS/ system.
 Nevertheless, /Projectile/ and /Helm/ are really powerful and useful. You really should look at them.
 
-For now, I will cover the basics of /TAGS/ since it is a standard (used by other softwares) and it is built-in (so if you use another Emacs without your config, you still know how to surf in the code). And other useful tricks will be shown here.
+For now, I will cover the basics of /TAGS/ since it is a standard (used by other software) and it is built-in (so if you use another Emacs without your config, you still know how to surf in the code). And other useful tricks will be shown here.
 
 *** Tags basics
 
@@ -450,7 +450,7 @@ Select the resource you want (let's say /All.methods/ if you are editing some co
 
 *** Files navigation (a.k.a fuzzy matching) with TAGS and ido
 
-In order to find and jump easily to a file in your project thanks to TAGS, you have to add a little function to your confiugration.
+In order to find and jump easily to a file in your project thanks to TAGS, you have to add a little function to your configuration.
 For this you should have installed the =ido-mode= described above.
 
 #+begin_src emacs-lisp
@@ -477,9 +477,9 @@ Now, in your project folder and once you generated your TAGS file, you can press
 
 *M-x rgrep RET yoursearchterm RET*
 
-Once fired, you can swith to the newly created buffer, parse the results and jump to the wanted files very quickly.
+Once fired, you can switch to the newly created buffer, parse the results and jump to the wanted files very quickly.
 
-What is cool is that it is integrated in the editor, just beside your code and does not require to switch to a shell and then copy-paste the files path you want.
+What is cool is that it is integrated in the editor, just beside your code --  it does not require you to switch to a shell and then copy-paste the file you want.
 
 [[../images/rgrep.gif]]
 
@@ -506,7 +506,7 @@ There is no secret or perfect color theme. There are so many of theme and each u
 #+CAPTION: color themes
 [[../images/colors.gif]]
 
-In order to choose yours, try the default ones, see this [[http://gnuemacscolorthemetest.googlecode.com/svn/html/index-el.html][showcase]], make your own or google a lot !
+In order to choose yours, try the default ones, see this [[http://gnuemacscolorthemetest.googlecode.com/svn/html/index-el.html][showcase]], make your own or Google a lot!
 
 *** Font settings
 
