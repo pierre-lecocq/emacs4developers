@@ -6,8 +6,8 @@
 
 * Emacs for developers - Building your own editor
 
-From this point, we will edit the configuration file.
-For the moment, we will put everything in a single *~/.emacs.d/init.el* file. Create it if it does not exist.
+From this moment on, we will edit the configuration file.
+For now, we will put everything in a single *~/.emacs.d/init.el* file. Create it if it does not exist.
 
 #+BEGIN_SRC sh
 # Backup old configuration
@@ -38,8 +38,8 @@ After each configuration modification, two solutions:
 
 ** General basic configuration
 
-Now, let's move to a more visual configuration basic set.
-As before, simply add this to your configuration file:
+Now, let's move on to a basic set of more visual basic configurations.
+As you did earlier, simply add this to your configuration file:
 
 #+BEGIN_SRC lisp
 ;; Ask "y" or "n" instead of "yes" or "no". Yes, laziness is great.
@@ -63,7 +63,7 @@ As before, simply add this to your configuration file:
 
 You may have notice that the files you edit are duplicated and renamed with a /~/ at the end.
 They are the backup files that Emacs creates for you with the auto-save feature.
-Sometimes it is great because you can recover a file in case of error, sometimes it is annoying because you can have some many of these files.
+Sometimes it is great because you can recover a file in case of error, sometimes it is annoying because you can have so many of these files.
 
 It is up to you to keep it or disable it.
 Here is the configuration to disable it:
@@ -75,7 +75,7 @@ Here is the configuration to disable it:
 (setq auto-save-default nil)
 #+END_SRC
 
-An alternative method is to save these backups in a centralized folder:
+An alternative method is to save these backups in a centralized directory:
 
 #+BEGIN_SRC lisp
 ;; Save backup files in a dedicated directory
@@ -85,7 +85,7 @@ An alternative method is to save these backups in a centralized folder:
 ** Setting up the locales
 
 You may want to set up a specific locale for your files.
-Here is the trick:
+This will do the trick:
 
 #+BEGIN_SRC lisp
 ;; Set locale to UTF8
@@ -99,11 +99,11 @@ Here is the trick:
 
 ** More configuration
 
-The best way to get your configuration better, is to read the [[http://www.gnu.org/software/emacs/manual/][manual]] ...
-But you can also (this is the un-official method) read the others Emacs users' config files.
+The best way to improve your configuration is to read the [[http://www.gnu.org/software/emacs/manual/][manual]] ...
+But you can also (this is the unofficial method) read others Emacs users' config files.
 There are so many people who share their configuration, comment their code, and distribute their modes!
 
-Here is mine: (https://github.com/pierre-lecocq/emacs.d)
+Here are mine: (https://github.com/pierre-lecocq/emacs.d)
 
 - The [[https://github.com/pierre-lecocq/emacs.d/blob/master/config/org/01-packages.org][packages]] I use
 - The [[https://github.com/pierre-lecocq/emacs.d/blob/master/config/org/02-common.org][common]] configuration
@@ -112,9 +112,9 @@ Here is mine: (https://github.com/pierre-lecocq/emacs.d)
 
 ** Modes
 
-/Modes/ are Emacs' /extensions/ that can be installed to extend the capabilities of Emacs. They will allow you to build a powerful tailored editor.
+/Modes/ are Emacs /extensions/ that can be installed to extend the capabilities of Emacs. They will allow you to build a powerful tailored editor.
 
-There are 2 kind of modes: minor and major.
+There are 2 kinds of modes: major and minor.
 
 *** Major modes
 
@@ -124,9 +124,9 @@ Only one major mode can be used at a time.
 
 *** Minor modes
 
-Minor modes are additional modes that are added transparently to the major mode. They add more features to the main one (i.e parentheses matching, syntax or spelling checkers, ...)
+Minor modes are additional modes that are added transparently to the major mode. They add features and behavior (i.e parentheses matching, syntax or spelling checkers, ...)
 
-Several minor modes can be used at a time.
+Several minor modes can be used at any given time.
 
 ** Package managers
 
@@ -142,7 +142,7 @@ To list available packages, simply type this command:
 M-x package-list-packages
 #+END_SRC
 
-You will have a list of packages. Simply press ENTER on the name of one of it to install it.
+You will see a list of packages. Simply press ENTER on the name of one of them to install it.
 
 Additionally, you can manage the packages list by adding other sources to your configuration file:
 
@@ -155,8 +155,8 @@ Additionally, you can manage the packages list by adding other sources to your c
 
 *** El-Get
 
-/[[https://github.com/dimitri/el-get][el-get]]/ is one of the most popular and easy to use package managers. It's the "/apt-get/" of Emacs.
-It is written by the great [[https://github.com/dimitri][Dimitri Fontaine]] and is based on recipe files that simply describe where is located the package and how to get/compile/install it for you.
+/[[https://github.com/dimitri/el-get][el-get]]/ is one of the most popular and easy-to-use package managers. It's the "/apt-get/" of Emacs.
+It is written by the great [[https://github.com/dimitri][Dimitri Fontaine]] and is based on recipe files that simply describe where the package is located and how to get/compile/install it for you.
 
 To use it, simply add this to your configuration file. It will download and set up /el-get/ for you:
 
@@ -172,7 +172,7 @@ To use it, simply add this to your configuration file. It will download and set 
       (eval-print-last-sexp))))
 #+END_SRC
 
-From this point, we will use /el-get/ to install packages.
+From now on, we will use /el-get/ to install packages.
 
 *** Install your first packages with el-get
 
@@ -207,7 +207,7 @@ The first solution is better since the package is described and its state (avail
 ** Some useful packages
 
 As a developer, you will need some packages that will help you to work, increase your productivity and enhance your comfort while coding.
-Please note that even if I am a Ruby/shell/Lisp/web/PHP developer, some packages are compatible and useful for every kind of development. Therefore, the base packages are listed here but some specific packages that might be useful for your work are eventually not listed here. It is up to you to adapt the list according to your needs!
+Please note that even if I am a Ruby/shell/Lisp/web/PHP developer, some packages are compatible and useful for every kind of development. Therefore, the base packages are listed here but some specific packages that might be useful for your work may not be listed here. It is up to you to adapt the list according to your needs!
 
 Tip: After adding packages, restart Emacs in order to let /el-get/ download and install it properly.
 
@@ -316,8 +316,8 @@ To install it, add =php-mode= to your packages list.
 
 *** Rainbow mode
 
-A useless but indispensable mode to add colors to your CSS files when using properties like "color", "background-color".
-It is cool since it understands every way to write a color (hex, name, ...) and gives you a preview of the color itself.
+A toyish but indispensable mode to add colors to your CSS files when using properties like "color", "background-color".
+It is great because it understands every way to write a color (hex, name, ...) and gives you a preview of the color itself.
 
 To install it, add =rainbow-mode= to your packages list.
 
@@ -394,11 +394,11 @@ To install it, add =paredit= to your packages list.
 
 ** Code navigation
 
-Navigate through source code is an indispensable feature in code editors. Some of other editors are focused on this (like Sublime) but the problem is that they do not leave you the choices of the weapons (like every other features).
+Navigate through source code is an indispensable feature in code editors. Some other editors are focused on this (like Sublime) but the problem is that they do not leave you the choice of weapons (like every other features).
 
 Emacs, as you noticed (yes, you did) can integrate any external tool or include a large variety of internal tools to make it more efficient. Code navigation is not an exception.
 
-There are a lot of packages in order to navigate through code, with different methodologies and advantages:
+There are a lot of packages that exist to navigate through code, with different methodologies and advantages:
 
 - [[http://www.emacswiki.org/emacs/EmacsTags][TAGS]] (built in. No installation required)
 - [[https://github.com/bbatsov/projectile][Projectile]] (install it by adding =projectile= to your packages list)
@@ -473,7 +473,7 @@ Now, in your project folder and once you generated your TAGS file, you can press
 
 *** RGrep
 
-/rgrep/ is a great tool to use in addition of the TAGS. It is a Unix tool that make /grep/ queries recursively. In Emacs, it will bring you a new buffer with all the results of the command. To use it, simply type:
+/rgrep/ is a great tool to use in addition of the TAGS. It is a Unix tool that make /grep/ queries recursively. In Emacs, it will show you a new buffer with all the results of the command. To use it, simply type:
 
 *M-x rgrep RET yoursearchterm RET*
 
@@ -511,7 +511,7 @@ In order to choose yours, try the default ones, see this [[http://gnuemacscolort
 *** Font settings
 
 After setting up your theme, there are some other tweaks that are "color theme related".
-Fonts is something very important depending on your system, your screen size, your current task in Emacs, ... etc
+Fonts are something very important depending on your system, your screen size, your current task in Emacs, ... etc
 
 If you want to change the font directly from your current Emacs instance, simply type *M-x set-frame-font RET*.
 And if you want to see all supported fonts, type *TAB* twice. It will show you a list.
@@ -533,7 +533,7 @@ As an exercise, I'll let you search how to do this kind of stuff in Emacs Lisp i
 
 If you want more about font settings and especially about font names, please see the [[http://www.emacswiki.org/emacs/SetFonts][Emacs wiki page]] or the [[http://www.gnu.org/software/emacs/manual/html_node/emacs/Fonts.html][manual]].
 
-A last point: sometimes you want to change the font size of your current buffer. To do this, simply type:
+One last point: sometimes you want to change the font size of your current buffer. To do this, simply type:
 
 - *M-x text-scale-increase* or *C-x C-+*
 - *M-x text-scale-decrease* or *C-x C--* (Ctrl x, Ctrl dash)
