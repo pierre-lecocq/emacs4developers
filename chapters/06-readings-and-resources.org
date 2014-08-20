@@ -13,5 +13,6 @@
 - [[http://emacsredux.com][Emacs redux]] by Bozhidar Batsov
 - [[http://planet.emacsen.org/][Planet Emacsen]]
 - [[http://reddit.com/r/emacs][Emacs sub-reddit]]
+- [[http://endlessparentheses.com/][Endless Parentheses]], concise emacs productivity tips
 
 And of course, the [[http://www.emacswiki.org/][Emacs wiki]]
