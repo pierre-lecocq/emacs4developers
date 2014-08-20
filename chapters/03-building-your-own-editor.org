@@ -292,7 +292,7 @@ This mode check the syntax of a buffer. It could be used for checking code synta
 
 To install it, add =flycheck= to your packages list.
 
-[[https://github.com/flycheck/flycheck][Read more]]
+[[http://flycheck.readthedocs.org/en/latest/][Read more]]
 
 *** Highlight symbol
 
