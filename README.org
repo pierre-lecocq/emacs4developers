@@ -58,7 +58,7 @@ If you need a detailed and explained Gnus configuration example, please refer to
 
 * Exports
 
-This document is also available in [[./exports/emacs4developers.org][a single ORG file]], [[./exports/emacs4developers.odt][ODT]], [[./exports/emacs4developers.txt][TXT]] and [[./exports/emacs4developers.html][HTML]].
+This document is also available in [[./exports/emacs4developers.org][a single ORG file]], [[./exports/emacs4developers.pdf][PDF]], [[./exports/emacs4developers.odt][ODT]] and [[./exports/emacs4developers.html][HTML]].
 
 * License
 

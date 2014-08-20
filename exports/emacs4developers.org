@@ -6,10 +6,7 @@
 
 * Emacs for developers
 
-This document will (hopefully) help you to use Emacs like a sir !
-
-#+CAPTION: Using Emacs like a sir
-[[../images/sir.png]]
+This document will (hopefully) help you to use Emacs as a developer.
 
 **** Disclaimer
 
@@ -418,36 +415,73 @@ To use it, simply add this to your configuration file. It will download and set 
       (eval-print-last-sexp))))
 #+END_SRC
 
-From this point, we will use /el-get/ to install packages.
+*** The generic method
 
-*** Install your first packages with el-get
+In order to leave you the choice of the package manager you want to use, here is a function that handles several package managers. For now, it covers /package.el/ and /el-get/.
 
-Here is how to install a few packages. All the packages that you will install in the future will be done with the same method.
+It also allows you to automatically install packages you want.
 
-Let's say that we want to install 2 packages for the begining:
+In the following snippet, two sample packages are installed
 
 - /color-theme/ in order to allow us to  change colors themes
 - /autopair/ in order to close automatically parentheses, brackets and braces when you open it
 
-Simply add this code at the bottom of your configuration file:
+Simply add this code to your configuration file:
 
 #+BEGIN_SRC lisp
+;; Set up the package manager of choice. Supports "el-get" and "package.el"
+(setq pmoc "el-get")
+
 ;; List of all wanted packages
 (setq
- el-get-packages
+ wanted-packages
  '(
    color-theme
    autopair
-   ;; Add any other packages here ...
 ))
 
-(el-get 'sync el-get-packages)
+;; Package manager and packages handler
+(defun install-wanted-packages ()
+  "Install wanted packages according to a specific package manager"
+  (interactive)
+  (cond
+   ;; package.el
+   ((string= pmoc "package.el")
+    (require 'package)
+    (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
+    (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+    (add-to-list 'package-archives '("marmelade" . "http://marmalade-repo.org/packages/"))
+    (package-initialize)
+    (let ((need-refresh nil))
+      (mapc (lambda (package-name)
+          (unless (package-installed-p package-name)
+        (set 'need-refresh t))) wanted-packages)
+      (if need-refresh
+        (package-refresh-contents)))
+    (mapc (lambda (package-name)
+        (unless (package-installed-p package-name)
+          (package-install package-name))) wanted-packages)
+    )
+   ;; el-get
+   ((string= pmoc "el-get")
+    (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+    (unless (require 'el-get nil 'noerror)
+      (with-current-buffer
+      (url-retrieve-synchronously
+       "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
+    (let (el-get-master-branch)
+      (goto-char (point-max))
+      (eval-print-last-sexp))))
+    (el-get 'sync wanted-packages))
+   ;; fallback
+   (t (error "Unsupported package manager")))
+  )
+
+;; Install wanted packages
+(install-wanted-packages)
 #+END_SRC
 
-This code will install packages from the list named /el-get-packages/ we defined just above.
-In the future, if you want to add a package, simply add its name to this list.
-
-Available packages are listed [[https://github.com/dimitri/el-get/tree/master/recipes][here]].
+Note that some of the following package names could vary if you use /package.el/ or /el-get/.
 
 ** Some useful packages
 
