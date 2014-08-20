@@ -9,7 +9,7 @@
 **  Config files
 
 In order to customize Emacs, you will have to edit its configuration files.
-It does not exist when you install the software (or is an empty file) and does nothing until you decide to tweak Emacs.
+hen you install the software, the configuration file does not exist (or is empty) and does nothing until you decide to tweak Emacs.
 Some people use Emacs for decades without any extra configuration because they like it out of the box.
 
 There are several ways to manage your Emacs configuration:
@@ -17,9 +17,9 @@ There are several ways to manage your Emacs configuration:
 - Simply create and edit a *~/.emacs* file
 - Create a *~/.emacs.d/* directory with a *~/.emacs.d/init.el* file
 
-The first solution is great if you have a small, tidied and exportable configuration file.
+The first solution is great if you have a small, clean and exportable configuration file.
 
-The second solution is great if you need several configuration files (keep you configuration parts separated) or you need to install external extensions (you will install them in *~/.emacs.d* to keep them centralized and exportable).
+The second solution is great if you need several configuration files (keep your configuration parts separated) or you need to install external extensions (you will install them in *~/.emacs.d* to keep them centralized and exportable).
 
 ** Executing commands
 
@@ -46,13 +46,13 @@ Congratulations! You just called your first Emacs command.
 
 ** Key bindings
 
-Here are the most useful keys in Emacs. You will use them several hundreds (or thousands) times a day.
+Here are the most useful keys in Emacs. You will use them several hundreds (or thousands) of times a day.
 
-How it works?
+How does it work?
 
-- The sequence /C-something/ means that you have to press and hold the /Control/ key while hitting the /something/ key. Example: /C-a/ means /Control + a/.
-- The sequence /C-something somethingelse/ means that you press /Control + something/, then you release Control to hit /somethingelse/.
-- The sequence /C-something C-somethingelse/ means that you have to press Control while hitting /something/ and /somethingelse/.
+- The sequence /C-something/ means that you have to press and hold the /Control/ key while pressing the /something/ key. Example: /C-a/ means /Control + a/.
+- The sequence /C-something somethingelse/ means that you press /Control + something/, then you release Control to press /somethingelse/.
+- The sequence /C-something C-somethingelse/ means that you have to press Control while pressing /something/, then releasing /something/ and pressing /somethingelse/.
 
 *** Manipulate files
 
@@ -62,7 +62,7 @@ How it works?
 #+CAPTION: Open a file, modify it and save it
 [[../images/open-and-save.gif]]
 
-*** Manipulate the line
+*** Manipulate the current line
 
 - *C-a*: go to the beginning of the current line
 - *C-e*: go to the end of the current line
@@ -84,7 +84,7 @@ An /Emacs frame/ can be divided into /windows/ in itself.
 - *C-x 2*: open a new window horizontally
 - *C-x 3*: open a new window vertically
 - *C-x o*: switch to the next window
-- *C-x 0*: close a window
+- *C-x 0*: close the current window
 
 #+CAPTION: Windows manipulation
 [[../images/windows.gif]]
@@ -104,7 +104,7 @@ A /buffer/ is displayed in a /frame/.
 
 - *C-g* or *ESC ESC ESC*: cancel the current command running in the minibuffer
 
-*** The most useless one
+*** The most useless command
 
 - *C-x C-c*: quit emacs (use at your own risks!)
 
