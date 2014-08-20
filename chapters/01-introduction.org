@@ -31,6 +31,8 @@ And if you have an exotic operating system, here are the specific distributions:
 - Mac OS X: http://emacsformacosx.com/ (or with homebrew: /brew install emacs/)
 - Windows: http://ftp.igh.cnrs.fr/pub/gnu/emacs/windows/
 
+For Max OS X, the Yamamoto Mitsuharu port has some nice features an can be found via this [[https://github.com/railwaycat/emacs-mac-port][github mirror]].
+
 But, in order to get the latest version, it's _highly recommended_ that you compile Emacs yourself: http://ftp.igh.cnrs.fr/pub/gnu/emacs/
 
 
