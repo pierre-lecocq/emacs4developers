@@ -9,7 +9,7 @@
 **  Config files
 
 In order to customize Emacs, you will have to edit its configuration files.
-hen you install the software, the configuration file does not exist (or is empty) and does nothing until you decide to tweak Emacs.
+When you install the software, the configuration file does not exist (or is empty) and does nothing until you decide to tweak Emacs.
 Some people use Emacs for decades without any extra configuration because they like it out of the box.
 
 There are several ways to manage your Emacs configuration:
