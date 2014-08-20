@@ -6,10 +6,7 @@
 
 * Emacs for developers
 
-This document will (hopefully) help you to use Emacs like a sir !
-
-#+CAPTION: Using Emacs like a sir
-[[./images/sir.png]]
+This document will (hopefully) help you to use Emacs as a developer.
 
 **** Disclaimer
 
