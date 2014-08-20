@@ -438,7 +438,7 @@ There are a lot of packages that exist to navigate through code, with different 
 
 - [[http://www.emacswiki.org/emacs/EmacsTags][TAGS]] (built in. No installation required)
 - [[https://github.com/bbatsov/projectile][Projectile]] (install it by adding =projectile= to your packages list)
-- [[https://github.com/emacs-helm/helm][Helm]] (install it by adding =heml= to your packages list)
+- [[https://github.com/emacs-helm/helm][Helm]] (install it by adding =helm= to your packages list)
 - [[http://cedet.sourceforge.net/][Emacs CEDET]] (install it by adding =cedet= to your packages list)
 - ...
 
