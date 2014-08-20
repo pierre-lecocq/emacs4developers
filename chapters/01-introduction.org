@@ -28,7 +28,7 @@ So run your favorite package manager to install it:
 
 And if you have an exotic operating system, here are the specific distributions:
 
-- Mac OS X: http://emacsformacosx.com/
+- Mac OS X: http://emacsformacosx.com/ (or with homebrew: /brew install emacs/)
 - Windows: http://ftp.igh.cnrs.fr/pub/gnu/emacs/windows/
 
 But, in order to get the latest version, it's _highly recommended_ that you compile Emacs yourself: http://ftp.igh.cnrs.fr/pub/gnu/emacs/
@@ -36,7 +36,7 @@ But, in order to get the latest version, it's _highly recommended_ that you comp
 
 ** More than an editor
 
-- More than an editor, it is a Lisp interpretor
+- More than an editor, it is a Lisp interpreter
 - Can run any type of program written in Lisp:
   - Email clients (like [[http://www.gnus.org/][Gnus]] or [[http://www.emacswiki.org/emacs/mu4e][mu4e]])
   - Shell (like bash or eshell)
@@ -55,13 +55,13 @@ But, in order to get the latest version, it's _highly recommended_ that you comp
   - And so on ...
   - (and of course a document editor that can automatically generate this presentation)
 
-Naturally, you can do all of that at the same time with only one Emacs instance. Don't need to say it ...
+It goes without saying that you can do all of this at the same time with only one Emacs instance.
 
 ** The perfect development tool
 
-- As Emacs is a Lisp interpretor, it is extensible. Really really extensible.
+- As Emacs is a Lisp interpreter, it is extensible. Really, really extensible.
 - The (unofficial) goal of Emacs is to be hacked
-- Therefore your goal is to hack Emacs to make it work perfectly as you want
+- Therefore, your goal is to hack Emacs to make it work exactly as you want
 
 - Already provides so many development tools (also extensible, of course)
   - Debuggers
