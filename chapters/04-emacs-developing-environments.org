@@ -6,13 +6,13 @@
 
 * Emacs for developers - Emacs developing environments
 
-Emacs, thanks to major or minor modes, can be transformed into a powerful specific environment.
+Emacs, thanks to major and minor modes, can be transformed into a powerful specific development environment.
 
-According to the kind of files you are editing (or a command you type), it can mutate and give you specific features that fits the need of a programming language (or a task like debugging, launching unit tests, ...)
+According to the kind of files you are editing (or a command you type), it can change and give you specific features that fit the need of a programming language (or a task like debugging, launching unit tests, ...)
 
 ** Emacs for Ruby developers
 
-There are many ruby developers who describe their setup around the web. Here are the most popular:
+There are many Ruby developers who describe their setup around the web. Here are the most popular:
 
 - [[http://devblog.avdi.org/category/emacs-reboot/][The Emacs reboot series, by Avdi Grimm]] (Avdi is a famous ruby programmer and a great Emacs hacker)
 - [[http://crypt.codemancers.com/posts/2013-09-26-setting-up-emacs-as-development-environment-on-osx/][Setting up Emacs as Ruby development environment on OSX]] (even if it is for OSX, the packages remain the same on all OSes)
@@ -21,7 +21,7 @@ There are many ruby developers who describe their setup around the web. Here are
 
 ** Emacs for Python developers
 
-Here are some resources about setting Emacs for developing in python:
+Here are some resources about configuring Emacs for developing in Python:
 
 - [[http://caisah.info/emacs-for-python/][Emacs for python - on caisah.info]]
 - [[http://www.emacswiki.org/emacs/PythonProgrammingInEmacs][Python programming in Emacs - on the EmacsWiki]]
@@ -42,7 +42,7 @@ If you develop in Go, you really should refer to the great [[http://yousefourabi
 
 ** Emacs for PHP developers
 
-PHP, along with all the web technologies (HTML/JS/CSS) are very well supported in Emacs. The PHP mode does almost all the job by itself.
+PHP, along with all the web technologies (HTML/JS/CSS) are very well supported in Emacs. The PHP mode does almost all the work by itself.
 
 - [[http://www.emacswiki.org/emacs/PhpMode][The EmacsWiki page about php-mode and other associated packages]]
 - [[http://stackoverflow.com/questions/912671/what-is-a-good-setup-for-editing-php-in-emacs][A list of useful packages for PHP - on StackOverflow]]
