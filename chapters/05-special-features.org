@@ -108,6 +108,8 @@ Here are some of its features beside the basic ones:
 
 You really should try it with your personal account. It is easy to configure and integrate with [[http://www.emacswiki.org/emacs/GnusGmail][Gmail]], for example.
 
+If you want a complete configuration example with some of the most important features (imap, smtp, search, contacts, GPG signature, display customization, ...), please refer to this dedicated article: [[http://qsdfgh.com/articles/gnus-configuration-example.html][Gnus configuration example]]
+
 But be careful! If you try it, you will love it.
 
 Some alternatives to Gnus (that I do not use, but that are popular):
