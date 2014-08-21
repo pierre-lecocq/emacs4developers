@@ -10,7 +10,8 @@ This document will (hopefully) help you to use Emacs as a developer.
 
 **** Disclaimer
 
-Work in progress, so stay tuned.
+- Work in progress, so stay tuned.
+- Exports are handled by the author for the moment and do not reflect the very last changes (but are recent anyway). A scripted solution will be provided soon for contributors.
 
 * Table of contents
 
