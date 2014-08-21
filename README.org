@@ -13,6 +13,10 @@ This document will (hopefully) help you to use Emacs as a developer.
 - Work in progress, so stay tuned.
 - Exports are handled by the author for the moment and do not reflect the very last changes (but are recent anyway). A scripted solution will be provided soon for contributors.
 
+**** Contributions or requests
+
+Do not hesitate to send a pull request or open an issue to fix, add, discuss, ... etc. 
+
 * Table of contents
 
 - 1. [[./chapters/01-introduction.org][Introduction]]
