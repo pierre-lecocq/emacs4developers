@@ -332,6 +332,14 @@ In order to understand how powerful it is, simply watch this amazing [[http://vi
 
 To install it, add =magit= to your packages list.
 
+*** Git time machine
+
+In addition to Magit, there is an interesting package that allows you to travel in time accross the different versions of a file stored in Git.
+
+Here is a demo and its repository: [[https://github.com/pidu/git-timemachine][git-timemachine on github]].
+
+To install it, add =git-timemachine= to your packages list.
+
 [[https://github.com/magit/magit][Read more]]
 
 *** Multiple cursors
