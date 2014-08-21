@@ -38,8 +38,8 @@ C languages are very well handled by Emacs and it allows you to edit, debug and 
 
 ** Emacs for Go developers
 
-If you develop in Go, you really should refer to the great [[http://yousefourabi.com/blog/2014/05/emacs-for-go/][Emacs for Go]] article, written by Yousef Ourabi.
-Another one, with videos, is written by Dominik Honnef: [[http://dominik.honnef.co/posts/2013/03/writing_go_in_emacs/][Writing Go in Emacs]]
+- If you develop in Go, you really should refer to the great [[http://yousefourabi.com/blog/2014/05/emacs-for-go/][Emacs for Go]] article, written by Yousef Ourabi.
+- Another one, with videos, is written by Dominik Honnef: [[http://dominik.honnef.co/posts/2013/03/writing_go_in_emacs/][Writing Go in Emacs]]
 
 ** Emacs for PHP developers
 
