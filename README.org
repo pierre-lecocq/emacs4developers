@@ -15,7 +15,17 @@ This document will (hopefully) help you to use Emacs as a developer.
 
 **** Contributions or requests
 
-Do not hesitate to send a pull request or open an issue to fix, add, discuss, ... etc. 
+Do not hesitate to send a pull request or open an issue to fix, add, discuss, ... etc.
+
+** Who is the target of this tutorial
+
+Well, this is a good question. And I won't give an answer but some elements of answer.
+
+What is sure is that it is not written for the people thanked below (Batien, Dimitri, Sacha, Nic, Avdi, and so on ...), but what is interseting with Emacs is that even if you are a beginner, an intermediate / advanced user or an every day power user, you can learn from others each time you open a web page or a manual dealing with Emacs.
+
+Therefore, this tutorial is written for people who want to improve their experience. Simple as that. Whatever is their knowledge, their feeling, their usage, their config file size (without any pun), etc ...
+
+Remember one thing: Emacs is 30+ years old and brings new users everyday. It is a clue that this is a piece of software that deserve some attention.
 
 * Table of contents
 
