@@ -56,19 +56,19 @@ How does it work?
 
 *** Manipulate files
 
-- *C-x C-f*: open a file
-- *C-x C-s*: save a file
+- *C-x C-f*: open a file, which corresponds to *M-x find-file*
+- *C-x C-s*: save a file, which corresponds to *M-x save-buffer*
 
 #+CAPTION: Open a file, modify it and save it
 [[../images/open-and-save.gif]]
 
 *** Manipulate the current line
 
-- *C-a*: go to the beginning of the current line
-- *C-e*: go to the end of the current line
-- *C-k*: cut the rest of the line at the cursor position
-- *C-y*: paste what you had cut with the command above
-- *C-l*: center the buffer at the cursor position
+- *C-a*: go to the beginning of the current line, which corresponds to *M-x begining-of-line*
+- *C-e*: go to the end of the current line, which corresponds to *M-x end-of-line*
+- *C-k*: cut the rest of the line at the cursor position, which corresponds to *M-x kill-line*
+- *C-y*: paste what you had cut with the command above, which corresponds to *M-x yank*
+- *C-l*: center the buffer at the cursor position, which corresponds to *M-x recenter-top-bottom*
 
 #+CAPTION: Line manipulation
 [[../images/line.gif]]
@@ -81,10 +81,10 @@ An /Emacs frame/ is the window that you opened when you launched Emacs.
 
 An /Emacs frame/ can be divided into /windows/ in itself.
 
-- *C-x 2*: open a new window horizontally
-- *C-x 3*: open a new window vertically
-- *C-x o*: switch to the next window
-- *C-x 0*: close the current window
+- *C-x 2*: open a new window horizontally, which corresponds to *M-x split-window-below*
+- *C-x 3*: open a new window vertically, which corresponds to *M-x split-window-right*
+- *C-x o*: switch to the next window, which corresponds to *M-x other-window*
+- *C-x 0*: close the current window, which corresponds to *M-x delete-window*
 
 #+CAPTION: Windows manipulation
 [[../images/windows.gif]]
@@ -93,20 +93,20 @@ An /Emacs frame/ can be divided into /windows/ in itself.
 
 A /buffer/ is displayed in a /frame/.
 
-- *C-x b*: switch to an already opened buffer
-- *C-x C-b*: list opened buffer (and jump to the selected one)
-- *C-x k*: kill a buffer
+- *C-x b*: switch to an already opened buffer, which corresponds to *M-x switch-to-buffer*
+- *C-x C-b*: list opened buffer (and jump to the selected one), which corresponds to *M-x list-buffers*
+- *C-x k*: kill a buffer, which corresponds to *M-x kill-buffer*
 
 #+CAPTION: Buffer navigation
 [[../images/buffers.gif]]
 
 *** Cancel a command
 
-- *C-g* or *ESC ESC ESC*: cancel the current command running in the minibuffer
+- *C-g* or *ESC ESC ESC*: cancel the current command running in the minibuffer, which corresponds to *M-x keyboard-quit*
 
 *** The most useless command
 
-- *C-x C-c*: quit emacs (use at your own risks!)
+- *C-x C-c*: quit emacs (use at your own risks!), which corresponds to *M-x save-buffers-kill-terminal*
 
 ** Help!
 

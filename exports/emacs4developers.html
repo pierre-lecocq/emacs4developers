@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Emacs for developers</title>
-<!-- 2014-08-20 Mer 14:15 -->
+<!-- 2014-08-27 Mer 09:36 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Pierre Lecocq" />
@@ -145,7 +145,11 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">1. Emacs for developers</a></li>
+<li><a href="#sec-1">1. Emacs for developers</a>
+<ul>
+<li><a href="#sec-1-1">1.1. Who is the target of this tutorial</a></li>
+</ul>
+</li>
 <li><a href="#sec-2">2. Table of contents</a></li>
 <li><a href="#sec-3">3. Introduction</a>
 <ul>
@@ -270,7 +274,28 @@ This document will (hopefully) help you to use Emacs as a developer.
 Work in progress, so stay tuned.
 </p>
 </div>
-</li></ol>
+</li>
+
+<div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1">1.1 Who is the target of this tutorial</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Well, this is a good question. And I won't give an answer but some elements of answer.
+</p>
+
+<p>
+What is sure is that it is not written for the people thanked below (Batien, Dimitri, Sacha, Nic, Avdi, and so on &#x2026;), but what is interseting with Emacs is that even if you are a beginner, an intermediate / advanced user or an every day power user, you can learn from others each time you open a web page or a manual dealing with Emacs.
+</p>
+
+<p>
+Therefore, this tutorial is written for people who want to improve their experience. Simple as that. Whatever is their knowledge, their feeling, their usage, their config file size (without any pun), etc &#x2026;
+</p>
+
+<p>
+Remember one thing: Emacs is 30+ years old and brings new users everyday. It is a clue that this is a piece of software that deserve some attention.
+</p>
+</div>
+</div>
 </div>
 
 <div id="outline-container-sec-2" class="outline-2">
@@ -657,9 +682,9 @@ How it works?
 <h4 id="sec-4-3-1">4.3.1 Manipulate files</h4>
 <div class="outline-text-4" id="text-4-3-1">
 <ul class="org-ul">
-<li><b>C-x C-f</b>: open a file
+<li><b>C-x C-f</b>: open a file, which corresponds to <b>M-x find-file</b>
 </li>
-<li><b>C-x C-s</b>: save a file
+<li><b>C-x C-s</b>: save a file, which corresponds to <b>M-x save-buffer</b>
 </li>
 </ul>
 
@@ -676,15 +701,15 @@ How it works?
 <h4 id="sec-4-3-2">4.3.2 Manipulate the line</h4>
 <div class="outline-text-4" id="text-4-3-2">
 <ul class="org-ul">
-<li><b>C-a</b>: go to the begining of the current line
+<li><b>C-a</b>: go to the beginning of the current line, which corresponds to <b>M-x begining-of-line</b>
 </li>
-<li><b>C-e</b>: go to the end of the current line
+<li><b>C-e</b>: go to the end of the current line, which corresponds to <b>M-x end-of-line</b>
 </li>
-<li><b>C-k</b>: cut the rest of the line at the cursor position
+<li><b>C-k</b>: cut the rest of the line at the cursor position, which corresponds to <b>M-x kill-line</b>
 </li>
-<li><b>C-y</b>: paste what you had cut with the command above
+<li><b>C-y</b>: paste what you had cut with the command above, which corresponds to <b>M-x yank</b>
 </li>
-<li><b>C-l</b>: center the buffer at the cursor position
+<li><b>C-l</b>: center the buffer at the cursor position, which corresponds to <b>M-x recenter-top-bottom</b>
 </li>
 </ul>
 
@@ -713,13 +738,13 @@ An <i>Emacs frame</i> can be divided into <i>windows</i> in itself.
 </p>
 
 <ul class="org-ul">
-<li><b>C-x 2</b>: open a new window horizontally
+<li><b>C-x 2</b>: open a new window horizontally, which corresponds to <b>M-x split-window-below</b>
 </li>
-<li><b>C-x 3</b>: open a new window vertically
+<li><b>C-x 3</b>: open a new window vertically, which corresponds to <b>M-x split-window-right</b>
 </li>
-<li><b>C-x o</b>: switch to the next window
+<li><b>C-x o</b>: switch to the next window, which corresponds to <b>M-x other-window</b>
 </li>
-<li><b>C-x 0</b>: close a window
+<li><b>C-x 0</b>: close the current window, which corresponds to <b>M-x delete-window</b>
 </li>
 </ul>
 
@@ -740,11 +765,11 @@ A <i>buffer</i> is displayed in a <i>frame</i>.
 </p>
 
 <ul class="org-ul">
-<li><b>C-x b</b>: switch to an already opened buffer
+<li><b>C-x b</b>: switch to an already opened buffer, which corresponds to <b>M-x switch-to-buffer</b>
 </li>
-<li><b>C-x C-b</b>: list opened buffer (and jump to the selected one)
+<li><b>C-x C-b</b>: list opened buffer (and jump to the selected one), which corresponds to <b>M-x list-buffers</b>
 </li>
-<li><b>C-x k</b>: kill a buffer
+<li><b>C-x k</b>: kill a buffer, which corresponds to <b>M-x kill-buffer</b>
 </li>
 </ul>
 
@@ -761,7 +786,7 @@ A <i>buffer</i> is displayed in a <i>frame</i>.
 <h4 id="sec-4-3-5">4.3.5 Cancel a command</h4>
 <div class="outline-text-4" id="text-4-3-5">
 <ul class="org-ul">
-<li><b>C-g</b> or <b>ESC ESC ESC</b>: cancel the current command running in the minibuffer
+<li><b>C-g</b> or <b>ESC ESC ESC</b>: cancel the current command running in the minibuffer, which corresponds to <b>M-x keyboard-quit</b>
 </li>
 </ul>
 </div>
@@ -771,7 +796,7 @@ A <i>buffer</i> is displayed in a <i>frame</i>.
 <h4 id="sec-4-3-6">4.3.6 The most useless one</h4>
 <div class="outline-text-4" id="text-4-3-6">
 <ul class="org-ul">
-<li><b>C-x C-c</b>: quit emacs (use at your own risks!)
+<li><b>C-x C-c</b>: quit emacs (use at your own risks!), which corresponds to <b>M-x save-buffers-kill-terminal</b>
 </li>
 </ul>
 </div>
@@ -1901,6 +1926,8 @@ C languages are very well handled by Emacs and it allows you to edit, debug and 
 </p>
 
 <ul class="org-ul">
+<li><a href="http://tuhdo.github.io/c-ide.html">C/C++ Development Environment for Emacs</a> is a very complete article about this
+</li>
 <li><a href="http://stackoverflow.com/questions/5800317/emacs-as-a-c-programming-ide-configuration">A various tips and packages for C language(s)</a> on StackOverflow
 </li>
 <li><a href="http://truongtx.me/2013/03/10/emacs-setting-up-perfect-environment-for-cc-programming/">Setting up perfect environment for C/C++ Programming</a> (according to its auhor. Good resource, though)
@@ -1918,9 +1945,12 @@ C languages are very well handled by Emacs and it allows you to edit, debug and 
 <div id="outline-container-sec-6-4" class="outline-3">
 <h3 id="sec-6-4">6.4 Emacs for Go developers</h3>
 <div class="outline-text-3" id="text-6-4">
-<p>
-If you develop in Go, you really should refer to the great <a href="http://yousefourabi.com/blog/2014/05/emacs-for-go/">Emacs for Go</a> article, written by Yousef Ourabi.
-</p>
+<ul class="org-ul">
+<li>If you develop in Go, you really should refer to the great <a href="http://yousefourabi.com/blog/2014/05/emacs-for-go/">Emacs for Go</a> article, written by Yousef Ourabi.
+</li>
+<li>Another one, with videos, is written by Dominik Honnef: <a href="http://dominik.honnef.co/posts/2013/03/writing_go_in_emacs/">Writing Go in Emacs</a>
+</li>
+</ul>
 </div>
 </div>
 
@@ -1972,6 +2002,8 @@ Emacs is very useful for scientists and people dealing with data. Statistics, an
 </p>
 
 <ul class="org-ul">
+<li><a href="https://github.com/vikasrawal/orgpaper/blob/master/orgpapers.org">An amazing paper on working with Emacs, OrgMode and R</a>
+</li>
 <li><a href="http://ess.r-project.org/">Emacs Speaks Statistics</a> is a great project that adds a full statistics environment to your Emacs
 </li>
 <li><a href="http://stats.blogoverflow.com/2011/08/using-emacs-to-work-with-r/">A tutorial on using ESS</a>
@@ -2324,7 +2356,7 @@ And thank you for reading this !
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Pierre Lecocq</p>
-<p class="date">Created: 2014-08-20 Mer 14:15</p>
+<p class="date">Created: 2014-08-27 Mer 09:36</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.3.1 (<a href="http://orgmode.org">Org</a> mode 8.3beta)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>

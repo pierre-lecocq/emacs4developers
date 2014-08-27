@@ -12,6 +12,16 @@ This document will (hopefully) help you to use Emacs as a developer.
 
 Work in progress, so stay tuned.
 
+** Who is the target of this tutorial
+
+Well, this is a good question. And I won't give an answer but some elements of answer.
+
+What is sure is that it is not written for the people thanked below (Batien, Dimitri, Sacha, Nic, Avdi, and so on ...), but what is interseting with Emacs is that even if you are a beginner, an intermediate / advanced user or an every day power user, you can learn from others each time you open a web page or a manual dealing with Emacs.
+
+Therefore, this tutorial is written for people who want to improve their experience. Simple as that. Whatever is their knowledge, their feeling, their usage, their config file size (without any pun), etc ...
+
+Remember one thing: Emacs is 30+ years old and brings new users everyday. It is a clue that this is a piece of software that deserve some attention.
+
 * Table of contents
 
 - 1. [[#introduction][Introduction]]
@@ -180,19 +190,19 @@ How it works?
 
 *** Manipulate files
 
-- *C-x C-f*: open a file
-- *C-x C-s*: save a file
+- *C-x C-f*: open a file, which corresponds to *M-x find-file*
+- *C-x C-s*: save a file, which corresponds to *M-x save-buffer*
 
 #+CAPTION: Open a file, modify it and save it
 [[../images/open-and-save.gif]]
 
 *** Manipulate the line
 
-- *C-a*: go to the begining of the current line
-- *C-e*: go to the end of the current line
-- *C-k*: cut the rest of the line at the cursor position
-- *C-y*: paste what you had cut with the command above
-- *C-l*: center the buffer at the cursor position
+- *C-a*: go to the beginning of the current line, which corresponds to *M-x begining-of-line*
+- *C-e*: go to the end of the current line, which corresponds to *M-x end-of-line*
+- *C-k*: cut the rest of the line at the cursor position, which corresponds to *M-x kill-line*
+- *C-y*: paste what you had cut with the command above, which corresponds to *M-x yank*
+- *C-l*: center the buffer at the cursor position, which corresponds to *M-x recenter-top-bottom*
 
 #+CAPTION: Line manipulation
 [[../images/line.gif]]
@@ -205,10 +215,10 @@ An /Emacs frame/ is the window that you opened when you launched Emacs.
 
 An /Emacs frame/ can be divided into /windows/ in itself.
 
-- *C-x 2*: open a new window horizontally
-- *C-x 3*: open a new window vertically
-- *C-x o*: switch to the next window
-- *C-x 0*: close a window
+- *C-x 2*: open a new window horizontally, which corresponds to *M-x split-window-below*
+- *C-x 3*: open a new window vertically, which corresponds to *M-x split-window-right*
+- *C-x o*: switch to the next window, which corresponds to *M-x other-window*
+- *C-x 0*: close the current window, which corresponds to *M-x delete-window*
 
 #+CAPTION: Windows manipulation
 [[../images/windows.gif]]
@@ -217,20 +227,20 @@ An /Emacs frame/ can be divided into /windows/ in itself.
 
 A /buffer/ is displayed in a /frame/.
 
-- *C-x b*: switch to an already opened buffer
-- *C-x C-b*: list opened buffer (and jump to the selected one)
-- *C-x k*: kill a buffer
+- *C-x b*: switch to an already opened buffer, which corresponds to *M-x switch-to-buffer*
+- *C-x C-b*: list opened buffer (and jump to the selected one), which corresponds to *M-x list-buffers*
+- *C-x k*: kill a buffer, which corresponds to *M-x kill-buffer*
 
 #+CAPTION: Buffer navigation
 [[../images/buffers.gif]]
 
 *** Cancel a command
 
-- *C-g* or *ESC ESC ESC*: cancel the current command running in the minibuffer
+- *C-g* or *ESC ESC ESC*: cancel the current command running in the minibuffer, which corresponds to *M-x keyboard-quit*
 
 *** The most useless one
 
-- *C-x C-c*: quit emacs (use at your own risks!)
+- *C-x C-c*: quit emacs (use at your own risks!), which corresponds to *M-x save-buffers-kill-terminal*
 
 ** Help!
 
@@ -840,6 +850,7 @@ Here are some resources about setting Emacs for developing in python:
 
 C languages are very well handled by Emacs and it allows you to edit, debug and run programs with Emacs very easily, with all the control you want.
 
+- [[http://tuhdo.github.io/c-ide.html][C/C++ Development Environment for Emacs]] is a very complete article about this
 - [[http://stackoverflow.com/questions/5800317/emacs-as-a-c-programming-ide-configuration][A various tips and packages for C language(s)]] on StackOverflow
 - [[http://truongtx.me/2013/03/10/emacs-setting-up-perfect-environment-for-cc-programming/][Setting up perfect environment for C/C++ Programming]] (according to its auhor. Good resource, though)
 - [[http://www.emacswiki.org/emacs/DebuggingWithEmacs][Debugging with Emacs]]
@@ -848,7 +859,8 @@ C languages are very well handled by Emacs and it allows you to edit, debug and 
 
 ** Emacs for Go developers
 
-If you develop in Go, you really should refer to the great [[http://yousefourabi.com/blog/2014/05/emacs-for-go/][Emacs for Go]] article, written by Yousef Ourabi.
+- If you develop in Go, you really should refer to the great [[http://yousefourabi.com/blog/2014/05/emacs-for-go/][Emacs for Go]] article, written by Yousef Ourabi.
+- Another one, with videos, is written by Dominik Honnef: [[http://dominik.honnef.co/posts/2013/03/writing_go_in_emacs/][Writing Go in Emacs]]
 
 ** Emacs for PHP developers
 
@@ -872,6 +884,7 @@ Java development is held by Eclipse. But it is not the only editor/environment t
 
 Emacs is very useful for scientists and people dealing with data. Statistics, analysis, plotting, ... everything can be done within Emacs.
 
+- [[https://github.com/vikasrawal/orgpaper/blob/master/orgpapers.org][An amazing paper on working with Emacs, OrgMode and R]]
 - [[http://ess.r-project.org/][Emacs Speaks Statistics]] is a great project that adds a full statistics environment to your Emacs
 - [[http://stats.blogoverflow.com/2011/08/using-emacs-to-work-with-r/][A tutorial on using ESS]]
 
