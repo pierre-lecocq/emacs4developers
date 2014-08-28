@@ -330,6 +330,8 @@ To install it, add =js3-mode= to your packages list.
 Magit is a very powerful and elegant mode for interacting with your git repository.
 In order to understand how powerful it is, simply watch this amazing [[http://vimeo.com/2871241][video]].
 
+Once installed, always keep the [[http://daemianmack.com/magit-cheatsheet.html][magit cheatsheet]] around.
+
 To install it, add =magit= to your packages list.
 
 *** Git time machine
