@@ -235,6 +235,42 @@ Simply add this code to your configuration file:
 
 Note that some of the following package names could vary if you use /package.el/ or /el-get/.
 
+*** The modern and efficient way
+
+Some upper-level packages make package management easier and cleaner.
+
+For example, John Wiegley's =use-package= software is an elegant and efficient way to install and tidy your external packages configurations.
+
+Here is the way to use it:
+
+First, setup packages sources and install =use-package=
+
+#+BEGIN_SRC lisp
+(require 'package)
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+(package-initialize)
+
+(unless (package-installed-p 'use-package)
+  (progn
+    (package-refresh-contents)
+    (package-install 'use-package)))
+
+(require 'use-package)
+#+END_SRC
+
+Then, for each package you want to install, simply add this to your configuration (replace /the-package-name/ by any package name):
+
+#+BEGIN_SRC LISP
+(use-package the-package-name
+         :ensure the-package-name
+         :init (progn
+                  ;; Do something after the package is initialized
+                ))
+#+END_SRC
+
+
 ** Some useful packages
 
 As a developer, you will need some packages that will help you to work, increase your productivity and enhance your comfort while coding.
