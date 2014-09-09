@@ -103,12 +103,7 @@ The best way to improve your configuration is to read the [[http://www.gnu.org/s
 But you can also (this is the unofficial method) read others Emacs users' config files.
 There are so many people who share their configuration, comment their code, and distribute their modes!
 
-Here are mine: (https://github.com/pierre-lecocq/emacs.d)
-
-- The [[https://github.com/pierre-lecocq/emacs.d/blob/master/config/org/01-packages.org][packages]] I use
-- The [[https://github.com/pierre-lecocq/emacs.d/blob/master/config/org/02-common.org][common]] configuration
-- The [[https://github.com/pierre-lecocq/emacs.d/blob/master/config/org/03-modes.org][modes]] specific configuration
-- The [[https://github.com/pierre-lecocq/emacs.d/blob/master/config/org/04-keybindings.org][keybindings]]
+Here is mine: (https://github.com/pierre-lecocq/emacs.d)
 
 ** Modes
 

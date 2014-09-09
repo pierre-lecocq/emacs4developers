@@ -358,11 +358,6 @@ There are so many people who share their configuration, comment their code, and 
 
 Here is mine: (https://github.com/pierre-lecocq/emacs.d)
 
-- The [[https://github.com/pierre-lecocq/emacs.d/blob/master/config/packages.org][packages]] I use
-- The [[https://github.com/pierre-lecocq/emacs.d/blob/master/config/common.org][common]] configuration
-- The [[https://github.com/pierre-lecocq/emacs.d/blob/master/config/modes.org][modes]] specific configuration
-- The [[https://github.com/pierre-lecocq/emacs.d/blob/master/config/keybindings.org][keybindings]]
-
 ** Modes
 
 /Modes/ are Emacs' /extensions/ that can be installed to extend the capabilities of Emacs. They will allow you to build a powerful tailored editor.
