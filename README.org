@@ -69,7 +69,7 @@ Remember one thing: Emacs is 30+ years old and brings new users everyday. It is 
 
 * The Gnus case
 
-If you need a detailed and explained Gnus configuration example, please refer to [[http://qsdfgh.com/articles/gnus-configuration-example.html][this dedicated article]]
+If you need a detailed and explained Gnus (an Emacs mail reader) configuration example, please refer to [[http://qsdfgh.com/articles/gnus-configuration-example.html][this dedicated article]]
 
 * Exports
 
