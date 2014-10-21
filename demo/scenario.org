@@ -1,0 +1,39 @@
+- 1. Setup
+
+    - 1.1 Launch with config file
+    - 1.2 Open file
+
+- 2. Navigation
+
+    - 2.1 Go to constructor and edit arguments
+    - 2.2 Search for the "dispatch" function
+    - 2.3 Go to the second occurrence
+
+- 3. Editing
+
+    - 3.1 Basic code editing
+    - 3.2 Select a region, duplicate and modify its content
+    - 3.3 Comment a region
+    - 3.4 Replace in a region
+    - 3.5 Basic auto-complete
+
+- 4. Windows and buffers
+
+    - 4.1 Open a new window
+    - 4.2 Open a new buffer with a new file
+    - 4.3 Close window
+    - 4.4 Switch between buffers in the same window
+    - 4.5 Re-open several windows with different buffers
+    - 4.6 Close everything but the current window
+
+- 5. Dired mode
+
+    - 5.1 Open dired mode
+    - 5.2 Renaming a file
+    - 5.3 Deleting a file
+
+- 6. Shell 
+
+    - 6.1 Open a shell
+    - 6.2 Execute a command
+    - 6.3 Copy output to scratch buffer and modify it
