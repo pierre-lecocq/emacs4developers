@@ -33,6 +33,14 @@ Remember one thing: Emacs is 30+ years old and brings new users everyday. It is 
    - 2.1 [[#config-files][Config files]]
    - 2.2 [[#executing-commands][Executing commands]]
    - 2.3 [[#key-bindings][Key bindings]]
+      - 2.3.1 [[#manipulate-files][Manipulate files]]
+      - 2.3.2 [[#manipulate-the-current-line][Manipulate the current line]]
+      - 2.3.3 [[#selecting-a-region][Selecting a region]]
+      - 2.3.4 [[#commenting][Commenting]]
+      - 2.3.5 [[#windows][Windows]]
+      - 2.3.6 [[#buffers][Buffers]]
+      - 2.3.7 [[#cancel-a-command][Cancel a command]]
+      - 2.3.8 [[#the-most-useless-command][The most useless command]]
    - 2.4 [[#help][Help!]]
 - 3. [[#building-your-own-editor][Building your own editor]]
    - 3.1 [[#first-basic-configuration][First basic configuration]]
@@ -206,6 +214,38 @@ How it works?
 
 #+CAPTION: Line manipulation
 [[../images/line.gif]]
+
+*** Selecting a region
+
+Regions are selections, in Emacs.
+
+They are composed by two points. A starting one and and an ending one.
+
+To select the starting point, move your cursor to the wanted location and simply press *C-Space*. In your minibuffer, you should have seen a message like "Mark set".
+Now, move your cursor to the location you wantyour selection to end.
+
+You have now a selection (or a /region/) delimited by the place you set the first mark and your cursor. With this region, you can do what ever you want:
+
+- Copy (*M-w*)
+- Cut (*C-k*)
+- Paste (*C-y*)
+- Replace (*M-%*)
+- ... etc
+
+#+CAPTION: Selecting a region
+[[../images/selecting.gif]]
+
+*** Commenting
+
+In order to comment a code block, select the region you want to comment and use:
+
+- *M-x comment-region* in order to comment the block
+- *M-x uncomment-region* in order to uncomment the block
+
+Of course, Emacs knows, according to the major mode loaded how to comment properly your code. If the major-mode is /ruby-mode/, it will add a "#" before the line; if the major-mode is /lisp-mode/, it will add ";;", and so on and so forth.
+
+#+CAPTION: Commenting
+[[../images/comment.gif]]
 
 *** Windows
 

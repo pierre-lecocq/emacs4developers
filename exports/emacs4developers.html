@@ -1,63 +1,91 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title>Emacs for developers</title>
-<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
-<meta name="title" content="Emacs for developers"/>
-<meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2014-09-09T21:48+0200"/>
-<meta name="author" content="Pierre Lecocq"/>
-<meta name="description" content="Learn using Emacs as a developer"/>
-<meta name="keywords" content="emacs, developer"/>
+<title>*Org HTML Export*</title>
+<!-- 2014-10-21 Mar 13:50 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Pierre Lecocq" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
-  html { font-family: Times, serif; font-size: 12pt; }
   .title  { text-align: center; }
-  .todo   { color: red; }
+  .todo   { font-family: monospace; color: red; }
   .done   { color: green; }
-  .tag    { background-color: #add8e6; font-weight:normal }
-  .target { }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
   .timestamp { color: #bebebe; }
   .timestamp-kwd { color: #5f9ea0; }
-  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
-  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
-  .center {margin-left:auto; margin-right:auto; text-align:center;}
-  p.verse { margin-left: 3% }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
   pre {
-    border: 1pt solid #AEBDCC;
-    background-color: #F3F5F7;
-    padding: 5pt;
-    font-family: courier, monospace;
-        font-size: 90%;
-        overflow:auto;
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
   }
-  table { border-collapse: collapse; }
-  td, th { vertical-align: top;  }
-  th.right  { text-align:center;  }
-  th.left   { text-align:center;   }
-  th.center { text-align:center; }
-  td.right  { text-align:right;  }
-  td.left   { text-align:left;   }
-  td.center { text-align:center; }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
   dt { font-weight: bold; }
-  div.figure { padding: 0.5em; }
-  div.figure p { text-align: center; }
-  div.inlinetask {
-    padding:10px;
-    border:2px solid gray;
-    margin:10px;
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
     background: #ffffcc;
   }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
   textarea { overflow-x: auto; }
-  .linenr { font-size:smaller }
-  .code-highlighted {background-color:#ffff00;}
-  .org-info-js_info-navigation { border-style:none; }
-  #org-info-js_console-label { font-size:10px; font-weight:bold;
-                               white-space:nowrap; }
-  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
-                                 font-weight:bold; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
   /*]]>*/-->
 </style>
 <script type="text/javascript">
@@ -106,2399 +134,3170 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js"></script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
 
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
 </head>
 <body>
-
-<div id="preamble">
-
-</div>
-
 <div id="content">
-<h1 class="title">Emacs for developers</h1>
+<h1 class="title">*Org HTML Export*</h1>
+<p>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd</a>"&gt;
+&lt;html xmlns="<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>" lang="en" xml:lang="en"&gt;
+&lt;head&gt;
+&lt;title&gt;Emacs for developers&lt;/title&gt;
+&lt;!&#x2013; 2014-10-21 Mar 13:50 &#x2013;&gt;
+&lt;meta  http-equiv="Content-Type" content="text/html;charset=utf-8" /&gt;
+&lt;meta  name="generator" content="Org-mode" /&gt;
+&lt;meta  name="author" content="Pierre Lecocq" /&gt;
+&lt;meta  name="description" content="Learn using Emacs as a developer"
+ /&gt;
+&lt;meta  name="keywords" content="emacs, developer" /&gt;
+&lt;style type="text/css"&gt;
+ &lt;!&#x2013;/*&#x2013;&gt;&lt;![CDATA[/*&gt;&lt;!&#x2013;*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+</p>
 
+<p>
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js<sub>info</sub>-navigation { border-style: none; }
+  #org-info-js<sub>console</sub>-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js<sub>search</sub>-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  <i><b>]]&gt;</b></i>&#x2013;&gt;
+&lt;/style&gt;
+&lt;script type="text/javascript"&gt;
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+</p>
 
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#sec-1">1 Emacs for developers</a>
-<ul>
-<li><a href="#sec-1-1">1.1 Who is the target of this tutorial</a></li>
-</ul>
-</li>
-<li><a href="#sec-2">2 Table of contents</a></li>
-<li><a href="#sec-3">3 Introduction</a>
-<ul>
-<li><a href="#sec-3-1">3.1 Brief history</a></li>
-<li><a href="#sec-3-2">3.2 How to get Emacs?</a></li>
-<li><a href="#sec-3-3">3.3 More than an editor</a></li>
-<li><a href="#sec-3-4">3.4 The perfect development tool</a></li>
-</ul>
-</li>
-<li><a href="#sec-4">4 The basics</a>
-<ul>
-<li><a href="#sec-4-1">4.1 Config files</a></li>
-<li><a href="#sec-4-2">4.2 Executing commands</a></li>
-<li><a href="#sec-4-3">4.3 Key bindings</a>
-<ul>
-<li><a href="#sec-4-3-1">4.3.1 Manipulate files</a></li>
-<li><a href="#sec-4-3-2">4.3.2 Manipulate the line</a></li>
-<li><a href="#sec-4-3-3">4.3.3 Windows</a></li>
-<li><a href="#sec-4-3-4">4.3.4 Buffers</a></li>
-<li><a href="#sec-4-3-5">4.3.5 Cancel a command</a></li>
-<li><a href="#sec-4-3-6">4.3.6 The most useless one</a></li>
-</ul>
-</li>
-<li><a href="#sec-4-4">4.4 Help!</a></li>
-</ul>
-</li>
-<li><a href="#sec-5">5 Building your own editor</a>
-<ul>
-<li><a href="#sec-5-1">5.1 First basic configuration</a></li>
-<li><a href="#sec-5-2">5.2 General basic configuration</a></li>
-<li><a href="#sec-5-3">5.3 Backup files</a></li>
-<li><a href="#sec-5-4">5.4 Setting up the locales</a></li>
-<li><a href="#sec-5-5">5.5 More configuration</a></li>
-<li><a href="#sec-5-6">5.6 Modes</a>
-<ul>
-<li><a href="#sec-5-6-1">5.6.1 Major modes</a></li>
-<li><a href="#sec-5-6-2">5.6.2 Minor modes</a></li>
-</ul>
-</li>
-<li><a href="#sec-5-7">5.7 Package managers</a>
-<ul>
-<li><a href="#sec-5-7-1">5.7.1 Package.el</a></li>
-<li><a href="#sec-5-7-2">5.7.2 El-Get</a></li>
-<li><a href="#sec-5-7-3">5.7.3 The generic method</a></li>
-<li><a href="#sec-5-7-4">5.7.4 The modern and efficient way</a></li>
-</ul>
-</li>
-<li><a href="#sec-5-8">5.8 Some useful packages</a>
-<ul>
-<li><a href="#sec-5-8-1">5.8.1 Auto complete</a></li>
-<li><a href="#sec-5-8-2">5.8.2 Autopair</a></li>
-<li><a href="#sec-5-8-3">5.8.3 Buffer move</a></li>
-<li><a href="#sec-5-8-4">5.8.4 Flycheck</a></li>
-<li><a href="#sec-5-8-5">5.8.5 Highlight symbol</a></li>
-<li><a href="#sec-5-8-6">5.8.6 Ido</a></li>
-<li><a href="#sec-5-8-7">5.8.7 JS3</a></li>
-<li><a href="#sec-5-8-8">5.8.8 Magit</a></li>
-<li><a href="#sec-5-8-9">5.8.9 Multiple cursors</a></li>
-<li><a href="#sec-5-8-10">5.8.10 PHP mode</a></li>
-<li><a href="#sec-5-8-11">5.8.11 Rainbow mode</a></li>
-<li><a href="#sec-5-8-12">5.8.12 RHTML mode</a></li>
-<li><a href="#sec-5-8-13">5.8.13 Ruby mode</a></li>
-<li><a href="#sec-5-8-14">5.8.14 Switch window</a></li>
-<li><a href="#sec-5-8-15">5.8.15 Visual regexp</a></li>
-<li><a href="#sec-5-8-16">5.8.16 Yaml mode</a></li>
-<li><a href="#sec-5-8-17">5.8.17 Yasnippet</a></li>
-<li><a href="#sec-5-8-18">5.8.18 Paredit</a></li>
-</ul>
-</li>
-<li><a href="#sec-5-9">5.9 Code navigation</a>
-<ul>
-<li><a href="#sec-5-9-1">5.9.1 Tags basics</a></li>
-<li><a href="#sec-5-9-2">5.9.2 List functions or methods</a></li>
-<li><a href="#sec-5-9-3">5.9.3 Files navigation (a.k.a fuzzy matching) with TAGS and ido</a></li>
-<li><a href="#sec-5-9-4">5.9.4 RGrep</a></li>
-</ul>
-</li>
-<li><a href="#sec-5-10">5.10 Setting a color theme</a>
-<ul>
-<li><a href="#sec-5-10-1">5.10.1 Font settings</a></li>
-</ul></li>
-</ul>
-</li>
-<li><a href="#sec-6">6 Emacs for developers - Emacs developing environments</a>
-<ul>
-<li><a href="#sec-6-1">6.1 Emacs for Ruby developers</a></li>
-<li><a href="#sec-6-2">6.2 Emacs for Python developers</a></li>
-<li><a href="#sec-6-3">6.3 Emacs for C/C++/Objective-C</a></li>
-<li><a href="#sec-6-4">6.4 Emacs for Go developers</a></li>
-<li><a href="#sec-6-5">6.5 Emacs for PHP developers</a></li>
-<li><a href="#sec-6-6">6.6 Emacs for Java developers</a></li>
-<li><a href="#sec-6-7">6.7 Emacs for R and statistics</a></li>
-</ul>
-</li>
-<li><a href="#sec-7">7 Special features</a>
-<ul>
-<li><a href="#sec-7-1">7.1 Emacs as a file manager</a></li>
-<li><a href="#sec-7-2">7.2 Working locally vs remotely</a></li>
-<li><a href="#sec-7-3">7.3 Organize your work, write papers and manage your agenda</a></li>
-<li><a href="#sec-7-4">7.4 Emails in Emacs</a></li>
-<li><a href="#sec-7-5">7.5 Some great Emacs tips and tricks</a></li>
-<li><a href="#sec-7-6">7.6 Coming from other editors (i.e Vim)</a></li>
-</ul>
-</li>
-<li><a href="#sec-8">8 Readings and resources</a></li>
-<li><a href="#sec-9">9 License</a></li>
-<li><a href="#sec-10">10 Thanks</a></li>
-</ul>
-</div>
-</div>
+<p>
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+</p>
 
-<div id="outline-container-1" class="outline-2">
-<h2 id="sec-1"><span class="section-number-2">1</span> Emacs for developers</h2>
-<div class="outline-text-2" id="text-1">
+<p>
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+</p>
+
+<p>
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+</p>
 
 
 <p>
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+<b>/
+&lt;!&#x2013;/</b>&#x2013;&gt;&lt;![CDATA[/*&gt;&lt;!&#x2013;*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+<i>*]]&gt;*//</i>&#x2013;&gt;
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id="content"&gt;
+&lt;h1 class="title"&gt;Emacs for developers&lt;/h1&gt;
+&lt;div id="table-of-contents"&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;div id="text-table-of-contents"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#sec-1"&gt;1. Emacs for developers&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#sec-1-1"&gt;1.1. Who is the target of this tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-2"&gt;2. Table of contents&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-3"&gt;3. Introduction&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#sec-3-1"&gt;3.1. Brief history&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-3-2"&gt;3.2. How to get Emacs?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-3-3"&gt;3.3. More than an editor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-3-4"&gt;3.4. The perfect development tool&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-4"&gt;4. The basics&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#sec-4-1"&gt;4.1. Config files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-4-2"&gt;4.2. Executing commands&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-4-3"&gt;4.3. Key bindings&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#sec-4-3-1"&gt;4.3.1. Manipulate files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-4-3-2"&gt;4.3.2. Manipulate the line&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-4-3-3"&gt;4.3.3. Selecting a region&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-4-3-4"&gt;4.3.4. Commenting&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-4-3-5"&gt;4.3.5. Windows&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-4-3-6"&gt;4.3.6. Buffers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-4-3-7"&gt;4.3.7. Cancel a command&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-4-3-8"&gt;4.3.8. The most useless one&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-4-4"&gt;4.4. Help!&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5"&gt;5. Building your own editor&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#sec-5-1"&gt;5.1. First basic configuration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-2"&gt;5.2. General basic configuration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-3"&gt;5.3. Backup files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-4"&gt;5.4. Setting up the locales&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-5"&gt;5.5. More configuration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-6"&gt;5.6. Modes&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#sec-5-6-1"&gt;5.6.1. Major modes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-6-2"&gt;5.6.2. Minor modes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-7"&gt;5.7. Package managers&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#sec-5-7-1"&gt;5.7.1. Package.el&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-7-2"&gt;5.7.2. El-Get&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-7-3"&gt;5.7.3. The generic method&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-7-4"&gt;5.7.4. The modern and efficient way&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-8"&gt;5.8. Some useful packages&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#sec-5-8-1"&gt;5.8.1. Auto complete&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-8-2"&gt;5.8.2. Autopair&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-8-3"&gt;5.8.3. Buffer move&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-8-4"&gt;5.8.4. Flycheck&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-8-5"&gt;5.8.5. Highlight symbol&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-8-6"&gt;5.8.6. Ido&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-8-7"&gt;5.8.7. JS3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-8-8"&gt;5.8.8. Magit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-8-9"&gt;5.8.9. Multiple cursors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-8-10"&gt;5.8.10. PHP mode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-8-11"&gt;5.8.11. Rainbow mode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-8-12"&gt;5.8.12. RHTML mode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-8-13"&gt;5.8.13. Ruby mode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-8-14"&gt;5.8.14. Switch window&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-8-15"&gt;5.8.15. Visual regexp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-8-16"&gt;5.8.16. Yaml mode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-8-17"&gt;5.8.17. Yasnippet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-8-18"&gt;5.8.18. Paredit&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-9"&gt;5.9. Code navigation&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#sec-5-9-1"&gt;5.9.1. Tags basics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-9-2"&gt;5.9.2. List functions or methods&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-9-3"&gt;5.9.3. Files navigation (a.k.a fuzzy matching) with TAGS and ido&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-9-4"&gt;5.9.4. RGrep&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-5-10"&gt;5.10. Setting a color theme&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#sec-5-10-1"&gt;5.10.1. Font settings&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-6"&gt;6. Emacs for developers - Emacs developing environments&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#sec-6-1"&gt;6.1. Emacs for Ruby developers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-6-2"&gt;6.2. Emacs for Python developers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-6-3"&gt;6.3. Emacs for C/C++/Objective-C&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-6-4"&gt;6.4. Emacs for Go developers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-6-5"&gt;6.5. Emacs for PHP developers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-6-6"&gt;6.6. Emacs for Java developers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-6-7"&gt;6.7. Emacs for R and statistics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-7"&gt;7. Special features&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#sec-7-1"&gt;7.1. Emacs as a file manager&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-7-2"&gt;7.2. Working locally vs remotely&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-7-3"&gt;7.3. Organize your work, write papers and manage your agenda&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-7-4"&gt;7.4. Emails in Emacs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-7-5"&gt;7.5. Some great Emacs tips and tricks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-7-6"&gt;7.6. Coming from other editors (i.e Vim)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-8"&gt;8. Readings and resources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-9"&gt;9. License&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#sec-10"&gt;10. Thanks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-1" class="outline-2"&gt;
+&lt;h2 id="sec-1"&gt;&lt;span class="section-number-2"&gt;1&lt;/span&gt; Emacs for developers&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-1"&gt;
+&lt;p&gt;
 This document will (hopefully) help you to use Emacs as a developer.
+&lt;/p&gt;
+&lt;/div&gt;
 </p>
-<ul>
-<li id="sec-1-1">Disclaimer<br/>
 
 <p>
+&lt;ol class="org-ol"&gt;&lt;li&gt;&lt;a id="sec-1-0-0-1" name="sec-1-0-0-1"&gt;&lt;/a&gt;Disclaimer&lt;br  /&gt;&lt;div class="outline-text-5" id="text-1-0-0-1"&gt;
+&lt;p&gt;
 Work in progress, so stay tuned.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/li&gt;
 </p>
-</li>
-</ul>
-
-</div>
-
-<div id="outline-container-1-1" class="outline-3">
-<h3 id="sec-1-1"><span class="section-number-3">1.1</span> Who is the target of this tutorial</h3>
-<div class="outline-text-3" id="text-1-1">
-
 
 <p>
+&lt;div id="outline-container-sec-1-1" class="outline-3"&gt;
+&lt;h3 id="sec-1-1"&gt;&lt;span class="section-number-3"&gt;1.1&lt;/span&gt; Who is the target of this tutorial&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-1-1"&gt;
+&lt;p&gt;
 Well, this is a good question. And I won't give an answer but some elements of answer.
+&lt;/p&gt;
 </p>
+
 <p>
-What is sure is that it is not written for the people thanked below (Batien, Dimitri, Sacha, Nic, Avdi, and so on &hellip;), but what is interseting with Emacs is that even if you are a beginner, an intermediate / advanced user or an every day power user, you can learn from others each time you open a web page or a manual dealing with Emacs.
+&lt;p&gt;
+What is sure is that it is not written for the people thanked below (Batien, Dimitri, Sacha, Nic, Avdi, and so on &amp;#x2026;), but what is interseting with Emacs is that even if you are a beginner, an intermediate / advanced user or an every day power user, you can learn from others each time you open a web page or a manual dealing with Emacs.
+&lt;/p&gt;
 </p>
+
 <p>
-Therefore, this tutorial is written for people who want to improve their experience. Simple as that. Whatever is their knowledge, their feeling, their usage, their config file size (without any pun), etc &hellip;
+&lt;p&gt;
+Therefore, this tutorial is written for people who want to improve their experience. Simple as that. Whatever is their knowledge, their feeling, their usage, their config file size (without any pun), etc &amp;#x2026;
+&lt;/p&gt;
 </p>
+
 <p>
+&lt;p&gt;
 Remember one thing: Emacs is 30+ years old and brings new users everyday. It is a clue that this is a piece of software that deserve some attention.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </p>
-</div>
-</div>
-
-</div>
-
-<div id="outline-container-2" class="outline-2">
-<h2 id="sec-2"><span class="section-number-2">2</span> Table of contents</h2>
-<div class="outline-text-2" id="text-2">
-
-
-<ul>
-<li>1. <a href="#introduction">Introduction</a>
-<ul>
-<li>1.1 <a href="#brief-history">Brief history</a>
-</li>
-<li>1.2 <a href="#how-to-get-emacs">How to get Emacs?</a>
-</li>
-<li>1.3 <a href="#more-than-an-editor">More than an editor</a>
-</li>
-<li>1.4 <a href="#the-perfect-development-tool">The perfect development tool</a>
-</li>
-</ul>
-
-</li>
-<li>2. <a href="#the-basics">The basics</a>
-<ul>
-<li>2.1 <a href="#config-files">Config files</a>
-</li>
-<li>2.2 <a href="#executing-commands">Executing commands</a>
-</li>
-<li>2.3 <a href="#key-bindings">Key bindings</a>
-</li>
-<li>2.4 <a href="#help">Help!</a>
-</li>
-</ul>
-
-</li>
-<li>3. <a href="#building-your-own-editor">Building your own editor</a>
-<ul>
-<li>3.1 <a href="#first-basic-configuration">First basic configuration</a>
-</li>
-<li>3.2 <a href="#general-basic-configuration">General basic configuration</a>
-</li>
-<li>3.3 <a href="#backup-files">Backup files</a>
-</li>
-<li>3.4 <a href="#setting-up-the-locals">Setting up the locales</a>
-</li>
-<li>3.5 <a href="#more-configuration">More configuration</a>
-</li>
-<li>3.6 <a href="#modes">Modes</a>
-</li>
-<li>3.7 <a href="#package-managers">Package managers</a>
-</li>
-<li>3.8 <a href="#some-useful-packages">Some useful packages</a>
-</li>
-<li>3.9 <a href="#code-navigation">Code navigation</a>
-</li>
-<li>3.10 <a href="#setting-a-color-theme">Setting a color theme</a>
-</li>
-</ul>
-
-</li>
-<li>4. <a href="#emacs-developing-environments">Emacs developing environments</a>
-<ul>
-<li>4.1 <a href="#emacs-for-ruby-developers">Emacs for Ruby developers</a>
-</li>
-<li>4.2 <a href="#emacs-for-python-developers">Emacs for Python developers</a>
-</li>
-<li>4.3 <a href="#emacs-for-ccobjective-c">Emacs for C/C++/Objective-C developers</a>
-</li>
-<li>4.4 <a href="#emacs-for-go-developers">Emacs for Go developers</a>
-</li>
-<li>4.5 <a href="#emacs-for-php-developers">Emacs for PHP developers</a>
-</li>
-<li>4.6 <a href="#emacs-for-java-developers">Emacs for Java developers</a>
-</li>
-<li>4.7 <a href="#emacs-for-r-and-statistics">Emacs for R and statistics</a>
-</li>
-</ul>
-
-</li>
-<li>5. <a href="#special-features">Special features</a>
-<ul>
-<li>5.1 <a href="#emacs-as-a-file-manager">Emacs as a file manager</a>
-</li>
-<li>5.2 <a href="#working-locally-vs-remotely">Working locally vs remotely</a>
-</li>
-<li>5.3 <a href="#organize-your-work-write-papers-and-manage-your-agenda">Organize your work, write papers and manage your agenda</a>
-</li>
-<li>5.4 <a href="#emails-in-emacs">Emails in Emacs</a>
-</li>
-<li>5.5 <a href="#some-great-emacs-tips-and-tricks">Some great Emacs tips and tricks</a>
-</li>
-<li>5.6 <a href="#coming-from-other-editors-ie-vim">Coming from other editors (i.e Vim or SublimeText)</a>
-</li>
-</ul>
-
-</li>
-<li>6. <a href="#readings-and-resources">Readings and resources</a>
-</li>
-</ul>
-
-
-</div>
-
-</div>
-
-<div id="outline-container-3" class="outline-2">
-<h2 id="sec-3"><span class="section-number-2">3</span> Introduction</h2>
-<div class="outline-text-2" id="text-3">
-
-
-
-</div>
-
-<div id="outline-container-3-1" class="outline-3">
-<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Brief history</h3>
-<div class="outline-text-3" id="text-3-1">
-
-
-<ul>
-<li>Originally developed by Richard Stallman and Guy Steele in MIT AI lab
-</li>
-<li>First release in 1976
-</li>
-<li>Inspired by TECO editor
-</li>
-<li>Based on macros (Emacs stands for Editor MACroS)
-</li>
-<li>Written in C and Emacs Lisp
-</li>
-<li>Part of the GNU project (therefore, we <i>should</i> say "GNU Emacs", not "Emacs")
-
-</li>
-<li>Despite its age, new users are still adopting Emacs as their development platform to this day!
-</li>
-</ul>
-
-
-</div>
-
-</div>
-
-<div id="outline-container-3-2" class="outline-3">
-<h3 id="sec-3-2"><span class="section-number-3">3.2</span> How to get Emacs?</h3>
-<div class="outline-text-3" id="text-3-2">
-
 
 <p>
+&lt;div id="outline-container-sec-2" class="outline-2"&gt;
+&lt;h2 id="sec-2"&gt;&lt;span class="section-number-2"&gt;2&lt;/span&gt; Table of contents&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-2"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;1. &lt;i&gt;Introduction&lt;/i&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;1.1 &lt;i&gt;Brief history&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;1.2 &lt;i&gt;How to get Emacs?&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;1.3 &lt;i&gt;More than an editor&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;1.4 &lt;i&gt;The perfect development tool&lt;/i&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2. &lt;i&gt;The basics&lt;/i&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;2.1 &lt;i&gt;Config files&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;2.2 &lt;i&gt;Executing commands&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;2.3 &lt;i&gt;Key bindings&lt;/i&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;2.3.1 &lt;i&gt;Manipulate files&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;2.3.2 &lt;i&gt;Manipulate the current line&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;2.3.3 &lt;i&gt;Selecting a region&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;2.3.4 &lt;i&gt;Commenting&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;2.3.5 &lt;i&gt;Windows&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;2.3.6 &lt;i&gt;Buffers&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;2.3.7 &lt;i&gt;Cancel a command&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;2.3.8 &lt;i&gt;The most useless command&lt;/i&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;2.4 &lt;i&gt;Help!&lt;/i&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;3. &lt;i&gt;Building your own editor&lt;/i&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;3.1 &lt;i&gt;First basic configuration&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;3.2 &lt;i&gt;General basic configuration&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;3.3 &lt;i&gt;Backup files&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;3.4 &lt;i&gt;Setting up the locales&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;3.5 &lt;i&gt;More configuration&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;3.6 &lt;i&gt;Modes&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;3.7 &lt;i&gt;Package managers&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;3.8 &lt;i&gt;Some useful packages&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;3.9 &lt;i&gt;Code navigation&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;3.10 &lt;i&gt;Setting a color theme&lt;/i&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;4. &lt;i&gt;Emacs developing environments&lt;/i&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;4.1 &lt;i&gt;Emacs for Ruby developers&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;4.2 &lt;i&gt;Emacs for Python developers&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;4.3 &lt;i&gt;Emacs for C/C++/Objective-C developers&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;4.4 &lt;i&gt;Emacs for Go developers&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;4.5 &lt;i&gt;Emacs for PHP developers&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;4.6 &lt;i&gt;Emacs for Java developers&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;4.7 &lt;i&gt;Emacs for R and statistics&lt;/i&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;5. &lt;i&gt;Special features&lt;/i&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;5.1 &lt;i&gt;Emacs as a file manager&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;5.2 &lt;i&gt;Working locally vs remotely&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;5.3 &lt;i&gt;Organize your work, write papers and manage your agenda&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;5.4 &lt;i&gt;Emails in Emacs&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;5.5 &lt;i&gt;Some great Emacs tips and tricks&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;5.6 &lt;i&gt;Coming from other editors (i.e Vim or SublimeText)&lt;/i&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;6. &lt;i&gt;Readings and resources&lt;/i&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-3" class="outline-2"&gt;
+&lt;h2 id="sec-3"&gt;&lt;span class="section-number-2"&gt;3&lt;/span&gt; Introduction&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-3"&gt;
+&lt;/div&gt;&lt;div id="outline-container-sec-3-1" class="outline-3"&gt;
+&lt;h3 id="sec-3-1"&gt;&lt;span class="section-number-3"&gt;3.1&lt;/span&gt; Brief history&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-3-1"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Originally developed by Richard Stallman and Guy Steele in MIT AI lab
+&lt;/li&gt;
+&lt;li&gt;First release in 1976
+&lt;/li&gt;
+&lt;li&gt;Inspired by TECO editor
+&lt;/li&gt;
+&lt;li&gt;Based on macros (Emacs stands for Editor MACroS)
+&lt;/li&gt;
+&lt;li&gt;Written in C and Emacs Lisp
+&lt;/li&gt;
+&lt;li&gt;Part of the GNU project (therefore, we &lt;i&gt;should&lt;/i&gt; say "GNU Emacs", not "Emacs")
+&lt;/li&gt;
+</p>
+
+<p>
+&lt;li&gt;Despite its age, new users are still adopting Emacs as their development platform to this day!
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-3-2" class="outline-3"&gt;
+&lt;h3 id="sec-3-2"&gt;&lt;span class="section-number-3"&gt;3.2&lt;/span&gt; How to get Emacs?&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-3-2"&gt;
+&lt;p&gt;
 On every Linux distribution, packages are available.
 So run your favorite package manager to install it:
+&lt;/p&gt;
 </p>
-<ul>
-<li><i>apt-get install emacs</i>
-</li>
-<li><i>yum install emacs</i>
-</li>
-<li>&hellip;
-</li>
-</ul>
-
 
 <p>
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;i&gt;apt-get install emacs&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;i&gt;yum install emacs&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;&amp;#x2026;
+&lt;/li&gt;
+&lt;/ul&gt;
+</p>
+
+<p>
+&lt;p&gt;
 And if you have an exotic operating system, here are the specific distributions:
+&lt;/p&gt;
 </p>
-<ul>
-<li>Mac OS X: <a href="http://emacsformacosx.com/">http://emacsformacosx.com/</a>
-</li>
-<li>Windows: <a href="http://ftp.igh.cnrs.fr/pub/gnu/emacs/windows/">http://ftp.igh.cnrs.fr/pub/gnu/emacs/windows/</a>
-</li>
-</ul>
+
+<p>
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Mac OS X: &lt;a href="<a href="http://emacsformacosx.com/">http://emacsformacosx.com/</a>"&gt;<a href="http://emacsformacosx.com/">http://emacsformacosx.com/</a>&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;Windows: &lt;a href="<a href="http://ftp.igh.cnrs.fr/pub/gnu/emacs/windows/">http://ftp.igh.cnrs.fr/pub/gnu/emacs/windows/</a>"&gt;<a href="http://ftp.igh.cnrs.fr/pub/gnu/emacs/windows/">http://ftp.igh.cnrs.fr/pub/gnu/emacs/windows/</a>&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</p>
+
+<p>
+&lt;p&gt;
+But, in order to get the latest version, it's &lt;span class="underline"&gt;highly recommended&lt;/span&gt; that you compile Emacs yourself: &lt;a href="<a href="http://ftp.igh.cnrs.fr/pub/gnu/emacs/">http://ftp.igh.cnrs.fr/pub/gnu/emacs/</a>"&gt;<a href="http://ftp.igh.cnrs.fr/pub/gnu/emacs/">http://ftp.igh.cnrs.fr/pub/gnu/emacs/</a>&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
 
 
 <p>
-But, in order to get the latest version, it's <span style="text-decoration:underline;">highly recommended</span> that you compile Emacs yourself: <a href="http://ftp.igh.cnrs.fr/pub/gnu/emacs/">http://ftp.igh.cnrs.fr/pub/gnu/emacs/</a>
+&lt;div id="outline-container-sec-3-3" class="outline-3"&gt;
+&lt;h3 id="sec-3-3"&gt;&lt;span class="section-number-3"&gt;3.3&lt;/span&gt; More than an editor&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-3-3"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;More than an editor, it is a Lisp interpretor
+&lt;/li&gt;
+&lt;li&gt;Can run any type of program written in Lisp:
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Email clients (like &lt;a href="<a href="http://www.gnus.org/">http://www.gnus.org/</a>"&gt;Gnus&lt;/a&gt; or &lt;a href="<a href="http://www.emacswiki.org/emacs/mu4e">http://www.emacswiki.org/emacs/mu4e</a>"&gt;mu4e&lt;/a&gt;)
+&lt;/li&gt;
+&lt;li&gt;Shell (like bash or eshell)
+&lt;/li&gt;
+&lt;li&gt;File and directory management (with &lt;a href="<a href="http://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html">http://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html</a>"&gt;Dired mode&lt;/a&gt;)
+&lt;/li&gt;
+&lt;li&gt;Agenda / Notes / TODO list / Project management (with the amazing &lt;a href="<a href="http://orgmode.org">http://orgmode.org</a>"&gt;OrgMode&lt;/a&gt;)
+&lt;/li&gt;
+&lt;li&gt;IRC / Twitter / Jabber / &amp;#x2026; clients
+&lt;/li&gt;
+&lt;li&gt;Games (like Tetris, Pong, Snake, 5x5, Dunnet, &amp;#x2026;)
+&lt;/li&gt;
+&lt;li&gt;Encrypt/decrypt files (like GPG files)
+&lt;/li&gt;
+&lt;li&gt;On-the-fly archives editing (thanks to &lt;a href="<a href="http://www.emacswiki.org/emacs/ArchiveMode">http://www.emacswiki.org/emacs/ArchiveMode</a>"&gt;archive-mode&lt;/a&gt;)
+&lt;/li&gt;
+&lt;li&gt;PDF / Image / (&amp;#x2026;) viewer
+&lt;/li&gt;
+&lt;li&gt;A powerful front end to R / S+ / SPSS / Stata (with &lt;a href="<a href="http://ess.r-project.org/">http://ess.r-project.org/</a>"&gt;EmacsSpeaksStatisics)&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;An editor for multi-modal REPL's like IPython (with &lt;a href="<a href="http://tkf.github.io/emacs-ipython-notebook/">http://tkf.github.io/emacs-ipython-notebook/</a>"&gt;EmacsIPythonNotebook&lt;/a&gt;)
+&lt;/li&gt;
+&lt;li&gt;Music player (with emms, vlc, mplayer, &amp;#x2026;)
+&lt;/li&gt;
+&lt;li&gt;Music programming (with &lt;a href="<a href="http://vimeo.com/22798433">http://vimeo.com/22798433</a>"&gt;Overtone&lt;/a&gt;)
+&lt;/li&gt;
+&lt;li&gt;Video editing
+&lt;/li&gt;
+&lt;li&gt;And so on &amp;#x2026;
+&lt;/li&gt;
+&lt;li&gt;(and of course a document editor that can automatically generate this presentation)
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 </p>
 
-</div>
-
-</div>
-
-<div id="outline-container-3-3" class="outline-3">
-<h3 id="sec-3-3"><span class="section-number-3">3.3</span> More than an editor</h3>
-<div class="outline-text-3" id="text-3-3">
-
-
-<ul>
-<li>More than an editor, it is a Lisp interpretor
-</li>
-<li>Can run any type of program written in Lisp:
-<ul>
-<li>Email clients (like <a href="http://www.gnus.org/">Gnus</a> or <a href="http://www.emacswiki.org/emacs/mu4e">mu4e</a>)
-</li>
-<li>Shell (like bash or eshell)
-</li>
-<li>File and directory management (with <a href="http://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html">Dired mode</a>)
-</li>
-<li>Agenda / Notes / TODO list / Project management (with the amazing <a href="http://orgmode.org">OrgMode</a>)
-</li>
-<li>IRC / Twitter / Jabber / &hellip; clients
-</li>
-<li>Games (like Tetris, Pong, Snake, 5x5, Dunnet, &hellip;)
-</li>
-<li>Encrypt/decrypt files (like GPG files)
-</li>
-<li>On-the-fly archives editing (thanks to <a href="http://www.emacswiki.org/emacs/ArchiveMode">archive-mode</a>)
-</li>
-<li>PDF / Image / (&hellip;) viewer
-</li>
-<li>A powerful front end to R / S+ / SPSS / Stata (with <a href="http://ess.r-project.org/">EmacsSpeaksStatisics)</a>
-</li>
-<li>An editor for multi-modal REPL's like IPython (with <a href="http://tkf.github.io/emacs-ipython-notebook/">EmacsIPythonNotebook</a>)
-</li>
-<li>Music player (with emms, vlc, mplayer, &hellip;)
-</li>
-<li>Music programming (with <a href="http://vimeo.com/22798433">Overtone</a>)
-</li>
-<li>Video editing
-</li>
-<li>And so on &hellip;
-</li>
-<li>(and of course a document editor that can automatically generate this presentation)
-</li>
-</ul>
-
-</li>
-</ul>
-
-
 <p>
-Naturally, you can do all of that at the same time with only one Emacs instance. Don't need to say it &hellip;
+&lt;p&gt;
+Naturally, you can do all of that at the same time with only one Emacs instance. Don't need to say it &amp;#x2026;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </p>
-</div>
-
-</div>
-
-<div id="outline-container-3-4" class="outline-3">
-<h3 id="sec-3-4"><span class="section-number-3">3.4</span> The perfect development tool</h3>
-<div class="outline-text-3" id="text-3-4">
-
-
-<ul>
-<li>As Emacs is a Lisp interpretor, it is extensible. Really really extensible.
-</li>
-<li>The (unofficial) goal of Emacs is to be hacked
-</li>
-<li>Therefore your goal is to hack Emacs to make it work perfectly as you want
-
-</li>
-<li>Already provides so many development tools (also extensible, of course)
-<ul>
-<li>Debuggers
-</li>
-<li>Compilers
-</li>
-<li>Syntax checkers
-</li>
-<li>Documentations
-</li>
-<li>Consoles
-</li>
-<li>&hellip;
-
-</li>
-</ul>
-
-</li>
-<li>Also provides <i>modes</i> (extensions) for <b>every</b> programming language for
-<ul>
-<li>Syntax highlighting
-</li>
-<li>Documentation search
-</li>
-<li>Indentation
-</li>
-<li>Source code browsing
-</li>
-<li>Compilation commands
-</li>
-<li>Specific behaviour
-</li>
-<li>&hellip;
-</li>
-</ul>
-
-</li>
-</ul>
-
-
-</div>
-</div>
-
-</div>
-
-<div id="outline-container-4" class="outline-2">
-<h2 id="sec-4"><span class="section-number-2">4</span> The basics</h2>
-<div class="outline-text-2" id="text-4">
-
-
-
-</div>
-
-<div id="outline-container-4-1" class="outline-3">
-<h3 id="sec-4-1"><span class="section-number-3">4.1</span> Config files</h3>
-<div class="outline-text-3" id="text-4-1">
-
 
 <p>
+&lt;div id="outline-container-sec-3-4" class="outline-3"&gt;
+&lt;h3 id="sec-3-4"&gt;&lt;span class="section-number-3"&gt;3.4&lt;/span&gt; The perfect development tool&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-3-4"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;As Emacs is a Lisp interpretor, it is extensible. Really really extensible.
+&lt;/li&gt;
+&lt;li&gt;The (unofficial) goal of Emacs is to be hacked
+&lt;/li&gt;
+&lt;li&gt;Therefore your goal is to hack Emacs to make it work perfectly as you want
+&lt;/li&gt;
+</p>
+
+<p>
+&lt;li&gt;Already provides so many development tools (also extensible, of course)
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Debuggers
+&lt;/li&gt;
+&lt;li&gt;Compilers
+&lt;/li&gt;
+&lt;li&gt;Syntax checkers
+&lt;/li&gt;
+&lt;li&gt;Documentations
+&lt;/li&gt;
+&lt;li&gt;Consoles
+&lt;/li&gt;
+&lt;li&gt;&amp;#x2026;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+</p>
+
+<p>
+&lt;li&gt;Also provides &lt;i&gt;modes&lt;/i&gt; (extensions) for &lt;b&gt;every&lt;/b&gt; programming language for
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Syntax highlighting
+&lt;/li&gt;
+&lt;li&gt;Documentation search
+&lt;/li&gt;
+&lt;li&gt;Indentation
+&lt;/li&gt;
+&lt;li&gt;Source code browsing
+&lt;/li&gt;
+&lt;li&gt;Compilation commands
+&lt;/li&gt;
+&lt;li&gt;Specific behaviour
+&lt;/li&gt;
+&lt;li&gt;&amp;#x2026;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-4" class="outline-2"&gt;
+&lt;h2 id="sec-4"&gt;&lt;span class="section-number-2"&gt;4&lt;/span&gt; The basics&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-4"&gt;
+&lt;/div&gt;&lt;div id="outline-container-sec-4-1" class="outline-3"&gt;
+&lt;h3 id="sec-4-1"&gt;&lt;span class="section-number-3"&gt;4.1&lt;/span&gt; Config files&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-4-1"&gt;
+&lt;p&gt;
 In order to customize Emacs, you will have to edit its configuration files.
 It does not exist when you install the software (or is an empty file) and does nothing until you decide to tweak Emacs.
 Some people use Emacs for decades without any extra configuration because they like it out of the box.
+&lt;/p&gt;
 </p>
+
 <p>
+&lt;p&gt;
 There are several ways to manage your Emacs configuration:
+&lt;/p&gt;
 </p>
-<ul>
-<li>Simply create and edit a <b>~/.emacs</b> file
-</li>
-<li>Create a <b>~/.emacs.d/</b> directory with a <b>~/.emacs.d/init.el</b> file
-</li>
-</ul>
-
 
 <p>
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Simply create and edit a &lt;b&gt;~/.emacs&lt;/b&gt; file
+&lt;/li&gt;
+&lt;li&gt;Create a &lt;b&gt;~/.emacs.d/&lt;/b&gt; directory with a &lt;b&gt;~/.emacs.d/init.el&lt;/b&gt; file
+&lt;/li&gt;
+&lt;/ul&gt;
+</p>
+
+<p>
+&lt;p&gt;
 The first solution is great if you have a small, tidied and exportable configuration file.
+&lt;/p&gt;
 </p>
-<p>
-The second solution is great if you need several configuration files (keep you configuration parts separated) or you need to install external extensions (you will install them in <b>~/.emacs.d</b> to keep them centralized and exportable).
-</p>
-</div>
-
-</div>
-
-<div id="outline-container-4-2" class="outline-3">
-<h3 id="sec-4-2"><span class="section-number-3">4.2</span> Executing commands</h3>
-<div class="outline-text-3" id="text-4-2">
-
 
 <p>
+&lt;p&gt;
+The second solution is great if you need several configuration files (keep you configuration parts separated) or you need to install external extensions (you will install them in &lt;b&gt;~/.emacs.d&lt;/b&gt; to keep them centralized and exportable).
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-4-2" class="outline-3"&gt;
+&lt;h3 id="sec-4-2"&gt;&lt;span class="section-number-3"&gt;4.2&lt;/span&gt; Executing commands&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-4-2"&gt;
+&lt;p&gt;
 The main idea of Emacs is that everything is a command. For example: opening a file with a keybinding calls a command that is executed by the Emacs' core.
 And all the commands are written in Lisp.
+&lt;/p&gt;
 </p>
+
 <p>
-To call a command, you simply have to press <b>Escape</b> and then <b>x</b>. It could be <b>Alt-x</b> for more comfort.
-The official name is "<i>Meta x</i>" and is written <i>M-x</i>
+&lt;p&gt;
+To call a command, you simply have to press &lt;b&gt;Escape&lt;/b&gt; and then &lt;b&gt;x&lt;/b&gt;. It could be &lt;b&gt;Alt-x&lt;/b&gt; for more comfort.
+The official name is "&lt;i&gt;Meta x&lt;/i&gt;" and is written &lt;i&gt;M-x&lt;/i&gt;
+&lt;/p&gt;
 </p>
+
 <p>
+&lt;p&gt;
 If you type this key sequence, you will see at the bottom of the editor a little prompt.
-This part of Emacs is called the <i>mini buffer</i> and is used for every interactive actions.
+This part of Emacs is called the &lt;i&gt;mini buffer&lt;/i&gt; and is used for every interactive actions.
+&lt;/p&gt;
 </p>
+
 <p>
+&lt;p&gt;
 Let's try something:
+&lt;/p&gt;
 </p>
-<ul>
-<li>type <b>M-x</b>
-</li>
-<li>Then, in the minibuffer, type <b>version</b> and <b>RET</b> (return)
-</li>
-</ul>
-
 
 <p>
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;type &lt;b&gt;M-x&lt;/b&gt;
+&lt;/li&gt;
+&lt;li&gt;Then, in the minibuffer, type &lt;b&gt;version&lt;/b&gt; and &lt;b&gt;RET&lt;/b&gt; (return)
+&lt;/li&gt;
+&lt;/ul&gt;
+</p>
+
+<p>
+&lt;p&gt;
 Emacs should display the current version number of the software.
+&lt;/p&gt;
 </p>
 
-<div class="figure">
-<p><img src="../images/version.gif"  alt="../images/version.gif" /></p>
-<p>Execute the version command</p>
-</div>
 
 <p>
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../images/version.gif" alt="version.gif" /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;span class="figure-number"&gt;Figure 1:&lt;/span&gt; Execute the version command&lt;/p&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;p&gt;
 Congratulations! You just called your first Emacs command.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </p>
-</div>
-
-</div>
-
-<div id="outline-container-4-3" class="outline-3">
-<h3 id="sec-4-3"><span class="section-number-3">4.3</span> Key bindings</h3>
-<div class="outline-text-3" id="text-4-3">
-
 
 <p>
+&lt;div id="outline-container-sec-4-3" class="outline-3"&gt;
+&lt;h3 id="sec-4-3"&gt;&lt;span class="section-number-3"&gt;4.3&lt;/span&gt; Key bindings&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-4-3"&gt;
+&lt;p&gt;
 Here are the most useful keys in Emacs. You will use them several hundreds (or thousands) times a day.
+&lt;/p&gt;
 </p>
+
 <p>
+&lt;p&gt;
 How it works?
+&lt;/p&gt;
 </p>
-<ul>
-<li>The sequence <i>C-something</i> means that you have to press and hold the <i>Control</i> key while hitting the <i>something</i> key. Example: <i>C-a</i> means <i>Control + a</i>.
-</li>
-<li>The sequence <i>C-something somethingelse</i> means that you press <i>Control + something</i>, then you release Control to hit <i>somethingelse</i>.
-</li>
-<li>The sequence <i>C-something C-somethingelse</i> means that you have to press Control while hitting <i>something</i> and <i>somethingelse</i>.
-</li>
-</ul>
 
+<p>
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;The sequence &lt;i&gt;C-something&lt;/i&gt; means that you have to press and hold the &lt;i&gt;Control&lt;/i&gt; key while hitting the &lt;i&gt;something&lt;/i&gt; key. Example: &lt;i&gt;C-a&lt;/i&gt; means &lt;i&gt;Control + a&lt;/i&gt;.
+&lt;/li&gt;
+&lt;li&gt;The sequence &lt;i&gt;C-something somethingelse&lt;/i&gt; means that you press &lt;i&gt;Control + something&lt;/i&gt;, then you release Control to hit &lt;i&gt;somethingelse&lt;/i&gt;.
+&lt;/li&gt;
+&lt;li&gt;The sequence &lt;i&gt;C-something C-somethingelse&lt;/i&gt; means that you have to press Control while hitting &lt;i&gt;something&lt;/i&gt; and &lt;i&gt;somethingelse&lt;/i&gt;.
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</p>
 
-
-</div>
-
-<div id="outline-container-4-3-1" class="outline-4">
-<h4 id="sec-4-3-1"><span class="section-number-4">4.3.1</span> Manipulate files</h4>
-<div class="outline-text-4" id="text-4-3-1">
-
-
-<ul>
-<li><b>C-x C-f</b>: open a file, which corresponds to <b>M-x find-file</b>
-</li>
-<li><b>C-x C-s</b>: save a file, which corresponds to <b>M-x save-buffer</b>
-</li>
-</ul>
-
-
-
-<div class="figure">
-<p><img src="../images/open-and-save.gif"  alt="../images/open-and-save.gif" /></p>
-<p>Open a file, modify it and save it</p>
-</div>
-
-</div>
-
-</div>
-
-<div id="outline-container-4-3-2" class="outline-4">
-<h4 id="sec-4-3-2"><span class="section-number-4">4.3.2</span> Manipulate the line</h4>
-<div class="outline-text-4" id="text-4-3-2">
-
-
-<ul>
-<li><b>C-a</b>: go to the beginning of the current line, which corresponds to <b>M-x begining-of-line</b>
-</li>
-<li><b>C-e</b>: go to the end of the current line, which corresponds to <b>M-x end-of-line</b>
-</li>
-<li><b>C-k</b>: cut the rest of the line at the cursor position, which corresponds to <b>M-x kill-line</b>
-</li>
-<li><b>C-y</b>: paste what you had cut with the command above, which corresponds to <b>M-x yank</b>
-</li>
-<li><b>C-l</b>: center the buffer at the cursor position, which corresponds to <b>M-x recenter-top-bottom</b>
-</li>
-</ul>
-
-
-
-<div class="figure">
-<p><img src="../images/line.gif"  alt="../images/line.gif" /></p>
-<p>Line manipulation</p>
-</div>
-
-</div>
-
-</div>
-
-<div id="outline-container-4-3-3" class="outline-4">
-<h4 id="sec-4-3-3"><span class="section-number-4">4.3.3</span> Windows</h4>
-<div class="outline-text-4" id="text-4-3-3">
+<p>
+&lt;div id="outline-container-sec-4-3-1" class="outline-4"&gt;
+&lt;h4 id="sec-4-3-1"&gt;&lt;span class="section-number-4"&gt;4.3.1&lt;/span&gt; Manipulate files&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-4-3-1"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;b&gt;C-x C-f&lt;/b&gt;: open a file, which corresponds to &lt;b&gt;M-x find-file&lt;/b&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;C-x C-s&lt;/b&gt;: save a file, which corresponds to &lt;b&gt;M-x save-buffer&lt;/b&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</p>
 
 
 <p>
-This might be confusing but a <i>window</i> is a part of a <i>frame</i>.
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../images/open-and-save.gif" alt="open-and-save.gif" /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;span class="figure-number"&gt;Figure 2:&lt;/span&gt; Open a file, modify it and save it&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </p>
+
 <p>
-An <i>Emacs frame</i> is the window that you opened when you launched Emacs.
+&lt;div id="outline-container-sec-4-3-2" class="outline-4"&gt;
+&lt;h4 id="sec-4-3-2"&gt;&lt;span class="section-number-4"&gt;4.3.2&lt;/span&gt; Manipulate the line&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-4-3-2"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;b&gt;C-a&lt;/b&gt;: go to the beginning of the current line, which corresponds to &lt;b&gt;M-x begining-of-line&lt;/b&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;C-e&lt;/b&gt;: go to the end of the current line, which corresponds to &lt;b&gt;M-x end-of-line&lt;/b&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;C-k&lt;/b&gt;: cut the rest of the line at the cursor position, which corresponds to &lt;b&gt;M-x kill-line&lt;/b&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;C-y&lt;/b&gt;: paste what you had cut with the command above, which corresponds to &lt;b&gt;M-x yank&lt;/b&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;C-l&lt;/b&gt;: center the buffer at the cursor position, which corresponds to &lt;b&gt;M-x recenter-top-bottom&lt;/b&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 </p>
-<p>
-An <i>Emacs frame</i> can be divided into <i>windows</i> in itself.
-</p>
-<ul>
-<li><b>C-x 2</b>: open a new window horizontally, which corresponds to <b>M-x split-window-below</b>
-</li>
-<li><b>C-x 3</b>: open a new window vertically, which corresponds to <b>M-x split-window-right</b>
-</li>
-<li><b>C-x o</b>: switch to the next window, which corresponds to <b>M-x other-window</b>
-</li>
-<li><b>C-x 0</b>: close the current window, which corresponds to <b>M-x delete-window</b>
-</li>
-</ul>
-
-
-
-<div class="figure">
-<p><img src="../images/windows.gif"  alt="../images/windows.gif" /></p>
-<p>Windows manipulation</p>
-</div>
-
-</div>
-
-</div>
-
-<div id="outline-container-4-3-4" class="outline-4">
-<h4 id="sec-4-3-4"><span class="section-number-4">4.3.4</span> Buffers</h4>
-<div class="outline-text-4" id="text-4-3-4">
 
 
 <p>
-A <i>buffer</i> is displayed in a <i>frame</i>.
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../images/line.gif" alt="line.gif" /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;span class="figure-number"&gt;Figure 3:&lt;/span&gt; Line manipulation&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </p>
-<ul>
-<li><b>C-x b</b>: switch to an already opened buffer, which corresponds to <b>M-x switch-to-buffer</b>
-</li>
-<li><b>C-x C-b</b>: list opened buffer (and jump to the selected one), which corresponds to <b>M-x list-buffers</b>
-</li>
-<li><b>C-x k</b>: kill a buffer, which corresponds to <b>M-x kill-buffer</b>
-</li>
-</ul>
 
+<p>
+&lt;div id="outline-container-sec-4-3-3" class="outline-4"&gt;
+&lt;h4 id="sec-4-3-3"&gt;&lt;span class="section-number-4"&gt;4.3.3&lt;/span&gt; Selecting a region&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-4-3-3"&gt;
+&lt;p&gt;
+Regions are selections, in Emacs.
+&lt;/p&gt;
+</p>
 
+<p>
+&lt;p&gt;
+They are composed by two points. A starting one and and an ending one.
+&lt;/p&gt;
+</p>
 
-<div class="figure">
-<p><img src="../images/buffers.gif"  alt="../images/buffers.gif" /></p>
-<p>Buffer navigation</p>
-</div>
+<p>
+&lt;p&gt;
+To select the starting point, move your cursor to the wanted location and simply press &lt;b&gt;C-Space&lt;/b&gt;. In your minibuffer, you should have seen a message like "Mark set".
+Now, move your cursor to the location you wantyour selection to end.
+&lt;/p&gt;
+</p>
 
-</div>
+<p>
+&lt;p&gt;
+You have now a selection (or a &lt;i&gt;region&lt;/i&gt;) delimited by the place you set the first mark and your cursor. With this region, you can do what ever you want:
+&lt;/p&gt;
+</p>
 
-</div>
-
-<div id="outline-container-4-3-5" class="outline-4">
-<h4 id="sec-4-3-5"><span class="section-number-4">4.3.5</span> Cancel a command</h4>
-<div class="outline-text-4" id="text-4-3-5">
-
-
-<ul>
-<li><b>C-g</b> or <b>ESC ESC ESC</b>: cancel the current command running in the minibuffer, which corresponds to <b>M-x keyboard-quit</b>
-</li>
-</ul>
-
-
-</div>
-
-</div>
-
-<div id="outline-container-4-3-6" class="outline-4">
-<h4 id="sec-4-3-6"><span class="section-number-4">4.3.6</span> The most useless one</h4>
-<div class="outline-text-4" id="text-4-3-6">
-
-
-<ul>
-<li><b>C-x C-c</b>: quit emacs (use at your own risks!), which corresponds to <b>M-x save-buffers-kill-terminal</b>
-</li>
-</ul>
-
-
-</div>
-</div>
-
-</div>
-
-<div id="outline-container-4-4" class="outline-3">
-<h3 id="sec-4-4"><span class="section-number-3">4.4</span> Help!</h3>
-<div class="outline-text-3" id="text-4-4">
+<p>
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Copy (&lt;b&gt;M-w&lt;/b&gt;)
+&lt;/li&gt;
+&lt;li&gt;Cut (&lt;b&gt;C-k&lt;/b&gt;)
+&lt;/li&gt;
+&lt;li&gt;Paste (&lt;b&gt;C-y&lt;/b&gt;)
+&lt;/li&gt;
+&lt;li&gt;Replace (&lt;b&gt;M-%&lt;/b&gt;)
+&lt;/li&gt;
+&lt;li&gt;&amp;#x2026; etc
+&lt;/li&gt;
+&lt;/ul&gt;
+</p>
 
 
 <p>
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../images/selecting.gif" alt="selecting.gif" /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;span class="figure-number"&gt;Figure 4:&lt;/span&gt; Selecting a region&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-4-3-4" class="outline-4"&gt;
+&lt;h4 id="sec-4-3-4"&gt;&lt;span class="section-number-4"&gt;4.3.4&lt;/span&gt; Commenting&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-4-3-4"&gt;
+&lt;p&gt;
+In order to comment a code block, select the region you want to comment and use:
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;b&gt;M-x comment-region&lt;/b&gt; in order to comment the block
+&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;M-x uncomment-region&lt;/b&gt; in order to uncomment the block
+&lt;/li&gt;
+&lt;/ul&gt;
+</p>
+
+<p>
+&lt;p&gt;
+Of course, Emacs knows, according to the major mode loaded how to comment properly your code. If the major-mode is &lt;i&gt;ruby-mode&lt;/i&gt;, it will add a "#" before the line; if the major-mode is &lt;i&gt;lisp-mode&lt;/i&gt;, it will add ";;", and so on and so forth.
+&lt;/p&gt;
+</p>
+
+
+<p>
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../images/comment.gif" alt="comment.gif" /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;span class="figure-number"&gt;Figure 5:&lt;/span&gt; Commenting&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-4-3-5" class="outline-4"&gt;
+&lt;h4 id="sec-4-3-5"&gt;&lt;span class="section-number-4"&gt;4.3.5&lt;/span&gt; Windows&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-4-3-5"&gt;
+&lt;p&gt;
+This might be confusing but a &lt;i&gt;window&lt;/i&gt; is a part of a &lt;i&gt;frame&lt;/i&gt;.
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;p&gt;
+An &lt;i&gt;Emacs frame&lt;/i&gt; is the window that you opened when you launched Emacs.
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;p&gt;
+An &lt;i&gt;Emacs frame&lt;/i&gt; can be divided into &lt;i&gt;windows&lt;/i&gt; in itself.
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;b&gt;C-x 2&lt;/b&gt;: open a new window horizontally, which corresponds to &lt;b&gt;M-x split-window-below&lt;/b&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;C-x 3&lt;/b&gt;: open a new window vertically, which corresponds to &lt;b&gt;M-x split-window-right&lt;/b&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;C-x o&lt;/b&gt;: switch to the next window, which corresponds to &lt;b&gt;M-x other-window&lt;/b&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;C-x 0&lt;/b&gt;: close the current window, which corresponds to &lt;b&gt;M-x delete-window&lt;/b&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</p>
+
+
+<p>
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../images/windows.gif" alt="windows.gif" /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;span class="figure-number"&gt;Figure 6:&lt;/span&gt; Windows manipulation&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-4-3-6" class="outline-4"&gt;
+&lt;h4 id="sec-4-3-6"&gt;&lt;span class="section-number-4"&gt;4.3.6&lt;/span&gt; Buffers&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-4-3-6"&gt;
+&lt;p&gt;
+A &lt;i&gt;buffer&lt;/i&gt; is displayed in a &lt;i&gt;frame&lt;/i&gt;.
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;b&gt;C-x b&lt;/b&gt;: switch to an already opened buffer, which corresponds to &lt;b&gt;M-x switch-to-buffer&lt;/b&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;C-x C-b&lt;/b&gt;: list opened buffer (and jump to the selected one), which corresponds to &lt;b&gt;M-x list-buffers&lt;/b&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;C-x k&lt;/b&gt;: kill a buffer, which corresponds to &lt;b&gt;M-x kill-buffer&lt;/b&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</p>
+
+
+<p>
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../images/buffers.gif" alt="buffers.gif" /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;span class="figure-number"&gt;Figure 7:&lt;/span&gt; Buffer navigation&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-4-3-7" class="outline-4"&gt;
+&lt;h4 id="sec-4-3-7"&gt;&lt;span class="section-number-4"&gt;4.3.7&lt;/span&gt; Cancel a command&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-4-3-7"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;b&gt;C-g&lt;/b&gt; or &lt;b&gt;ESC ESC ESC&lt;/b&gt;: cancel the current command running in the minibuffer, which corresponds to &lt;b&gt;M-x keyboard-quit&lt;/b&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-4-3-8" class="outline-4"&gt;
+&lt;h4 id="sec-4-3-8"&gt;&lt;span class="section-number-4"&gt;4.3.8&lt;/span&gt; The most useless one&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-4-3-8"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;b&gt;C-x C-c&lt;/b&gt;: quit emacs (use at your own risks!), which corresponds to &lt;b&gt;M-x save-buffers-kill-terminal&lt;/b&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-4-4" class="outline-3"&gt;
+&lt;h3 id="sec-4-4"&gt;&lt;span class="section-number-3"&gt;4.4&lt;/span&gt; Help!&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-4-4"&gt;
+&lt;p&gt;
 Emacs has a powerful built-in help system for key bindings and internal functionalities.
+&lt;/p&gt;
 </p>
-<ul>
-<li><b>C-h f &lt;function-name&gt;</b>: Find the key binding corresponding to &lt;function-name&gt; (ex: C-h f save-buffer)
-</li>
-<li><b>C-h k &lt;key-sequence&gt;</b>: Find the function name corresponding to &lt;key-sequence&gt; (ex: C-h k C-x C-s)
-</li>
-</ul>
-
 
 <p>
-When executing these commands, a new frame opens. To close it, switch to it (<i>C-x o</i>) and type <i>q</i>. If not, simply close it (<i>C-x 0</i>)
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;b&gt;C-h f &amp;lt;function-name&amp;gt;&lt;/b&gt;: Find the key binding corresponding to &amp;lt;function-name&amp;gt; (ex: C-h f save-buffer)
+&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;C-h k &amp;lt;key-sequence&amp;gt;&lt;/b&gt;: Find the function name corresponding to &amp;lt;key-sequence&amp;gt; (ex: C-h k C-x C-s)
+&lt;/li&gt;
+&lt;/ul&gt;
 </p>
-<p>
-Emacs also includes the full manual (also available online: <a href="http://www.gnu.org/software/emacs/manual/html_node/emacs/">http://www.gnu.org/software/emacs/manual/html_node/emacs/</a>)
-</p>
-<ul>
-<li><b>C-h r</b>: browse the Emacs manual within Emacs
-</li>
-</ul>
-
 
 <p>
-Finally, there are so many other help functions: <a href="http://www.emacswiki.org/emacs/EmacsNewbieHelpReference">http://www.emacswiki.org/emacs/EmacsNewbieHelpReference</a>
+&lt;p&gt;
+When executing these commands, a new frame opens. To close it, switch to it (&lt;i&gt;C-x o&lt;/i&gt;) and type &lt;i&gt;q&lt;/i&gt;. If not, simply close it (&lt;i&gt;C-x 0&lt;/i&gt;)
+&lt;/p&gt;
 </p>
-</div>
-</div>
-
-</div>
-
-<div id="outline-container-5" class="outline-2">
-<h2 id="sec-5"><span class="section-number-2">5</span> Building your own editor</h2>
-<div class="outline-text-2" id="text-5">
-
 
 <p>
+&lt;p&gt;
+Emacs also includes the full manual (also available online: &lt;a href="<a href="http://www.gnu.org/software/emacs/manual/html_node/emacs/">http://www.gnu.org/software/emacs/manual/html_node/emacs/</a>"&gt;<a href="http://www.gnu.org/software/emacs/manual/html_node/emacs/">http://www.gnu.org/software/emacs/manual/html_node/emacs/</a>&lt;/a&gt;)
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;b&gt;C-h r&lt;/b&gt;: browse the Emacs manual within Emacs
+&lt;/li&gt;
+&lt;/ul&gt;
+</p>
+
+<p>
+&lt;p&gt;
+Finally, there are so many other help functions: &lt;a href="<a href="http://www.emacswiki.org/emacs/EmacsNewbieHelpReference">http://www.emacswiki.org/emacs/EmacsNewbieHelpReference</a>"&gt;<a href="http://www.emacswiki.org/emacs/EmacsNewbieHelpReference">http://www.emacswiki.org/emacs/EmacsNewbieHelpReference</a>&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-5" class="outline-2"&gt;
+&lt;h2 id="sec-5"&gt;&lt;span class="section-number-2"&gt;5&lt;/span&gt; Building your own editor&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-5"&gt;
+&lt;p&gt;
 From this point, we will edit the configuration file.
-For the moment, we will put everything in a single <b>~/.emacs.d/init.el</b> file. Create it if it does not exist.
+For the moment, we will put everything in a single &lt;b&gt;~/.emacs.d/init.el&lt;/b&gt; file. Create it if it does not exist.
+&lt;/p&gt;
 </p>
 
+<p>
+&lt;div class="org-src-container"&gt;
+</p>
 
-
-<pre class="src src-sh"><span style="color: #a5a5a5;"># </span><span style="color: #a5a5a5;">Backup old configuration</span>
+<p>
+&lt;pre class="src src-sh"&gt;&lt;span style="color: #a5a5a5;"&gt;# &lt;/span&gt;&lt;span style="color: #a5a5a5;"&gt;Backup old configuration&lt;/span&gt;
 cp .emacs dot-emacs.old
 cp -R .emacs.d dot-emacs.d.old
+</p>
 
-<span style="color: #a5a5a5;"># </span><span style="color: #a5a5a5;">Create new and empty configuration</span>
+<p>
+&lt;span style="color: #a5a5a5;"&gt;# &lt;/span&gt;&lt;span style="color: #a5a5a5;"&gt;Create new and empty configuration&lt;/span&gt;
 mkdir ~/.emacs.d
 touch ~/.emacs.d/init.el
-</pre>
-
-
-
-</div>
-
-<div id="outline-container-5-1" class="outline-3">
-<h3 id="sec-5-1"><span class="section-number-3">5.1</span> First basic configuration</h3>
-<div class="outline-text-3" id="text-5-1">
-
-
-<p>
-When you will have to change or add configuration, simply edit your <b>~/.emacs.d/init.el</b> file and add what you need.
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </p>
+
 <p>
+&lt;div id="outline-container-sec-5-1" class="outline-3"&gt;
+&lt;h3 id="sec-5-1"&gt;&lt;span class="section-number-3"&gt;5.1&lt;/span&gt; First basic configuration&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-5-1"&gt;
+&lt;p&gt;
+When you will have to change or add configuration, simply edit your &lt;b&gt;~/.emacs.d/init.el&lt;/b&gt; file and add what you need.
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;p&gt;
 For exemple, here is a tweak that does nothing visually but is useful for other packages and the Emacs engine itself.
 It allows you to define your name and email. Emacs can use it to add author informations to a file when asked.
+&lt;/p&gt;
 </p>
 
-
-
-<pre class="src src-lisp">(setq user-full-name <span style="color: #aa3939;">"Your full name"</span>)
-(setq user-mail-address <span style="color: #aa3939;">"your@email.com"</span>)
-</pre>
-
+<p>
+&lt;div class="org-src-container"&gt;
+</p>
 
 <p>
+&lt;pre class="src src-lisp"&gt;(setq user-full-name &lt;span style="color: #aa3939;"&gt;"Your full name"&lt;/span&gt;)
+(setq user-mail-address &lt;span style="color: #aa3939;"&gt;"your@email.com"&lt;/span&gt;)
+&lt;/pre&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;p&gt;
 After each configuration modification, two solutions:
+&lt;/p&gt;
 </p>
-<ul>
-<li>the soft &amp; clever way: execute <b>M-x eval-buffer</b>
-</li>
-<li>the hard way: restart Emacs.
-</li>
-</ul>
-
-
-</div>
-
-</div>
-
-<div id="outline-container-5-2" class="outline-3">
-<h3 id="sec-5-2"><span class="section-number-3">5.2</span> General basic configuration</h3>
-<div class="outline-text-3" id="text-5-2">
-
 
 <p>
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;the soft &amp;amp; clever way: execute &lt;b&gt;M-x eval-buffer&lt;/b&gt;
+&lt;/li&gt;
+&lt;li&gt;the hard way: restart Emacs.
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-5-2" class="outline-3"&gt;
+&lt;h3 id="sec-5-2"&gt;&lt;span class="section-number-3"&gt;5.2&lt;/span&gt; General basic configuration&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-5-2"&gt;
+&lt;p&gt;
 Now, let's move to a more visual configuration basic set.
 As before, simply add this to your configuration file:
+&lt;/p&gt;
 </p>
 
-
-
-<pre class="src src-lisp"><span style="color: #a5a5a5;">;; </span><span style="color: #a5a5a5;">Ask "y" or "n" instead of "yes" or "no". Yes, laziness is great.</span>
-(fset 'yes-or-no-p 'y-or-n-p)
-
-<span style="color: #a5a5a5;">;; </span><span style="color: #a5a5a5;">Highlight corresponding parenthese when cursor is on one</span>
-(show-paren-mode t)
-
-<span style="color: #a5a5a5;">;; </span><span style="color: #a5a5a5;">Highlight tabulations</span>
-(setq-default highlight-tabs t)
-
-<span style="color: #a5a5a5;">;; </span><span style="color: #a5a5a5;">Show trailing white spaces</span>
-(setq-default show-trailing-whitespace t)
-
-<span style="color: #a5a5a5;">;; </span><span style="color: #a5a5a5;">Remove useless whitespaces before saving a file</span>
-(add-hook 'before-save-hook 'whitespace-cleanup)
-(add-hook 'before-save-hook (<span style="color: #5FB7CC;">lambda</span>() (delete-trailing-whitespace)))
-</pre>
-
-
-</div>
-
-</div>
-
-<div id="outline-container-5-3" class="outline-3">
-<h3 id="sec-5-3"><span class="section-number-3">5.3</span> Backup files</h3>
-<div class="outline-text-3" id="text-5-3">
-
+<p>
+&lt;div class="org-src-container"&gt;
+</p>
 
 <p>
-You may have notice that the files you edit are duplicated and renamed with a <i>~</i> at the end.
+&lt;pre class="src src-lisp"&gt;&lt;span style="color: #a5a5a5;"&gt;;; &lt;/span&gt;&lt;span style="color: #a5a5a5;"&gt;Ask "y" or "n" instead of "yes" or "no". Yes, laziness is great.&lt;/span&gt;
+(fset 'yes-or-no-p 'y-or-n-p)
+</p>
+
+<p>
+&lt;span style="color: #a5a5a5;"&gt;;; &lt;/span&gt;&lt;span style="color: #a5a5a5;"&gt;Highlight corresponding parenthese when cursor is on one&lt;/span&gt;
+(show-paren-mode t)
+</p>
+
+<p>
+&lt;span style="color: #a5a5a5;"&gt;;; &lt;/span&gt;&lt;span style="color: #a5a5a5;"&gt;Highlight tabulations&lt;/span&gt;
+(setq-default highlight-tabs t)
+</p>
+
+<p>
+&lt;span style="color: #a5a5a5;"&gt;;; &lt;/span&gt;&lt;span style="color: #a5a5a5;"&gt;Show trailing white spaces&lt;/span&gt;
+(setq-default show-trailing-whitespace t)
+</p>
+
+<p>
+&lt;span style="color: #a5a5a5;"&gt;;; &lt;/span&gt;&lt;span style="color: #a5a5a5;"&gt;Remove useless whitespaces before saving a file&lt;/span&gt;
+(add-hook 'before-save-hook 'whitespace-cleanup)
+(add-hook 'before-save-hook (&lt;span style="color: #5FB7CC;"&gt;lambda&lt;/span&gt;() (delete-trailing-whitespace)))
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-5-3" class="outline-3"&gt;
+&lt;h3 id="sec-5-3"&gt;&lt;span class="section-number-3"&gt;5.3&lt;/span&gt; Backup files&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-5-3"&gt;
+&lt;p&gt;
+You may have notice that the files you edit are duplicated and renamed with a &lt;i&gt;~&lt;/i&gt; at the end.
 They are the backup files that Emacs creates for you with an auto-save feature.
 Sometimes it is great because you can recover a file in case of error, sometimes it is annoying because you can have some many of these files.
+&lt;/p&gt;
 </p>
+
 <p>
+&lt;p&gt;
 It is up to you to keep it or disable it.
 Here is the configuration for that:
+&lt;/p&gt;
 </p>
 
+<p>
+&lt;div class="org-src-container"&gt;
+</p>
 
-
-<pre class="src src-lisp"><span style="color: #a5a5a5;">;; </span><span style="color: #a5a5a5;">Remove all backup files</span>
+<p>
+&lt;pre class="src src-lisp"&gt;&lt;span style="color: #a5a5a5;"&gt;;; &lt;/span&gt;&lt;span style="color: #a5a5a5;"&gt;Remove all backup files&lt;/span&gt;
 (setq make-backup-files nil)
 (setq backup-inhibited t)
 (setq auto-save-default nil)
-</pre>
-
-
-<p>
-An alternative method is to save these backups in a centralized folder:
+&lt;/pre&gt;
+&lt;/div&gt;
 </p>
 
-
-
-<pre class="src src-lisp"><span style="color: #a5a5a5;">;; </span><span style="color: #a5a5a5;">Save backup files in a dedicated directory</span>
-(setq backup-directory-alist '((<span style="color: #aa3939;">"."</span> . <span style="color: #aa3939;">"~/.saves"</span>)))
-</pre>
-
-
-</div>
-
-</div>
-
-<div id="outline-container-5-4" class="outline-3">
-<h3 id="sec-5-4"><span class="section-number-3">5.4</span> Setting up the locales</h3>
-<div class="outline-text-3" id="text-5-4">
-
+<p>
+&lt;p&gt;
+An alternative method is to save these backups in a centralized folder:
+&lt;/p&gt;
+</p>
 
 <p>
+&lt;div class="org-src-container"&gt;
+</p>
+
+<p>
+&lt;pre class="src src-lisp"&gt;&lt;span style="color: #a5a5a5;"&gt;;; &lt;/span&gt;&lt;span style="color: #a5a5a5;"&gt;Save backup files in a dedicated directory&lt;/span&gt;
+(setq backup-directory-alist '((&lt;span style="color: #aa3939;"&gt;"."&lt;/span&gt; . &lt;span style="color: #aa3939;"&gt;"~/.saves"&lt;/span&gt;)))
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-5-4" class="outline-3"&gt;
+&lt;h3 id="sec-5-4"&gt;&lt;span class="section-number-3"&gt;5.4&lt;/span&gt; Setting up the locales&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-5-4"&gt;
+&lt;p&gt;
 You may want to set up a specific locale for your files.
 Here is the trick:
+&lt;/p&gt;
 </p>
 
+<p>
+&lt;div class="org-src-container"&gt;
+</p>
 
-
-<pre class="src src-lisp"><span style="color: #a5a5a5;">;; </span><span style="color: #a5a5a5;">Set locale to UTF8</span>
+<p>
+&lt;pre class="src src-lisp"&gt;&lt;span style="color: #a5a5a5;"&gt;;; &lt;/span&gt;&lt;span style="color: #a5a5a5;"&gt;Set locale to UTF8&lt;/span&gt;
 (set-language-environment 'utf-8)
 (set-terminal-coding-system 'utf-8)
 (setq locale-coding-system 'utf-8)
 (set-default-coding-systems 'utf-8)
 (set-selection-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
-</pre>
-
-
-</div>
-
-</div>
-
-<div id="outline-container-5-5" class="outline-3">
-<h3 id="sec-5-5"><span class="section-number-3">5.5</span> More configuration</h3>
-<div class="outline-text-3" id="text-5-5">
-
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
 
 <p>
-The best way to get your configuration better, is to read the <a href="http://www.gnu.org/software/emacs/manual/">manual</a> &hellip;
+&lt;div id="outline-container-sec-5-5" class="outline-3"&gt;
+&lt;h3 id="sec-5-5"&gt;&lt;span class="section-number-3"&gt;5.5&lt;/span&gt; More configuration&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-5-5"&gt;
+&lt;p&gt;
+The best way to get your configuration better, is to read the &lt;a href="<a href="http://www.gnu.org/software/emacs/manual/">http://www.gnu.org/software/emacs/manual/</a>"&gt;manual&lt;/a&gt; &amp;#x2026;
 But you can also (this is the un-official method) read the others Emacs users' config files.
 There are so many people who share their configuration, comment their code, and distribute their modes!
+&lt;/p&gt;
 </p>
-<p>
-Here is mine: (<a href="https://github.com/pierre-lecocq/emacs.d">https://github.com/pierre-lecocq/emacs.d</a>)
-</p>
-</div>
-
-</div>
-
-<div id="outline-container-5-6" class="outline-3">
-<h3 id="sec-5-6"><span class="section-number-3">5.6</span> Modes</h3>
-<div class="outline-text-3" id="text-5-6">
-
 
 <p>
-<i>Modes</i> are Emacs' <i>extensions</i> that can be installed to extend the capabilities of Emacs. They will allow you to build a powerful tailored editor.
+&lt;p&gt;
+Here is mine: (&lt;a href="<a href="https://github.com/pierre-lecocq/emacs.d">https://github.com/pierre-lecocq/emacs.d</a>"&gt;<a href="https://github.com/pierre-lecocq/emacs.d">https://github.com/pierre-lecocq/emacs.d</a>&lt;/a&gt;)
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </p>
+
 <p>
+&lt;div id="outline-container-sec-5-6" class="outline-3"&gt;
+&lt;h3 id="sec-5-6"&gt;&lt;span class="section-number-3"&gt;5.6&lt;/span&gt; Modes&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-5-6"&gt;
+&lt;p&gt;
+&lt;i&gt;Modes&lt;/i&gt; are Emacs' &lt;i&gt;extensions&lt;/i&gt; that can be installed to extend the capabilities of Emacs. They will allow you to build a powerful tailored editor.
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;p&gt;
 There are 2 kind of modes: minor and major.
+&lt;/p&gt;
+&lt;/div&gt;
 </p>
 
-</div>
-
-<div id="outline-container-5-6-1" class="outline-4">
-<h4 id="sec-5-6-1"><span class="section-number-4">5.6.1</span> Major modes</h4>
-<div class="outline-text-4" id="text-5-6-1">
-
-
 <p>
-Major modes are modes that transform Emacs to a specialized software for editing a certain type of files (i.e c-mode) or managing special tasks (i.e reading emails, managing git repository, &hellip;)
+&lt;div id="outline-container-sec-5-6-1" class="outline-4"&gt;
+&lt;h4 id="sec-5-6-1"&gt;&lt;span class="section-number-4"&gt;5.6.1&lt;/span&gt; Major modes&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-6-1"&gt;
+&lt;p&gt;
+Major modes are modes that transform Emacs to a specialized software for editing a certain type of files (i.e c-mode) or managing special tasks (i.e reading emails, managing git repository, &amp;#x2026;)
+&lt;/p&gt;
 </p>
+
 <p>
+&lt;p&gt;
 Only one major mode can be used at a time.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </p>
-</div>
-
-</div>
-
-<div id="outline-container-5-6-2" class="outline-4">
-<h4 id="sec-5-6-2"><span class="section-number-4">5.6.2</span> Minor modes</h4>
-<div class="outline-text-4" id="text-5-6-2">
-
 
 <p>
-Minor modes are additionnal modes that are added transparently to the major mode. They add more features to the main one (i.e parentheses matching, syntax or spelling checkers, &hellip;)
+&lt;div id="outline-container-sec-5-6-2" class="outline-4"&gt;
+&lt;h4 id="sec-5-6-2"&gt;&lt;span class="section-number-4"&gt;5.6.2&lt;/span&gt; Minor modes&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-6-2"&gt;
+&lt;p&gt;
+Minor modes are additionnal modes that are added transparently to the major mode. They add more features to the main one (i.e parentheses matching, syntax or spelling checkers, &amp;#x2026;)
+&lt;/p&gt;
 </p>
+
 <p>
+&lt;p&gt;
 Several minor modes can be used at a time.
-</p>
-</div>
-</div>
-
-</div>
-
-<div id="outline-container-5-7" class="outline-3">
-<h3 id="sec-5-7"><span class="section-number-3">5.7</span> Package managers</h3>
-<div class="outline-text-3" id="text-5-7">
-
-
-<p>
-Emacs has brilliant package managers such as <i>package.el</i> or <i>el-get</i> that allows you to add and update modes really easily.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </p>
 
-</div>
-
-<div id="outline-container-5-7-1" class="outline-4">
-<h4 id="sec-5-7-1"><span class="section-number-4">5.7.1</span> Package.el</h4>
-<div class="outline-text-4" id="text-5-7-1">
-
-
 <p>
-<i>package.el</i> is the built in package manager shipped by default with Emacs 24 or later.
+&lt;div id="outline-container-sec-5-7" class="outline-3"&gt;
+&lt;h3 id="sec-5-7"&gt;&lt;span class="section-number-3"&gt;5.7&lt;/span&gt; Package managers&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-5-7"&gt;
+&lt;p&gt;
+Emacs has brilliant package managers such as &lt;i&gt;package.el&lt;/i&gt; or &lt;i&gt;el-get&lt;/i&gt; that allows you to add and update modes really easily.
+&lt;/p&gt;
+&lt;/div&gt;
 </p>
+
 <p>
+&lt;div id="outline-container-sec-5-7-1" class="outline-4"&gt;
+&lt;h4 id="sec-5-7-1"&gt;&lt;span class="section-number-4"&gt;5.7.1&lt;/span&gt; Package.el&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-7-1"&gt;
+&lt;p&gt;
+&lt;i&gt;package.el&lt;/i&gt; is the built in package manager shipped by default with Emacs 24 or later.
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;p&gt;
 To list available packages, simply type this command:
+&lt;/p&gt;
 </p>
 
-
-
-<pre class="src src-lisp">M-x package-list-packages
-</pre>
-
+<p>
+&lt;div class="org-src-container"&gt;
+</p>
 
 <p>
+&lt;pre class="src src-lisp"&gt;M-x package-list-packages
+&lt;/pre&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;p&gt;
 You will have a list of packages. Simply press ENTER on the name of one of it to install it.
+&lt;/p&gt;
 </p>
+
 <p>
+&lt;p&gt;
 Additionnaly, you can manage the packages list by adding other sources to your configuration file:
+&lt;/p&gt;
 </p>
-
-
-
-<pre class="src src-lisp"><span style="color: #a5a5a5;">;; </span><span style="color: #a5a5a5;">Add package sources</span>
-(setq package-archives '((<span style="color: #aa3939;">"gnu"</span> . <span style="color: #aa3939;">"http://elpa.gnu.org/packages/"</span>)
-                         (<span style="color: #aa3939;">"marmalade"</span> . <span style="color: #aa3939;">"http://marmalade-repo.org/packages/"</span>)
-                         (<span style="color: #aa3939;">"melpa"</span> . <span style="color: #aa3939;">"http://melpa.milkbox.net/packages/"</span>)))
-</pre>
-
-
-</div>
-
-</div>
-
-<div id="outline-container-5-7-2" class="outline-4">
-<h4 id="sec-5-7-2"><span class="section-number-4">5.7.2</span> El-Get</h4>
-<div class="outline-text-4" id="text-5-7-2">
-
 
 <p>
-/<a href="https://github.com/dimitri/el-get">el-get</a>/ is one of the most popular and easy to use package manager. The "<i>apt-get</i>" of Emacs.
-It is written by the great <a href="https://github.com/dimitri">Dimitri Fontaine</a> and is based on recipe files that simply describe where is located the package and how to get/compile/install it for you.
+&lt;div class="org-src-container"&gt;
 </p>
+
 <p>
-To use it, simply add this to your configuration file. It will download and set up <i>el-get</i> for you:
+&lt;pre class="src src-lisp"&gt;&lt;span style="color: #a5a5a5;"&gt;;; &lt;/span&gt;&lt;span style="color: #a5a5a5;"&gt;Add package sources&lt;/span&gt;
+(setq package-archives '((&lt;span style="color: #aa3939;"&gt;"gnu"&lt;/span&gt; . &lt;span style="color: #aa3939;"&gt;"<a href="http://elpa.gnu.org/packages/">http://elpa.gnu.org/packages/</a>"&lt;/span&gt;)
+                         (&lt;span style="color: #aa3939;"&gt;"marmalade"&lt;/span&gt; . &lt;span style="color: #aa3939;"&gt;"<a href="http://marmalade-repo.org/packages/">http://marmalade-repo.org/packages/</a>"&lt;/span&gt;)
+                         (&lt;span style="color: #aa3939;"&gt;"melpa"&lt;/span&gt; . &lt;span style="color: #aa3939;"&gt;"<a href="http://melpa.milkbox.net/packages/">http://melpa.milkbox.net/packages/</a>"&lt;/span&gt;)))
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </p>
 
+<p>
+&lt;div id="outline-container-sec-5-7-2" class="outline-4"&gt;
+&lt;h4 id="sec-5-7-2"&gt;&lt;span class="section-number-4"&gt;5.7.2&lt;/span&gt; El-Get&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-7-2"&gt;
+&lt;p&gt;
+&lt;i&gt;&lt;a href="<a href="https://github.com/dimitri/el-get">https://github.com/dimitri/el-get</a>"&gt;el-get&lt;/a&gt;&lt;/i&gt; is one of the most popular and easy to use package manager. The "&lt;i&gt;apt-get&lt;/i&gt;" of Emacs.
+It is written by the great &lt;a href="<a href="https://github.com/dimitri">https://github.com/dimitri</a>"&gt;Dimitri Fontaine&lt;/a&gt; and is based on recipe files that simply describe where is located the package and how to get/compile/install it for you.
+&lt;/p&gt;
+</p>
 
+<p>
+&lt;p&gt;
+To use it, simply add this to your configuration file. It will download and set up &lt;i&gt;el-get&lt;/i&gt; for you:
+&lt;/p&gt;
+</p>
 
-<pre class="src src-lisp"><span style="color: #a5a5a5;">;; </span><span style="color: #a5a5a5;">Set up el-get</span>
-(add-to-list 'load-path <span style="color: #aa3939;">"~/.emacs.d/el-get/el-get"</span>)
-(<span style="color: #5FB7CC;">unless</span> (<span style="color: #5FB7CC;">require</span> '<span style="color: #8dd7e9;">el-get</span> nil 'noerror)
-  (<span style="color: #5FB7CC;">with-current-buffer</span>
+<p>
+&lt;div class="org-src-container"&gt;
+</p>
+
+<p>
+&lt;pre class="src src-lisp"&gt;&lt;span style="color: #a5a5a5;"&gt;;; &lt;/span&gt;&lt;span style="color: #a5a5a5;"&gt;Set up el-get&lt;/span&gt;
+(add-to-list 'load-path &lt;span style="color: #aa3939;"&gt;"~/.emacs.d/el-get/el-get"&lt;/span&gt;)
+(&lt;span style="color: #5FB7CC;"&gt;unless&lt;/span&gt; (&lt;span style="color: #5FB7CC;"&gt;require&lt;/span&gt; '&lt;span style="color: #8dd7e9;"&gt;el-get&lt;/span&gt; nil 'noerror)
+  (with-current-buffer
       (url-retrieve-synchronously
-       <span style="color: #aa3939;">"https://raw.github.com/dimitri/el-get/master/el-get-install.el"</span>)
-    (<span style="color: #5FB7CC;">let</span> (el-get-master-branch)
+       &lt;span style="color: #aa3939;"&gt;"<a href="https://raw.github.com/dimitri/el-get/master/el-get-install.el">https://raw.github.com/dimitri/el-get/master/el-get-install.el</a>"&lt;/span&gt;)
+    (&lt;span style="color: #5FB7CC;"&gt;let&lt;/span&gt; (el-get-master-branch)
       (goto-char (point-max))
       (eval-print-last-sexp))))
-</pre>
-
-
-</div>
-
-</div>
-
-<div id="outline-container-5-7-3" class="outline-4">
-<h4 id="sec-5-7-3"><span class="section-number-4">5.7.3</span> The generic method</h4>
-<div class="outline-text-4" id="text-5-7-3">
-
-
-<p>
-In order to leave you the choice of the package manager you want to use, here is a function that handles several package managers. For now, it covers <i>package.el</i> and <i>el-get</i>.
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </p>
+
 <p>
+&lt;div id="outline-container-sec-5-7-3" class="outline-4"&gt;
+&lt;h4 id="sec-5-7-3"&gt;&lt;span class="section-number-4"&gt;5.7.3&lt;/span&gt; The generic method&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-7-3"&gt;
+&lt;p&gt;
+In order to leave you the choice of the package manager you want to use, here is a function that handles several package managers. For now, it covers &lt;i&gt;package.el&lt;/i&gt; and &lt;i&gt;el-get&lt;/i&gt;.
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;p&gt;
 It also allows you to automatically install packages you want.
+&lt;/p&gt;
 </p>
+
 <p>
+&lt;p&gt;
 In the following snippet, two sample packages are installed
+&lt;/p&gt;
 </p>
-<ul>
-<li><i>color-theme</i> in order to allow us to  change colors themes
-</li>
-<li><i>autopair</i> in order to close automatically parentheses, brackets and braces when you open it
-</li>
-</ul>
-
 
 <p>
-Simply add this code to your configuration file:
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;i&gt;color-theme&lt;/i&gt; in order to allow us to  change colors themes
+&lt;/li&gt;
+&lt;li&gt;&lt;i&gt;autopair&lt;/i&gt; in order to close automatically parentheses, brackets and braces when you open it
+&lt;/li&gt;
+&lt;/ul&gt;
 </p>
 
+<p>
+&lt;p&gt;
+Simply add this code to your configuration file:
+&lt;/p&gt;
+</p>
 
+<p>
+&lt;div class="org-src-container"&gt;
+</p>
 
-<pre class="src src-lisp"><span style="color: #a5a5a5;">;; </span><span style="color: #a5a5a5;">Set up the package manager of choice. Supports "el-get" and "package.el"</span>
-(setq pmoc <span style="color: #aa3939;">"el-get"</span>)
+<p>
+&lt;pre class="src src-lisp"&gt;&lt;span style="color: #a5a5a5;"&gt;;; &lt;/span&gt;&lt;span style="color: #a5a5a5;"&gt;Set up the package manager of choice. Supports "el-get" and "package.el"&lt;/span&gt;
+(setq pmoc &lt;span style="color: #aa3939;"&gt;"el-get"&lt;/span&gt;)
+</p>
 
-<span style="color: #a5a5a5;">;; </span><span style="color: #a5a5a5;">List of all wanted packages</span>
+<p>
+&lt;span style="color: #a5a5a5;"&gt;;; &lt;/span&gt;&lt;span style="color: #a5a5a5;"&gt;List of all wanted packages&lt;/span&gt;
 (setq
  wanted-packages
  '(
    color-theme
    autopair
 ))
+</p>
 
-<span style="color: #a5a5a5;">;; </span><span style="color: #a5a5a5;">Package manager and packages handler</span>
-(<span style="color: #5FB7CC;">defun</span> <span style="color: #1D68C4;">install-wanted-packages</span> ()
-  <span style="color: #aa3939;">"Install wanted packages according to a specific package manager"</span>
+<p>
+&lt;span style="color: #a5a5a5;"&gt;;; &lt;/span&gt;&lt;span style="color: #a5a5a5;"&gt;Package manager and packages handler&lt;/span&gt;
+(&lt;span style="color: #5FB7CC;"&gt;defun&lt;/span&gt; &lt;span style="color: #1D68C4;"&gt;install-wanted-packages&lt;/span&gt; ()
+  &lt;span style="color: #aa3939;"&gt;"Install wanted packages according to a specific package manager"&lt;/span&gt;
   (interactive)
-  (<span style="color: #5FB7CC;">cond</span>
-   <span style="color: #a5a5a5;">;; </span><span style="color: #a5a5a5;">package.el</span>
-   ((string= pmoc <span style="color: #aa3939;">"package.el"</span>)
-    (<span style="color: #5FB7CC;">require</span> '<span style="color: #8dd7e9;">package</span>)
-    (add-to-list 'package-archives '(<span style="color: #aa3939;">"gnu"</span> . <span style="color: #aa3939;">"http://elpa.gnu.org/packages/"</span>))
-    (add-to-list 'package-archives '(<span style="color: #aa3939;">"melpa"</span> . <span style="color: #aa3939;">"http://melpa.milkbox.net/packages/"</span>))
-    (add-to-list 'package-archives '(<span style="color: #aa3939;">"marmelade"</span> . <span style="color: #aa3939;">"http://marmalade-repo.org/packages/"</span>))
+  (&lt;span style="color: #5FB7CC;"&gt;cond&lt;/span&gt;
+   &lt;span style="color: #a5a5a5;"&gt;;; &lt;/span&gt;&lt;span style="color: #a5a5a5;"&gt;package.el&lt;/span&gt;
+   ((string= pmoc &lt;span style="color: #aa3939;"&gt;"package.el"&lt;/span&gt;)
+    (&lt;span style="color: #5FB7CC;"&gt;require&lt;/span&gt; '&lt;span style="color: #8dd7e9;"&gt;package&lt;/span&gt;)
+    (add-to-list 'package-archives '(&lt;span style="color: #aa3939;"&gt;"gnu"&lt;/span&gt; . &lt;span style="color: #aa3939;"&gt;"<a href="http://elpa.gnu.org/packages/">http://elpa.gnu.org/packages/</a>"&lt;/span&gt;))
+    (add-to-list 'package-archives '(&lt;span style="color: #aa3939;"&gt;"melpa"&lt;/span&gt; . &lt;span style="color: #aa3939;"&gt;"<a href="http://melpa.milkbox.net/packages/">http://melpa.milkbox.net/packages/</a>"&lt;/span&gt;))
+    (add-to-list 'package-archives '(&lt;span style="color: #aa3939;"&gt;"marmelade"&lt;/span&gt; . &lt;span style="color: #aa3939;"&gt;"<a href="http://marmalade-repo.org/packages/">http://marmalade-repo.org/packages/</a>"&lt;/span&gt;))
     (package-initialize)
-    (<span style="color: #5FB7CC;">let</span> ((need-refresh nil))
-      (mapc (<span style="color: #5FB7CC;">lambda</span> (package-name)
-          (<span style="color: #5FB7CC;">unless</span> (package-installed-p package-name)
+    (&lt;span style="color: #5FB7CC;"&gt;let&lt;/span&gt; ((need-refresh nil))
+      (mapc (&lt;span style="color: #5FB7CC;"&gt;lambda&lt;/span&gt; (package-name)
+          (&lt;span style="color: #5FB7CC;"&gt;unless&lt;/span&gt; (package-installed-p package-name)
         (set 'need-refresh t))) wanted-packages)
-      (<span style="color: #5FB7CC;">if</span> need-refresh
+      (&lt;span style="color: #5FB7CC;"&gt;if&lt;/span&gt; need-refresh
         (package-refresh-contents)))
-    (mapc (<span style="color: #5FB7CC;">lambda</span> (package-name)
-        (<span style="color: #5FB7CC;">unless</span> (package-installed-p package-name)
+    (mapc (&lt;span style="color: #5FB7CC;"&gt;lambda&lt;/span&gt; (package-name)
+        (&lt;span style="color: #5FB7CC;"&gt;unless&lt;/span&gt; (package-installed-p package-name)
           (package-install package-name))) wanted-packages)
     )
-   <span style="color: #a5a5a5;">;; </span><span style="color: #a5a5a5;">el-get</span>
-   ((string= pmoc <span style="color: #aa3939;">"el-get"</span>)
-    (add-to-list 'load-path <span style="color: #aa3939;">"~/.emacs.d/el-get/el-get"</span>)
-    (<span style="color: #5FB7CC;">unless</span> (<span style="color: #5FB7CC;">require</span> '<span style="color: #8dd7e9;">el-get</span> nil 'noerror)
-      (<span style="color: #5FB7CC;">with-current-buffer</span>
+   &lt;span style="color: #a5a5a5;"&gt;;; &lt;/span&gt;&lt;span style="color: #a5a5a5;"&gt;el-get&lt;/span&gt;
+   ((string= pmoc &lt;span style="color: #aa3939;"&gt;"el-get"&lt;/span&gt;)
+    (add-to-list 'load-path &lt;span style="color: #aa3939;"&gt;"~/.emacs.d/el-get/el-get"&lt;/span&gt;)
+    (&lt;span style="color: #5FB7CC;"&gt;unless&lt;/span&gt; (&lt;span style="color: #5FB7CC;"&gt;require&lt;/span&gt; '&lt;span style="color: #8dd7e9;"&gt;el-get&lt;/span&gt; nil 'noerror)
+      (with-current-buffer
       (url-retrieve-synchronously
-       <span style="color: #aa3939;">"https://raw.github.com/dimitri/el-get/master/el-get-install.el"</span>)
-    (<span style="color: #5FB7CC;">let</span> (el-get-master-branch)
+       &lt;span style="color: #aa3939;"&gt;"<a href="https://raw.github.com/dimitri/el-get/master/el-get-install.el">https://raw.github.com/dimitri/el-get/master/el-get-install.el</a>"&lt;/span&gt;)
+    (&lt;span style="color: #5FB7CC;"&gt;let&lt;/span&gt; (el-get-master-branch)
       (goto-char (point-max))
       (eval-print-last-sexp))))
     (el-get 'sync wanted-packages))
-   <span style="color: #a5a5a5;">;; </span><span style="color: #a5a5a5;">fallback</span>
-   (t (<span style="color: #ffc0cb; font-weight: bold;">error</span> <span style="color: #aa3939;">"Unsupported package manager"</span>)))
+   &lt;span style="color: #a5a5a5;"&gt;;; &lt;/span&gt;&lt;span style="color: #a5a5a5;"&gt;fallback&lt;/span&gt;
+   (t (&lt;span style="color: #ffc0cb; font-weight: bold;"&gt;error&lt;/span&gt; &lt;span style="color: #aa3939;"&gt;"Unsupported package manager"&lt;/span&gt;)))
   )
+</p>
 
-<span style="color: #a5a5a5;">;; </span><span style="color: #a5a5a5;">Install wanted packages</span>
+<p>
+&lt;span style="color: #a5a5a5;"&gt;;; &lt;/span&gt;&lt;span style="color: #a5a5a5;"&gt;Install wanted packages&lt;/span&gt;
 (install-wanted-packages)
-</pre>
-
-
-<p>
-Note that some of the following package names could vary if you use <i>package.el</i> or <i>el-get</i>.
+&lt;/pre&gt;
+&lt;/div&gt;
 </p>
-</div>
-
-</div>
-
-<div id="outline-container-5-7-4" class="outline-4">
-<h4 id="sec-5-7-4"><span class="section-number-4">5.7.4</span> The modern and efficient way</h4>
-<div class="outline-text-4" id="text-5-7-4">
-
 
 <p>
+&lt;p&gt;
+Note that some of the following package names could vary if you use &lt;i&gt;package.el&lt;/i&gt; or &lt;i&gt;el-get&lt;/i&gt;.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-5-7-4" class="outline-4"&gt;
+&lt;h4 id="sec-5-7-4"&gt;&lt;span class="section-number-4"&gt;5.7.4&lt;/span&gt; The modern and efficient way&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-7-4"&gt;
+&lt;p&gt;
 Some upper-level packages make package management easier and cleaner.
+&lt;/p&gt;
 </p>
+
 <p>
-For example, John Wiegley's <code>use-package</code> software is an elegant and efficient way to install and tidy your external packages configurations.
+&lt;p&gt;
+For example, John Wiegley's &lt;code&gt;use-package&lt;/code&gt; software is an elegant and efficient way to install and tidy your external packages configurations.
+&lt;/p&gt;
 </p>
+
 <p>
+&lt;p&gt;
 Here is the way to use it:
+&lt;/p&gt;
 </p>
+
 <p>
-First, setup packages sources and install <code>use-package</code>
+&lt;p&gt;
+First, setup packages sources and install &lt;code&gt;use-package&lt;/code&gt;
+&lt;/p&gt;
 </p>
 
+<p>
+&lt;div class="org-src-container"&gt;
+</p>
 
-
-<pre class="src src-lisp">(<span style="color: #5FB7CC;">require</span> '<span style="color: #8dd7e9;">package</span>)
-(setq package-archives '((<span style="color: #aa3939;">"gnu"</span> . <span style="color: #aa3939;">"http://elpa.gnu.org/packages/"</span>)
-                         (<span style="color: #aa3939;">"marmalade"</span> . <span style="color: #aa3939;">"http://marmalade-repo.org/packages/"</span>)
-                         (<span style="color: #aa3939;">"melpa"</span> . <span style="color: #aa3939;">"http://melpa.milkbox.net/packages/"</span>)))
+<p>
+&lt;pre class="src src-lisp"&gt;(&lt;span style="color: #5FB7CC;"&gt;require&lt;/span&gt; '&lt;span style="color: #8dd7e9;"&gt;package&lt;/span&gt;)
+(setq package-archives '((&lt;span style="color: #aa3939;"&gt;"gnu"&lt;/span&gt; . &lt;span style="color: #aa3939;"&gt;"<a href="http://elpa.gnu.org/packages/">http://elpa.gnu.org/packages/</a>"&lt;/span&gt;)
+                         (&lt;span style="color: #aa3939;"&gt;"marmalade"&lt;/span&gt; . &lt;span style="color: #aa3939;"&gt;"<a href="http://marmalade-repo.org/packages/">http://marmalade-repo.org/packages/</a>"&lt;/span&gt;)
+                         (&lt;span style="color: #aa3939;"&gt;"melpa"&lt;/span&gt; . &lt;span style="color: #aa3939;"&gt;"<a href="http://melpa.milkbox.net/packages/">http://melpa.milkbox.net/packages/</a>"&lt;/span&gt;)))
 (package-initialize)
+</p>
 
-(<span style="color: #5FB7CC;">unless</span> (package-installed-p 'use-package)
-  (<span style="color: #5FB7CC;">progn</span>
+<p>
+(&lt;span style="color: #5FB7CC;"&gt;unless&lt;/span&gt; (package-installed-p 'use-package)
+  (&lt;span style="color: #5FB7CC;"&gt;progn&lt;/span&gt;
     (package-refresh-contents)
     (package-install 'use-package)))
-
-(<span style="color: #5FB7CC;">require</span> '<span style="color: #8dd7e9;">use-package</span>)
-</pre>
-
-
-<p>
-Then, for each package you want to install, simply add this to your configuration (replace <i>the-package-name</i> by any package name):
 </p>
 
+<p>
+(&lt;span style="color: #5FB7CC;"&gt;require&lt;/span&gt; '&lt;span style="color: #8dd7e9;"&gt;use-package&lt;/span&gt;)
+&lt;/pre&gt;
+&lt;/div&gt;
+</p>
 
+<p>
+&lt;p&gt;
+Then, for each package you want to install, simply add this to your configuration (replace &lt;i&gt;the-package-name&lt;/i&gt; by any package name):
+&lt;/p&gt;
+</p>
 
-<pre class="src src-LISP">(use-package the-package-name
-         :ensure the-package-name
+<p>
+&lt;div class="org-src-container"&gt;
+</p>
+
+<p>
+&lt;pre class="src src-LISP"&gt;(use-package the-package-name
+</p>
+<p>
+:ensure the-package-name
+</p>
+<p>
          :init (progn
                   ;; Do something after the package is initialized
                 ))
-</pre>
-
-
-</div>
-</div>
-
-</div>
-
-<div id="outline-container-5-8" class="outline-3">
-<h3 id="sec-5-8"><span class="section-number-3">5.8</span> Some useful packages</h3>
-<div class="outline-text-3" id="text-5-8">
-
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
 
 <p>
+&lt;div id="outline-container-sec-5-8" class="outline-3"&gt;
+&lt;h3 id="sec-5-8"&gt;&lt;span class="section-number-3"&gt;5.8&lt;/span&gt; Some useful packages&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-5-8"&gt;
+&lt;p&gt;
 As a developer, you will need some packages that will help you to work, increase your productivity and enhance your confort while coding.
 Please note that even if I am a Ruby/shell/Lisp/web/PHP developer, some packages are compatible and useful for every kind of development. Therefore, the base packages are listed here but some specific packages that might be useful for your work are eventually not listed here. It is up to you to adapt the list according to your needs!
-</p>
-<p>
-Tip: After adding packages, restart Emacs in order to let <i>el-get</i> download and install it properly.
+&lt;/p&gt;
 </p>
 
-</div>
-
-<div id="outline-container-5-8-1" class="outline-4">
-<h4 id="sec-5-8-1"><span class="section-number-4">5.8.1</span> Auto complete</h4>
-<div class="outline-text-4" id="text-5-8-1">
-
+<p>
+&lt;p&gt;
+Tip: After adding packages, restart Emacs in order to let &lt;i&gt;el-get&lt;/i&gt; download and install it properly.
+&lt;/p&gt;
+&lt;/div&gt;
+</p>
 
 <p>
+&lt;div id="outline-container-sec-5-8-1" class="outline-4"&gt;
+&lt;h4 id="sec-5-8-1"&gt;&lt;span class="section-number-4"&gt;5.8.1&lt;/span&gt; Auto complete&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-8-1"&gt;
+&lt;p&gt;
 Auto completion is a must-have feature in the development world.
 This package simply displays a popup at the cursor position with the available completions.
+&lt;/p&gt;
 </p>
-<p>
-To install it, add <code>auto-complete</code> to your packages list.
-</p>
-<p>
-<a href="http://www.emacswiki.org/emacs/AutoComplete">Read more</a>
-</p>
-<p>
-<img src="../images/mode-autocomplete.gif"  alt="../images/mode-autocomplete.gif" />
-</p>
-</div>
 
-</div>
+<p>
+&lt;p&gt;
+To install it, add &lt;code&gt;auto-complete&lt;/code&gt; to your packages list.
+&lt;/p&gt;
+</p>
 
-<div id="outline-container-5-8-2" class="outline-4">
-<h4 id="sec-5-8-2"><span class="section-number-4">5.8.2</span> Autopair</h4>
-<div class="outline-text-4" id="text-5-8-2">
+<p>
+&lt;p&gt;
+&lt;a href="<a href="http://www.emacswiki.org/emacs/AutoComplete">http://www.emacswiki.org/emacs/AutoComplete</a>"&gt;Read more&lt;/a&gt;
+&lt;/p&gt;
+</p>
 
 
 <p>
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../images/mode-autocomplete.gif" alt="mode-autocomplete.gif" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-5-8-2" class="outline-4"&gt;
+&lt;h4 id="sec-5-8-2"&gt;&lt;span class="section-number-4"&gt;5.8.2&lt;/span&gt; Autopair&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-8-2"&gt;
+&lt;p&gt;
 When you open a quote/parenthese/bracket/curly bracket, this mode automatically adds the closed one and bring your cusror between the two.
 Very useful to avoid syntax errors, for example.
+&lt;/p&gt;
 </p>
-<p>
-To install it, add <code>autopair</code> to your packages list.
-</p>
-<p>
-<a href="https://github.com/capitaomorte/autopair">Read more</a>
-</p>
-<p>
-<img src="../images/mode-autopair.gif"  alt="../images/mode-autopair.gif" />
-</p>
-</div>
 
-</div>
+<p>
+&lt;p&gt;
+To install it, add &lt;code&gt;autopair&lt;/code&gt; to your packages list.
+&lt;/p&gt;
+</p>
 
-<div id="outline-container-5-8-3" class="outline-4">
-<h4 id="sec-5-8-3"><span class="section-number-4">5.8.3</span> Buffer move</h4>
-<div class="outline-text-4" id="text-5-8-3">
+<p>
+&lt;p&gt;
+&lt;a href="<a href="https://github.com/capitaomorte/autopair">https://github.com/capitaomorte/autopair</a>"&gt;Read more&lt;/a&gt;
+&lt;/p&gt;
+</p>
 
 
 <p>
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../images/mode-autopair.gif" alt="mode-autopair.gif" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-5-8-3" class="outline-4"&gt;
+&lt;h4 id="sec-5-8-3"&gt;&lt;span class="section-number-4"&gt;5.8.3&lt;/span&gt; Buffer move&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-8-3"&gt;
+&lt;p&gt;
 This mode allows you to re-organize and move the buffers from a window to another.
 Useful if you want to switch buffer places in order to have your debugging buffer on the right side, for example.
+&lt;/p&gt;
 </p>
-<p>
-To install it, add <code>buffer-move</code> to your packages list.
-</p>
-<p>
-<a href="http://www.emacswiki.org/cgi-bin/wiki/buffer-move.el">Read more</a>
-</p>
-<p>
-<img src="../images/mode-buffermove.gif"  alt="../images/mode-buffermove.gif" />
-</p>
-</div>
 
-</div>
+<p>
+&lt;p&gt;
+To install it, add &lt;code&gt;buffer-move&lt;/code&gt; to your packages list.
+&lt;/p&gt;
+</p>
 
-<div id="outline-container-5-8-4" class="outline-4">
-<h4 id="sec-5-8-4"><span class="section-number-4">5.8.4</span> Flycheck</h4>
-<div class="outline-text-4" id="text-5-8-4">
+<p>
+&lt;p&gt;
+&lt;a href="<a href="http://www.emacswiki.org/cgi-bin/wiki/buffer-move.el">http://www.emacswiki.org/cgi-bin/wiki/buffer-move.el</a>"&gt;Read more&lt;/a&gt;
+&lt;/p&gt;
+</p>
 
 
 <p>
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../images/mode-buffermove.gif" alt="mode-buffermove.gif" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-5-8-4" class="outline-4"&gt;
+&lt;h4 id="sec-5-8-4"&gt;&lt;span class="section-number-4"&gt;5.8.4&lt;/span&gt; Flycheck&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-8-4"&gt;
+&lt;p&gt;
 This mode check the syntax of a buffer. It could be used for checking code syntax or typos when writing any kind of text.
+&lt;/p&gt;
 </p>
-<p>
-To install it, add <code>flycheck</code> to your packages list.
-</p>
-<p>
-<a href="https://github.com/flycheck/flycheck">Read more</a>
-</p>
-</div>
-
-</div>
-
-<div id="outline-container-5-8-5" class="outline-4">
-<h4 id="sec-5-8-5"><span class="section-number-4">5.8.5</span> Highlight symbol</h4>
-<div class="outline-text-4" id="text-5-8-5">
-
 
 <p>
+&lt;p&gt;
+To install it, add &lt;code&gt;flycheck&lt;/code&gt; to your packages list.
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;p&gt;
+&lt;a href="<a href="https://github.com/flycheck/flycheck">https://github.com/flycheck/flycheck</a>"&gt;Read more&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-5-8-5" class="outline-4"&gt;
+&lt;h4 id="sec-5-8-5"&gt;&lt;span class="section-number-4"&gt;5.8.5&lt;/span&gt; Highlight symbol&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-8-5"&gt;
+&lt;p&gt;
 This mode highlights all symbols that matches a pattern in your buffer
+&lt;/p&gt;
 </p>
-<p>
-To install it, add <code>highlight-symbol</code> to your packages list.
-</p>
-<p>
-<a href="http://www.emacswiki.org/emacs/HighlightSymbol">Read more</a>
-</p>
-</div>
-
-</div>
-
-<div id="outline-container-5-8-6" class="outline-4">
-<h4 id="sec-5-8-6"><span class="section-number-4">5.8.6</span> Ido</h4>
-<div class="outline-text-4" id="text-5-8-6">
-
 
 <p>
+&lt;p&gt;
+To install it, add &lt;code&gt;highlight-symbol&lt;/code&gt; to your packages list.
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;p&gt;
+&lt;a href="<a href="http://www.emacswiki.org/emacs/HighlightSymbol">http://www.emacswiki.org/emacs/HighlightSymbol</a>"&gt;Read more&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-5-8-6" class="outline-4"&gt;
+&lt;h4 id="sec-5-8-6"&gt;&lt;span class="section-number-4"&gt;5.8.6&lt;/span&gt; Ido&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-8-6"&gt;
+&lt;p&gt;
 Ido is a must have mode to navigate, find stuffs, and do things interactively.
 It is for comfort, but is indispensable to go fast.
+&lt;/p&gt;
 </p>
+
 <p>
+&lt;p&gt;
 Many extensions of this mode are available, therefore read and chose what you want.
+&lt;/p&gt;
 </p>
-<p>
-I personnaly use two of them: <i>vertical</i> and <i>hack</i>.
-</p>
-<p>
-To install it, add <code>ido-hacks</code> and <code>ido-vertical-mode</code> to your packages list.
-</p>
-<p>
-<a href="http://www.emacswiki.org/emacs/InteractivelyDoThings">Read more</a>
-</p>
-<p>
-<img src="../images/mode-ido.gif"  alt="../images/mode-ido.gif" />
-</p>
-</div>
-
-</div>
-
-<div id="outline-container-5-8-7" class="outline-4">
-<h4 id="sec-5-8-7"><span class="section-number-4">5.8.7</span> JS3</h4>
-<div class="outline-text-4" id="text-5-8-7">
-
 
 <p>
+&lt;p&gt;
+I personnaly use two of them: &lt;i&gt;vertical&lt;/i&gt; and &lt;i&gt;hack&lt;/i&gt;.
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;p&gt;
+To install it, add &lt;code&gt;ido-hacks&lt;/code&gt; and &lt;code&gt;ido-vertical-mode&lt;/code&gt; to your packages list.
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;p&gt;
+&lt;a href="<a href="http://www.emacswiki.org/emacs/InteractivelyDoThings">http://www.emacswiki.org/emacs/InteractivelyDoThings</a>"&gt;Read more&lt;/a&gt;
+&lt;/p&gt;
+</p>
+
+
+<p>
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../images/mode-ido.gif" alt="mode-ido.gif" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-5-8-7" class="outline-4"&gt;
+&lt;h4 id="sec-5-8-7"&gt;&lt;span class="section-number-4"&gt;5.8.7&lt;/span&gt; JS3&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-8-7"&gt;
+&lt;p&gt;
 This mode is an enhanced mode for editing Javascript files. I do not use it a lot, but it is useful for some javascript-like or NPM files.
+&lt;/p&gt;
 </p>
-<p>
-To install it, add <code>js3-mode</code> to your packages list.
-</p>
-<p>
-<a href="http://www.emacswiki.org/emacs/Js2Mode">Read more</a>
-</p>
-</div>
-
-</div>
-
-<div id="outline-container-5-8-8" class="outline-4">
-<h4 id="sec-5-8-8"><span class="section-number-4">5.8.8</span> Magit</h4>
-<div class="outline-text-4" id="text-5-8-8">
-
 
 <p>
+&lt;p&gt;
+To install it, add &lt;code&gt;js3-mode&lt;/code&gt; to your packages list.
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;p&gt;
+&lt;a href="<a href="http://www.emacswiki.org/emacs/Js2Mode">http://www.emacswiki.org/emacs/Js2Mode</a>"&gt;Read more&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-5-8-8" class="outline-4"&gt;
+&lt;h4 id="sec-5-8-8"&gt;&lt;span class="section-number-4"&gt;5.8.8&lt;/span&gt; Magit&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-8-8"&gt;
+&lt;p&gt;
 Magit is a very powerful and elegant mode for intercating with your git repository.
-In order to understand how powerful it is, simply watch this amazing <a href="http://vimeo.com/2871241">video</a>
+In order to understand how powerful it is, simply watch this amazing &lt;a href="<a href="http://vimeo.com/2871241">http://vimeo.com/2871241</a>"&gt;video&lt;/a&gt;
+&lt;/p&gt;
 </p>
-<p>
-To install it, add <code>magit</code> to your packages list.
-</p>
-<p>
-<a href="https://github.com/magit/magit">Read more</a>
-</p>
-</div>
-
-</div>
-
-<div id="outline-container-5-8-9" class="outline-4">
-<h4 id="sec-5-8-9"><span class="section-number-4">5.8.9</span> Multiple cursors</h4>
-<div class="outline-text-4" id="text-5-8-9">
-
 
 <p>
-This mode is great and super powerful. Instead of explaining what it is, check this amazing <a href="http://emacsrocks.com/e13.html">video</a> by Magnars.
+&lt;p&gt;
+To install it, add &lt;code&gt;magit&lt;/code&gt; to your packages list.
+&lt;/p&gt;
 </p>
-<p>
-To install it, add <code>multiple-cursors</code> to your packages list.
-</p>
-<p>
-<a href="https://github.com/magnars/multiple-cursors.el">Read more</a>
-</p>
-</div>
-
-</div>
-
-<div id="outline-container-5-8-10" class="outline-4">
-<h4 id="sec-5-8-10"><span class="section-number-4">5.8.10</span> PHP mode</h4>
-<div class="outline-text-4" id="text-5-8-10">
-
 
 <p>
-A basic but stable mode for editing PHP files, whatever you think about PHP &hellip;
+&lt;p&gt;
+&lt;a href="<a href="https://github.com/magit/magit">https://github.com/magit/magit</a>"&gt;Read more&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </p>
-<p>
-To install it, add <code>php-mode</code> to your packages list.
-</p>
-<p>
-<a href="http://php-mode.sourceforge.net/">Read more</a>
-</p>
-</div>
-
-</div>
-
-<div id="outline-container-5-8-11" class="outline-4">
-<h4 id="sec-5-8-11"><span class="section-number-4">5.8.11</span> Rainbow mode</h4>
-<div class="outline-text-4" id="text-5-8-11">
-
 
 <p>
+&lt;div id="outline-container-sec-5-8-9" class="outline-4"&gt;
+&lt;h4 id="sec-5-8-9"&gt;&lt;span class="section-number-4"&gt;5.8.9&lt;/span&gt; Multiple cursors&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-8-9"&gt;
+&lt;p&gt;
+This mode is great and super powerful. Instead of explaining what it is, check this amazing &lt;a href="<a href="http://emacsrocks.com/e13.html">http://emacsrocks.com/e13.html</a>"&gt;video&lt;/a&gt; by Magnars.
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;p&gt;
+To install it, add &lt;code&gt;multiple-cursors&lt;/code&gt; to your packages list.
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;p&gt;
+&lt;a href="<a href="https://github.com/magnars/multiple-cursors.el">https://github.com/magnars/multiple-cursors.el</a>"&gt;Read more&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-5-8-10" class="outline-4"&gt;
+&lt;h4 id="sec-5-8-10"&gt;&lt;span class="section-number-4"&gt;5.8.10&lt;/span&gt; PHP mode&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-8-10"&gt;
+&lt;p&gt;
+A basic but stable mode for editing PHP files, whatever you think about PHP &amp;#x2026;
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;p&gt;
+To install it, add &lt;code&gt;php-mode&lt;/code&gt; to your packages list.
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;p&gt;
+&lt;a href="<a href="http://php-mode.sourceforge.net/">http://php-mode.sourceforge.net/</a>"&gt;Read more&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-5-8-11" class="outline-4"&gt;
+&lt;h4 id="sec-5-8-11"&gt;&lt;span class="section-number-4"&gt;5.8.11&lt;/span&gt; Rainbow mode&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-8-11"&gt;
+&lt;p&gt;
 A useless but indispensable mode to add colors to your CSS files when using properties like "color", "background-color".
-It is cool since it understands every way to write a color (hex, name, &hellip;) and gives you a preview of the color itself.
+It is cool since it understands every way to write a color (hex, name, &amp;#x2026;) and gives you a preview of the color itself.
+&lt;/p&gt;
 </p>
-<p>
-To install it, add <code>rainbow-mode</code> to your packages list.
-</p>
-<p>
-<a href="http://julien.danjou.info/projects/emacs-packages">Read more</a>
-</p>
-</div>
-
-</div>
-
-<div id="outline-container-5-8-12" class="outline-4">
-<h4 id="sec-5-8-12"><span class="section-number-4">5.8.12</span> RHTML mode</h4>
-<div class="outline-text-4" id="text-5-8-12">
-
 
 <p>
+&lt;p&gt;
+To install it, add &lt;code&gt;rainbow-mode&lt;/code&gt; to your packages list.
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;p&gt;
+&lt;a href="<a href="http://julien.danjou.info/projects/emacs-packages">http://julien.danjou.info/projects/emacs-packages</a>"&gt;Read more&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-5-8-12" class="outline-4"&gt;
+&lt;h4 id="sec-5-8-12"&gt;&lt;span class="section-number-4"&gt;5.8.12&lt;/span&gt; RHTML mode&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-8-12"&gt;
+&lt;p&gt;
 This mode is useful for editing .rhtml files. You can also use it to edit any kinf of ruby templates (i.e .erb).
+&lt;/p&gt;
 </p>
-<p>
-To install it, add <code>rhtml-mode</code> to your packages list.
-</p>
-<p>
-<a href="https://github.com/eschulte/rhtml">Read more</a>
-</p>
-</div>
-
-</div>
-
-<div id="outline-container-5-8-13" class="outline-4">
-<h4 id="sec-5-8-13"><span class="section-number-4">5.8.13</span> Ruby mode</h4>
-<div class="outline-text-4" id="text-5-8-13">
-
 
 <p>
+&lt;p&gt;
+To install it, add &lt;code&gt;rhtml-mode&lt;/code&gt; to your packages list.
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;p&gt;
+&lt;a href="<a href="https://github.com/eschulte/rhtml">https://github.com/eschulte/rhtml</a>"&gt;Read more&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-5-8-13" class="outline-4"&gt;
+&lt;h4 id="sec-5-8-13"&gt;&lt;span class="section-number-4"&gt;5.8.13&lt;/span&gt; Ruby mode&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-8-13"&gt;
+&lt;p&gt;
 Do I really need to explain ?
+&lt;/p&gt;
 </p>
+
 <p>
+&lt;p&gt;
 Ruby mode is already installed in Emacs and is very stable.
+&lt;/p&gt;
 </p>
-<p>
-<a href="http://www.emacswiki.org/emacs/RubyMode">Read more</a>
-</p>
-</div>
-
-</div>
-
-<div id="outline-container-5-8-14" class="outline-4">
-<h4 id="sec-5-8-14"><span class="section-number-4">5.8.14</span> Switch window</h4>
-<div class="outline-text-4" id="text-5-8-14">
-
 
 <p>
+&lt;p&gt;
+&lt;a href="<a href="http://www.emacswiki.org/emacs/RubyMode">http://www.emacswiki.org/emacs/RubyMode</a>"&gt;Read more&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-5-8-14" class="outline-4"&gt;
+&lt;h4 id="sec-5-8-14"&gt;&lt;span class="section-number-4"&gt;5.8.14&lt;/span&gt; Switch window&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-8-14"&gt;
+&lt;p&gt;
 This mode is cool when you work with a lot of windows opened.
-If you want to switch to another one, you have to press <b>C-x o</b> until you reach the wanted window.
-With this mode, when you press <b>C-x o</b>, big numbers replace your opened windows. Simply type the corresponding number to reach the wanted window.
+If you want to switch to another one, you have to press &lt;b&gt;C-x o&lt;/b&gt; until you reach the wanted window.
+With this mode, when you press &lt;b&gt;C-x o&lt;/b&gt;, big numbers replace your opened windows. Simply type the corresponding number to reach the wanted window.
+&lt;/p&gt;
 </p>
+
 <p>
-To install it, add <code>switch-window</code> to your packages list.
+&lt;p&gt;
+To install it, add &lt;code&gt;switch-window&lt;/code&gt; to your packages list.
+&lt;/p&gt;
 </p>
+
 <p>
+&lt;p&gt;
 Then do not forget to override the defaut configuration by adding this to your configuration:
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;div class="org-src-container"&gt;
+</p>
+
+<p>
+&lt;pre class="src src-lisp"&gt;(global-set-key (kbd &lt;span style="color: #aa3939;"&gt;"C-x o"&lt;/span&gt;) 'switch-window)
+&lt;/pre&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;p&gt;
+&lt;a href="<a href="https://github.com/dimitri/switch-window">https://github.com/dimitri/switch-window</a>"&gt;Read more&lt;/a&gt;
+&lt;/p&gt;
 </p>
 
 
-
-<pre class="src src-lisp">(global-set-key (kbd <span style="color: #aa3939;">"C-x o"</span>) 'switch-window)
-</pre>
-
-
 <p>
-<a href="https://github.com/dimitri/switch-window">Read more</a>
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../images/mode-switchwindow.gif" alt="mode-switchwindow.gif" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </p>
-<p>
-<img src="../images/mode-switchwindow.gif"  alt="../images/mode-switchwindow.gif" />
-</p>
-</div>
-
-</div>
-
-<div id="outline-container-5-8-15" class="outline-4">
-<h4 id="sec-5-8-15"><span class="section-number-4">5.8.15</span> Visual regexp</h4>
-<div class="outline-text-4" id="text-5-8-15">
-
 
 <p>
+&lt;div id="outline-container-sec-5-8-15" class="outline-4"&gt;
+&lt;h4 id="sec-5-8-15"&gt;&lt;span class="section-number-4"&gt;5.8.15&lt;/span&gt; Visual regexp&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-8-15"&gt;
+&lt;p&gt;
 This mode highlights the text that matches the regexp that you are writing in the mini buffer.
+&lt;/p&gt;
 </p>
-<p>
-To install it, add <code>visual-regexp</code> to your packages list.
-</p>
-<p>
-<a href="https://github.com/benma/visual-regexp.el">Read more</a>
-</p>
-</div>
-
-</div>
-
-<div id="outline-container-5-8-16" class="outline-4">
-<h4 id="sec-5-8-16"><span class="section-number-4">5.8.16</span> Yaml mode</h4>
-<div class="outline-text-4" id="text-5-8-16">
-
 
 <p>
+&lt;p&gt;
+To install it, add &lt;code&gt;visual-regexp&lt;/code&gt; to your packages list.
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;p&gt;
+&lt;a href="<a href="https://github.com/benma/visual-regexp.el">https://github.com/benma/visual-regexp.el</a>"&gt;Read more&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-5-8-16" class="outline-4"&gt;
+&lt;h4 id="sec-5-8-16"&gt;&lt;span class="section-number-4"&gt;5.8.16&lt;/span&gt; Yaml mode&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-8-16"&gt;
+&lt;p&gt;
 Alows you to edit .yml files
+&lt;/p&gt;
 </p>
-<p>
-To install it, add <code>yaml-mode</code> to your packages list.
-</p>
-<p>
-<a href="http://www.emacswiki.org/emacs/YamlMode">Read more</a>
-</p>
-</div>
-
-</div>
-
-<div id="outline-container-5-8-17" class="outline-4">
-<h4 id="sec-5-8-17"><span class="section-number-4">5.8.17</span> Yasnippet</h4>
-<div class="outline-text-4" id="text-5-8-17">
-
 
 <p>
+&lt;p&gt;
+To install it, add &lt;code&gt;yaml-mode&lt;/code&gt; to your packages list.
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;p&gt;
+&lt;a href="<a href="http://www.emacswiki.org/emacs/YamlMode">http://www.emacswiki.org/emacs/YamlMode</a>"&gt;Read more&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-5-8-17" class="outline-4"&gt;
+&lt;h4 id="sec-5-8-17"&gt;&lt;span class="section-number-4"&gt;5.8.17&lt;/span&gt; Yasnippet&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-8-17"&gt;
+&lt;p&gt;
 A mode that allows you to write code faster if you are lazy.
-It is very easy to create your own snippets and use it whatever the file you are editing (code, non-code, emails, &hellip;)
+It is very easy to create your own snippets and use it whatever the file you are editing (code, non-code, emails, &amp;#x2026;)
+&lt;/p&gt;
 </p>
+
 <p>
+&lt;p&gt;
 I personnaly do not use it, but people coming from Textmate/Sublime would love it.
+&lt;/p&gt;
 </p>
-<p>
-To install it, add <code>yasnippet</code> to your packages list.
-</p>
-<p>
-<a href="http://www.emacswiki.org/emacs/Yasnippet">Read more</a>
-</p>
-</div>
-
-</div>
-
-<div id="outline-container-5-8-18" class="outline-4">
-<h4 id="sec-5-8-18"><span class="section-number-4">5.8.18</span> Paredit</h4>
-<div class="outline-text-4" id="text-5-8-18">
-
 
 <p>
+&lt;p&gt;
+To install it, add &lt;code&gt;yasnippet&lt;/code&gt; to your packages list.
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;p&gt;
+&lt;a href="<a href="http://www.emacswiki.org/emacs/Yasnippet">http://www.emacswiki.org/emacs/Yasnippet</a>"&gt;Read more&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-5-8-18" class="outline-4"&gt;
+&lt;h4 id="sec-5-8-18"&gt;&lt;span class="section-number-4"&gt;5.8.18&lt;/span&gt; Paredit&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-8-18"&gt;
+&lt;p&gt;
 Paredit is a really cool mode to "keep parentheses balanced" and navigating in the S-expressions. Useful and indispensable if you write Lisp code, for example.
+&lt;/p&gt;
 </p>
-<p>
-To install it, add <code>paredit</code> to your packages list.
-</p>
-<p>
-<a href="http://www.emacswiki.org/emacs/ParEdit">Read more</a>
-</p>
-</div>
-</div>
-
-</div>
-
-<div id="outline-container-5-9" class="outline-3">
-<h3 id="sec-5-9"><span class="section-number-3">5.9</span> Code navigation</h3>
-<div class="outline-text-3" id="text-5-9">
-
 
 <p>
+&lt;p&gt;
+To install it, add &lt;code&gt;paredit&lt;/code&gt; to your packages list.
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;p&gt;
+&lt;a href="<a href="http://www.emacswiki.org/emacs/ParEdit">http://www.emacswiki.org/emacs/ParEdit</a>"&gt;Read more&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-5-9" class="outline-3"&gt;
+&lt;h3 id="sec-5-9"&gt;&lt;span class="section-number-3"&gt;5.9&lt;/span&gt; Code navigation&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-5-9"&gt;
+&lt;p&gt;
 Navigate through source code is an indispensable feature in code editors. Some of other editors are focused on this (like Sublime) but the problem is that they do not leave you the choices of the weapons (like every other features).
+&lt;/p&gt;
 </p>
+
 <p>
+&lt;p&gt;
 Emacs, as you noticed (yes, you did) can integrate any external tool or include a large variety of internal tools to make it more efficient. Code navigation is not an exception.
+&lt;/p&gt;
 </p>
+
 <p>
+&lt;p&gt;
 There are a lot of packages in order to navigate through code, with different methodologies and advantages:
+&lt;/p&gt;
 </p>
-<ul>
-<li><a href="http://www.emacswiki.org/emacs/EmacsTags">TAGS</a> (built in. No installation required)
-</li>
-<li><a href="https://github.com/bbatsov/projectile">Projectile</a> (install it by adding <code>projectile</code> to your packages list)
-</li>
-<li><a href="https://github.com/emacs-helm/helm">Helm</a> (install it by adding <code>heml</code> to your packages list)
-</li>
-<li><a href="http://cedet.sourceforge.net/">Emacs CEDET</a> (install it by adding <code>cedet</code> to your packages list)
-</li>
-<li>&hellip;
-</li>
-</ul>
-
 
 <p>
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;a href="<a href="http://www.emacswiki.org/emacs/EmacsTags">http://www.emacswiki.org/emacs/EmacsTags</a>"&gt;TAGS&lt;/a&gt; (built in. No installation required)
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="<a href="https://github.com/bbatsov/projectile">https://github.com/bbatsov/projectile</a>"&gt;Projectile&lt;/a&gt; (install it by adding &lt;code&gt;projectile&lt;/code&gt; to your packages list)
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="<a href="https://github.com/emacs-helm/helm">https://github.com/emacs-helm/helm</a>"&gt;Helm&lt;/a&gt; (install it by adding &lt;code&gt;heml&lt;/code&gt; to your packages list)
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="<a href="http://cedet.sourceforge.net/">http://cedet.sourceforge.net/</a>"&gt;Emacs CEDET&lt;/a&gt; (install it by adding &lt;code&gt;cedet&lt;/code&gt; to your packages list)
+&lt;/li&gt;
+&lt;li&gt;&amp;#x2026;
+&lt;/li&gt;
+&lt;/ul&gt;
+</p>
+
+<p>
+&lt;p&gt;
 (Note: use once at a time! You do not need to install them all)
-</p>
-<p>
-After using <i>Projectile</i> for a certain period of time, I gave <i>Helm</i> a shot but finally got back to the simplicity and the efficiency of the <i>TAGS</i> system.
-Nevertheless, <i>Projectile</i> and <i>Helm</i> are really powerful and useful. You really should look at them.
-</p>
-<p>
-For now, I will cover the basics of <i>TAGS</i> since it is a standard (used by other softwares) and it is built-in (so if you use another Emacs without your config, you still know how to surf in the code). And other useful tricks will be shown here.
+&lt;/p&gt;
 </p>
 
-</div>
-
-<div id="outline-container-5-9-1" class="outline-4">
-<h4 id="sec-5-9-1"><span class="section-number-4">5.9.1</span> Tags basics</h4>
-<div class="outline-text-4" id="text-5-9-1">
-
+<p>
+&lt;p&gt;
+After using &lt;i&gt;Projectile&lt;/i&gt; for a certain period of time, I gave &lt;i&gt;Helm&lt;/i&gt; a shot but finally got back to the simplicity and the efficiency of the &lt;i&gt;TAGS&lt;/i&gt; system.
+Nevertheless, &lt;i&gt;Projectile&lt;/i&gt; and &lt;i&gt;Helm&lt;/i&gt; are really powerful and useful. You really should look at them.
+&lt;/p&gt;
+</p>
 
 <p>
+&lt;p&gt;
+For now, I will cover the basics of &lt;i&gt;TAGS&lt;/i&gt; since it is a standard (used by other softwares) and it is built-in (so if you use another Emacs without your config, you still know how to surf in the code). And other useful tricks will be shown here.
+&lt;/p&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-5-9-1" class="outline-4"&gt;
+&lt;h4 id="sec-5-9-1"&gt;&lt;span class="section-number-4"&gt;5.9.1&lt;/span&gt; Tags basics&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-9-1"&gt;
+&lt;p&gt;
 Basically, the TAGS rely on an index file of the content of your code source.
 In the root folder of a project, you must generate your index.
 Several methods for this, but here is one command that generates the file:
+&lt;/p&gt;
 </p>
 
-
-
-<pre class="src src-sh"><span style="color: #7FFFD4;">cd</span> /path/to/your/project
-find . -regex <span style="color: #aa3939;">".*\.\(c\|h\|rb\|py\|php\|js\|sh\|bash\)"</span> -print | xargs etags -a
-</pre>
-
+<p>
+&lt;div class="org-src-container"&gt;
+</p>
 
 <p>
+&lt;pre class="src src-sh"&gt;&lt;span style="color: #7FFFD4;"&gt;cd&lt;/span&gt; /path/to/your/project
+find . -regex &lt;span style="color: #aa3939;"&gt;".*\.\(c\|h\|rb\|py\|php\|js\|sh\|bash\)"&lt;/span&gt; -print | xargs etags -a
+&lt;/pre&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;p&gt;
 You now should see a "TAGS" file. If needed, exclude this file from your git/svn/whatever repository/.
+&lt;/p&gt;
 </p>
+
 <p>
+&lt;p&gt;
 You are now ready to surf!
+&lt;/p&gt;
 </p>
+
 <p>
+&lt;p&gt;
 Now, here are the main commands to use them:
+&lt;/p&gt;
 </p>
-<ul>
-<li><b>M-.</b> is the equivalent of <b>M-x find-tag</b>: find a tag
-</li>
-<li><b>M-x find-tag-other-window</b>: find a tag, but in another window
-</li>
-<li><b>M-x tags-search</b>: find a tag thanks to a regexp
-</li>
-<li><b>M-x tags-query-replace</b>: replace a tag in all the indexed files
-</li>
-<li><b>M-x tags-apropos</b>: list all tags that match a regexp
-</li>
-<li><b>M-x list-tags</b>: list all tags in a file
-</li>
-</ul>
-
-
-</div>
-
-</div>
-
-<div id="outline-container-5-9-2" class="outline-4">
-<h4 id="sec-5-9-2"><span class="section-number-4">5.9.2</span> List functions or methods</h4>
-<div class="outline-text-4" id="text-5-9-2">
-
 
 <p>
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;b&gt;M-.&lt;/b&gt; is the equivalent of &lt;b&gt;M-x find-tag&lt;/b&gt;: find a tag
+&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;M-x find-tag-other-window&lt;/b&gt;: find a tag, but in another window
+&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;M-x tags-search&lt;/b&gt;: find a tag thanks to a regexp
+&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;M-x tags-query-replace&lt;/b&gt;: replace a tag in all the indexed files
+&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;M-x tags-apropos&lt;/b&gt;: list all tags that match a regexp
+&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;M-x list-tags&lt;/b&gt;: list all tags in a file
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-5-9-2" class="outline-4"&gt;
+&lt;h4 id="sec-5-9-2"&gt;&lt;span class="section-number-4"&gt;5.9.2&lt;/span&gt; List functions or methods&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-9-2"&gt;
+&lt;p&gt;
 In order to list and jump easily between the functions or methods of the current file, here is a little trick:
+&lt;/p&gt;
 </p>
 
-
-
-<pre class="src src-emacs-lisp">(global-set-key (kbd <span style="color: #aa3939;">"C-S-f"</span>) 'imenu) <span style="color: #a5a5a5;">;; </span><span style="color: #a5a5a5;">use iMenu</span>
-</pre>
-
+<p>
+&lt;div class="org-src-container"&gt;
+</p>
 
 <p>
+&lt;pre class="src src-emacs-lisp"&gt;(global-set-key (kbd &lt;span style="color: #aa3939;"&gt;"C-S-f"&lt;/span&gt;) 'imenu) &lt;span style="color: #a5a5a5;"&gt;;; &lt;/span&gt;&lt;span style="color: #a5a5a5;"&gt;use iMenu&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;p&gt;
 After pressing Ctrl-Shift-f (replace it by whatever you want!), a menu with all the available resources appears in the minibuffer.
-Select the resource you want (let's say <i>All.methods</i> if you are editing some code) and you will be able to search and jump to a method definition directly.
+Select the resource you want (let's say &lt;i&gt;All.methods&lt;/i&gt; if you are editing some code) and you will be able to search and jump to a method definition directly.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </p>
-</div>
-
-</div>
-
-<div id="outline-container-5-9-3" class="outline-4">
-<h4 id="sec-5-9-3"><span class="section-number-4">5.9.3</span> Files navigation (a.k.a fuzzy matching) with TAGS and ido</h4>
-<div class="outline-text-4" id="text-5-9-3">
-
 
 <p>
+&lt;div id="outline-container-sec-5-9-3" class="outline-4"&gt;
+&lt;h4 id="sec-5-9-3"&gt;&lt;span class="section-number-4"&gt;5.9.3&lt;/span&gt; Files navigation (a.k.a fuzzy matching) with TAGS and ido&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-9-3"&gt;
+&lt;p&gt;
 In order to find and jump easily to a file in your project thanks to TAGS, you have to add a little function to your confiugration.
-For this you should have installed the <code>ido-mode</code> described above.
+For this you should have installed the &lt;code&gt;ido-mode&lt;/code&gt; described above.
+&lt;/p&gt;
 </p>
 
+<p>
+&lt;div class="org-src-container"&gt;
+</p>
 
-
-<pre class="src src-emacs-lisp">(<span style="color: #5FB7CC;">defun</span> <span style="color: #1D68C4;">ido-find-file-in-tag-files</span> ()
+<p>
+&lt;pre class="src src-emacs-lisp"&gt;(&lt;span style="color: #5FB7CC;"&gt;defun&lt;/span&gt; &lt;span style="color: #1D68C4;"&gt;ido-find-file-in-tag-files&lt;/span&gt; ()
   (interactive)
-  (<span style="color: #5FB7CC;">save-excursion</span>
-    (<span style="color: #5FB7CC;">let</span> ((enable-recursive-minibuffers t))
+  (&lt;span style="color: #5FB7CC;"&gt;save-excursion&lt;/span&gt;
+    (&lt;span style="color: #5FB7CC;"&gt;let&lt;/span&gt; ((enable-recursive-minibuffers t))
       (visit-tags-table-buffer))
     (find-file
      (expand-file-name
       (ido-completing-read
-       <span style="color: #aa3939;">"Project file: "</span> (tags-table-files) nil t)))))
-
-(global-set-key (kbd <span style="color: #aa3939;">"C-S-x C-S-f"</span>) 'ido-find-file-in-tag-files)
-</pre>
-
-
-<p>
-Now, in your project folder and once you generated your TAGS file, you can press <b>C-S-x C-S-f</b> to find files through the whole tree of directories just by typing a pattern.
+       &lt;span style="color: #aa3939;"&gt;"Project file: "&lt;/span&gt; (tags-table-files) nil t)))))
 </p>
+
 <p>
-<img src="../images/fuzzy.gif"  alt="../images/fuzzy.gif" />
+(global-set-key (kbd &lt;span style="color: #aa3939;"&gt;"C-S-x C-S-f"&lt;/span&gt;) 'ido-find-file-in-tag-files)
+&lt;/pre&gt;
+&lt;/div&gt;
 </p>
-</div>
-
-</div>
-
-<div id="outline-container-5-9-4" class="outline-4">
-<h4 id="sec-5-9-4"><span class="section-number-4">5.9.4</span> RGrep</h4>
-<div class="outline-text-4" id="text-5-9-4">
-
 
 <p>
-<i>rgrep</i> is a great tool to use in addition of the TAGS. It is a Unix tool that make <i>grep</i> queries recursively. In Emacs, it will bring you a new buffer with all the results of the command. To use it, simply type:
+&lt;p&gt;
+Now, in your project folder and once you generated your TAGS file, you can press &lt;b&gt;C-S-x C-S-f&lt;/b&gt; to find files through the whole tree of directories just by typing a pattern.
+&lt;/p&gt;
 </p>
+
+
 <p>
-<b>M-x rgrep RET yoursearchterm RET</b>
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../images/fuzzy.gif" alt="fuzzy.gif" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </p>
+
 <p>
+&lt;div id="outline-container-sec-5-9-4" class="outline-4"&gt;
+&lt;h4 id="sec-5-9-4"&gt;&lt;span class="section-number-4"&gt;5.9.4&lt;/span&gt; RGrep&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-9-4"&gt;
+&lt;p&gt;
+&lt;i&gt;rgrep&lt;/i&gt; is a great tool to use in addition of the TAGS. It is a Unix tool that make &lt;i&gt;grep&lt;/i&gt; queries recursively. In Emacs, it will bring you a new buffer with all the results of the command. To use it, simply type:
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;p&gt;
+&lt;b&gt;M-x rgrep RET yoursearchterm RET&lt;/b&gt;
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;p&gt;
 Once fired, you can swith to the newly created buffer, parse the results and jump to the wanted files very quickly.
+&lt;/p&gt;
 </p>
+
 <p>
+&lt;p&gt;
 What is cool is that it is integrated in the editor, just beside your code and does not require to switch to a shell and then copy-paste the files path you want.
+&lt;/p&gt;
 </p>
-<p>
-<img src="../images/rgrep.gif"  alt="../images/rgrep.gif" />
-</p>
-
-</div>
-</div>
-
-</div>
-
-<div id="outline-container-5-10" class="outline-3">
-<h3 id="sec-5-10"><span class="section-number-3">5.10</span> Setting a color theme</h3>
-<div class="outline-text-3" id="text-5-10">
 
 
 <p>
-Now, we are talking about something very touchy and that can be a long quest &hellip;
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../images/rgrep.gif" alt="rgrep.gif" /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </p>
+
+
 <p>
+&lt;div id="outline-container-sec-5-10" class="outline-3"&gt;
+&lt;h3 id="sec-5-10"&gt;&lt;span class="section-number-3"&gt;5.10&lt;/span&gt; Setting a color theme&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-5-10"&gt;
+&lt;p&gt;
+Now, we are talking about something very touchy and that can be a long quest &amp;#x2026;
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;p&gt;
 A color theme generally includes colors for:
+&lt;/p&gt;
 </p>
-<ul>
-<li>background
-</li>
-<li>syntax color (for code)
-</li>
-<li>specific modes colors (gnus, dired, git, &hellip;)
-</li>
-</ul>
-
 
 <p>
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;background
+&lt;/li&gt;
+&lt;li&gt;syntax color (for code)
+&lt;/li&gt;
+&lt;li&gt;specific modes colors (gnus, dired, git, &amp;#x2026;)
+&lt;/li&gt;
+&lt;/ul&gt;
+</p>
+
+<p>
+&lt;p&gt;
 There are several ways to install a color theme, but first, we will use the Emacs' internal color-theme library.
+&lt;/p&gt;
 </p>
+
 <p>
+&lt;p&gt;
 Let's try to switch between different themes:
+&lt;/p&gt;
 </p>
-<ul>
-<li>Type <b>M-x load-theme RET tango-dark</b>
-</li>
-<li>Then type <b>M-x load-theme RET wombat</b>
-</li>
-<li>Finally type <b>M-x load-theme RET whiteboard</b>
-</li>
-</ul>
-
 
 <p>
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Type &lt;b&gt;M-x load-theme RET tango-dark&lt;/b&gt;
+&lt;/li&gt;
+&lt;li&gt;Then type &lt;b&gt;M-x load-theme RET wombat&lt;/b&gt;
+&lt;/li&gt;
+&lt;li&gt;Finally type &lt;b&gt;M-x load-theme RET whiteboard&lt;/b&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</p>
+
+<p>
+&lt;p&gt;
 There is no secret or perfect color theme. There are so many of theme and each user has its preferences in term of colors.
+&lt;/p&gt;
 </p>
-
-<div class="figure">
-<p><img src="../images/colors.gif"  alt="../images/colors.gif" /></p>
-<p>color themes</p>
-</div>
-
-<p>
-In order to choose yours, try the default ones, see this <a href="http://gnuemacscolorthemetest.googlecode.com/svn/html/index-el.html">showcase</a>, make your own or google a lot !
-</p>
-
-</div>
-
-<div id="outline-container-5-10-1" class="outline-4">
-<h4 id="sec-5-10-1"><span class="section-number-4">5.10.1</span> Font settings</h4>
-<div class="outline-text-4" id="text-5-10-1">
 
 
 <p>
+&lt;div class="figure"&gt;
+&lt;p&gt;&lt;img src="../images/colors.gif" alt="colors.gif" /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;span class="figure-number"&gt;Figure 15:&lt;/span&gt; color themes&lt;/p&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;p&gt;
+In order to choose yours, try the default ones, see this &lt;a href="<a href="http://gnuemacscolorthemetest.googlecode.com/svn/html/index-el.html">http://gnuemacscolorthemetest.googlecode.com/svn/html/index-el.html</a>"&gt;showcase&lt;/a&gt;, make your own or google a lot !
+&lt;/p&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-5-10-1" class="outline-4"&gt;
+&lt;h4 id="sec-5-10-1"&gt;&lt;span class="section-number-4"&gt;5.10.1&lt;/span&gt; Font settings&lt;/h4&gt;
+&lt;div class="outline-text-4" id="text-5-10-1"&gt;
+&lt;p&gt;
 After setting up your theme, there are some other tweaks that are "color theme related".
-Fonts is something very important depending on your system, your screen size, your current task in Emacs, &hellip; etc
+Fonts is something very important depending on your system, your screen size, your current task in Emacs, &amp;#x2026; etc
+&lt;/p&gt;
 </p>
+
 <p>
-If you want to change the font directly from your current Emacs instance, simply type <b>M-x set-frame-font RET</b>.
-And if you want to see all supported fonts, type <b>TAB</b> twice. It will show you a list.
+&lt;p&gt;
+If you want to change the font directly from your current Emacs instance, simply type &lt;b&gt;M-x set-frame-font RET&lt;/b&gt;.
+And if you want to see all supported fonts, type &lt;b&gt;TAB&lt;/b&gt; twice. It will show you a list.
+&lt;/p&gt;
 </p>
+
 <p>
+&lt;p&gt;
 The global and easy way to do it is to add a line to your configuration:
+&lt;/p&gt;
 </p>
 
-
-
-<pre class="src src-lisp">(set-default-font <span style="color: #aa3939;">"DejaVu Sans Mono-10"</span>)
-</pre>
-
+<p>
+&lt;div class="org-src-container"&gt;
+</p>
 
 <p>
+&lt;pre class="src src-lisp"&gt;(set-default-font &lt;span style="color: #aa3939;"&gt;"DejaVu Sans Mono-10"&lt;/span&gt;)
+&lt;/pre&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;p&gt;
 But to be safe, you'd better add this into your X resource settings file (~/.Xresources):
+&lt;/p&gt;
 </p>
 
-
-
-<pre class="src src-lisp">emacs.font: DejaVu Sans Mono-10
-</pre>
-
+<p>
+&lt;div class="org-src-container"&gt;
+</p>
 
 <p>
-Of course, it is possible to set a different font for any system or mode you want. It is cool since you can use different font (size) if you are on Linux or mac OR if you write a book, write code, read your emails, &hellip; etc.
+&lt;pre class="src src-lisp"&gt;emacs.font: DejaVu Sans Mono-10
+&lt;/pre&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;p&gt;
+Of course, it is possible to set a different font for any system or mode you want. It is cool since you can use different font (size) if you are on Linux or mac OR if you write a book, write code, read your emails, &amp;#x2026; etc.
 As an exercise, I'll let you search how to do this kind of stuff in Emacs Lisp if you need it.
+&lt;/p&gt;
 </p>
+
 <p>
-If you want more about font settings and especially about font names, please see the <a href="http://www.emacswiki.org/emacs/SetFonts">Emacs wiki page</a> or the <a href="http://www.gnu.org/software/emacs/manual/html_node/emacs/Fonts.html">manual</a>.
+&lt;p&gt;
+If you want more about font settings and especially about font names, please see the &lt;a href="<a href="http://www.emacswiki.org/emacs/SetFonts">http://www.emacswiki.org/emacs/SetFonts</a>"&gt;Emacs wiki page&lt;/a&gt; or the &lt;a href="<a href="http://www.gnu.org/software/emacs/manual/html_node/emacs/Fonts.html">http://www.gnu.org/software/emacs/manual/html_node/emacs/Fonts.html</a>"&gt;manual&lt;/a&gt;.
+&lt;/p&gt;
 </p>
+
 <p>
+&lt;p&gt;
 A last point: sometimes you want to change the font size of your current buffer. To do this, simply type:
+&lt;/p&gt;
 </p>
-<ul>
-<li><b>M-x text-scale-increase</b> or <b>C-x C-+</b>
-</li>
-<li><b>M-x text-scale-decrease</b> or <b>C-x C&ndash;</b> (Ctrl x, Ctrl dash)
-</li>
-</ul>
-
 
 <p>
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;b&gt;M-x text-scale-increase&lt;/b&gt; or &lt;b&gt;C-x C-+&lt;/b&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;M-x text-scale-decrease&lt;/b&gt; or &lt;b&gt;C-x C&#x2013;&lt;/b&gt; (Ctrl x, Ctrl dash)
+&lt;/li&gt;
+&lt;/ul&gt;
+</p>
+
+<p>
+&lt;p&gt;
 Really handy if you show your screen through an external display or you want to focus on a specific part of a file.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </p>
-</div>
-</div>
-</div>
-
-</div>
-
-<div id="outline-container-6" class="outline-2">
-<h2 id="sec-6"><span class="section-number-2">6</span> Emacs for developers - Emacs developing environments</h2>
-<div class="outline-text-2" id="text-6">
-
 
 <p>
+&lt;div id="outline-container-sec-6" class="outline-2"&gt;
+&lt;h2 id="sec-6"&gt;&lt;span class="section-number-2"&gt;6&lt;/span&gt; Emacs for developers - Emacs developing environments&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-6"&gt;
+&lt;p&gt;
 Emacs, thanks to major or minor modes can be transformed into a powerful specific environment.
-</p>
-<p>
-According to the kind of files you are editing (or a command you type), it can mutate and give you specific features that fits the need of a programming language (or a task like debugging, launching unit tests, &hellip;)
+&lt;/p&gt;
 </p>
 
-</div>
-
-<div id="outline-container-6-1" class="outline-3">
-<h3 id="sec-6-1"><span class="section-number-3">6.1</span> Emacs for Ruby developers</h3>
-<div class="outline-text-3" id="text-6-1">
-
+<p>
+&lt;p&gt;
+According to the kind of files you are editing (or a command you type), it can mutate and give you specific features that fits the need of a programming language (or a task like debugging, launching unit tests, &amp;#x2026;)
+&lt;/p&gt;
+&lt;/div&gt;
+</p>
 
 <p>
+&lt;div id="outline-container-sec-6-1" class="outline-3"&gt;
+&lt;h3 id="sec-6-1"&gt;&lt;span class="section-number-3"&gt;6.1&lt;/span&gt; Emacs for Ruby developers&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-6-1"&gt;
+&lt;p&gt;
 There are many ruby developer who decribe their set up around the web. Here are the most popular:
+&lt;/p&gt;
 </p>
-<ul>
-<li><a href="http://devblog.avdi.org/category/emacs-reboot/">The Emacs reboot serie, by Avdi Grimm</a> (Avdi is a famous ruby programmer and a great Emacs hacker)
-</li>
-<li><a href="http://crypt.codemancers.com/posts/2013-09-26-setting-up-emacs-as-development-environment-on-osx/">Setting up Emacs as Ruby development environment on OSX</a> (even if it is for OSX, the packages remain the same on all OSes)
-</li>
-<li><a href="http://lorefnon.me/2014/02/02/configuring-emacs-for-rails.html">Configuring Emacs as a productive development environment for Rails development</a>
-</li>
-<li><a href="http://www.emacswiki.org/emacs/RubyOnRails">The EmacsWiki on Ruby and RoR</a>
-</li>
-</ul>
-
-
-</div>
-
-</div>
-
-<div id="outline-container-6-2" class="outline-3">
-<h3 id="sec-6-2"><span class="section-number-3">6.2</span> Emacs for Python developers</h3>
-<div class="outline-text-3" id="text-6-2">
-
 
 <p>
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;a href="<a href="http://devblog.avdi.org/category/emacs-reboot/">http://devblog.avdi.org/category/emacs-reboot/</a>"&gt;The Emacs reboot serie, by Avdi Grimm&lt;/a&gt; (Avdi is a famous ruby programmer and a great Emacs hacker)
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="<a href="http://crypt.codemancers.com/posts/2013-09-26-setting-up-emacs-as-development-environment-on-osx/">http://crypt.codemancers.com/posts/2013-09-26-setting-up-emacs-as-development-environment-on-osx/</a>"&gt;Setting up Emacs as Ruby development environment on OSX&lt;/a&gt; (even if it is for OSX, the packages remain the same on all OSes)
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="<a href="http://lorefnon.me/2014/02/02/configuring-emacs-for-rails.html">http://lorefnon.me/2014/02/02/configuring-emacs-for-rails.html</a>"&gt;Configuring Emacs as a productive development environment for Rails development&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="<a href="http://www.emacswiki.org/emacs/RubyOnRails">http://www.emacswiki.org/emacs/RubyOnRails</a>"&gt;The EmacsWiki on Ruby and RoR&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-6-2" class="outline-3"&gt;
+&lt;h3 id="sec-6-2"&gt;&lt;span class="section-number-3"&gt;6.2&lt;/span&gt; Emacs for Python developers&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-6-2"&gt;
+&lt;p&gt;
 Here are some resources about setting Emacs for developing in python:
+&lt;/p&gt;
 </p>
-<ul>
-<li><a href="http://caisah.info/emacs-for-python/">Emacs for python - on caisah.info</a>
-</li>
-<li><a href="http://www.emacswiki.org/emacs/PythonProgrammingInEmacs">Python programming in Emacs - on the EmacsWiki</a>
-</li>
-</ul>
-
-
-</div>
-
-</div>
-
-<div id="outline-container-6-3" class="outline-3">
-<h3 id="sec-6-3"><span class="section-number-3">6.3</span> Emacs for C/C++/Objective-C</h3>
-<div class="outline-text-3" id="text-6-3">
-
 
 <p>
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;a href="<a href="http://caisah.info/emacs-for-python/">http://caisah.info/emacs-for-python/</a>"&gt;Emacs for python - on caisah.info&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="<a href="http://www.emacswiki.org/emacs/PythonProgrammingInEmacs">http://www.emacswiki.org/emacs/PythonProgrammingInEmacs</a>"&gt;Python programming in Emacs - on the EmacsWiki&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-6-3" class="outline-3"&gt;
+&lt;h3 id="sec-6-3"&gt;&lt;span class="section-number-3"&gt;6.3&lt;/span&gt; Emacs for C/C++/Objective-C&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-6-3"&gt;
+&lt;p&gt;
 C languages are very well handled by Emacs and it allows you to edit, debug and run programs with Emacs very easily, with all the control you want.
+&lt;/p&gt;
 </p>
-<ul>
-<li><a href="http://tuhdo.github.io/c-ide.html">C/C++ Development Environment for Emacs</a> is a very complete article about this
-</li>
-<li><a href="http://stackoverflow.com/questions/5800317/emacs-as-a-c-programming-ide-configuration">A various tips and packages for C language(s)</a> on StackOverflow
-</li>
-<li><a href="http://truongtx.me/2013/03/10/emacs-setting-up-perfect-environment-for-cc-programming/">Setting up perfect environment for C/C++ Programming</a> (according to its auhor. Good resource, though)
-</li>
-<li><a href="http://www.emacswiki.org/emacs/DebuggingWithEmacs">Debugging with Emacs</a>
-</li>
-<li><a href="http://cedet.sourceforge.net/">CEDET - Collection of Emacs Development Environment Tools</a> An amazing collection of tools for developping in many programming languages, especially for C/C++
-</li>
-<li><a href="http://alexott.net/en/writings/emacs-devenv/EmacsCedet.html">How to configure CEDET</a>
-</li>
-</ul>
-
-
-</div>
-
-</div>
-
-<div id="outline-container-6-4" class="outline-3">
-<h3 id="sec-6-4"><span class="section-number-3">6.4</span> Emacs for Go developers</h3>
-<div class="outline-text-3" id="text-6-4">
-
-
-<ul>
-<li>If you develop in Go, you really should refer to the great <a href="http://yousefourabi.com/blog/2014/05/emacs-for-go/">Emacs for Go</a> article, written by Yousef Ourabi.
-</li>
-<li>Another one, with videos, is written by Dominik Honnef: <a href="http://dominik.honnef.co/posts/2013/03/writing_go_in_emacs/">Writing Go in Emacs</a>
-</li>
-</ul>
-
-
-</div>
-
-</div>
-
-<div id="outline-container-6-5" class="outline-3">
-<h3 id="sec-6-5"><span class="section-number-3">6.5</span> Emacs for PHP developers</h3>
-<div class="outline-text-3" id="text-6-5">
-
 
 <p>
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;a href="<a href="http://tuhdo.github.io/c-ide.html">http://tuhdo.github.io/c-ide.html</a>"&gt;C/C++ Development Environment for Emacs&lt;/a&gt; is a very complete article about this
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="<a href="http://stackoverflow.com/questions/5800317/emacs-as-a-c-programming-ide-configuration">http://stackoverflow.com/questions/5800317/emacs-as-a-c-programming-ide-configuration</a>"&gt;A various tips and packages for C language(s)&lt;/a&gt; on StackOverflow
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="<a href="http://truongtx.me/2013/03/10/emacs-setting-up-perfect-environment-for-cc-programming/">http://truongtx.me/2013/03/10/emacs-setting-up-perfect-environment-for-cc-programming/</a>"&gt;Setting up perfect environment for C/C++ Programming&lt;/a&gt; (according to its auhor. Good resource, though)
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="<a href="http://www.emacswiki.org/emacs/DebuggingWithEmacs">http://www.emacswiki.org/emacs/DebuggingWithEmacs</a>"&gt;Debugging with Emacs&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="<a href="http://cedet.sourceforge.net/">http://cedet.sourceforge.net/</a>"&gt;CEDET - Collection of Emacs Development Environment Tools&lt;/a&gt; An amazing collection of tools for developping in many programming languages, especially for C/C++
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="<a href="http://alexott.net/en/writings/emacs-devenv/EmacsCedet.html">http://alexott.net/en/writings/emacs-devenv/EmacsCedet.html</a>"&gt;How to configure CEDET&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-6-4" class="outline-3"&gt;
+&lt;h3 id="sec-6-4"&gt;&lt;span class="section-number-3"&gt;6.4&lt;/span&gt; Emacs for Go developers&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-6-4"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;If you develop in Go, you really should refer to the great &lt;a href="<a href="http://yousefourabi.com/blog/2014/05/emacs-for-go/">http://yousefourabi.com/blog/2014/05/emacs-for-go/</a>"&gt;Emacs for Go&lt;/a&gt; article, written by Yousef Ourabi.
+&lt;/li&gt;
+&lt;li&gt;Another one, with videos, is written by Dominik Honnef: &lt;a href="<a href="http://dominik.honnef.co/posts/2013/03/writing_go_in_emacs/">http://dominik.honnef.co/posts/2013/03/writing_go_in_emacs/</a>"&gt;Writing Go in Emacs&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-6-5" class="outline-3"&gt;
+&lt;h3 id="sec-6-5"&gt;&lt;span class="section-number-3"&gt;6.5&lt;/span&gt; Emacs for PHP developers&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-6-5"&gt;
+&lt;p&gt;
 PHP, along with all the web technologies (HTML/JS/CSS) are very well supported in Emacs. The PHP mode does almost all the job by itself.
+&lt;/p&gt;
 </p>
-<ul>
-<li><a href="http://www.emacswiki.org/emacs/PhpMode">The EmacsWiki page about php-mode and other assicated packages</a>
-</li>
-<li><a href="http://stackoverflow.com/questions/912671/what-is-a-good-setup-for-editing-php-in-emacs">A list of useful packages for PHP - on StackOverflow</a>
-</li>
-<li><a href="https://drupal.org/node/59868">An example setup for working on Drupal</a> (but can be used for PHP in general)
-</li>
-<li><a href="https://code.google.com/p/geben-on-emacs/">GEBEN - remote debugging environment for Emacs</a>
-</li>
-<li><a href="http://web-mode.org/">Web Mode - focused on web templates (HTML/JS/CSS)</a>
-</li>
-</ul>
-
-
-</div>
-
-</div>
-
-<div id="outline-container-6-6" class="outline-3">
-<h3 id="sec-6-6"><span class="section-number-3">6.6</span> Emacs for Java developers</h3>
-<div class="outline-text-3" id="text-6-6">
-
 
 <p>
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;a href="<a href="http://www.emacswiki.org/emacs/PhpMode">http://www.emacswiki.org/emacs/PhpMode</a>"&gt;The EmacsWiki page about php-mode and other assicated packages&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="<a href="http://stackoverflow.com/questions/912671/what-is-a-good-setup-for-editing-php-in-emacs">http://stackoverflow.com/questions/912671/what-is-a-good-setup-for-editing-php-in-emacs</a>"&gt;A list of useful packages for PHP - on StackOverflow&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="<a href="https://drupal.org/node/59868">https://drupal.org/node/59868</a>"&gt;An example setup for working on Drupal&lt;/a&gt; (but can be used for PHP in general)
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="<a href="https://code.google.com/p/geben-on-emacs/">https://code.google.com/p/geben-on-emacs/</a>"&gt;GEBEN - remote debugging environment for Emacs&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="<a href="http://web-mode.org/">http://web-mode.org/</a>"&gt;Web Mode - focused on web templates (HTML/JS/CSS)&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-6-6" class="outline-3"&gt;
+&lt;h3 id="sec-6-6"&gt;&lt;span class="section-number-3"&gt;6.6&lt;/span&gt; Emacs for Java developers&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-6-6"&gt;
+&lt;p&gt;
 Java development is held by Eclipse. But it is not the only editor/environment that allows you to develop in Java !
+&lt;/p&gt;
 </p>
-<ul>
-<li><a href="http://jdee.sourceforge.net/">JDEE - the Java Development Environment for Emacs</a>
-</li>
-<li><a href="http://www.emacswiki.org/emacs/JavaDevelopmentEnvironment">The EmacsWiki article on JDEE</a>
-</li>
-<li><a href="#http">A video demo of a full Java environment on Emacs</a>
-</li>
-</ul>
-
-
-</div>
-
-</div>
-
-<div id="outline-container-6-7" class="outline-3">
-<h3 id="sec-6-7"><span class="section-number-3">6.7</span> Emacs for R and statistics</h3>
-<div class="outline-text-3" id="text-6-7">
-
 
 <p>
-Emacs is very useful for scientists and people dealing with data. Statistics, analysis, plotting, &hellip; everything can be done within Emacs.
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;a href="<a href="http://jdee.sourceforge.net/">http://jdee.sourceforge.net/</a>"&gt;JDEE - the Java Development Environment for Emacs&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="<a href="http://www.emacswiki.org/emacs/JavaDevelopmentEnvironment">http://www.emacswiki.org/emacs/JavaDevelopmentEnvironment</a>"&gt;The EmacsWiki article on JDEE&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="http:"&gt;A video demo of a full Java environment on Emacs&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </p>
-<ul>
-<li><a href="https://github.com/vikasrawal/orgpaper/blob/master/orgpapers.org">An amazing paper on working with Emacs, OrgMode and R</a>
-</li>
-<li><a href="http://ess.r-project.org/">Emacs Speaks Statistics</a> is a great project that adds a full statistics environment to your Emacs
-</li>
-<li><a href="http://stats.blogoverflow.com/2011/08/using-emacs-to-work-with-r/">A tutorial on using ESS</a>
-</li>
-</ul>
-
-
-</div>
-</div>
-
-</div>
-
-<div id="outline-container-7" class="outline-2">
-<h2 id="sec-7"><span class="section-number-2">7</span> Special features</h2>
-<div class="outline-text-2" id="text-7">
-
-
-
-</div>
-
-<div id="outline-container-7-1" class="outline-3">
-<h3 id="sec-7-1"><span class="section-number-3">7.1</span> Emacs as a file manager</h3>
-<div class="outline-text-3" id="text-7-1">
-
 
 <p>
-Emacs has a built-in mode named <i>dired</i> that allows you to manage your file system directly in Emacs really easily.
+&lt;div id="outline-container-sec-6-7" class="outline-3"&gt;
+&lt;h3 id="sec-6-7"&gt;&lt;span class="section-number-3"&gt;6.7&lt;/span&gt; Emacs for R and statistics&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-6-7"&gt;
+&lt;p&gt;
+Emacs is very useful for scientists and people dealing with data. Statistics, analysis, plotting, &amp;#x2026; everything can be done within Emacs.
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;a href="<a href="https://github.com/vikasrawal/orgpaper/blob/master/orgpapers.org">https://github.com/vikasrawal/orgpaper/blob/master/orgpapers.org</a>"&gt;An amazing paper on working with Emacs, OrgMode and R&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="<a href="http://ess.r-project.org/">http://ess.r-project.org/</a>"&gt;Emacs Speaks Statistics&lt;/a&gt; is a great project that adds a full statistics environment to your Emacs
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="<a href="http://stats.blogoverflow.com/2011/08/using-emacs-to-work-with-r/">http://stats.blogoverflow.com/2011/08/using-emacs-to-work-with-r/</a>"&gt;A tutorial on using ESS&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-7" class="outline-2"&gt;
+&lt;h2 id="sec-7"&gt;&lt;span class="section-number-2"&gt;7&lt;/span&gt; Special features&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-7"&gt;
+&lt;/div&gt;&lt;div id="outline-container-sec-7-1" class="outline-3"&gt;
+&lt;h3 id="sec-7-1"&gt;&lt;span class="section-number-3"&gt;7.1&lt;/span&gt; Emacs as a file manager&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-7-1"&gt;
+&lt;p&gt;
+Emacs has a built-in mode named &lt;i&gt;dired&lt;/i&gt; that allows you to manage your file system directly in Emacs really easily.
 It is very powerful and has features that graphical file managers do not have.
+&lt;/p&gt;
 </p>
+
 <p>
+&lt;p&gt;
 First of all, to launch it, type:
+&lt;/p&gt;
 </p>
-<ul>
-<li><b>M-x dired RET</b> and then select a path to open (default is the directory of the file you are editing)
-</li>
-<li>or <b>C-x d</b> if you prefer keybindings
-</li>
-</ul>
-
 
 <p>
-Here are a few quick shortcuts once you are in <i>dired mode</i>
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;b&gt;M-x dired RET&lt;/b&gt; and then select a path to open (default is the directory of the file you are editing)
+&lt;/li&gt;
+&lt;li&gt;or &lt;b&gt;C-x d&lt;/b&gt; if you prefer keybindings
+&lt;/li&gt;
+&lt;/ul&gt;
 </p>
-<ul>
-<li><b>R</b> (capital R): rename a file
-</li>
-<li><b>D</b> (capital D): delete a file
-</li>
-<li><b>+</b>: create a new directory
-</li>
-<li><b>Z</b>: compress the file
-</li>
-<li><b>RET</b> (enter): Open the file
-</li>
-<li><b>g</b>: refresh
-</li>
-<li><b>q</b>: close the dired window
-</li>
-</ul>
-
 
 <p>
-Of course, files can be marked to operate on a selection of them. Use <b>m</b> to mark, <b>u</b> to unmark (<b>U</b> to unmark all), <b>% m</b> to mark according to a pattern.
+&lt;p&gt;
+Here are a few quick shortcuts once you are in &lt;i&gt;dired mode&lt;/i&gt;
+&lt;/p&gt;
 </p>
-<p>
-Note that there are so many tricks, extensions and features in <i>dired mode</i> that I let you see around what you need.
-</p>
-<p>
-<a href="http://www.emacswiki.org/emacs/DiredMode">Read more about Dired</a>
-</p>
-<p>
-<a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html">Read the manual</a>
-</p>
-</div>
-
-</div>
-
-<div id="outline-container-7-2" class="outline-3">
-<h3 id="sec-7-2"><span class="section-number-3">7.2</span> Working locally vs remotely</h3>
-<div class="outline-text-3" id="text-7-2">
-
 
 <p>
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;b&gt;R&lt;/b&gt; (capital R): rename a file
+&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;D&lt;/b&gt; (capital D): delete a file
+&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;+&lt;/b&gt;: create a new directory
+&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;Z&lt;/b&gt;: compress the file
+&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;RET&lt;/b&gt; (enter): Open the file
+&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;g&lt;/b&gt;: refresh
+&lt;/li&gt;
+&lt;li&gt;&lt;b&gt;q&lt;/b&gt;: close the dired window
+&lt;/li&gt;
+&lt;/ul&gt;
+</p>
+
+<p>
+&lt;p&gt;
+Of course, files can be marked to operate on a selection of them. Use &lt;b&gt;m&lt;/b&gt; to mark, &lt;b&gt;u&lt;/b&gt; to unmark (&lt;b&gt;U&lt;/b&gt; to unmark all), &lt;b&gt;% m&lt;/b&gt; to mark according to a pattern.
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;p&gt;
+Note that there are so many tricks, extensions and features in &lt;i&gt;dired mode&lt;/i&gt; that I let you see around what you need.
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;p&gt;
+&lt;a href="<a href="http://www.emacswiki.org/emacs/DiredMode">http://www.emacswiki.org/emacs/DiredMode</a>"&gt;Read more about Dired&lt;/a&gt;
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;p&gt;
+&lt;a href="<a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html">https://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html</a>"&gt;Read the manual&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-7-2" class="outline-3"&gt;
+&lt;h3 id="sec-7-2"&gt;&lt;span class="section-number-3"&gt;7.2&lt;/span&gt; Working locally vs remotely&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-7-2"&gt;
+&lt;p&gt;
 Emacs, once installed on your machine will allow you to edit your file locally, obviously.
+&lt;/p&gt;
 </p>
+
 <p>
-Other people (non-Emacs users) will do a dirty trick to edit remote files like they were local files. They will mount the remote directory on their machine (thanks to <i>sshfs</i>).
+&lt;p&gt;
+Other people (non-Emacs users) will do a dirty trick to edit remote files like they were local files. They will mount the remote directory on their machine (thanks to &lt;i&gt;sshfs&lt;/i&gt;).
 But the magic in Emacs is that you can transparently edit remote files on your development servers for example.
 To do so, Emacs comes with a genious extension named "Tramp". It is alreay installed and available when you install Emacs.
+&lt;/p&gt;
 </p>
+
 <p>
-If you press <b>C-x C-f</b>, you can open a file. But if you ask <code>myname@myserver.com:/path/to/file</code>, it will automatically connect to the server and let you edit the remote file. Easy as pie.
-<i>Tramp</i> supports lots of protocols like ssh, ftp, and so on.
+&lt;p&gt;
+If you press &lt;b&gt;C-x C-f&lt;/b&gt;, you can open a file. But if you ask &lt;code&gt;myname@myserver.com:/path/to/file&lt;/code&gt;, it will automatically connect to the server and let you edit the remote file. Easy as pie.
+&lt;i&gt;Tramp&lt;/i&gt; supports lots of protocols like ssh, ftp, and so on.
+&lt;/p&gt;
 </p>
+
 <p>
+&lt;p&gt;
 And what is great is that if you are editing a remote file and you launch a shell in Emacs, it will automatically set the shell into your remote environment and open it as if you were in the remote directory the file is in.
+&lt;/p&gt;
 </p>
-<p>
-A last tip about TRAMP. If you simply add <code>sudo:</code> in front of your file path, you edit your file with higher privileges. It is a very useful feature if you need to edit your configuration files on a server, for example. Of course, it works remotely and locally.
-</p>
-<p>
-<a href="http://www.emacswiki.org/emacs/TrampMode">Read more about Tramp</a>
-</p>
-</div>
-
-</div>
-
-<div id="outline-container-7-3" class="outline-3">
-<h3 id="sec-7-3"><span class="section-number-3">7.3</span> Organize your work, write papers and manage your agenda</h3>
-<div class="outline-text-3" id="text-7-3">
-
 
 <p>
+&lt;p&gt;
+A last tip about TRAMP. If you simply add &lt;code&gt;sudo:&lt;/code&gt; in front of your file path, you edit your file with higher privileges. It is a very useful feature if you need to edit your configuration files on a server, for example. Of course, it works remotely and locally.
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;p&gt;
+&lt;a href="<a href="http://www.emacswiki.org/emacs/TrampMode">http://www.emacswiki.org/emacs/TrampMode</a>"&gt;Read more about Tramp&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-7-3" class="outline-3"&gt;
+&lt;h3 id="sec-7-3"&gt;&lt;span class="section-number-3"&gt;7.3&lt;/span&gt; Organize your work, write papers and manage your agenda&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-7-3"&gt;
+&lt;p&gt;
 In Emacs, you can do everything. This is a fact.
+&lt;/p&gt;
 </p>
+
 <p>
-One the most amazing and complete mode is the amazing <a href="http://orgmode.org">Org mode</a>, written by amazing people.
+&lt;p&gt;
+One the most amazing and complete mode is the amazing &lt;a href="<a href="http://orgmode.org">http://orgmode.org</a>"&gt;Org mode&lt;/a&gt;, written by amazing people.
 But when I say amazing, it is absolutly amazing. It allows you to "live in Emacs".
+&lt;/p&gt;
 </p>
-<p>
-Here a a few of its am&hellip; features:
-</p>
-<ul>
-<li>A full agenda / calendar
-</li>
-<li>TODO lists and project management
-</li>
-<li>Writing (research papers, books, an "Emacs for developers" whitepaper, your shopping list &hellip;)
-</li>
-<li>Include code in you papers
-</li>
-<li>Tables and spreadsheets (with formulas and calculation)
-</li>
-<li>Mobile integration
-</li>
-<li>&hellip;
-</li>
-</ul>
-
 
 <p>
+&lt;p&gt;
+Here a a few of its am&amp;#x2026; features:
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;A full agenda / calendar
+&lt;/li&gt;
+&lt;li&gt;TODO lists and project management
+&lt;/li&gt;
+&lt;li&gt;Writing (research papers, books, an "Emacs for developers" whitepaper, your shopping list &amp;#x2026;)
+&lt;/li&gt;
+&lt;li&gt;Include code in you papers
+&lt;/li&gt;
+&lt;li&gt;Tables and spreadsheets (with formulas and calculation)
+&lt;/li&gt;
+&lt;li&gt;Mobile integration
+&lt;/li&gt;
+&lt;li&gt;&amp;#x2026;
+&lt;/li&gt;
+&lt;/ul&gt;
+</p>
+
+<p>
+&lt;p&gt;
 And what is really cool is that every thing you do in Org is exportable in:
+&lt;/p&gt;
 </p>
-<ul>
-<li>PDF
-</li>
-<li>LaTex
-</li>
-<li>HTML
-</li>
-<li>Text
-</li>
-<li>ODT
-</li>
-<li>iCalendar
-</li>
-<li>TextInfo
-</li>
-<li>&hellip; and many more.
-</li>
-</ul>
-
 
 <p>
-You really should check their <a href="http://orgmode.org/features.html">list of features</a>
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;PDF
+&lt;/li&gt;
+&lt;li&gt;LaTex
+&lt;/li&gt;
+&lt;li&gt;HTML
+&lt;/li&gt;
+&lt;li&gt;Text
+&lt;/li&gt;
+&lt;li&gt;ODT
+&lt;/li&gt;
+&lt;li&gt;iCalendar
+&lt;/li&gt;
+&lt;li&gt;TextInfo
+&lt;/li&gt;
+&lt;li&gt;&amp;#x2026; and many more.
+&lt;/li&gt;
+&lt;/ul&gt;
 </p>
+
 <p>
-If you want to see a good example of Org-mode capabilities, check <a href="http://home.fnal.gov/~neilsen/notebook/orgExamples/org-examples.html">that great page</a>
+&lt;p&gt;
+You really should check their &lt;a href="<a href="http://orgmode.org/features.html">http://orgmode.org/features.html</a>"&gt;list of features&lt;/a&gt;
+&lt;/p&gt;
 </p>
-</div>
-
-</div>
-
-<div id="outline-container-7-4" class="outline-3">
-<h3 id="sec-7-4"><span class="section-number-3">7.4</span> Emails in Emacs</h3>
-<div class="outline-text-3" id="text-7-4">
-
 
 <p>
+&lt;p&gt;
+If you want to see a good example of Org-mode capabilities, check &lt;a href="<a href="http://home.fnal.gov/~neilsen/notebook/orgExamples/org-examples.html">http://home.fnal.gov/~neilsen/notebook/orgExamples/org-examples.html</a>"&gt;that great page&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-7-4" class="outline-3"&gt;
+&lt;h3 id="sec-7-4"&gt;&lt;span class="section-number-3"&gt;7.4&lt;/span&gt; Emails in Emacs&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-7-4"&gt;
+&lt;p&gt;
 There are packages that let you use Emacs as a full featured MUA.
-Reading emails, sending emails, filtering, archiving &hellip; etc.
+Reading emails, sending emails, filtering, archiving &amp;#x2026; etc.
+&lt;/p&gt;
 </p>
+
 <p>
+&lt;p&gt;
 Emacs can be a very powerful and fast e-mail client and as it is controlled by the keyboard, it could be more efficient than a graphical e-mail client (clicking is a loss of time).
 I use it for years now and I can not imagine using another program to read my emails.
+&lt;/p&gt;
 </p>
+
 <p>
-There are several package to do so, but the most used is <a href="http://www.gnus.org/">Gnus</a>. It is already installed with Emacs.
+&lt;p&gt;
+There are several package to do so, but the most used is &lt;a href="<a href="http://www.gnus.org/">http://www.gnus.org/</a>"&gt;Gnus&lt;/a&gt;. It is already installed with Emacs.
+&lt;/p&gt;
 </p>
+
 <p>
+&lt;p&gt;
 Here are some of its features beside the basic ones:
+&lt;/p&gt;
 </p>
-<ul>
-<li>Gnus is in fact a newsreader used to interact with email servers. So you can use to fetch messages from newsgroups, RSS, SMTP, POP, &hellip;
-</li>
-<li>Easy and powerful mail splitting
-</li>
-<li>Integration with BBDB, a contact manager
-</li>
-<li>Message scoring
-</li>
-<li>LDAP
-</li>
-<li>PGP signing and encrypting
-</li>
-<li>Customizable layout
-</li>
-<li>Encrypted file to manage your credentials
-</li>
-<li>&hellip; and many more
-</li>
-<li>&hellip; and of course, it is extensible thanks to Lisp
-</li>
-</ul>
-
 
 <p>
-You really should try it with your personnal account. It is easy to configure and integrate with <a href="http://www.emacswiki.org/emacs/GnusGmail">Gmail</a>, for example.
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Gnus is in fact a newsreader used to interact with email servers. So you can use to fetch messages from newsgroups, RSS, SMTP, POP, &amp;#x2026;
+&lt;/li&gt;
+&lt;li&gt;Easy and powerful mail splitting
+&lt;/li&gt;
+&lt;li&gt;Integration with BBDB, a contact manager
+&lt;/li&gt;
+&lt;li&gt;Message scoring
+&lt;/li&gt;
+&lt;li&gt;LDAP
+&lt;/li&gt;
+&lt;li&gt;PGP signing and encrypting
+&lt;/li&gt;
+&lt;li&gt;Customizable layout
+&lt;/li&gt;
+&lt;li&gt;Encrypted file to manage your credentials
+&lt;/li&gt;
+&lt;li&gt;&amp;#x2026; and many more
+&lt;/li&gt;
+&lt;li&gt;&amp;#x2026; and of course, it is extensible thanks to Lisp
+&lt;/li&gt;
+&lt;/ul&gt;
 </p>
+
 <p>
+&lt;p&gt;
+You really should try it with your personnal account. It is easy to configure and integrate with &lt;a href="<a href="http://www.emacswiki.org/emacs/GnusGmail">http://www.emacswiki.org/emacs/GnusGmail</a>"&gt;Gmail&lt;/a&gt;, for example.
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;p&gt;
 But be careful! If you try it, you will love it.
+&lt;/p&gt;
 </p>
+
 <p>
+&lt;p&gt;
 Some alternatives to Gnus (that I do not use, but that are popular):
-</p><ul>
-<li><a href="http://www.emacswiki.org/emacs/WanderLust">Wanderlust</a>
-</li>
-<li><a href="http://www.djcbsoftware.nl/code/mu/mu4e.html">Mu4e</a>
-</li>
-</ul>
-
-
-</div>
-
-</div>
-
-<div id="outline-container-7-5" class="outline-3">
-<h3 id="sec-7-5"><span class="section-number-3">7.5</span> Some great Emacs tips and tricks</h3>
-<div class="outline-text-3" id="text-7-5">
-
-
-<ul>
-<li>Emacs is all about Macros. This is one of its most powerful feature. Record a sequence and re-play it on other lines! Here is <a href="http://www.thegeekstuff.com/2010/07/emacs-macro-tutorial-how-to-record-and-play/">how</a>.
-</li>
-<li>Using <a href="http://www.masteringemacs.org/articles/2010/11/01/running-shells-in-emacs-overview/">shell</a> inside Emacs is cool
-</li>
-<li>You really should use the /<a href="http://www.emacswiki.org/emacs/BookMarks">bookmarks</a>/ functionnality to save your projects locations (locally or remotely)
-</li>
-<li>When opening a file, add <i>sudo:</i> in front of its path in order to edit it as a privileged user
-</li>
-<li>You can edit files in hexadecimal directly in Emacs thanks to the <i>hexl-mode</i>
-</li>
-<li>Emacs allows you to open an archive (gz, bz2, zip, &hellip;), edit its files on-the-fly without extracting yourself the archive. To do so, simple open the file directly in Emacs (<b>C-x C-f</b> /path/to/archive.tar.bz2)
-</li>
-<li><a href="http://www.gnu.org/software/emacs/manual/html_node/emacs/Rectangles.html">Rectangle regions</a> edition is really easy
-</li>
-<li><a href="http://www.cs.bu.edu/teaching/tool/emacs/programming/#compile">Compilation</a> and <a href="http://www.cs.bu.edu/teaching/tool/emacs/programming/#gdb">debugging</a> is really well supported in Emacs
-</li>
-<li><a href="http://www.emacswiki.org/ERC">Erc</a> is a great IRC client running in Emacs
-</li>
-</ul>
-
-
-<p>
-<i>To be continued</i>
+&lt;/p&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;a href="<a href="http://www.emacswiki.org/emacs/WanderLust">http://www.emacswiki.org/emacs/WanderLust</a>"&gt;Wanderlust&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="<a href="http://www.djcbsoftware.nl/code/mu/mu4e.html">http://www.djcbsoftware.nl/code/mu/mu4e.html</a>"&gt;Mu4e&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </p>
-</div>
-
-</div>
-
-<div id="outline-container-7-6" class="outline-3">
-<h3 id="sec-7-6"><span class="section-number-3">7.6</span> Coming from other editors (i.e Vim)</h3>
-<div class="outline-text-3" id="text-7-6">
-
 
 <p>
+&lt;div id="outline-container-sec-7-5" class="outline-3"&gt;
+&lt;h3 id="sec-7-5"&gt;&lt;span class="section-number-3"&gt;7.5&lt;/span&gt; Some great Emacs tips and tricks&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-7-5"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Emacs is all about Macros. This is one of its most powerful feature. Record a sequence and re-play it on other lines! Here is &lt;a href="<a href="http://www.thegeekstuff.com/2010/07/emacs-macro-tutorial-how-to-record-and-play/">http://www.thegeekstuff.com/2010/07/emacs-macro-tutorial-how-to-record-and-play/</a>"&gt;how&lt;/a&gt;.
+&lt;/li&gt;
+&lt;li&gt;Using &lt;a href="<a href="http://www.masteringemacs.org/articles/2010/11/01/running-shells-in-emacs-overview/">http://www.masteringemacs.org/articles/2010/11/01/running-shells-in-emacs-overview/</a>"&gt;shell&lt;/a&gt; inside Emacs is cool
+&lt;/li&gt;
+&lt;li&gt;You really should use the &lt;i&gt;&lt;a href="<a href="http://www.emacswiki.org/emacs/BookMarks">http://www.emacswiki.org/emacs/BookMarks</a>"&gt;bookmarks&lt;/a&gt;&lt;/i&gt; functionnality to save your projects locations (locally or remotely)
+&lt;/li&gt;
+&lt;li&gt;When opening a file, add &lt;i&gt;sudo:&lt;/i&gt; in front of its path in order to edit it as a privileged user
+&lt;/li&gt;
+&lt;li&gt;You can edit files in hexadecimal directly in Emacs thanks to the &lt;i&gt;hexl-mode&lt;/i&gt;
+&lt;/li&gt;
+&lt;li&gt;Emacs allows you to open an archive (gz, bz2, zip, &amp;#x2026;), edit its files on-the-fly without extracting yourself the archive. To do so, simple open the file directly in Emacs (&lt;b&gt;C-x C-f&lt;/b&gt; /path/to/archive.tar.bz2)
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="<a href="http://www.gnu.org/software/emacs/manual/html_node/emacs/Rectangles.html">http://www.gnu.org/software/emacs/manual/html_node/emacs/Rectangles.html</a>"&gt;Rectangle regions&lt;/a&gt; edition is really easy
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="<a href="http://www.cs.bu.edu/teaching/tool/emacs/programming/#compile">http://www.cs.bu.edu/teaching/tool/emacs/programming/#compile</a>"&gt;Compilation&lt;/a&gt; and &lt;a href="<a href="http://www.cs.bu.edu/teaching/tool/emacs/programming/#gdb">http://www.cs.bu.edu/teaching/tool/emacs/programming/#gdb</a>"&gt;debugging&lt;/a&gt; is really well supported in Emacs
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="<a href="http://www.emacswiki.org/ERC">http://www.emacswiki.org/ERC</a>"&gt;Erc&lt;/a&gt; is a great IRC client running in Emacs
+&lt;/li&gt;
+&lt;/ul&gt;
+</p>
+
+<p>
+&lt;p&gt;
+&lt;i&gt;To be continued&lt;/i&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-7-6" class="outline-3"&gt;
+&lt;h3 id="sec-7-6"&gt;&lt;span class="section-number-3"&gt;7.6&lt;/span&gt; Coming from other editors (i.e Vim)&lt;/h3&gt;
+&lt;div class="outline-text-3" id="text-7-6"&gt;
+&lt;p&gt;
 Some people use other editors and want to give Emacs a try.
 Some people are really used to use a specific editor.
 Some people do not want to lose their habits and their learning curve.
+&lt;/p&gt;
 </p>
+
 <p>
-I am thinking about Vim, but it is also true for other editors (textmate, sublime, &hellip;)
+&lt;p&gt;
+I am thinking about Vim, but it is also true for other editors (textmate, sublime, &amp;#x2026;)
+&lt;/p&gt;
 </p>
+
 <p>
+&lt;p&gt;
 Emacs has a mode that allows you to use it exactly like Vim.
+&lt;/p&gt;
 </p>
+
 <p>
+&lt;p&gt;
 I personnaly never used this mode, but many people use it. Therefore, it allows you to switch gently and softly from Vim to Emacs.
+&lt;/p&gt;
 </p>
-<p>
-<a href="http://www.emacswiki.org/emacs/Evil">Read more about Evil-mode</a>
-</p>
-</div>
-</div>
-
-</div>
-
-<div id="outline-container-8" class="outline-2">
-<h2 id="sec-8"><span class="section-number-2">8</span> Readings and resources</h2>
-<div class="outline-text-2" id="text-8">
-
-
-<ul>
-<li><a href="http://emacsrocks.com/">Emacs rocks videos</a>
-</li>
-<li><a href="http://devblog.avdi.org/category/emacs-reboot/">Avdi Grimm Emacs reboot series</a>
-</li>
-<li><a href="http://www.masteringemacs.org/">Mastering Emacs</a>
-</li>
-<li><a href="http://sachachua.com/blog/category/geek/emacs/">Sacha's blog</a> and her wonderful Emacs contributors interviews serie
-</li>
-<li><a href="http://emacsredux.com">Emacs redux</a> by Bozhidar Batsov
-</li>
-<li><a href="http://planet.emacsen.org/">Planet Emacsen</a>
-</li>
-<li><a href="http://reddit.com/r/emacs">Emacs sub-reddit</a>
-</li>
-</ul>
-
 
 <p>
-And of course, the <a href="http://www.emacswiki.org/">Emacs wiki</a>
+&lt;p&gt;
+&lt;a href="<a href="http://www.emacswiki.org/emacs/Evil">http://www.emacswiki.org/emacs/Evil</a>"&gt;Read more about Evil-mode&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </p>
-</div>
-
-</div>
-
-<div id="outline-container-9" class="outline-2">
-<h2 id="sec-9"><span class="section-number-2">9</span> License</h2>
-<div class="outline-text-2" id="text-9">
-
 
 <p>
-The content of this project itself is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/us/deed.en_US">Creative Commons Attribution 3.0 license</a>, and the underlying source code used to format and display that content is licensed under the <a href="http://opensource.org/licenses/mit-license.php">MIT license</a>.
+&lt;div id="outline-container-sec-8" class="outline-2"&gt;
+&lt;h2 id="sec-8"&gt;&lt;span class="section-number-2"&gt;8&lt;/span&gt; Readings and resources&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-8"&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;&lt;a href="<a href="http://emacsrocks.com/">http://emacsrocks.com/</a>"&gt;Emacs rocks videos&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="<a href="http://devblog.avdi.org/category/emacs-reboot/">http://devblog.avdi.org/category/emacs-reboot/</a>"&gt;Avdi Grimm Emacs reboot series&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="<a href="http://www.masteringemacs.org/">http://www.masteringemacs.org/</a>"&gt;Mastering Emacs&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="<a href="http://sachachua.com/blog/category/geek/emacs/">http://sachachua.com/blog/category/geek/emacs/</a>"&gt;Sacha's blog&lt;/a&gt; and her wonderful Emacs contributors interviews serie
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="<a href="http://emacsredux.com">http://emacsredux.com</a>"&gt;Emacs redux&lt;/a&gt; by Bozhidar Batsov
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="<a href="http://planet.emacsen.org/">http://planet.emacsen.org/</a>"&gt;Planet Emacsen&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="<a href="http://reddit.com/r/emacs">http://reddit.com/r/emacs</a>"&gt;Emacs sub-reddit&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 </p>
+
 <p>
-Contributors list can be found <a href="https://github.com/pierre-lecocq/emacs4developers/network/members">here</a>.
+&lt;p&gt;
+And of course, the &lt;a href="<a href="http://www.emacswiki.org/">http://www.emacswiki.org/</a>"&gt;Emacs wiki&lt;/a&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </p>
-</div>
-
-</div>
-
-<div id="outline-container-10" class="outline-2">
-<h2 id="sec-10"><span class="section-number-2">10</span> Thanks</h2>
-<div class="outline-text-2" id="text-10">
-
 
 <p>
+&lt;div id="outline-container-sec-9" class="outline-2"&gt;
+&lt;h2 id="sec-9"&gt;&lt;span class="section-number-2"&gt;9&lt;/span&gt; License&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-9"&gt;
+&lt;p&gt;
+The content of this project itself is licensed under the &lt;a href="<a href="http://creativecommons.org/licenses/by/3.0/us/deed.en_US">http://creativecommons.org/licenses/by/3.0/us/deed.en_US</a>"&gt;Creative Commons Attribution 3.0 license&lt;/a&gt;, and the underlying source code used to format and display that content is licensed under the &lt;a href="<a href="http://opensource.org/licenses/mit-license.php">http://opensource.org/licenses/mit-license.php</a>"&gt;MIT license&lt;/a&gt;.
+&lt;/p&gt;
+</p>
+
+<p>
+&lt;p&gt;
+Contributors list can be found &lt;a href="<a href="https://github.com/pierre-lecocq/emacs4developers/network/members">https://github.com/pierre-lecocq/emacs4developers/network/members</a>"&gt;here&lt;/a&gt;.
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</p>
+
+<p>
+&lt;div id="outline-container-sec-10" class="outline-2"&gt;
+&lt;h2 id="sec-10"&gt;&lt;span class="section-number-2"&gt;10&lt;/span&gt; Thanks&lt;/h2&gt;
+&lt;div class="outline-text-2" id="text-10"&gt;
+&lt;p&gt;
 I want to thank some of the great people who make Emacs a very intersting piece of software or make its community very active (the sort order is absolutly not important here):
+&lt;/p&gt;
 </p>
+
 <p>
-Bastien Guerry, Dimitri Fontaine, Julien Danjou, Sacha Chua, Steve Purcell, Nic Ferrier, Avdi Grimm, Magnars, Steve Yegge, Bozhidar Batsov, Xah Lee, and many more &hellip;
+&lt;p&gt;
+Bastien Guerry, Dimitri Fontaine, Julien Danjou, Sacha Chua, Steve Purcell, Nic Ferrier, Avdi Grimm, Magnars, Steve Yegge, Bozhidar Batsov, Xah Lee, and many more &amp;#x2026;
+&lt;/p&gt;
 </p>
+
 <p>
-You should check those people and their work over the web, twitter, youtube, &hellip;
+&lt;p&gt;
+You should check those people and their work over the web, twitter, youtube, &amp;#x2026;
+&lt;/p&gt;
 </p>
+
 <p>
+&lt;p&gt;
 And thank you for reading this !
-</p></div>
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="postamble" class="status"&gt;
+&lt;p class="author"&gt;Author: Pierre Lecocq&lt;/p&gt;
+&lt;p class="date"&gt;Created: 2014-10-21 Mar 13:50&lt;/p&gt;
+&lt;p class="creator"&gt;&lt;a href="<a href="http://www.gnu.org/software/emacs/">http://www.gnu.org/software/emacs/</a>"&gt;Emacs&lt;/a&gt; 24.4.1 (&lt;a href="<a href="http://orgmode.org">http://orgmode.org</a>"&gt;Org&lt;/a&gt; mode 8.2.10)&lt;/p&gt;
+&lt;p class="validation"&gt;&lt;a href="<a href="http://validator.w3.org/check?uri=referer">http://validator.w3.org/check?uri=referer</a>"&gt;Validate&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</p>
 </div>
-</div>
-
-<div id="postamble">
-<p class="date">Date: 2014-09-09T21:48+0200</p>
+<div id="postamble" class="status">
 <p class="author">Author: Pierre Lecocq</p>
-<p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3f with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
-<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
-
+<p class="date">Created: 2014-10-21 Mar 13:50</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.4.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>
