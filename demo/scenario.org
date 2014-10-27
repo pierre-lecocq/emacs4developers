@@ -1,39 +1,52 @@
-- 1. Setup
+* The demo
 
-    - 1.1 Launch with config file
-    - 1.2 Open file
+** 1. Setup
 
-- 2. Navigation
+- 1.1 Launch using a dedicated config file
+- 1.2 Print the current Emacs' version (wouhou !)
+- 1.3 Open a file
 
-    - 2.1 Go to constructor and edit arguments
-    - 2.2 Search for the "dispatch" function
-    - 2.3 Go to the second occurrence
+** 2. Basic editing
 
-- 3. Editing
+- 2.1 Go to constructor and edit arguments
+- 2.2 Select a region
+- 2.3 Copy and paste the region
+- 2.4 Comment/Uncomment a region
 
-    - 3.1 Basic code editing
-    - 3.2 Select a region, duplicate and modify its content
-    - 3.3 Comment a region
-    - 3.4 Replace in a region
-    - 3.5 Basic auto-complete
+** 3. Searching
 
-- 4. Windows and buffers
+- 3.1 Search in the current buffer
+- 3.2 Navigate between occurrences
+- 3.3 Search in project files with rgrep
 
-    - 4.1 Open a new window
-    - 4.2 Open a new buffer with a new file
-    - 4.3 Close window
-    - 4.4 Switch between buffers in the same window
-    - 4.5 Re-open several windows with different buffers
-    - 4.6 Close everything but the current window
+** 4. Windows and buffers
 
-- 5. Dired mode
+- 4.1 Open a new window
+- 4.2 Open a new buffer with a new file
+- 4.3 Close window
+- 4.4 Switch between buffers in the same window
+- 4.5 Re-open several windows with different buffers
+- 4.6 Close everything but the current window
 
-    - 5.1 Open dired mode
-    - 5.2 Renaming a file
-    - 5.3 Deleting a file
+** 5. Dired mode
 
-- 6. Shell 
+- 5.1 Open dired mode
+- 5.2 Create a directory (+)
+- 5.3 Create three new file (C-x C-f) and then refresh the buffer (g)
+- 5.4 Rename two file (R) one by one
+- 5.5 Mark two files (m) and delete them both (D)
+- 5.6 Compress the remaining file (Z)
+- 5.7 Change its mode (M)
 
-    - 6.1 Open a shell
-    - 6.2 Execute a command
-    - 6.3 Copy output to scratch buffer and modify it
+** 6. Shell
+
+- 6.1 Open a shell
+- 6.2 Execute a command (ls -l)
+- 6.4 Select the output and execute a command on the selected region (M-| RET sed -e 's/e/EEE/g' > test-shell.txt)
+- 6.5 Execute a command from a buffer (M-! RET ls -l /)
+
+*  Final screen
+
+- Thank you
+- Original tutorial repository
+- Twitter & github account
