@@ -1545,7 +1545,7 @@ Additionnaly, you can manage the packages list by adding other sources to your c
 &lt;pre class="src src-lisp"&gt;&lt;span style="color: #a5a5a5;"&gt;;; &lt;/span&gt;&lt;span style="color: #a5a5a5;"&gt;Add package sources&lt;/span&gt;
 (setq package-archives '((&lt;span style="color: #aa3939;"&gt;"gnu"&lt;/span&gt; . &lt;span style="color: #aa3939;"&gt;"<a href="http://elpa.gnu.org/packages/">http://elpa.gnu.org/packages/</a>"&lt;/span&gt;)
                          (&lt;span style="color: #aa3939;"&gt;"marmalade"&lt;/span&gt; . &lt;span style="color: #aa3939;"&gt;"<a href="http://marmalade-repo.org/packages/">http://marmalade-repo.org/packages/</a>"&lt;/span&gt;)
-                         (&lt;span style="color: #aa3939;"&gt;"melpa"&lt;/span&gt; . &lt;span style="color: #aa3939;"&gt;"<a href="http://melpa.milkbox.net/packages/">http://melpa.milkbox.net/packages/</a>"&lt;/span&gt;)))
+                         (&lt;span style="color: #aa3939;"&gt;"melpa"&lt;/span&gt; . &lt;span style="color: #aa3939;"&gt;"<a href="http://melpa.milkbox.net/packages/">http://melpa.org/packages/</a>"&lt;/span&gt;)))
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1653,7 +1653,7 @@ Simply add this code to your configuration file:
    ((string= pmoc &lt;span style="color: #aa3939;"&gt;"package.el"&lt;/span&gt;)
     (&lt;span style="color: #5FB7CC;"&gt;require&lt;/span&gt; '&lt;span style="color: #8dd7e9;"&gt;package&lt;/span&gt;)
     (add-to-list 'package-archives '(&lt;span style="color: #aa3939;"&gt;"gnu"&lt;/span&gt; . &lt;span style="color: #aa3939;"&gt;"<a href="http://elpa.gnu.org/packages/">http://elpa.gnu.org/packages/</a>"&lt;/span&gt;))
-    (add-to-list 'package-archives '(&lt;span style="color: #aa3939;"&gt;"melpa"&lt;/span&gt; . &lt;span style="color: #aa3939;"&gt;"<a href="http://melpa.milkbox.net/packages/">http://melpa.milkbox.net/packages/</a>"&lt;/span&gt;))
+    (add-to-list 'package-archives '(&lt;span style="color: #aa3939;"&gt;"melpa"&lt;/span&gt; . &lt;span style="color: #aa3939;"&gt;"<a href="http://melpa.milkbox.net/packages/">http://melpa.org/packages/</a>"&lt;/span&gt;))
     (add-to-list 'package-archives '(&lt;span style="color: #aa3939;"&gt;"marmelade"&lt;/span&gt; . &lt;span style="color: #aa3939;"&gt;"<a href="http://marmalade-repo.org/packages/">http://marmalade-repo.org/packages/</a>"&lt;/span&gt;))
     (package-initialize)
     (&lt;span style="color: #5FB7CC;"&gt;let&lt;/span&gt; ((need-refresh nil))
@@ -1732,7 +1732,7 @@ First, setup packages sources and install &lt;code&gt;use-package&lt;/code&gt;
 &lt;pre class="src src-lisp"&gt;(&lt;span style="color: #5FB7CC;"&gt;require&lt;/span&gt; '&lt;span style="color: #8dd7e9;"&gt;package&lt;/span&gt;)
 (setq package-archives '((&lt;span style="color: #aa3939;"&gt;"gnu"&lt;/span&gt; . &lt;span style="color: #aa3939;"&gt;"<a href="http://elpa.gnu.org/packages/">http://elpa.gnu.org/packages/</a>"&lt;/span&gt;)
                          (&lt;span style="color: #aa3939;"&gt;"marmalade"&lt;/span&gt; . &lt;span style="color: #aa3939;"&gt;"<a href="http://marmalade-repo.org/packages/">http://marmalade-repo.org/packages/</a>"&lt;/span&gt;)
-                         (&lt;span style="color: #aa3939;"&gt;"melpa"&lt;/span&gt; . &lt;span style="color: #aa3939;"&gt;"<a href="http://melpa.milkbox.net/packages/">http://melpa.milkbox.net/packages/</a>"&lt;/span&gt;)))
+                         (&lt;span style="color: #aa3939;"&gt;"melpa"&lt;/span&gt; . &lt;span style="color: #aa3939;"&gt;"<a href="http://melpa.milkbox.net/packages/">http://melpa.org/packages/</a>"&lt;/span&gt;)))
 (package-initialize)
 </p>
 

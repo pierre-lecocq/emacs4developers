@@ -145,7 +145,7 @@ Additionally, you can manage the packages list by adding other sources to your c
 ;; Add package sources
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")
-                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+                         ("melpa" . "http://melpa.org/packages/")))
 #+END_SRC
 
 *** El-Get
@@ -201,7 +201,7 @@ Simply add this code to your configuration file:
    ((string= pmoc "package.el")
     (require 'package)
     (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
-    (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+    (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
     (add-to-list 'package-archives '("marmelade" . "http://marmalade-repo.org/packages/"))
     (package-initialize)
     (let ((need-refresh nil))
@@ -249,7 +249,7 @@ First, setup packages sources and install =use-package=
 (require 'package)
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")
-                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+                         ("melpa" . "http://melpa.org/packages/")))
 (package-initialize)
 
 (unless (package-installed-p 'use-package)
