@@ -80,8 +80,7 @@ Remember one thing: Emacs is 30+ years old and brings new users everyday. It is 
 Here is a video that covers the basics of this tutorial.
 It is a simple, annoted but efficient demo of a session in Emacs.
 
-- [[https://www.youtube.com/watch?v%3DoPZ8yliLYMM][https://www.youtube.com/watch?v=oPZ8yliLYMM]]
-- [[https://vimeo.com/110356656]]
+[[https://github.com/pierre-lecocq/emacs4developers/tree/master/demo][Here is the links, the sources and the dedicated config file!]]
 
 * The Gnus case
 
