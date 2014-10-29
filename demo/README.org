@@ -1,25 +1,33 @@
 * The demo
 
-** 1. Setup
+A (basic) annoted demo associated to this tutorial is available in video:
+
+- [[https://www.youtube.com/watch?v=oPZ8yliLYMM]] (Watch it in HD for better ... quality !)
+- [[https://vimeo.com/110356656]]
+
+** Scenario
+
+*** 1. Setup
 
 - 1.1 Launch using a dedicated config file
 - 1.2 Print the current Emacs' version (wouhou !)
 - 1.3 Open a file
 
-** 2. Basic editing
+*** 2. Basic editing
 
 - 2.1 Go to constructor and edit arguments
 - 2.2 Select a region
 - 2.3 Copy and paste the region
 - 2.4 Comment/Uncomment a region
+- 2.5 Save the current file (buffer)
 
-** 3. Searching
+*** 3. Searching
 
 - 3.1 Search in the current buffer
 - 3.2 Navigate between occurrences
 - 3.3 Search in project files with rgrep
 
-** 4. Windows and buffers
+*** 4. Windows and buffers
 
 - 4.1 Open a new window
 - 4.2 Open a new buffer with a new file
@@ -28,7 +36,7 @@
 - 4.5 Re-open several windows with different buffers
 - 4.6 Close everything but the current window
 
-** 5. Dired mode
+*** 5. Dired mode
 
 - 5.1 Open dired mode
 - 5.2 Create a directory (+)
@@ -38,15 +46,9 @@
 - 5.6 Compress the remaining file (Z)
 - 5.7 Change its mode (M)
 
-** 6. Shell
+*** 6. Shell
 
 - 6.1 Open a shell
 - 6.2 Execute a command (ls -l)
 - 6.4 Select the output and execute a command on the selected region (M-| RET sed -e 's/e/EEE/g' > test-shell.txt)
 - 6.5 Execute a command from a buffer (M-! RET ls -l /)
-
-*  Final screen
-
-- Thank you
-- Original tutorial repository
-- Twitter & github account
