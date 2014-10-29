@@ -75,6 +75,14 @@ Remember one thing: Emacs is 30+ years old and brings new users everyday. It is 
    - 5.6 [[./chapters/05-special-features.org#coming-from-other-editors-ie-vim][Coming from other editors (i.e Vim or SublimeText)]]
 - 6. [[./chapters/06-readings-and-resources.org][Readings and resources]]
 
+* The demo
+
+Here is a video that covers the basics of this tutorial.
+It is a simple, annoted but efficient demo of a session in Emacs.
+
+- [[https://www.youtube.com/watch?v%3DoPZ8yliLYMM][https://www.youtube.com/watch?v=oPZ8yliLYMM]]
+- [[https://vimeo.com/110356656]]
+
 * The Gnus case
 
 If you need a detailed and explained Gnus (an Emacs mail reader) configuration example, please refer to [[http://qsdfgh.com/articles/gnus-configuration-example.html][this dedicated article]]
