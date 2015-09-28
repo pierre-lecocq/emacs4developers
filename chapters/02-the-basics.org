@@ -117,6 +117,7 @@ An /Emacs frame/ can be divided into /windows/ in itself.
 - *C-x 3*: open a new window vertically, which corresponds to *M-x split-window-right*
 - *C-x o*: switch to the next window, which corresponds to *M-x other-window*
 - *C-x 0*: close the current window, which corresponds to *M-x delete-window*
+- *C-x 1*: close all the windows but the one focused, which correspond to *M-x delete-other-windows*
 
 #+CAPTION: Windows manipulation
 [[../images/windows.gif]]
@@ -129,12 +130,16 @@ A /buffer/ is displayed in a /frame/.
 - *C-x C-b*: list opened buffer (and jump to the selected one), which corresponds to *M-x list-buffers*
 - *C-x k*: kill a buffer, which corresponds to *M-x kill-buffer*
 
+On most read-only buffers, press *q* to close it.
+
 #+CAPTION: Buffer navigation
 [[../images/buffers.gif]]
 
 *** Cancel a command
 
 - *C-g* or *ESC ESC ESC*: cancel the current command running in the minibuffer, which corresponds to *M-x keyboard-quit*
+
+It also cancels all previously pressed keys.
 
 *** The most useless command
 
@@ -146,8 +151,11 @@ Emacs has a powerful built-in help system for key bindings and internal function
 
 - *C-h f <function-name>*: Find the key binding corresponding to <function-name> (ex: C-h f save-buffer)
 - *C-h k <key-sequence>*: Find the function name corresponding to <key-sequence> (ex: C-h k C-x C-s)
+- *<key-sequence> C-h*: Show the next possible keys to press after the <key-sequence> (ex: C-x 4 C-h)
 
 When executing these commands, a new frame opens. To close it, switch to it (/C-x o/) and type /q/. If not, simply close it (/C-x 0/)
+
+After executing a command with M-x, if the command have a corresponding keybinding bound to it, a message indicating what to press will appear in the minibuffer.
 
 Emacs also includes the full manual (also available online: http://www.gnu.org/software/emacs/manual/html_node/emacs/)
 
