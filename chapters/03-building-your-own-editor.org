@@ -105,6 +105,9 @@ There are so many people who share their configuration, comment their code, and 
 
 Here is mine: (https://github.com/pierre-lecocq/emacs.d)
 
+If you are a heavy VIM user, you can bring you VIM experience to Emacs by using [[https://github.com/syl20bnr/spacemacs][Spacemacs]]. You can also
+find [[https://github.com/emacs-tw/awesome-emacs#starter-kit][Starter Kit]] to start with Emacs.
+
 ** Modes
 
 /Modes/ are Emacs /extensions/ that can be installed to extend the capabilities of Emacs. They will allow you to build a powerful tailored editor.
