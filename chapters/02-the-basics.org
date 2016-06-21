@@ -151,7 +151,10 @@ Emacs has a powerful built-in help system for key bindings and internal function
 
 - *C-h f <function-name>*: Find the key binding corresponding to <function-name> (ex: C-h f save-buffer)
 - *C-h k <key-sequence>*: Find the function name corresponding to <key-sequence> (ex: C-h k C-x C-s)
+- *C-h v var*: Display the documentation of the Lisp variable var (describe-variable) (ex: C-h v emacs-version)
 - *<key-sequence> C-h*: Show the next possible keys to press after the <key-sequence> (ex: C-x 4 C-h)
+
+For more detail about Emacs help system, see: https://www.gnu.org/software/emacs/manual/html_node/emacs/Help-Summary.html
 
 When executing these commands, a new frame opens. To close it, switch to it (/C-x o/) and type /q/. If not, simply close it (/C-x 0/)
 
