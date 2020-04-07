@@ -23,7 +23,6 @@ There are many Ruby developers who describe their setup around the web. Here are
 
 Here are some resources about configuring Emacs for developing in Python:
 
-- [[http://caisah.info/emacs-for-python/][Emacs for python - on caisah.info]]
 - [[http://www.emacswiki.org/emacs/PythonProgrammingInEmacs][Python programming in Emacs - on the EmacsWiki]]
 
 ** Emacs for C/C++/Objective-C
